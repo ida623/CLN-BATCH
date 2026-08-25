@@ -1,14 +1,3 @@
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659762#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_95c50bcb-fc4f-4988-a6cd-cb45ac915f7a
----
 
 ## Tic-Tac-Toe 遊戲開發
 
@@ -89,17 +78,7 @@ export default App
 <script type="module" src="/src/index.jsx"></script>
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659766#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_efb9f912-ce50-47a8-907d-abe3da4d25c6
----
+-----------------------------------------------------------
 
 ### Tic-Tac-Toe 遊戲開發規劃
 
@@ -184,17 +163,7 @@ function App() {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659768#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_d1adbee4-0efe-493a-a0ac-0c9dcaafd1e1
----
+-----------------------------------------------------------
 
 ### 為玩家列表添加編輯按鈕
 
@@ -293,17 +262,7 @@ function App() {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659770#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_58d2b024-0f13-4a91-ba4d-75bf9451cfdc
----
+-----------------------------------------------------------
 
 ### 實作編輯功能與狀態管理
 
@@ -424,17 +383,7 @@ flowchart TD
     C -.->|不影響| H[父組件 App]
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659774#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_0db16324-7e09-4425-b94b-c07aa2539611
----
+-----------------------------------------------------------
 
 ### React 組件的隔離實例
 
@@ -444,17 +393,7 @@ hovernotes-id: doc_0db16324-7e09-4425-b94b-c07aa2539611
     - 當其中一個玩家進入編輯模式（顯示輸入欄位）時，另一個玩家組件並不會跟著改變（仍顯示玩家名稱）
     - 這證明了每個 `Player` 實例都有其專屬的 `isEditing` 狀態，不會互相影響
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659778#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_4323ed01-022b-47fc-a158-c89decefa6b8
----
+-----------------------------------------------------------
 
 ### 動態按鈕文字 (Button Caption)
 
@@ -495,17 +434,7 @@ if (isEditing) {
 />
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659780#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_0a87f817-96e5-4084-a9da-92b30f70d1f6
----
+-----------------------------------------------------------
 
 ### 根據舊狀態更新狀態 (Updating State Based On Old State)
 
@@ -592,17 +521,7 @@ sequenceDiagram
 
 - **[結論]** 若要讓第二次更新基於第一次更新後的結果，必須使用**更新函數 (Updater Function)** 形式，確保 React 在執行更新時才去抓取最新的狀態值。
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659790#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_fa437075-7fe4-45cb-a565-f07942874f1a
----
+-----------------------------------------------------------
 
 ### Player 組件的編輯問題
 
@@ -727,17 +646,7 @@ sequenceDiagram
     State-->>Input: 重新渲染，更新 value 屬性
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659792#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_025b5802-0489-482d-a15d-113ff454335c
----
+-----------------------------------------------------------
 
 ### 遊戲盤組件 (GameBoard Component)
 
@@ -854,17 +763,7 @@ flowchart TD
     - 目前按鈕內暫時填入 `'X'` 或 `'O'` 作為佔位符
     - 實際開發時，按鈕顯示的符號應根據該位置的狀態（來自 `initialGameBoard` 中的值）動態決定
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659798#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_8f5ceb5a-44f7-472a-8e28-6ab9a94ae58c
----
+-----------------------------------------------------------
 
 ### GameBoard
 
@@ -1013,17 +912,7 @@ function handleSelectSquare(rowIndex, colIndex) {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659800#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_86db8baf-13de-47fc-9a1a-a19f34d6e564
----
+-----------------------------------------------------------
 
 ### 玩家狀態的高亮顯示
 
@@ -1186,17 +1075,7 @@ export default function Player({ initialName, symbol, isActive }) {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659802#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_61c24fe0-a1f8-4d96-bbc7-af1d6f6ccf7d
----
+-----------------------------------------------------------
 
 ### 建立 Log 元件
 
@@ -1275,17 +1154,7 @@ flowchart TD
     style App_Component fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659808#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_64b39dc8-d90e-4d8d-be68-913229aac878
----
+-----------------------------------------------------------
 
 ### 狀態提升 (Lifting State Up)
 
@@ -1354,17 +1223,7 @@ function handleSelectSquare(rowIndex, colIndex) {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659812#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_6c0a8943-d2a2-438e-b665-6a47e9f827a5
----
+-----------------------------------------------------------
 
 ### 從遊戲回合推導遊戲盤面
 
@@ -1467,17 +1326,7 @@ function handleSelectSquare(rowIndex, colIndex) {
 <GameBoard onSelectSquare={handleSelectSquare} turns={gameTurns} />
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659814#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_ae040c02-09d1-41fd-9595-080177f76694
----
+-----------------------------------------------------------
 
 ### Log 元件實作
 
@@ -1551,17 +1400,7 @@ export default function Log({ turns }) {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659818#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_6516fbef-f1f3-4166-9d81-29caa69b8d22
----
+-----------------------------------------------------------
 
 ### App 組件中的現有狀態
 
@@ -1686,17 +1525,7 @@ function App() {
     - **邏輯一致性**：無論是根據「目前狀態」還是「舊狀態」推導，計算規則都完全相同
 
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659822#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_635819d9-5d0b-41fb-851a-a5a45822b6f9
----
+-----------------------------------------------------------
 
 ### 防止重複點擊按鈕
 
@@ -1719,17 +1548,7 @@ hovernotes-id: doc_635819d9-5d0b-41fb-851a-a5a45822b6f9
     - 當 `disabled` 被設定為 `true` 時，按鈕將無法被點擊，也不會觸發任何事件
 
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659824#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_03c75809-5685-4f7e-b483-dfc6b2229d6c
----
+-----------------------------------------------------------
 
 ### 檢查玩家獲勝狀態
 
@@ -1770,17 +1589,7 @@ const WINNING_COMBINATIONS = [
 ];
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659826#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_d43e7a76-204d-4aa2-b0fa-e4286be9635f
----
+-----------------------------------------------------------
 
 ### 動態檢查獲勝狀態
 
@@ -1875,17 +1684,7 @@ function App() {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659834#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_4dad1baf-d9e3-4395-904b-e2c4b010edcc
----
+-----------------------------------------------------------
 
 ### 存取獲勝組合的方格符號
 

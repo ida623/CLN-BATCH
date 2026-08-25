@@ -1,14 +1,3 @@
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649208#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_da60516c-e00f-47cf-a5bd-d202db381ccc
----
 
 ### 更新動態內容與自定義組件事件
 
@@ -92,17 +81,7 @@ export default function TabButton({ children, onSelect }) {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649214#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_188df86e-e974-4dab-85d0-e49d2a1d9743
----
+-----------------------------------------------------------
 
 ### 透過參數識別點擊的按鈕
 
@@ -172,17 +151,7 @@ function handleSelect(selectedButton) {
     - 只有當按鈕被點擊，觸發了該函數時，箭頭函數內部的 `handleSelect()` 才會被真正執行
 - **[總結]** 這種方式確保了函數是「被動等待觸發」，而不是在組件渲染時「主動立即執行」
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649230#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_54d59d45-d438-46a5-b9a6-9d5232eecfc2
----
+-----------------------------------------------------------
 
 ### 實現動態分頁內容
 
@@ -312,17 +281,7 @@ export default function TabButton({ children, onSelect }) {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649238#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_3099be1f-980b-46de-9817-79a058c4ca65
----
+-----------------------------------------------------------
 
 ### React 狀態 (State)
 
@@ -479,17 +438,7 @@ flowchart TD
     F --> G[重新渲染 UI 並顯示新內容]
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649246#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_d314365a-582d-4579-a159-0527d0d24641
----
+-----------------------------------------------------------
 
 ### 結合狀態與外部資料
 
@@ -560,17 +509,7 @@ import { EXAMPLES } from './data.js';
     - `EXAMPLES[selectedTopic]`：根據當前狀態找到對應的主題物件（例如 `{ title: '...', description: '...', code: '...' }`）
     - `.[property]`：接著從該主題物件中提取特定的屬性值（如 `.title`）
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649252#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_a88a6c62-4603-49a0-9696-a9ee97834faf
----
+-----------------------------------------------------------
 
 ### 處理初始狀態與條件式渲染
 
@@ -674,17 +613,7 @@ const [selectedTopic, setSelectedTopic] = useState(null);
     - `&&` 運算子可以讓程式碼更短、更簡潔。
     - 使用兩個獨立的 `&&` 段落有時比合併成一個複雜的三元運算式更具可讀性。
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649258#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_881b8803-07e7-439b-aa74-a79b009a0303
----
+-----------------------------------------------------------
 
 ### 動態樣式與 JSX 屬性
 
@@ -759,17 +688,7 @@ export default function TabButton({ children, onSelect }) {
         3. 所有 `TabButton` 元件會根據最新的 `selectedTopic` 重新計算 `isSelected` 的布林值
         4. 只有符合條件的按鈕會獲得 `active` class，從而達成動態樣式的效果
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649260#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_f6e309db-f1b2-4681-bf30-9b4b3d3ddfa5
----
+-----------------------------------------------------------
 
 ### App 組件的改進空間
 
@@ -852,17 +771,7 @@ hovernotes-id: doc_f6e309db-f1b2-4681-bf30-9b4b3d3ddfa5
 </ul>
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649262#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_53136434-cacd-4831-97e7-f501a16531c1
----
+-----------------------------------------------------------
 
 ### React Essentials Core Concepts
 
@@ -958,17 +867,7 @@ flowchart TD
     C --> D[更新 UI 顯示新的內容]
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659740#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_7acd6c01-6295-4aa3-831a-0ceab0aa7569
----
+-----------------------------------------------------------
 
 ### JSX 與建置程序 (The Build Process)
 
@@ -1030,17 +929,7 @@ React.createElement(
     - 不需要特殊的建置程序或轉換即可運作
     - 缺點：語法較為冗長 (Verbose)，且不一定直觀
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659742#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_17832833-7f13-46b9-b949-57e5c1e59f56
----
+-----------------------------------------------------------
 
 ### JSX 的單一父元素規則
 
@@ -1134,17 +1023,7 @@ return (
 );
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659746#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_e9485d20-e906-406a-8631-a45ea346859f
----
+-----------------------------------------------------------
 
 ### App 組件的職責分析
 
@@ -1198,17 +1077,7 @@ flowchart TD
     B --> E["重新渲染 TabButton 組件"]
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659748#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_8a9fc9ba-b991-40a7-8c71-8fb4625d23bc
----
+-----------------------------------------------------------
 
 ### 組件拆解實踐
 
@@ -1324,17 +1193,7 @@ export default function Examples() {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659750#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_79bf0907-df95-4e07-b14d-28bc8603a5b9
----
+-----------------------------------------------------------
 
 ### 重構與進階組件概念
 
@@ -1430,17 +1289,7 @@ export default function Section({ title, id, children }) {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659752#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_491dd6c7-66db-4e48-ba13-ed5353699885
----
+-----------------------------------------------------------
 
 ### 使用 Rest 與 Spread 處理 Props
 
@@ -1496,17 +1345,7 @@ export default function Section({ title, children, ...props }) {
     - `title` 與 `children` 會被正確渲染
     - `id="examples"` 與 `className=""` 會被收集進 `props` 並展開到內層的 `<section>` 標籤上
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659754#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_638ceb2b-b24d-44e3-ace0-dee1722b1ec2
----
+-----------------------------------------------------------
 
 ### 建立可複用的 Tabs 組件
 
@@ -1669,17 +1508,7 @@ export default function Tabs({ children, buttons }) {
         1. **主要內容插槽**：透過預設的 `children` prop 傳入
         2. **按鈕插槽**：透過自定義的 `buttons` prop 傳入
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659756#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_e51c3ad5-aad6-4246-bfab-852bfd1afb5a
----
+-----------------------------------------------------------
 
 ### Tabs 組件的靈活性優化
 
@@ -1810,17 +1639,7 @@ export default function Tabs({ children, buttons, ButtonsContainer }) {
 </Tabs>
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659758#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_8dce4d26-bc0b-42d3-a7c5-048f1cb8058e
----
+-----------------------------------------------------------
 
 ### 組件預設值 (Default Prop Values)
 
@@ -1830,17 +1649,7 @@ hovernotes-id: doc_8dce4d26-bc0b-42d3-a7c5-048f1cb8058e
 - **實作方式**
     - 可以透過在解構賦值語法中直接設定預設值來達成
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659760#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_74992441-19d0-411b-bdb7-881beaaebc7d
----
+-----------------------------------------------------------
 
 ## Tic-Tac-Toe 專案：進階 React 概念
 

@@ -1,14 +1,3 @@
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659840#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_cd0c9848-56bd-49e1-83d2-704e779d27e7
----
 
 ### GameOver 組件
 
@@ -81,17 +70,7 @@ const hasDraw = gameTurns.length === 9 && !winner;
 
 - **[注意點]** 當發生平局時，`winner` 變數將不會被設定（為 falsy），因此 `GameOver` 組件內部的顯示邏輯需要能處理 `winner` 為空的情況
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659844#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_a1db2931-aae2-4d9c-bd20-87f462a3556b
----
+-----------------------------------------------------------
 
 ### 實現重新比賽功能
 
@@ -197,17 +176,7 @@ flowchart TD
     - 不能只對最外層陣列進行淺拷貝（如使用 `[...initialGameBoard]`），因為內層的巢狀陣列仍會指向同一個引用
     - 必須建立一個**深拷貝**，確保每一層巢狀結構都是全新的物件，與原始資料完全隔離
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659846#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_d53af3c1-ac5b-443c-b787-825f1820b37b
----
+-----------------------------------------------------------
 
 ### 顯示玩家名稱的需求
 
@@ -293,17 +262,7 @@ function handlePlayerNameChange(symbol, newName) {
     - 使用展開運算符（Spread operator `...prevPlayers`）複製原本所有的玩家資訊
     - 使用計算屬性名稱（Computed property names `[symbol]: newName`）來精準更新對應符號的名稱
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659852#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_eeca1d69-9291-4dd7-b6fe-ab0dc5aa6c1e
----
+-----------------------------------------------------------
 
 ### Player 組件的名稱變更邏輯
 
@@ -366,17 +325,7 @@ function handleEditClick() {
 - **更新遊戲結束邏輯**
     - 在 `App.jsx` 中，原本的獲勝者判斷邏輯僅使用 `symbol`，現在應改為使用更新後的玩家名稱來顯示，以確保遊戲結束時呈現的是正確的玩家名稱。
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39659858#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_2222288b-49c7-4676-ba6c-c43247f70ea0
----
+-----------------------------------------------------------
 
 ### App Component Refactoring
 
@@ -545,17 +494,7 @@ return (
 - **[Refactoring Requirement]** Update references to the renamed board constant
     - Since `initialGameBoard` was renamed to `INITIAL_GAME_BOARD`, the `deriveGameBoard` function must be updated to use the new name.
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39760372#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_8530508c-e097-4126-b776-9a7cae348b63
----
+-----------------------------------------------------------
 
 ## React Essentials - Practice Project
 
@@ -627,17 +566,7 @@ export function calculateInvestmentResults({
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39760374#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_8757cb10-dc6f-4bdd-96c1-b59f79c41be6
----
+-----------------------------------------------------------
 
 ### 專案結構規劃與 Header 元件建立
 
@@ -676,17 +605,7 @@ export default function Header() {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39760376#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_d47a1224-f483-49b3-8828-bcbe96ba41db
----
+-----------------------------------------------------------
 
 ### User Input Component
 
@@ -799,17 +718,7 @@ export default function UserInput() {
     - The first group contains the investment amounts (Initial and Annual)
     - The second group contains the return and duration settings
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39760380#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_bb4c0d21-b209-4726-bd47-0d48f107fe13
----
+-----------------------------------------------------------
 
 ### UserInput 組件狀態管理
 
@@ -974,17 +883,7 @@ function handleChange(inputIdentifier, newValue) {
 />
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39760382#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_e2222bee-95b8-4de0-8ca4-410607f40366
----
+-----------------------------------------------------------
 
 ### 投資結果計算的執行位置
 
@@ -1156,17 +1055,7 @@ export default function UserInput({ onChange }) {
     - 將 `userInput` 的值（如 `userInput.initialInvestment`）賦予每個 `<input>` 的 `value` 屬性
     - 這使得輸入欄位成為「受控組件」，顯示的值始終與 `App` 組件中的狀態保持一致
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39760388#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_ae3af875-c3a1-42fe-98f1-1d45fe8c7944
----
+-----------------------------------------------------------
 
 ### 在 Results.jsx 中計算投資結果
 
@@ -1253,17 +1142,7 @@ export default function Results({ input }) {
 
     - 在 `investment.js` 中的計算邏輯因此受到污染，導致後續的數學運算失敗並產生 `NaN`。
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39760390#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_26058caa-c85b-4dfb-a303-41d7a3f0aa96
----
+-----------------------------------------------------------
 
 ### 在 Results 組件中顯示表格
 
@@ -1444,17 +1323,7 @@ const initialInvestment =
 })}
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39760392#overview
-created: "2026-08-22"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_a1c294c9-2c34-42d5-83ab-b2b937969a63
----
+-----------------------------------------------------------
 
 ### 投資計算器目前的缺陷
 
@@ -1520,17 +1389,7 @@ return (
 - **[後續規劃] 錯誤訊息回退機制 (Fallback Message)**
     - 當 `isValidInput` 為 `false` 時，應顯示一段錯誤提示文字，告知使用者輸入有誤，而非僅僅是不顯示結果
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39835916#overview
-created: "2026-08-22"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_4a68a780-8aad-494d-a2fd-34138db4e78d
----
+-----------------------------------------------------------
 
 ## React 組件樣式設計
 

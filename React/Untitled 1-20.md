@@ -1,15 +1,3 @@
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345174#overview
-created: "2026-08-20"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_416ffa37-eba4-4b2d-a994-3bc5e9303d0b
----
-
 ### JavaScript 模組化開發
 
 - 在進階專案中，將程式碼拆分至多個檔案是最佳實踐
@@ -44,18 +32,7 @@ export let apiKey = "adnaskasflak1";
 // 在 app.js 中匯入 apiKey
 import { apiKey } from "./util.js";
 ```
-
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595340#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_a57984b1-6443-464a-9cc0-307bec7a4f0d
----
+-----------------------------------------------------------
 
 ## React 簡介
 
@@ -81,18 +58,7 @@ hovernotes-id: doc_a57984b1-6443-464a-9cc0-307bec7a4f0d
     - 提供即時的反饋 (Instant feedback)
     - 擁有流暢的介面轉換 (Smooth transitions)
 
-
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595358#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_c0ba58b7-38d4-4904-9e29-6f2eefb2b0c6
----
+-----------------------------------------------------------
 
 ### 課程結構與學習路徑
 
@@ -103,34 +69,14 @@ hovernotes-id: doc_c0ba58b7-38d4-4904-9e29-6f2eefb2b0c6
     - 屬於選修章節
     - 若距離上次使用 JavaScript 已有一段時間，建議先複習此模組，以鞏固學習 React 所需的重要基礎知識
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345144#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_8b51e8e3-2716-4528-9808-2aca937e8765
----
+-----------------------------------------------------------
 
 ### 實作第一個 React App
 
 - 準備開始從零開始學習 React 的基礎知識
 - 在深入理論之前，先動手實作第一個 React 應用程式
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595364#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_8910854c-8271-407c-9ffc-cd4603f59222
----
+-----------------------------------------------------------
 
 ### 課程學習路徑
 
@@ -143,17 +89,7 @@ hovernotes-id: doc_8910854c-8271-407c-9ffc-cd4603f59222
     - **摘要路徑 (Summary Path)**
         - 適用於時間有限或需要快速掌握重點的學習者
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595368#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_01b7508b-4c6a-497b-84b7-0f378c363293
----
+-----------------------------------------------------------
 
 ### 如何充分利用本課程
 
@@ -189,17 +125,7 @@ hovernotes-id: doc_01b7508b-4c6a-497b-84b7-0f378c363293
     - 在練習過程中遇到瓶頸或卡住是正常的
     - 遇到問題時可以尋求幫助，也歡迎幫助他人
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345156#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_e2ead4b9-1b94-47c3-ac58-2696e1da84f0
----
+-----------------------------------------------------------
 
 ### 建立 React 專案
 
@@ -260,17 +186,7 @@ npm create vite@latest
         - **[開發流程建議]** 在開發過程中應保持該伺服器持續運行
         - 伺服器具備「監聽」功能 (Watch mode)，當你儲存程式碼檔案時，預覽網站會自動更新 (HMR - Hot Module Replacement)，提供極其高效的開發體驗
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345162#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_d1d9bdd0-1576-4ce0-9b48-a41098f64d4e
----
+-----------------------------------------------------------
 
 ### React 代碼必須經過轉換
 
@@ -288,17 +204,7 @@ flowchart LR
     B --> C["Code that runs in the browser\n(不含 JSX 的 JavaScript)"]
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/8211776#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_80f6332a-6a9d-4a40-8182-57b3afb2855c
----
+-----------------------------------------------------------
 
 ### JavaScript Refresher
 
@@ -310,17 +216,7 @@ hovernotes-id: doc_80f6332a-6a9d-4a40-8182-57b3afb2855c
 - **[注意事項]** 此章節並不能取代完整的 JavaScript 課程
     - 如果你完全沒有 JavaScript 基礎，建議先學習 JavaScript 基礎知識後再繼續本課程
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345168#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_5091b727-c5f5-4cd6-bbc8-de7ce922da9d
----
+-----------------------------------------------------------
 
 ### JavaScript 複習環境設定
 
@@ -329,17 +225,7 @@ hovernotes-id: doc_5091b727-c5f5-4cd6-bbc8-de7ce922da9d
     - 主要透過 CodeSandbox 中的 **Console** 來查看程式執行結果
 - **[學習目標]** 複習 JavaScript 核心知識，確保具備建構 React 應用程式所需的必要基礎
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345170#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_ecaba94e-a2ab-47eb-bfd2-52d539ed50bb
----
+-----------------------------------------------------------
 
 ## JavaScript 的執行環境
 
@@ -439,17 +325,7 @@ mindmap
 <script src="assets/scripts/app.js" type="module"></script>
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345172#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_12ac4476-cfad-40f3-a160-1276bbf02270
----
+-----------------------------------------------------------
 
 ### React 專案的執行機制
 
@@ -532,17 +408,7 @@ flowchart TD
         - 透過縮減程式碼（例如簡化變數名稱、移除多餘空格等）來減少檔案大小，提升效能
 
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345174#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_abc41319-87ff-4f25-86e5-72a57c7548e4
----
+-----------------------------------------------------------
 
 ### JavaScript Import 與 Export 語法
 
@@ -715,18 +581,7 @@ import * as utils from "./util.js";
 // 使用時需透過該物件名稱來存取內容
 console.log(utils.apiKey);
 ```
-
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345176#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_963de9c0-05ba-470c-9abb-3e93a9d34324
----
+-----------------------------------------------------------
 
 ### JavaScript 基礎概念回顧
 
@@ -803,30 +658,10 @@ let userMessage = "Hello World!";
         - 如果該值需要更改，只需修改變數賦值的那個地方
         - 所有引用該變數的地方都會自動同步更新，這大大降低了維護程式碼出錯的風險
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345178#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_ed2aada5-9b90-4c7d-b18d-ed47c53f342e
----
+-----------------------------------------------------------
 
 - 例如：`"hello" + "world"` 會得到 `"helloworld"`（注意：若無空格則會直接相連）
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345180#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_f5f72454-f034-4012-8554-b3bc3666901e
 ### JavaScript 函式
 
 - 一種定義程式碼但不立即執行的方式
@@ -958,17 +793,7 @@ greetUser("Max");
 - 函式名稱應該準確地描述這個函式做了什麼,或它會產生什麼樣的值
 - 如果函式的用途改變了(例如從單純印出問候語,變成建構並回傳一個問候字串),函式名稱也應該隨之更新,以反映這個新的行為
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345182#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_0752b865-e109-493d-b843-aae46af7c8f4
----
+-----------------------------------------------------------
 
 ### 箭頭函式 (Arrow Functions)
 
@@ -984,17 +809,7 @@ hovernotes-id: doc_0752b865-e109-493d-b843-aae46af7c8f4
 <button onClick={() => setActiveContentIndex(0)}>
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345318#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_875a8467-8690-4dc0-9716-7c8ff3224f8e
----
+-----------------------------------------------------------
 
 ## JavaScript 物件 (Objects)
 
@@ -1077,17 +892,7 @@ class User {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345324#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_16a5e946-44d0-45d4-81cf-969a9061e913
----
+-----------------------------------------------------------
 
 ## Arrays
 
@@ -1253,17 +1058,7 @@ console.log(hobbies);
 - **[實際應用]** 在 React 開發中非常常用
     - 用於將資料陣列轉換為對應的 JSX 元素，以便在介面上輸出列表內容
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345330#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_4194456f-889f-4b61-9daa-82b9a409bbbe
----
+-----------------------------------------------------------
 
 ### 陣列解構 (Array Destructuring)
 

@@ -1,14 +1,3 @@
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345372#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_225a1b65-ab82-465f-bff4-22b4410fbca2
----
 
 ### JavaScript Spread Operator (`...`)
 
@@ -50,18 +39,7 @@ graph TD
     A["Standard Inclusion: [hobbies, newHobbies]"] --> B["Result: Nested Arrays (Array inside Array)"]
     C["Spread Operator: [...hobbies, ...newHobbies]"] --> D["Result: Flat Array (Individual values merged)"]
 ```
-
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345374#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_6cb52a84-0654-4ba7-a24a-fa7c429cd81f
----
+-----------------------------------------------------------
 
 ## 控制結構 (Control Structures)
 
@@ -144,17 +122,7 @@ for (const hobby of hobbies) {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345378#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_04618156-8dff-46ad-901a-b8fcf00ff111
----
+-----------------------------------------------------------
 
 ### JavaScript 函數作為參數
 
@@ -258,18 +226,7 @@ greeter(() => {
     console.log("Hello!");
 });
 ```
-
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345382#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_1ea2c757-5dde-4dca-8da0-7ab7257e4cb6
----
+-----------------------------------------------------------
 
 ### 嵌套函數與作用域
 
@@ -291,18 +248,7 @@ function init() {
 
 // greet(); // 在 init 外部執行會出錯，因為 greet 的作用域僅限於 init
 ```
-
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345384#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_0757815f-1997-47a5-92c6-14e42984bafc
----
+-----------------------------------------------------------
 
 ### 原始值 (Primitive Values)
 
@@ -363,18 +309,7 @@ flowchart LR
         - 變數直接儲存值本身（雖然技術上不完全精確，但可作為理解模型）
         - 不存在「位址」的概念，因此無法像引用值那樣透過位址進行原地修改
 
-
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39648976#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_d26b9b97-1fae-4536-8eec-e4cc1a1a43dc
----
+-----------------------------------------------------------
 
 ## React Essentials 課程概覽
 
@@ -393,17 +328,7 @@ hovernotes-id: doc_d26b9b97-1fae-4536-8eec-e4cc1a1a43dc
 - **建立使用者介面 (Building User Interfaces)**: 使用 Components 來建構
 - **資料處理 (Data Handling)**: 學習如何使用、共享與輸出資料
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39648984#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_a914e5d8-0044-4277-bc42-34131a4ac7f8
----
+-----------------------------------------------------------
 
 ### React 的核心概念：組件 (Components)
 
@@ -471,17 +396,7 @@ flowchart TD
     JS --> RC
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39648990#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_499edc94-2176-4b12-a4fa-97b667add4ad
----
+-----------------------------------------------------------
 
 ### React 專案準備
 
@@ -512,17 +427,7 @@ npm run dev
     - 啟動後可以透過預覽網站查看 React App 的運行狀態
     - **注意**：在開發過程中必須保持開發伺服器程序持續運行
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39648994#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_031d6866-58e7-4675-b73f-987fa8e5f3c1
----
+-----------------------------------------------------------
 
 ### React 專案結構與渲染機制
 
@@ -632,17 +537,7 @@ function App() {
 export default App;
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39648998#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_88bd7565-c08e-435d-bacb-9a38eff23edd
----
+-----------------------------------------------------------
 
 ### 自定義組件 (Custom Components)
 
@@ -696,17 +591,7 @@ function Header() {
     - **成對標籤 (Opening and Closing tags)**：使用 `<Header></Header>`
     - **自閉合標籤 (Self-closing tag)**：使用 `<Header />`，這是一種更簡潔的快捷寫法
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649006#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_920e7fd6-1922-4b3f-9f1f-3b945f4c80be
----
+-----------------------------------------------------------
 
 ### React 內容的呈現機制
 
@@ -850,17 +735,7 @@ graph LR
     JSX_Component_Tree -->|React 分析並轉換| Actual_DOM
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649010#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_677f03b8-72aa-4547-b047-37b82e9a437d
----
+-----------------------------------------------------------
 
 ### 在 JSX 中輸出動態內容
 
@@ -936,17 +811,7 @@ function Header() {
     - 因為 `reactDescriptions` 陣列有三個元素，其索引值為 `0`, `1`, `2`
     - 因此傳入 `2` 作為參數，以確保產生的隨機索引落在有效範圍內
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649018#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_aea8ca16-738b-41e2-823b-77a82f659bb9
----
+-----------------------------------------------------------
 
 ### 圖片載入路徑的潛在問題
 
@@ -980,17 +845,7 @@ import reactImg from './assets/react-core-concepts.png';
     - 因為「打包程序」（Build Process）不僅會轉換 JSX 程式碼，也會處理這類 `import` 陳述式
     - 這與在 `index.jsx` 中 `import` CSS 檔案的原理相同，打包程序會確保這些資源被正確納入專案中
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649022#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_3ffaa892-7693-48a4-9a88-274bec9ab174
----
+-----------------------------------------------------------
 
 ### React 組件的重用性
 
@@ -1122,17 +977,7 @@ function CoreConcept(props) {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649032#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_a8aed70e-5a9a-47cf-b464-f54689d527f8
----
+-----------------------------------------------------------
 
 ### 建立資料檔案 `data.js`
 
@@ -1261,17 +1106,7 @@ function CoreConcept({ title, description, image }) {
 }
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649190#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_357ba535-a4a1-428b-88fc-4cf239b68238
----
+-----------------------------------------------------------
 
 ### 組件結構重構
 
@@ -1357,17 +1192,7 @@ graph TD
     Header -- "新路徑: ../assets/..." --> assets
 ```
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649198#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_019dde56-b65b-437c-a1e9-7808ed08f758
----
+-----------------------------------------------------------
 
 ### CSS Modularization
 
@@ -1408,17 +1233,7 @@ import './Header.css';
     - Improves organization by making it easy to see which styles relate to which component
     - Makes adjusting specific styles easier and more intuitive
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649200#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_c2e8a867-da4a-4774-bf12-3e55ead2c771
----
+-----------------------------------------------------------
 
 ### 建立 Examples 互動區塊
 
@@ -1570,17 +1385,7 @@ function TabButton({ label }) {
 
 > 最終的選擇取決於你的使用案例 (use-case) 與個人偏好。
 
----
-title: "Course: React - The Complete Guide (incl. Next.js, Redux) | Udemy"
-description: Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more!
-author: The Complete Guide (incl. Next.js, Redux) | Udemy
-source: https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/39649204#overview
-created: "2026-08-21"
-tags:
-  - hover-notes
-  - udemy
-hovernotes-id: doc_ce7bf869-7cf7-4416-9111-a2cc55c3301c
----
+-----------------------------------------------------------
 
 ### TabButton 的點擊事件處理
 
