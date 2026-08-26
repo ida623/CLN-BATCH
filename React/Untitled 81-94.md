@@ -1,4 +1,50 @@
 
+# 目錄
+
+1. [GameOver 組件與平局判斷](#gameover-組件)
+   概念：介紹 GameOver 組件的基本結構，用來在遊戲結束時顯示贏家或平局訊息，並說明如何在 App 組件用 `gameTurns.length === 9 && !winner` 判斷平局。
+
+2. [重新比賽功能與 Mutation Bug 修正](#實現重新比賽功能)
+   概念：實作 handleRestart 把 gameTurns 重置為空陣列讓遊戲重來，並深入解析陣列是「引用值」，直接改寫巢狀陣列會污染原始資料，必須用深拷貝才能徹底解決重新比賽失效的問題。
+
+3. [玩家名稱狀態管理（App 層級）](#顯示玩家名稱的需求)
+   概念：討論為什麼不該把 playerName 狀態直接提升到 App 組件（會拖累效能），改用一個以符號 X / O 為 key 的 players 物件，在 App 組件集中管理玩家名稱。
+
+4. [Player 組件回傳名稱給 App](#player-組件的名稱變更邏輯)
+   概念：說明如何透過 onChangeName prop 把 Player 組件內編輯完成的名稱回傳給 App，並利用 isEditing 狀態切換的時機點，只在真正按下「儲存」時才通知父層更新名稱。
+
+5. [App 組件重構：衍生邏輯抽離成函式](#app-component-refactoring)
+   概念：把原本寫在 App 組件裡的 winner 判斷、gameBoard 衍生邏輯抽成 deriveWinner、deriveGameBoard 等獨立函式，並把 players、INITIAL_GAME_BOARD 改成外部常數，讓 App 組件變得更精簡易讀。
+
+6. [投資計算器專案簡介與核心計算函式](#react-essentials---practice-project)
+   概念：介紹「投資計算器」練習專案的目標與環境設定，以及核心工具函式 calculateInvestmentResults 如何用 for 迴圈逐年計算利息與投資總值。
+
+7. [Header 元件建立](#專案結構規劃與-header-元件建立)
+   概念：新增 components 資料夾並建立 Header 元件，把 Logo 圖片與標題封裝起來，示範如何用 import 引入圖片資源，再賦值給 img 標籤的 src 屬性。
+
+8. [UserInput 組件的基本結構與欄位建置](#user-input-component)
+   概念：建立 UserInput 組件，用 input-group 搭配 Flexbox 排版四個輸入欄位（Initial Investment、Annual Investment、Expected Return、Duration），並說明為什麼要用 type="number"。
+
+9. [UserInput 狀態管理與受控組件](#userinput-組件狀態管理)
+   概念：用 useState 把四個輸入值合併成一個物件狀態，寫一個通用的 handleChange 函式搭配展開運算子更新對應欄位，再用箭頭函式包裝 onChange、加上 value 屬性，讓輸入欄位變成受控組件（Controlled Component）。
+
+10. [狀態提升至 App 組件並建立 Results 組件](#投資結果計算的執行位置)
+    概念：說明為什麼要把 userInput 狀態從 UserInput 提升到 App，讓 App 能同時把資料傳給 UserInput 和新建立的 Results 組件，兩個組件因此能共享同一份資料來源。
+
+11. [Results 組件計算結果與 NaN 除錯](#在-resultsjsx-中計算投資結果)
+    概念：在 Results 組件呼叫 calculateInvestmentResults 並印出結果，發現數字出現 NaN，追查後發現 input 欄位取出的值永遠是字串，用 + 運算子相加時變成字串連接而不是數字相加。
+
+12. [結果表格渲染與數據格式化](#在-results-組件中顯示表格)
+    概念：用 table、thead、tbody 建立結果表格，透過 resultsData.map() 動態渲染每一列並用 yearData.year 當 key，再用 formatter.format() 美化數字，並推導出總利息與總投資資本等欄位。
+
+13. [輸入驗證與條件式渲染](#投資計算器目前的缺陷)
+    概念：處理 duration 為 0 或負數時程式會崩潰的問題，新增 isValidInput 常數檢查輸入是否合法，並用 && 運算子只在輸入有效時才渲染 Results 組件。
+
+14. [React 組件樣式設計總覽](#react-組件樣式設計)
+    概念：概覽這個章節要學的幾種 React 樣式方案，包括 Vanilla CSS、CSS Modules、CSS-in-JS（Styled Components）與 Tailwind CSS，並說明靜態樣式和動態／條件式樣式的差異。
+
+-----------------------------------------------------------
+
 ### GameOver 組件
 
 - 用於遊戲結束時顯示結果的畫面

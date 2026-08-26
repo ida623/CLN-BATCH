@@ -10,6 +10,109 @@ tags:
 hovernotes-id: doc_6bbfc7d7-5322-4201-88bf-1b47d6f58cb1
 ---
 
+# 目錄
+
+1. [新增事件頁面 (New Event Page)](#新增事件頁面-new-event-page)
+   概念：建立新增事件頁面並重用 `EventForm` 元件，接著把 `action` 屬性、後端 `events.js` 的 POST 路由與伺服器端驗證串接起來，處理提交時前端缺乏回饋的體驗問題。
+
+2. [React Router `useNavigation` Hook](#react-router-usenavigation-hook)
+   概念：用 `useNavigation` 讀取目前的導覽狀態，透過 `navigation.state === 'submitting'` 判斷是否正在提交表單，藉此停用按鈕並顯示「Submitting...」等回饋文字，最後清掉後端測試用的模擬延遲。
+
+3. [前端與後端驗證的必要性](#前端與後端驗證的必要性)
+   概念：說明為什麼不能只靠前端的 `required` 屬性做驗證，後端一定要再驗一次，並學會用 422 狀態碼把驗證錯誤回傳給前端。
+
+4. [在 Action 中優化驗證錯誤處理](#在-action-中優化驗證錯誤處理)
+   概念：講解直接在 `action` 裡 `throw` 錯誤會清空使用者填寫的表單、體驗很差，正確做法是在 422 時直接 `return response`，並用 `useActionData` 取得 `action` 回傳的資料。
+
+5. [解析後端回傳的驗證錯誤結構](#解析後端回傳的驗證錯誤結構)
+   概念：說明後端錯誤物件的結構，用 `Object.values(data.errors)` 把物件轉成陣列後 `.map()` 成 `<li>` 清單顯示出來，並實際測試整個錯誤處理流程。
+
+6. [編輯事件功能的限制](#編輯事件功能的限制)
+   概念：讓新增與編輯共用同一個 `action` 函數，靠 `request.method`（注意要用大寫比對）與 `params.eventId` 動態決定要打 `POST` 還是 `PATCH`、要不要在 URL 加上事件 ID，再把這個共用邏輯註冊到 `App.js` 的多個路由上。
+
+7. [擴充導覽功能](#擴充導覽功能)
+   概念：在導覽列新增 Newsletter 連結，並實作一個獨立的 Newsletter 頁面與訂閱表單，先用一個只印出 console log 的 dummy action 佔位。
+
+8. [NewsletterSignup 的觸發問題](#newslettersignup-的觸發問題)
+   概念：因為 `NewsletterSignup` 出現在全站導覽列，用一般 `<Form>` 會誤觸發當前頁面的 action，所以改用 `useFetcher` 的 `fetcher.Form` 在背景送出請求、不會造成頁面跳轉，並用 `fetcher.data`／`fetcher.state` 搭配 `useEffect` 顯示提交結果。
+
+9. [資料延遲載入 (Data Deferring)](#資料延遲載入-data-deferring)
+   概念：把資料抓取邏輯拆成獨立的 `loadEvents` 函數，再用 `defer({ events: loadEvents() })` 包成一個 Promise，讓 `loader` 不用等資料回來就能先完成，`useLoaderData` 拿到的則變成一個裝著 Promise 的物件。
+
+10. [使用 `<Await>` 組件處理延遲資料](#使用-await-組件處理延遲資料)
+    概念：用 `<Await resolve={...}>` 搭配 function children 渲染延遲資料，外層一定要包 `Suspense` 並給 `fallback`，同時說明常見的錯誤（例如 loader 直接回傳 response 破壞 defer 結構），最後總結 `defer` 與 `useFetcher` 各自適合的場景。
+
+11. [身份驗證 (Authentication)](#身份驗證-authentication)
+    概念：進入身份驗證單元，說明為什麼受保護的內容需要驗證機制、前端要怎麼跟強制驗證的後端溝通，並點出光回傳「是/否」不夠安全的問題，帶出後面要學的兩種主流解法。
+
+12. [伺服器端工作階段 (Server-side Sessions) 的運作機制](#伺服器端工作階段-server-side-sessions-的運作機制)
+    概念：比較 Server-side Sessions（後端要儲存客戶端狀態，適合緊密耦合架構）與身份驗證權杖（不需後端儲存狀態，適合前後端解耦的 SPA），並說明 JWT 是用私鑰簽署、不用儲存也能驗證的字串。
+
+13. [後端路由保護與中間件 (Middleware)](#後端路由保護與中間件-middleware)
+    概念：用中間件在請求進入路由處理前先驗證 Token 是否有效，藉此把路由分成不需驗證的公開路由與必須驗證的受保護路由（例如新增、修改事件），並說明權杖式驗證的完整流程。
+
+14. [Demo 專案概況](#demo-專案概況)
+    概念：介紹這次示範用的前後端專案結構、啟動開發環境的步驟，並在 `App.js` 新增 `/auth` 路由、於導覽列加上連結，讓使用者能進入身份驗證頁面。
+
+15. [身份驗證表單的切換邏輯](#身份驗證表單的切換邏輯)
+    概念：把原本用 `useState` 切換登入／註冊模式的邏輯，改成用 URL 查詢參數（`?mode=login`）驅動，並用 `useSearchParams` 讀取與更新參數，讓模式可以直接透過連結分享。
+
+16. [後端身份驗證 API 實作](#後端身份驗證-api-實作)
+    概念：後端 `/signup` 路由驗證 email 與密碼長度後建立使用者並回傳 token，前端則改用 React Router 的 `Form` 元件，並在 `action` 中透過 `new URL(request.url).searchParams` 解析出目前是登入還是註冊模式。
+
+17. [防止不支援的模式 (Defending against unsupported modes)](#防止不支援的模式-defending-against-unsupported-modes)
+    概念：在 `action` 裡檢查 `mode` 是否合法、設定好 `fetch` 的 headers 與 body 送出請求，依狀態碼分別處理驗證錯誤（422/401）與未知錯誤，成功後 `redirect` 回首頁，最後把 `action` 註冊到路由並實際測試新建使用者與重複註冊的情況。
+
+18. [使用 `useActionData` 獲取驗證錯誤](#使用-useactiondata-獲取驗證錯誤)
+    概念：在 `AuthForm` 用 `useActionData` 取得後端回傳的錯誤資料，遍歷 `data.errors` 顯示欄位錯誤清單，並額外顯示 `data.message` 這種通用錯誤訊息（例如「Email exists already」）。
+
+19. [提升使用者體驗：提交狀態指示器](#提升使用者體驗提交狀態指示器)
+    概念：跟前面新增事件表單的做法一樣，用 `useNavigation` 的 `isSubmitting` 狀態切換按鈕文字與 disabled 屬性，並驗證登入流程在正確與錯誤憑證下的實際行為。
+
+20. [身份驗證現狀與 Token 的重要性](#身份驗證現狀與-token-的重要性)
+    概念：指出目前雖然能登入，但因為沒有把後端回傳的 Token 帶到後續請求裡，執行刪除事件等受保護操作就會出錯，所以要先把 Token 從回應中取出，準備存進 Local Storage。
+
+21. [建立身份驗證輔助函數](#建立身份驗證輔助函數)
+    概念：把 `getAuthToken` 這類存取 Token 的邏輯封裝進 `util/auth.js`，並在需要授權的請求（新增、編輯、刪除事件）的 `Authorization` header 加上 `Bearer` 加 Token，實際驗證這些受保護操作能不能正常運作。
+
+22. [根據身份驗證狀態更新 UI](#根據身份驗證狀態更新-ui)
+    概念：依照是否有 Token 動態顯示或隱藏導覽連結與管理按鈕，並實作一個不需要頁面的 `logout` 路由，`action` 裡清掉 Token 後 `redirect` 回首頁，導覽列則用 `<Form action="/logout">` 觸發登出。
+
+23. [身份驗證狀態的全局同步](#身份驗證狀態的全局同步)
+    概念：因為單純呼叫輔助函數不會讓元件在 Token 改變時自動重新渲染，所以改在根路由掛一個 `tokenLoader`，用 `useRouteLoaderData('root')` 讓 `MainNavigation`、`EventsNavigation`、`EventItem` 等元件都能拿到同一份、會自動更新的登入狀態。
+
+24. [路由保護 (Route Protection) 的必要性](#路由保護-route-protection-的必要性)
+    概念：光靠隱藏按鈕還是能直接輸入網址進入表單頁，所以要在 `new`、`edit` 這類路由的 `loader` 裡加上 `checkAuthLoader`，沒有 Token 就直接 `redirect` 到登入頁，並驗證保護是否真的生效。
+
+25. [身份驗證 Token 的有效期](#身份驗證-token-的有效期)
+    概念：Token 通常會有效期限（例如一小時），所以要在 `RootLayout` 用 `useEffect` 搭配 `setTimeout` 監控過期時間，時間到就用 `useSubmit` 觸發 `/logout` 自動登出。
+
+26. [目前自動登出方案的缺陷](#目前自動登出方案的缺陷)
+    概念：指出固定設一小時定時器的問題（重新整理頁面會誤判剩餘時間），改成登入時就把到期時間存進 Local Storage，透過 `getTokenDuration` 算出精確剩餘毫秒數來設定定時器，並處理沒有 Token、Token 已過期等邊界情況，最後總結整個身份驗證單元。
+
+27. [從本地開發走向正式部署](#從本地開發走向正式部署)
+    概念：從本機開發轉向正式上線，介紹部署的完整流程——測試、優化、建置、上傳、設定伺服器，以及伺服器端與客戶端路由在部署上的差異。
+
+28. [部署練習專案概況](#部署練習專案概況)
+    概念：用一個簡單的部落格範例專案練習部署，先用 `React.memo` 之類的技巧優化程式碼，再解釋一般靜態 `import` 會讓所有依賴都被打包進同一包，應用程式一大就會拖慢首次載入速度。
+
+29. [實作延遲載入 (Lazy Loading)](#實作延遲載入-lazy-loading)
+    概念：把靜態 `import` 換成 `import()` 動態載入，`loader` 包成回傳 Promise 的函式、元件則用 `lazy()` 包起來並外層加上 `Suspense` 顯示載入中畫面，最後把同樣的做法套用到單篇文章頁面。
+
+30. [解決延遲載入 Loader 時的參數缺失問題](#解決延遲載入-loader-時的參數缺失問題)
+    概念：延遲載入的 `loader` 因為沒接住 React Router 傳入的 `params`，導致解構失敗，修正方式是讓路由層的 `loader` 先收下 `params` 再轉交給動態載入的模組使用。
+
+31. [準備正式部署 (Production Build)](#準備正式部署-production-build)
+    概念：說明為什麼要跑 `npm run build`——把開發用、方便閱讀的程式碼解析、轉換成標準 JS 並壓縮優化，產出的 `build` 資料夾（含 `static` 裡的主檔案與延遲載入的程式碼片段）才是真正要上傳到伺服器的內容。
+
+32. [React SPA 的本質](#react-spa-的本質)
+    概念：React SPA 本質上是純靜態網站，只需要靜態網站託管即可，接著實際走一遍用 Firebase Hosting 部署的完整流程：安裝 CLI、登入、`firebase init`、`firebase deploy`。
+
+33. [單頁應用程式 (SPA) 配置的重要性](#單頁應用程式-spa-配置的重要性)
+    概念：解釋為什麼部署時一定要把專案設成 single-page app——伺服器預設會依路徑找實體檔案，SPA 卻只有一個 `index.html`，設定 rewrites 規則後才能讓所有路徑都導回 `index.html`，交給 React Router 接手處理。
+
+-----------------------------------------------------------
+
 ### 新增事件頁面 (New Event Page)
 
 - 為了實現新增事件的功能，需要建立一個新的頁面組件來承載表單

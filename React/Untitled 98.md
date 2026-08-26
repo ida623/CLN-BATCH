@@ -10,6 +10,79 @@ tags:
 hovernotes-id: doc_019306a4-c459-443b-9db8-d4454409be98
 ---
 
+# 目錄
+
+1. [表單提交處理策略](#表單提交處理策略)
+   概念：表單要送出訂單資料前，得先用 onSubmit 搭配 event.preventDefault() 攔截瀏覽器預設的提交行為，不然瀏覽器會自己送一個請求到前端伺服器，跟預期的後端 API 對不上。
+
+2. [輸入值驗證](#輸入值驗證)
+   概念：簡單驗證可以直接在 input 上加 required 屬性，交給瀏覽器內建機制處理；要更細緻的規則就得自己寫 JavaScript 驗證邏輯，並選擇用 state 或 ref 來取值。
+
+3. [使用 `FormData` 提取數值](#使用-formdata-提取數值)
+   概念：把 event.target 傳進 new FormData()，就能一次抓到表單所有欄位的值；前提是每個 input 都要有 name 屬性，再用 Object.fromEntries(fd.entries()) 轉成一般的 JS 物件方便使用。
+
+4. [發送訂單至後端](#發送訂單至後端)
+   概念：用 fetch 把整合好的訂單資料（購物車項目加客戶資料）以 POST 方式送到 /orders，要記得設定 method、Content-Type 標頭，並用 JSON.stringify() 把物件序列化成字串。
+
+5. [實作基礎訂單提交](#實作基礎訂單提交)
+   概念：先做出最陽春的送出邏輯，不等待回應也不處理錯誤，透過 Network 分頁與後端的 orders.json 檔案確認資料真的有送達，之後再逐步補齊使用者體驗。
+
+6. [提升使用者體驗 (UX) 的必要性](#提升使用者體驗-ux-的必要性)
+   概念：目前的訂單提交雖然技術上能動，但缺乏錯誤提示與載入回饋，使用者點了送出之後完全不知道發生了什麼事，這是接下來要改善的重點。
+
+7. [封裝 HTTP 請求邏輯](#封裝-http-請求邏輯)
+   概念：因為 Checkout 和 Meals 兩個組件都需要處理 loading、success、error 這三種請求狀態，所以決定把共用邏輯抽出來，寫成一個叫 useHttp 的 Custom Hook。
+
+8. [實作 `sendHTTPRequest` 的錯誤處理](#實作-sendhttprequest-的錯誤處理)
+   概念：sendHTTPRequest 這個輔助函式會用 response.ok 判斷請求是否成功，失敗時要先解析回應內容取出 resData.message，讓拋出的錯誤訊息比單純的一句「發生錯誤」更具體。
+
+9. [在 `useHttp` 中實作 `sendRequest` 函式](#在-usehttp-中實作-sendrequest-函式)
+   概念：useHttp 內部再包一層 sendRequest 函式，負責呼叫 sendHTTPRequest 並用 try...catch 處理錯誤，同時用 useState 建立 data、isLoading、error 三個狀態，讓組件能感知請求進度並重新渲染。
+
+10. [`sendRequest` 的調用時機](#sendrequest-的調用時機)
+    概念：sendRequest 本身只是個待命的函式，要嘛在 useEffect 裡讓它掛載時自動執行（例如 Meals），要嘛在使用者操作時手動呼叫（例如 Checkout 送出表單），兩種情境需求不同。
+
+11. [優化 `useHttp` 的自動請求行為](#優化-usehttp-的自動請求行為)
+    概念：把 sendRequest 用 useCallback 包起來能避免函式每次渲染都重建、造成 useEffect 無限觸發，接著再依 config.method 是不是 GET（或完全沒傳 config）來決定要不要自動送出請求。
+
+12. [重構 `Meals.jsx` 以簡化邏輯](#重構-mealsjsx-以簡化邏輯)
+    概念：有了會自動處理 GET 請求的 useHttp 之後，Meals.jsx 裡原本手寫的 useEffect 和 useState 就可以整個刪掉，改成直接解構 useHttp 回傳的 data 當作餐點列表。
+
+13. [嘗試解決 `map` 錯誤的初步方案](#嘗試解決-map-錯誤的初步方案)
+    概念：因為 data 初始值是 undefined，第一次渲染就對它呼叫 .map() 會直接崩潰；後來發現用 initialData 參數讓 data 一開始就是空陣列，才是真正治本的解法，而不是調整 isLoading 的初始值。
+
+14. [遇到新的執行期錯誤：`map` 不是函式](#遇到新的執行期錯誤map-不是函式)
+    概念：解決 undefined 問題後又跳出 loadedMeals.map is not a function 的錯誤，一路追查發現是 sendRequest 忘記加 await，導致 data 被設成一個還沒解析完的 Promise，補上 await 才修好。
+
+15. [優化使用者體驗 (UX)](#優化使用者體驗-ux)
+    概念：確認資料能正常抓取後，回頭補上 Error 組件（可傳入 title、message 兩個 props）與置中的載入文字，讓 Meals 組件能依 isLoading、error 狀態切換畫面呈現。
+
+16. [在 Checkout 組件中使用 `useHttp`](#在-checkout-組件中使用-usehttp)
+    概念：Checkout 用 useHttp 打 POST 到 /orders，requestConfig 要定義在組件外面避免每次渲染都產生新物件（否則會觸發無窮迴圈），後來又讓 sendRequest 能接收動態的 data 參數，跟原本的 config 合併成完整的請求內容再送出。
+
+17. [簡化 `Checkout` 的提交邏輯](#簡化-checkout-的提交邏輯)
+    概念：訂單送出期間用 isSending 狀態切換按鈕文字（顯示「Sending order data...」防止使用者重複點擊），送出成功或失敗後再各自渲染成功訊息 Modal 或 Error 組件。
+
+18. [規劃訂單完成後的流程](#規劃訂單完成後的流程)
+    概念：訂單送出成功後除了關閉結帳視窗，還要在 CartContext 裡新增 CLEAR_CART 這個 action 來清空購物車，並用 clearData 把 useHttp 的 data 重設，避免下次結帳一開始就直接看到上次的成功訊息。
+
+19. [傳統表單提交處理方式](#傳統表單提交處理方式)
+    概念：把原本用 onSubmit 搭配 handleSubmit 的寫法，改用 React 的 Form Actions（函式改名叫 checkoutAction，綁在 form 的 action 屬性上），並確認整套訂單流程在新寫法下依然正常運作。
+
+20. [在 Form Actions 中簡化載入狀態管理](#在-form-actions-中簡化載入狀態管理)
+    概念：改用 useActionState(checkoutAction, null) 可以直接拿到 pending 狀態，不用再自己手動管理 isLoading；過程中也要注意 Action 函式的參數順序變成 (prevState, formData)，這是最容易踩坑的地方。
+
+21. [理解 Redux (Understanding Redux)](#理解-redux-understanding-redux)
+    概念：Redux（搭配簡化用的 Redux Toolkit）是用來管理「跨組件」或「全應用程式」狀態的工具，跟只能處理單一組件內部資料的 useState、useReducer 不同，狀態可以分成 local、cross-component、app-wide 三種層級。
+
+22. [簡化狀態管理的工具](#簡化狀態管理的工具)
+    概念：React Context 雖然能避免 prop drilling，但專案一大就會遇到 Provider 深層巢狀或單一巨大 Context 難以維護的問題，加上它比較適合低頻率更新的資料（像主題、登入狀態），資料變動太頻繁時效能會變差，這就是 Redux 派上用場的地方。
+
+23. [狀態管理的替代方案：Redux](#狀態管理的替代方案redux)
+    概念：Redux 的核心是一個全應用程式唯一的 Store，組件用訂閱機制取得資料切片，但不能直接改動裡面的內容；要改變狀態得先 dispatch 一個描述「發生了什麼事」的 Action 物件，交給 Reducer 函式算出新的 state 取代舊的，形成一個完整的資料流循環。
+
+-----------------------------------------------------------
+
 ### 表單提交處理策略
 
 - 為了將訂單請求發送到後端，需要處理表單的提交行為

@@ -10,6 +10,142 @@ tags:
 hovernotes-id: doc_6a7b34e8-94c6-40ee-b498-fda61c9b3bc3
 ---
 
+# 目錄
+
+1. [Vanilla CSS 的優缺點與作用域污染問題](#vanilla-css-優缺點)
+   概念：說明純 CSS 沒有作用域的先天限制，class name 會污染全域，導致不同元件的樣式互相覆蓋，並帶出後續各種樣式方案要解決的核心痛點。
+
+2. [React 內聯樣式（Inline Style）的語法與應用](#react-內聯樣式的正確語法)
+   概念：教你用雙大括號 `{{ }}` 寫內聯樣式、屬性要改成 camelCase 命名，以及內聯樣式雖然沒有作用域污染問題，但維護性差、不能寫偽類與媒體查詢。
+
+3. [條件式樣式與動態 Class Name 切換](#內聯樣式的進階應用-條件式樣式)
+   概念：用模板字串（Template Literals）與三元運算子，依據 state 動態決定要套用哪個 class 或哪個內聯樣式值，並示範固定 class 與動態 class 同時套用的寫法。
+
+4. [Vanilla CSS 優缺點總結與樣式污染實例](#vanilla-css-的優缺點分析)
+   概念：統整 Vanilla CSS 的優點（簡單、免安裝）與缺點（無作用域、易衝突），並用實際範例證明樣式污染問題確實存在。
+
+5. [CSS Modules 完整教學](#css-modules)
+   概念：介紹 CSS Modules 如何在打包時自動產生獨一無二的 class name 來解決作用域問題，包含啟用方式、匯入用法、條件式 class 與動態組合，以及它的優缺點。
+
+6. [Styled Components 安裝與基礎語法](#styled-components)
+   概念：介紹如何安裝並用標籤模板（Tagged Templates）語法建立樣式化元件，把 CSS 直接寫進 JavaScript 元件裡，達到元件與樣式合一。
+
+7. [Styled Components 的動態樣式與條件式樣式實作](#styled-components-的動態樣式實作)
+   概念：說明如何在樣式化元件中用 props 動態計算 CSS 值（例如依 `isInvalid` 切換顏色），以及用 Transient Props（`$` 前綴）避免自訂屬性被誤傳到原生 DOM 元素上。
+
+8. [Styled Components 的進階功能：媒體查詢與偽選擇器](#styled-components-的進階功能)
+   概念：示範在 Styled Components 裡直接寫巢狀規則、偽類（如 `:hover`）與媒體查詢，不用額外切換到 CSS 檔案就能處理響應式與互動樣式。
+
+9. [從其他方案遷移至 Styled Components 的實戰](#遷移按鈕樣式至-styled-components)
+   概念：把既有的 Vanilla CSS 或 CSS Modules 樣式，一步步轉換成 Styled Components 寫法，並整理出可複用的樣式化元件、討論遷移過程中容易踩的陷阱。
+
+10. [建立複合組件 CustomInput 封裝表單邏輯](#建立複合組件-custominput)
+   概念：把 label、input 與樣式包裝成一個可重用的 `CustomInput` 複合元件，處理 props 轉發與錯誤狀態顯示，示範 React 開發中「找出可複用機會」的核心心法，最後總結 Styled Components 的優缺點。
+
+11. [Tailwind CSS 安裝與入門設定](#tailwind-css)
+   概念：介紹 Tailwind 這種工具類別優先（Utility-First）的 CSS 框架，包含安裝套件、初始化設定檔與啟用後的開發體驗差異。
+
+12. [Tailwind CSS 佈局實作（Flexbox）](#使用-tailwind-css-實作-flexbox-佈局)
+   概念：用 Tailwind 內建的工具類別實作 Flexbox 佈局、微調圖片文字樣式，並示範如何搭配自訂 CSS 與匯入自訂字體。
+
+13. [Tailwind CSS 工具類別與響應式設計](#使用-tailwind-css-的工具類別)
+   概念：整理 Tailwind 常用的顏色、間距等工具類別，並說明如何用響應式斷點（如 `md:`、`lg:`）與狀態前綴（如 `hover:`）處理不同螢幕尺寸與互動狀態。
+
+14. [將組件從 Styled Components 轉換為 Tailwind CSS](#從-styled-component-轉換為-react-組件)
+   概念：實際把先前用 Styled Components 寫的 Input、按鈕、容器等元件，逐一改寫成 Tailwind 工具類別，包含條件式樣式切換與互動效果的實作。
+
+15. [Tailwind CSS 優缺點總結與各方案比較](#tailwind-css-的優缺點)
+   概念：整理 Tailwind 的優缺點（開發速度快 vs. JSX 變得冗長），並把 Vanilla CSS、CSS Modules、Styled Components、Tailwind 四種方案做整體比較。
+
+16. [Debugging React Apps：錯誤訊息解讀與定位](#debugging-react-apps)
+   概念：用一個投資計算器（Investment Calculator）專案示範怎麼讀懂 React 丟出的錯誤訊息、理解呼叫堆疊（Stack Trace），一步步追蹤資料流找出錯誤根源。
+
+17. [邏輯錯誤除錯與瀏覽器開發者工具應用](#邏輯錯誤-vs-執行錯誤)
+   概念：區分邏輯錯誤與執行錯誤的差異，並教你用瀏覽器開發者工具下斷點（Breakpoints）、逐步執行（Step-by-step）、檢查變數值來定位問題。
+
+18. [React Strict Mode 與 React DevTools](#使用-react-strict-mode)
+   概念：介紹 Strict Mode 如何幫忙提早發現潛在問題（例如重複執行副作用），以及 React DevTools 瀏覽器擴充功能怎麼檢視組件樹、props 與 hooks 狀態。
+
+19. [Refs & Portals 專案：Player 組件與 useRef 基礎](#refs-portals)
+   概念：從「倒數計時」專案的 Player 組件出發，示範從受控組件（Controlled Component）過渡到用 `useRef` 直接存取 DOM 節點的宣告式與命令式開發差異。
+
+20. [useRef 與 State 的核心差異與使用限制](#ref-與-state-的核心差異)
+   概念：說明修改 ref 不會觸發畫面重新渲染、ref 適合存不影響 UI 的值，並提醒存取 ref 內部屬性時要注意可能為 `undefined` 的風險。
+
+21. [TimerChallenge 組件實作與計時器邏輯](#timerchallenge-組件實作)
+   概念：實作一個倒數計時挑戰元件，處理多個計時器實例並存、啟動與停止的切換邏輯，以及動態 CSS class 套用等細節。
+
+22. [useRef 管理計時器 ID 解決多實例衝突](#使用-useref-管理計時器-id)
+   概念：說明為什麼用組件外部變數存 `setTimeout` 的 ID 會在多個實例間互相覆蓋，改用 `useRef` 讓每個元件都有各自獨立、不會觸發重新渲染的計時器 ID。
+
+23. [ResultModal 組件與 dialog 元素程式化控制](#新增結果彈出視窗-result-modal)
+   概念：新增結果彈出視窗，用原生 `<dialog>` 元素搭配 ref 呼叫 `showModal()` 以程式化方式開啟對話框，才能正確顯示 Backdrop 背景遮罩。
+
+24. [forwardRef 傳遞 Ref 至子組件](#在舊版-react-中接收-ref)
+   概念：說明自訂組件預設不能直接接收 `ref`，要透過 `forwardRef`（或新版 React 直接把 ref 當一般 prop）才能把 ref 轉發到內部的原生 DOM 元素上，並討論這種做法帶來的耦合風險。
+
+25. [useImperativeHandle 暴露組件 API](#使用-useimperativehandle-暴露組件-api)
+   概念：用 `useImperativeHandle` 自訂暴露給外部的方法（例如 `open()`），讓父元件只能呼叫指定的 API，而不是直接拿到整個內部 DOM 節點，達成更好的封裝與解耦。
+
+26. [計時器挑戰功能擴充：剩餘時間追蹤與分數計算](#擴充計時器挑戰功能)
+   概念：改用 `setInterval` 持續追蹤剩餘時間、用衍生狀態驅動 UI 顯示，並修正計時器結束時的 bug，完成 ResultModal 裡的分數計算與重置邏輯。
+
+27. [React Portals 概念與 createPortal 實作](#react-portals-概念介紹)
+   概念：說明 JSX 結構與實際渲染出來的 DOM 位置可以不同，用 `createPortal` 把 Modal 這類元件渲染到 `index.html` 裡指定的其他節點上，避免巢狀結構造成的視覺限制。
+
+28. [實作專案：ProjectsSidebar 與 NewProject 組件架構](#實作專案-進階概念練習)
+   概念：從零開始搭建一個專案管理應用，建立 `ProjectsSidebar`、`NewProject`、通用 `Input` 組件的結構與樣式，是後續所有功能的基礎架構。
+
+29. [NoProjectSelected 與 Button 通用組件、條件渲染](#建立-noprojectselected-組件)
+   概念：建立「尚未選擇專案」時顯示的畫面，抽出可重用的通用 `Button` 組件，並開始規劃 `App` 組件要如何依狀態做條件渲染（Conditional Rendering）。
+
+30. [App 組件狀態設計與新增專案處理邏輯](#app-組件的狀態設計)
+   概念：設計 `App` 組件要用什麼 state 表示「目前選中的專案」，追求最小化狀態（不重複存放可以衍生出來的資料），並實作觸發新增專案畫面的處理函式。
+
+31. [使用 Refs 收集表單輸入值與資料提升（Lifting State Up）](#建立新專案功能規劃)
+   概念：在 `NewProject` 表單裡用多個 ref 收集輸入值，示範自訂元件要轉發 ref 才能讓父層存取到內部 input，並透過資料提升把新專案資料往上傳給 `App` 組件、渲染到 `ProjectsSidebar` 列表。
+
+32. [表單驗證與通用 Modal 組件（含 Portal 實作）](#newproject-輸入驗證實作)
+   概念：替 `NewProject` 加上多欄位驗證，並打造一個高靈活度、用 `useImperativeHandle` 暴露 `open()` 方法、透過 Portal 提升層級的通用 `Modal` 組件，用來顯示錯誤訊息。
+
+33. [SelectedProject 組件：專案詳情顯示與選擇/刪除邏輯](#實作專案選擇與檢視功能)
+   概念：實作 `SelectedProject` 顯示專案詳情與日期格式化，用 `find` 方法從 state 衍生出目前選中的專案物件，並完成側邊欄的高亮效果與刪除專案功能（`filter` 方法）。
+
+34. [Tasks 任務管理功能：新增、顯示與刪除](#實作任務-tasks-管理功能)
+   概念：新增 `Tasks` 與 `NewTask` 組件，從一開始用 ref 收集輸入慢慢改成受控組件（雙向綁定），實作新增、列表渲染與刪除任務的完整資料流。
+
+35. [進階狀態管理：Prop Drilling 問題與組件組合（Component Composition）](#進階狀態管理-advanced-state-management)
+   概念：用線上商店（Online Shop）專案示範 Prop Drilling（把 props 一層層往下傳到用不到的中間組件）的問題，並介紹用 `children` prop 做組件組合來部分解決這個困擾。
+
+36. [React Context API 基礎：建立、提供與消耗 Context](#react-context-api)
+   概念：介紹 Context API 如何解決 Prop Drilling，包含建立 Context 物件、用 Provider 提供 `value`，以及用 `useContext` 或新的 `use` Hook 來消耗 Context 的值。
+
+37. [將 Context 與 State 連結實現動態更新](#設定-context-預設值的開發優勢)
+   概念：把 Context 的初始值改成連結到實際的 state 與更新函式，讓子組件不只能讀取購物車資料，還能透過 Context 觸發加入購物車等狀態更新。
+
+38. [Context.Consumer、重新渲染機制與重構實戰](#context-物件的替代組件)
+   概念：介紹另一種較舊的 `Context.Consumer` 用法並比較它與 `useContext` 的開發體驗，說明 Context 值變動會讓所有消耗它的組件重新渲染，最後把 `Header`、`CartModal`、`Cart` 都整合成用 Context 讀取狀態。
+
+39. [建立獨立 CartContextProvider 組件與 useReducer 管理複雜狀態](#context-api-的潛在限制)
+   概念：為了避免所有邏輯都塞在 `App` 組件裡，把狀態邏輯抽成獨立的 `CartContextProvider`；接著改用 `useReducer` 搭配 `dispatch` 與 Action（含 `type` 和 `payload`）來管理更複雜的購物車狀態更新。
+
+40. [Dealing with Side Effects：Place Picker 專案與地理位置排序](#dealing-with-side-effects)
+   概念：進入「地點選擇器」（Place Picker）新專案，用 `navigator.geolocation` 取得使用者位置後依距離排序地點清單，並開始辨識這種「跟 UI 渲染不直接相關」的副作用（Side Effect）。
+
+41. [副作用問題：無窮迴圈與 useEffect 介紹](#使用-usestate-解決非同步資料同步問題)
+   概念：說明直接在元件函式裡呼叫非同步 API 並用 `setState` 更新會造成無窮渲染迴圈，進而帶出 `useEffect` 這個 Hook，用依賴陣列（Dependencies Array）控制副作用何時該重新執行。
+
+42. [使用 localStorage 實作資料持久化](#資料持久化-使用-localstorage)
+   概念：用瀏覽器的 `localStorage` 搭配 `JSON.stringify()` 把選過的地點 ID 存起來，重新整理頁面後也能讀回資料，並實作刪除已選地點時同步移除 ID 的邏輯。
+
+43. [從 ID 初始化已選地點與優化 useEffect 使用](#應用程式啟動時的資料初始化)
+   概念：說明應用程式啟動時如何用 `find()` 方法把存起來的 ID 陣列轉換回完整的地點物件，並討論這個初始化邏輯其實不需要額外用 `useEffect`，直接在渲染時計算即可、順便優化執行時機。
+
+44. [Modal 組件命令式轉聲明式控制與 useEffect 同步 DOM API](#深入研究-useeffect-與依賴陣列)
+   概念：把 Modal 開關邏輯從命令式的 `open()`/`close()` 方法改成用一個 `open` prop 聲明式控制，並用 `useEffect` 依據這個 prop 去同步呼叫原生 `showModal()`／`close()`，示範副作用如何用來銜接 React 狀態與瀏覽器原生 DOM API。
+
+-----------------------------------------------------------
+
 ### Vanilla CSS: 優缺點
 
 - **優點**

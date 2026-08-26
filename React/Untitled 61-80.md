@@ -1,4 +1,65 @@
 
+# 目錄
+
+1. [Tic-Tac-Toe 專案初始設定（頁首與靜態資源）](#tic-tac-toe-遊戲開發)
+   概念：從最簡單的頁面結構開始，說明 index.html 和 App.jsx 的分工，並示範用 public 資料夾放置不需要 state 的靜態圖片資源。
+
+2. [遊戲整體規劃與 App 元件基礎結構](#tic-tac-toe-遊戲開發規劃)
+   概念：規劃遊戲的三大構件（玩家、遊戲盤、日誌），並在 App 元件裡用巢狀 `<ol>` 搭出玩家列表與遊戲容器的雛形。
+
+3. [重構出 Player 元件並用 Props 傳遞資料](#為玩家列表添加編輯按鈕)
+   概念：發現兩位玩家的 Markup 幾乎一模一樣，於是抽出獨立的 `Player` 元件，用 `name`、`symbol` 兩個 props 讓內容變成可配置的。
+
+4. [useState 入門：編輯狀態與重新渲染機制](#實作編輯功能與狀態管理)
+   概念：用 `useState` 建立 `isEditing` 狀態來控制編輯模式的切換，並說明呼叫 setter 後 React 只會重新渲染該元件與其子元件，每個元件實例的狀態彼此獨立、互不影響。
+
+5. [動態按鈕文字與 Input 初始值](#動態按鈕文字-button-caption)
+   概念：用三元運算子讓按鈕文字隨 `isEditing` 在 Edit 和 Save 之間切換，並用 `value` prop 讓 input 顯示玩家目前的名稱。
+
+6. [根據舊狀態更新狀態（Updater Function）](#根據舊狀態更新狀態-updating-state-based-on-old-state)
+   概念：說明 React 的狀態更新其實是「排程」而非立即執行，若新狀態要依賴舊狀態，得改成傳入 updater function，不然連續呼叫兩次 setter 只會抓到同一個過期的值。
+
+7. [受控組件：讓 Input 真正能編輯與儲存](#player-組件的編輯問題)
+   概念：直接把 `value` 綁死在 prop 上會讓輸入框打不了字，改用第二個 state 搭配 `onChange` 事件讀 `event.target.value`，才做出真正能編輯的受控組件。
+
+8. [遊戲盤組件（GameBoard）的建立](#遊戲盤組件-gameboard-component)
+   概念：建立 `GameBoard` 元件，用巢狀陣列 `initialGameBoard` 代表 3x3 棋盤，再透過兩層 `map` 動態渲染出九宮格按鈕。
+
+9. [GameBoard 狀態管理與不可變更新](#gameboard)
+   概念：用 `useState` 管理棋盤狀態並實作 `handleSelectSquare`，同時強調更新陣列時要先複製一份新的（連內層陣列也要複製），不能直接改動舊狀態。
+
+10. [狀態提升：讓 Player 與 GameBoard 共用 activePlayer](#玩家狀態的高亮顯示)
+    概念：把目前玩家（`activePlayer`）狀態提升到共同祖先 `App` 元件，透過 props 往下傳給 `Player` 和 `GameBoard`，再用回呼函式讓子元件觸發父層的回合切換邏輯。
+
+11. [建立 Log 元件並發現重複的狀態](#建立-log-元件)
+    概念：新增 `Log` 元件顯示回合紀錄，卻發現 `App` 的 `gameTurns` 和 `GameBoard` 自己的棋盤狀態內容重疊，於是決定把棋盤邏輯也一併往上提升。
+
+12. [把棋盤狀態完全搬進 App、記錄每回合資料](#狀態提升-lifting-state-up-2)
+    概念：正式把棋盤管理邏輯從 `GameBoard` 搬進 `App`，並把每一回合存成包含 `player` 和 `square` 座標的物件，放進 `gameTurns` 陣列的最前面。
+
+13. [從遊戲回合推導遊戲盤面](#從遊戲回合推導遊戲盤面)
+    概念：不再用 state 儲存棋盤本身，而是每次渲染時用 `for...of` 迴圈把 `gameTurns` 轉換（推導）成棋盤陣列，這樣就只需要維護一份資料來源。
+
+14. [Log 元件實作與 Template Literals](#log-元件實作)
+    概念：用 `turns.map()` 把每一回合轉成 `<li>`，顯示玩家與座標，並用樣板字面值組出 row、col 的組合當作唯一的 key。
+
+15. [用衍生狀態取代多餘的 activePlayer](#app-組件中的現有狀態)
+    概念：發現 `activePlayer` 其實可以從 `gameTurns` 算出來，不用另開一個 state，於是把推導邏輯抽成元件外部的 `deriveActivePlayer` 函式，讓算現在的玩家和算舊狀態的玩家共用同一份邏輯。
+
+16. [防止重複點擊按鈕](#防止重複點擊按鈕)
+    概念：在按鈕上加 `disabled` prop，只要該格已經有玩家符號就讓按鈕失效，避免同一格被重複點擊。
+
+17. [定義獲勝組合資料](#檢查玩家獲勝狀態)
+    概念：在元件外部定義 `WINNING_COMBINATIONS` 常數，用陣列中的陣列存放所有可能獲勝的三格座標組合，準備拿來跟目前棋盤比對。
+
+18. [從資料推導是否獲勝，棋盤邏輯提升到 App](#動態檢查獲勝狀態)
+    概念：說明不需要額外的 `hasWinner` state，因為每次重新渲染都能從 `gameTurns` 直接算出是否獲勝，並把原本放在 `GameBoard` 的棋盤計算邏輯搬到 `App`，讓獲勝檢查能直接拿到棋盤資料。
+
+19. [完成獲勝判定邏輯](#存取獲勝組合的方格符號)
+    概念：用 `combination[i].row` / `column` 取出每個獲勝組合對應的三個格子符號，檢查它們是否非空且彼此相等，成立就記錄 `winner`，再用 `&&` 短路運算子顯示遊戲結束訊息。
+
+-----------------------------------------------------------
+
 ## Tic-Tac-Toe 遊戲開發
 
 ### 初始頁面結構設定

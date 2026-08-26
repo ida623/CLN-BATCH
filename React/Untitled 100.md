@@ -10,6 +10,124 @@ tags:
 hovernotes-id: doc_8f498f04-857b-4ab4-b5ae-8dca50e739ff
 ---
 
+# 目錄
+
+1. [Redux 與非同步副作用的核心限制](#redux-與非同步與副作用的整合)
+   概念：Reducer 一定要是同步、無副作用的純函式，不能直接在裡面發送 HTTP 請求；如果後端（例如 Firebase）只是單純存資料而沒有邏輯，前端就得自己想辦法在別的地方處理這些轉換與同步。
+
+2. [後端能力與前端邏輯負擔的取捨](#解決後端邏輯缺失的方案)
+   概念：後端如果能處理資料轉換（像用 Firebase Functions 或自建 API），前端就能輕鬆很多；反之後端只會單純存檔，前端就得自己在組件裡先轉換好資料再發送請求。
+
+3. [組件內購物車資料轉換與避免直接修改狀態](#在組件中實作資料轉換邏輯)
+   概念：在組件裡處理購物車轉換邏輯時，絕對不能直接改 `useSelector` 拿到的原始物件，必須用展開運算子和 `slice()` 一層層建立副本，最後用 `replaceCart` 整包覆寫狀態。
+
+4. [Fat Reducers vs Fat Components vs Fat Actions](#fat-reducers-vs-fat-components-vs-fat-actions)
+   概念：判斷邏輯該放哪裡的核心原則——同步無副作用的資料轉換交給 Reducer，非同步或有副作用的程式碼（像 API 請求）則放在 Action Creator 或組件裡，千萬別放進 Reducer。
+
+5. [用 useEffect 把購物車同步到 Firebase](#在組件層級銜接同步更新與非同步請求)
+   概念：先用 `dispatch` 讓 Reducer 完成同步的狀態更新，再透過 `useEffect` 監聽 `cart` 的變化，用 `PUT` 請求把最新的購物車快照整包覆寫到 Firebase，這就是「胖 Reducer、瘦組件」的同步模式。
+
+6. [非同步請求的通知回饋與 try...catch 錯誤處理](#處理非同步請求的回應與錯誤)
+   概念：透過 Redux 的 `ui-slice` 新增 `showNotification` reducer，在請求開始、成功、失敗三個時間點分別 dispatch 對應的 pending/success/error 通知，並用 `try...catch` 統一攔截各種可能出錯的情況。
+
+7. [在 App.js 渲染通知並防止啟動時覆蓋後端資料](#在-appjs-中選取通知狀態)
+   概念：用 `useSelector` 從 `state.ui.notification` 取出通知內容並條件式渲染，同時用一個組件外部的 `isInitial` 變數擋掉第一次掛載時的自動同步，避免把後端既有資料洗掉。
+
+8. [Redux Thunk 的基本概念與結構](#redux-thunk-概念)
+   概念：Thunk 是一種特殊的 Action Creator，回傳的不是 action 物件而是另一個函式，讓我們能在真正 dispatch action 之前，先執行非同步請求或其他邏輯。
+
+9. [把非同步邏輯搬進 Thunk 並完善錯誤處理](#thunk-執行環境的特性)
+   概念：因為 Thunk 本質上就是一般的 JavaScript 函式，可以自由使用 `async/await`；把 `fetch` 邏輯封裝進獨立的 `sendRequest`，再用 `try...catch` 包起來統一處理 pending、success、error 三種通知。
+
+10. [在 App.js 中改用 Thunk 式 Action Creator](#在-appjs-中清理與整合邏輯)
+    概念：組件端只需要 `dispatch(sendCartData(cart))` 一行，完全不用管 HTTP 請求細節或通知邏輯，Redux Toolkit 的 `dispatch` 會自動辨識並執行回傳函式的 Thunk。
+
+11. [建立 fetchCartData 並抽離 cart-actions.js](#實作購物車資料抓取fetch-cart)
+    概念：為了在應用程式啟動時抓回購物車資料，新增 `fetchCartData` 這個 Thunk；同時把所有非同步 Action Creator 從 `cart-slice.js` 搬到獨立的 `cart-actions.js`，避免 slice 檔案越來越肥。
+
+12. [用 replaceCart 回填資料並避免多餘同步](#處理從-firebase-獲取的購物車資料)
+    概念：因為用 `PUT` 送出的資料快照跟 Firebase 存的結構完全一致，抓回來後可以直接 `dispatch(replaceCart(data))`；另外用 `changed` 這個旗標區分「初始化」跟「使用者操作」，避免一開機就多打一次不必要的 PUT 請求。
+
+13. [資料清洗、修正計算 bug 與容錯處理](#firebase-資料結構中的屬性污染問題)
+    概念：發送前只挑出 `items`、`totalQuantity` 等必要欄位，避免把 `changed` 這種前端專用的旗標也存進後端；同時修正 `removeItemFromCart` 忘記同步扣總價的 bug，並在購物車為空時用 `|| []` 防止 `.find()` 撞到 `undefined`。
+
+14. [Redux 學習總結與 DevTools 除錯技巧](#redux-非同步任務與副作用總結)
+    概念：回顧「邏輯該放哪裡」的整體原則，並介紹 Redux DevTools 這個瀏覽器擴充功能，能看到每個 action 的 diff、payload 與完整 state，甚至還能用時間旅行功能跳回任一個歷史狀態。
+
+15. [SPA 的特性與為什麼需要客戶端路由](#單頁應用程式-single-page-applications-spa)
+    概念：SPA 的所有畫面變化都在同一頁完成、URL 不會變，這雖然流暢卻讓使用者無法直接連結到特定內容；React Router 就是為了在保有 SPA 優勢的同時，讓不同 URL 能對應不同畫面。
+
+16. [安裝 react-router-dom 並定義第一組路由](#路由學習專案設定)
+    概念：透過 `npm install react-router-dom` 安裝套件後，用 `createBrowserRouter` 搭配路由定義物件陣列，設定 `path` 與 `element` 兩個關鍵屬性，把網址路徑對應到指定的頁面組件。
+
+17. [用 RouterProvider 啟動路由並新增頁面](#使用路由物件-router-object)
+    概念：把 `createBrowserRouter` 建立的路由實例傳入 `RouterProvider` 的 `router` prop 才能真正啟動路由系統，之後每新增一個頁面（如 `/products`），只要在陣列裡多加一組 `path`/`element` 就能生效。
+
+18. [JSX 風格的路由定義與改用 Link 導覽](#使用-createroutesfromelements-定義路由)
+    概念：除了物件陣列，也能用 `createRoutesFromElements` 搭配 `<Route>` 以 JSX 語法定義路由；另外原生 `<a>` 標籤會讓瀏覽器整頁重新載入，必須改用 `Link` 組件的 `to` 屬性才能維持 SPA 的無刷新體驗。
+
+19. [建立導覽列、巢狀路由 Outlet 與佈局樣式](#擴展應用程式功能)
+    概念：把 `MainNavigation` 包進根路由的 `RootLayout`，用 `children` 定義巢狀路由、`<Outlet />` 標記子路由要渲染的位置，這樣所有頁面就能共用同一份導覽列，再搭配 CSS Modules 統一佈局間距。
+
+20. [自定義錯誤頁面與 errorElement 冒泡處理](#處理路由錯誤-error-handling)
+    概念：訪問不存在的路徑預設會顯示很陽春的錯誤畫面，透過在路由物件加上 `errorElement` 指向自訂的 `ErrorPage`，錯誤會沿著路由層級往上冒泡，直到遇到第一個設定了 `errorElement` 的路由為止。
+
+21. [用 NavLink 實作連結的啟動狀態](#導覽連結的視覺回饋與狀態顯示)
+    概念：`NavLink` 的 `className`（或 `style`）可以接收一個函式，透過解構出的 `isActive` 動態套用樣式；根路徑連結因為所有路徑都以 `/` 開頭而永遠啟動，必須加上 `end` 屬性才能精確比對。
+
+22. [用 useNavigate 實作程式化導覽](#命令式路由-imperative-routing)
+    概念：像表單送出成功後需要自動跳轉這種情境，就得靠 `useNavigate` 取得 `navigate` 函式，在程式邏輯裡主動觸發導覽，而不是等使用者點擊連結。
+
+23. [動態路徑段與 useParams 取得參數](#產品頁面內容擴充)
+    概念：與其為每個商品手動定義一條路由，不如用冒號寫成 `:productId` 這種動態路徑段，再透過 `useParams()` 拿到物件裡對應的實際值，讓同一個組件能顯示不同商品的詳情。
+
+24. [用 map 動態渲染產品列表連結](#在產品頁面實作導覽連結)
+    概念：把靜態的一堆 `<Link>` 改成用 `PRODUCTS.map()` 搭配樣板字串動態產生每個商品的連結路徑，這樣不管資料陣列有幾筆商品，程式碼都不用跟著改。
+
+25. [巢狀路由中絕對路徑與相對路徑的衝突](#嵌套路由中的絕對路徑衝突)
+    概念：子路由如果用 `/` 開頭的絕對路徑，會跟父路由的路徑產生衝突甚至直接報錯；改成不加斜線的相對路徑，React Router 就會自動把子路徑接在父路徑後面。
+
+26. [Link 的 relative 屬性、`..` 導覽與 Index Route](#link-組件的進階屬性)
+    概念：`Link` 的 `relative` 屬性決定 `..` 是相對於「路由定義」還是「目前網址」解析，兩者在兄弟路由的情境下結果不同；另外子路由留空 `path` 或設定 `index: true`，都能讓它成為父路徑的預設內容。
+
+27. [路由進階練習專案的環境設定](#路由進階練習專案設定)
+    概念：這個練習專案分成 `backend-api` 與 `react-frontend` 兩部分，兩邊都要分別 `npm install` 並各自 `npm start`，且開發過程中兩台伺服器都得保持運作，前端才抓得到資料。
+
+28. [路由基礎練習：建立頁面與路由定義](#路由基礎練習挑戰)
+    概念：練習任務是建立五個頁面組件（Home、Events、EventDetail、NewEvent、EditEvent）並定義對應路由，過程中會遇到靜態路徑（如 `/events/new`）跟動態路徑（`/events/:eventId`）同時存在時，React Router 會自動選擇比較具體的那一個。
+
+29. [練習：根佈局、Index Route 與 NavLink 啟動狀態](#建立根佈局路由-root-layout-route)
+    概念：把導覽列包進 `RootLayout` 並用 `index: true` 取代 `path: '/'`，接著把原生 `<a>` 換成 `Link`／`NavLink`，同時用 `end` 屬性解決根路徑連結永遠處於啟動狀態的問題。
+
+30. [事件列表、巢狀事件佈局與 useEffect 抓資料的痛點](#下一步在-events-頁面實作事件列表)
+    概念：在 Events 頁面渲染虛擬事件清單並用 `useParams` 顯示詳情頁 ID，再建立 `EventsRootLayout` 讓事件相關頁面共用導覽列；同時發現用 `useEffect` 抓資料得等組件先渲染完才開始請求，會拖慢畫面反應。
+
+31. [用 loader 與 useLoaderData 取代 useEffect](#使用-loader-優化資料獲取)
+    概念：把路由定義加上 `loader` 屬性後，React Router 會在導覽開始的當下就先執行資料獲取，等資料備妥才渲染組件；組件端只要呼叫 `useLoaderData()` 就能拿到結果，完全不用再手動管理 `isLoading`、`error` 這些 state。
+
+32. [useLoaderData 的作用範圍與模組化 loader](#useloaderdata-的使用範圍)
+    概念：`useLoaderData` 只能在設定 `loader` 的路由本身或其子層組件使用，往上層（例如 `RootLayout`）拿不到；為了不讓 `App.js` 塞滿邏輯，通常會把 `loader` 函式定義在對應的頁面檔案裡再匯入。
+
+33. [loader 的執行時機與 useNavigation 載入回饋](#資料流向範例從後端到前端)
+    概念：`loader` 是在使用者開始導覽的瞬間就被呼叫，而非等組件掛載後才執行；透過在後端加上 `setTimeout` 模擬延遲，可以觀察到搭配 `useNavigation` 的 `state === 'loading'` 就能顯示「Loading...」提示。
+
+34. [loader 直接回傳 Response 物件的自動解析機制](#loader-的資料回傳特性)
+    概念：`loader` 不只能回傳陣列或物件，也能直接回傳 `fetch` 產生的 `Response` 物件，React Router 會自動幫忙解析並把最終資料透過 `useLoaderData` 交給組件，不用手動呼叫 `response.json()`。
+
+35. [loader 拋出錯誤與 errorElement 的冒泡機制](#loader-的錯誤處理)
+    概念：與其在 `loader` 裡回傳一個 `{ isError: true }` 的物件讓組件自己判斷，不如直接 `throw` 錯誤，React Router 會自動捕捉並沿路由層級往上冒泡到最近的 `errorElement`。
+
+36. [依 HTTP 狀態碼精確處理錯誤與 useRouteError](#進階錯誤處理區分錯誤類型)
+    概念：用 `throw json({...}, { status: 500 })` 拋出帶狀態碼的錯誤，再透過 `useRouteError()` 取得的 `error.status` 與 `error.data` 判斷是 404 還是 500，讓 `ErrorPage` 能顯示更精確的訊息；`json` 輔助工具還能省下手動 `JSON.stringify` 的麻煩。
+
+37. [事件詳情頁的 Link 導覽與 loader 動態參數](#從錨點元素轉換為-link-組件)
+    概念：把 `EventsList` 裡的 `<a>` 換成 `Link`，並在 `EventDetail.js` 的 `loader` 函式中透過自動注入的 `{ params }` 取得 `eventId`，用它組出正確的 API 請求網址。
+
+38. [loader 拋出 json 錯誤、註冊 loader 與巢狀共用](#在-loader-中處理非同步回應)
+    概念：`loader` 請求失敗時用 `throw json({...}, { status: 500 })` 拋出詳細錯誤；別忘了要在路由物件裡明確加上 `loader: xxxLoader` 才會生效；最後把 `:eventId` 拉出來當成不帶 `element` 的父路由，讓詳情頁與編輯頁共用同一個 `loader`，不用重複寫兩次。
+
+-----------------------------------------------------------
+
 ### Redux 與非同步與副作用的整合
 
 - **目標：實現資料持久化**

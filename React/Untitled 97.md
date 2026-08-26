@@ -10,6 +10,184 @@ tags:
 hovernotes-id: doc_a90f5972-8e78-4e4b-8dba-e72a3a255356
 ---
 
+# 目錄
+
+1. [Behind The Scenes: Understanding & Optimizing React](#behind-the-scenes-understanding-optimizing-react)
+   概念：這是全章節的開場，說明為什麼要理解 React 底層運作機制，才能寫出正確又有效能的程式碼，而不是憑感覺亂猜。
+
+2. [React 除錯工具](#react-除錯工具)
+   概念：介紹 React DevTools 的 Profiler 功能，用 Flamegraph 和 Ranked Chart 找出哪些組件重新渲染、耗費多少時間，藉此定位效能瓶頸；接著說明 `memo()` 如何讓元件在 props 沒變時跳過重新渲染。
+
+3. [組件組合（Component Composition）優化](#組件組合component-composition優化)
+   概念：透過 children prop 做組件組合重構，把會變動的狀態往下層隔離，減少不必要的父組件重新渲染範圍。
+
+4. [`Counter` 組件內的重新渲染分析](#counter-組件內的重新渲染分析)
+   概念：分析 `IconButton` 等子組件為什麼即使加了 `memo()` 還是會重新渲染，原因是父組件內每次都建立新的函式，導致 props 參照不穩定。
+
+5. [Counter 組件內部的重複執行問題](#counter-組件內部的重複執行問題)
+   概念：用 `useMemo` 快取像 `isPrime` 這種昂貴運算的結果，只有依賴項真的改變時才重新計算，避免每次渲染都白白算一次。
+
+6. [React 的底層運作機制](#react-的底層運作機制)
+   概念：解釋 React 用 Virtual DOM 做快照比對（diffing），只更新真正變動的部分，不會整個真實 DOM 重新刷新，這也是效能好的關鍵。
+
+7. [React 狀態的作用域與生命週期](#react-狀態的作用域與生命週期)
+   概念：說明每個組件實例的 state 是各自獨立的，並實作 `CounterHistory` 組件把單一數值改成一份歷史紀錄列表。
+
+8. [列表渲染中的狀態錯位問題](#列表渲染中的狀態錯位問題)
+   概念：探討用 `index` 當 `key` 會造成刪除或新增項目時狀態跳到錯誤的項目上，改用物件裡唯一的 ID 當 `key`，React 才能正確追蹤每個項目的狀態。
+
+9. [`App` 組件的狀態傳遞觀察](#app-組件的狀態傳遞觀察)
+   概念：比較用 `useEffect` 同步 props 到 state，或是直接改變 `key` 強制 React 卸載重建組件，兩種方式都能達到「重置組件」的效果。
+
+10. [狀態更新的排程機制](#狀態更新的排程機制)
+    概念：說明 `setState` 其實是非同步排程執行的，要用函式形式更新（updater function）才能保證連續多次更新的正確性，並簡介 React 的 batching 批次處理機制與 Million.js 這個效能工具。
+
+11. [Class-Based Components](#class-based-components)
+    概念：介紹類別組件的歷史背景與存在原因，並實際把一個函式組件改寫成 class 組件，說明 `render()` 方法與 class 語法的基本寫法。
+
+12. [類別組件中的狀態初始化](#類別組件中的狀態初始化)
+    概念：說明 class 組件要在 `constructor` 裡用 `this.state` 初始化狀態，`this.setState()` 是用「合併」而不是「取代」整個狀態物件，並解決方法裡 `this` 常常是 undefined 的綁定問題。
+
+13. [類別組件的生命週期 (Class Components Lifecycle)](#類別組件的生命週期-class-components-lifecycle)
+    概念：介紹 class 組件的生命週期方法（對應函式組件裡 `useEffect` 的各種情境），像是 `componentDidUpdate`、`componentDidMount`、`componentWillUnmount`，並實作 `UserFinder` 組件示範如何避免無限迴圈。
+
+14. [類別組件中的 Context API](#類別組件中的-context-api)
+    概念：說明 class 組件不能用 `useContext`，只能透過 `Context.Consumer` 或 `static contextType` 存取 context 資料，並比較兩者的差異與限制。
+
+15. [函數式組件的主導地位](#函數式組件的主導地位)
+    概念：總結函式組件現在已經是主流，但錯誤邊界（Error Boundary）目前還是只能用 class 組件實作，因為需要 `componentDidCatch` 這個生命週期方法。
+
+16. [實作專案：Place Picker](#實作專案-place-picker)
+    概念：介紹 Place Picker 這個實作專案的目標與簡易 dummy backend 架構，並說明 `fetch` 怎麼發送請求、回傳 Promise，要用 `.then()` 串接、`.json()` 解析回應資料。
+
+17. [在函數式組件中直接呼叫 `fetch` 的風險](#在函數式組件中直接呼叫-fetch-的風險)
+    概念：直接在函式組件本體呼叫 `fetch` 會造成無限重新渲染，要改用 `useEffect` 才能只在必要時執行一次，接著再重構成 `async`/`await` 語法。
+
+18. [模擬網路延遲與使用者體驗觀察](#模擬網路延遲與使用者體驗觀察)
+    概念：加入 loading 狀態顯示載入中 UI，改善資料還沒回來時的使用者體驗，並利用瀏覽器 Geolocation API 取得目前位置，把地點依距離排序。
+
+19. [程式碼重構：抽離資料獲取邏輯](#程式碼重構抽離資料獲取邏輯)
+    概念：把重複的 `fetch` 相關邏輯抽成獨立的 `http.js` 工具函式，讓組件只需要呼叫封裝好的 API 函式，程式碼更精簡好維護。
+
+20. [實作地點選擇的持久化功能](#實作地點選擇的持久化功能)
+    概念：把使用者選擇的地點同步送到後端儲存，示範用 `fetch` 的第二個參數物件設定 method、headers、body 等進階請求配置。
+
+21. [使用者體驗優化：樂觀更新 (Optimistic Updating)](#使用者體驗優化樂觀更新-optimistic-updating)
+    概念：先假設請求會成功、立刻更新畫面（樂觀更新），如果後端請求真的失敗才把狀態回滾並顯示錯誤訊息，讓操作起來感覺更即時。
+
+22. [Custom Hooks](#custom-hooks)
+    概念：介紹 Custom Hook 的核心規則（只能在組件或其他 Hook 裡呼叫、命名要以 `use` 開頭），並把重複的資料獲取邏輯抽成 `useFetch` 這個 Custom Hook。
+
+23. [進一步提升 `useFetch` 的通用性](#進一步提升-usefetch-的通用性)
+    概念：讓 `useFetch` 可以傳入初始值、暴露更新函式給外部使用，並把排序邏輯包成 Promise 傳進去，最後用一個 Hook 就搞定資料獲取加後續處理。
+
+24. [React Forms](#react-forms)
+    概念：進入表單處理章節，說明表單的核心任務是讀取、驗證、送出資料，並示範用 `event.preventDefault()` 阻止瀏覽器預設的表單提交行為（會整頁重新整理）。
+
+25. [管理表單輸入狀態](#管理表單輸入狀態)
+    概念：用 `useState` 追蹤每個輸入欄位的值（受控組件），並把多個欄位狀態合併成一個物件，搭配通用的變動處理器（change handler）減少重複程式碼。
+
+26. [使用 Refs 管理表單輸入](#使用-refs-管理表單輸入)
+    概念：改用 `useRef` 直接讀取輸入框的值，不用每次按鍵都觸發重新渲染，但也提到這種方式在處理複雜表單與重置時的限制。
+
+27. [利用 `FormData` 簡化資料提取](#利用-formdata-簡化資料提取)
+    概念：用瀏覽器內建的 `FormData` API 搭配 `Object.fromEntries()` 一次取出所有欄位資料，並用 `getAll()` 處理像 checkbox 這種可能有多個相同 name 的欄位。
+
+28. [使用者輸入驗證 (User Input Validation)](#使用者輸入驗證-user-input-validation)
+    概念：介紹表單重置的方式（reset 按鈕、`form.reset()`），並開始實作每次按鍵都驗證輸入值、即時更新錯誤提示 UI 的做法。
+
+29. [失去焦點驗證 (Validate on Lost Focus)](#失去焦點驗證-validate-on-lost-focus)
+    概念：改成在欄位失去焦點（`onBlur`）時才顯示錯誤訊息，用 `touched` 狀態記錄使用者是否互動過該欄位，避免一開始就整片紅字嚇到人。
+
+30. [基於引用 (Ref-based) 的表單處理](#基於引用-ref-based-的表單處理)
+    概念：改用 `useRef` 讀值的表單只在提交當下才驗證，統一管理整份表單的錯誤狀態並在提交時顯示提示訊息。
+
+31. [簡化表單處理流程](#簡化表單處理流程)
+    概念：利用 HTML 原生的 `required`、`type="email"` 等屬性讓瀏覽器自動驗證，搭配自訂邏輯處理瀏覽器驗證不到的情境，例如確認密碼是否相符。
+
+32. [簡單表單中的程式碼重複問題](#簡單表單中的程式碼重複問題)
+    概念：把重複的 label 加 input 的 JSX 抽成通用的 `Input` 組件，用展開運算子把多餘的 props 轉發給底層 input 元素，大幅簡化表單的 JSX 結構。
+
+33. [驗證邏輯的工具化 (Validation Utilities)](#驗證邏輯的工具化-validation-utilities)
+    概念：把驗證函式抽成獨立的工具檔案方便重用，接著把整個輸入欄位的值、觸碰狀態、驗證邏輯全部外包進 `useInput` 這個 Custom Hook。
+
+34. [在組件中使用整合後的驗證狀態](#在組件中使用整合後的驗證狀態)
+    概念：在組件裡用多個 `useInput` 實例管理各欄位，並示範怎麼傳入額外參數，處理像「兩個密碼要相符」這種需要跨欄位比對的驗證情境。
+
+35. [使用 Form Actions](#使用-form-actions)
+    概念：介紹 React 19 的 Form Actions，把 action 函式直接綁在 form 上，React 會自動收集 `FormData` 並傳入函式，不用再手動呼叫 `preventDefault()`。
+
+36. [實作 Form Action 中的驗證邏輯](#實作-form-action-中的驗證邏輯)
+    概念：把驗證邏輯搬進 action 函式裡執行，用陣列收集所有錯誤訊息，處理下拉選單、核取方塊等多種欄位類型的驗證。
+
+37. [使用 `useActionState` 獲取 Form Action 的回傳值](#使用-useactionstate-獲取-form-action-的回傳值)
+    概念：用 `useActionState` 這個 Hook 包裝 action 函式，讓它能把 action 內回傳的資料（例如錯誤訊息）帶回組件顯示，同時提供 `isPending` 狀態。
+
+38. [解決表單提交後的資料遺失問題](#解決表單提交後的資料遺失問題)
+    概念：表單提交失敗後 React 預設會清空所有輸入框，要手動用 `defaultValue` 把先前輸入的值回填，避免使用者要重新輸入一次；也處理 checkbox、select 這些元素狀態保留的細節。
+
+39. [結合 Form Actions 與 `useActionState` 管理表單](#結合-form-actions-與-useactionstate-管理表單)
+    概念：討論 action 函式該定義在組件內部還是外部（外部效能較好但拿不到 props），並介紹 OpinionBoard 這個新的練習專案。
+
+40. [實作練習：結合驗證與提交](#實作練習結合驗證與提交)
+    概念：在 `NewOpinion` 組件的 action 函式裡實作完整驗證邏輯，用 `useActionState` 顯示錯誤並保留使用者已輸入的內容。
+
+41. [處理成功案例：提交資料至後端](#處理成功案例提交資料至後端)
+    概念：把 action 函式改成 `async` 函式，裡面用 `await` 呼叫後端 API，React 19 原生就支援非同步的 Form Action。
+
+42. [異步提交後的 UI 行為](#異步提交後的-ui-行為)
+    概念：處理非同步提交完成後的畫面同步，並用 `useFormStatus` 這個 Hook 讓提交按鈕知道表單目前是否正在送出中，藉此停用按鈕、顯示載入提示，避免使用者重複點擊。
+
+43. [擴展資料提交的場景](#擴展資料提交的場景)
+    概念：說明同一個 form 裡可以有多個按鈕各自綁定不同的 `formAction`，並為每個按鈕各自建立一個 `useActionState`，分別追蹤各自的 pending 狀態。
+
+44. [實作樂觀更新：使用 `useOptimistic`](#實作樂觀更新使用-useoptimistic)
+    概念：用 `useOptimistic` 這個 Hook 讓畫面先立即顯示「假設會成功」的結果，等真正的非同步 action 完成後再用實際資料覆蓋，操作起來更即時流暢。
+
+45. [React Form Actions 核心總結](#react-form-actions-核心總結)
+    概念：統整整個 Form Actions 章節學到的 `useActionState`、`useFormStatus`、`useOptimistic` 等工具，比較傳統手動處理表單和用這些新 API 的差異。
+
+46. [實作專案：食物訂購應用程式 (Food Order App)](#實作專案食物訂購應用程式-food-order-app)
+    概念：介紹「食物訂購」這個實作挑戰的功能目標，建議先看完成品再從核心功能開始逐步搭建，並實作最上方的 `Header` 組件。
+
+47. [建立 `Meals` 組件](#建立-meals-組件)
+    概念：建立 `Meals` 組件，用 `fetch` 搭配 `useEffect` 向後端取得餐點列表資料，並處理錯誤與資料解析、渲染成列表。
+
+48. [建立 `MealItem` 組件以強化顯示內容](#建立-mealitem-組件以強化顯示內容)
+    概念：把每筆餐點資料渲染成獨立的 `MealItem` 組件，決定 props 該怎麼傳，並根據 CSS 需求調整 HTML 結構。
+
+49. [價格格式化預備](#價格格式化預備)
+    概念：用 `Intl.NumberFormat` 實作價格格式化工具函式，並打造可重用的 `Button` 組件，用 rest properties 讓它能接受不同樣式與屬性。
+
+50. [管理購物車資料](#管理購物車資料)
+    概念：建立 `CartContext`，規劃購物車資料的結構與 Provider 組件，讓不同組件都能共享和操作購物車狀態，不必一層層傳遞 props。
+
+51. [實作 `cartReducer` 函式](#實作-cartreducer-函式)
+    概念：用 `useReducer` 搭配 action 模式管理購物車的複雜狀態邏輯，實作 `ADD_ITEM`、`REMOVE_ITEM` 這些 action type，並強調不能直接變更（mutate）現有狀態，要用展開運算子建立副本。
+
+52. [在 `CartContextProvider` 中整合 `useReducer`](#在-cartcontextprovider-中整合-usereducer)
+    概念：把 `addItem`、`removeItem` 等操作方法包進 context 的 value 物件，並在 `App` 組件裡用 `CartContextProvider` 包裹整個應用程式，實現全域狀態共享。
+
+53. [利用 Context 實現跨組件資料共享](#利用-context-實現跨組件資料共享)
+    概念：在 `Header` 組件裡透過 Context 讀取購物車資料，用 `reduce` 方法加總所有項目的數量，動態顯示在圖示旁邊。
+
+54. [建立可重複使用的 Modal 組件](#建立可重複使用的-modal-組件)
+    概念：用 React 的 `createPortal` 把 Modal 渲染到 DOM 樹的不同位置，搭配 `useRef`、`useEffect` 實作程式化開關 dialog 元素，並建立 `Cart` 組件顯示購物車內容與總金額。
+
+55. [建立 `UserProgressContext` 用於追蹤使用者流程](#建立-userprogresscontext-用於追蹤使用者流程)
+    概念：新增一個 Context 專門記錄使用者目前處於哪個流程階段（瀏覽、購物車、結帳），統一控制各個 Modal 的顯示與隱藏，並串接開關購物車 Modal 的完整互動邏輯。
+
+56. [實作 Cart Item 樣式](#實作-cart-item-樣式)
+    概念：建立 `CartItem` 組件顯示單一項目的名稱、數量、金額，並透過 props 把 Context 的增減方法傳進來，讓組件保持單純、不直接依賴 Context。
+
+57. [購物車 Modal 的功能規劃與顯示邏輯](#購物車-modal-的功能規劃與顯示邏輯)
+    概念：規劃「前往結帳」按鈕的條件式顯示，並建立 `Checkout` 組件顯示訂單總額與收件資訊表單，重用之前做好的 `Input` 組件。
+
+58. [在 `Checkout.jsx` 中連結 `UserProgressContext` 控制 Modal](#在-checkoutjsx-中連結-userprogresscontext-控制-modal)
+    概念：把「前往結帳」「返回」「關閉」等按鈕與 `UserProgressContext` 串接起來，並修正 Escape 鍵關閉 Modal 後，流程狀態沒有正確重置的 bug，完成整個訂購流程。
+
+-----------------------------------------------------------
+
 ## Behind The Scenes: Understanding & Optimizing React
 
 - 本章節將深入探討 React 的底層運作原理，以幫助編寫正確且最佳化的程式碼

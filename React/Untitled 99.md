@@ -10,6 +10,109 @@ tags:
 hovernotes-id: doc_cd0022f9-7bc7-4a4d-9514-f5dc3138d21b
 ---
 
+# 目錄
+
+1. [Redux 環境建置與核心概念總覽](#redux-基礎專案設定)
+   概念：從零開始建一個空專案，用 Node.js 執行 JavaScript 並安裝 redux 套件，同時認識 Store、Reducer、Action、Subscription 這四個 Redux 核心角色如何互相搭配運作。
+
+2. [手刻 Store、Reducer 與訂閱機制](#建立-redux-store)
+   概念：用 `createStore()` 建立 Store、寫一個回傳新狀態物件的 Reducer，並透過 `subscribe()` 註冊訂閱函式；也會踩到「初始化時 state 是 undefined」這個經典錯誤，解法是替 state 參數加上預設值。
+
+3. [Dispatch Action 觸發訂閱與狀態更新](#執行結果與訂閱觸發時機)
+   概念：用 `store.dispatch({ type: 'increment' })` 送出一個帶有 `type` 識別碼的 action，讓 Reducer 算出新狀態並自動觸發訂閱函式，完整走過一次 Redux 的核心循環。
+
+4. [Reducer 依 Action Type 分流處理](#在-reducer-中處理不同類型的-action)
+   概念：在 Reducer 裡用 `if` 判斷 `action.type` 來決定要 increment 還是 decrement，並且一定要在不匹配任何條件時回傳原本的 state，避免狀態被意外清空。
+
+5. [從純 JS Redux 過渡到 React 專案](#redux-的核心概念與通用性)
+   概念：確認 Redux 本身跟框架無關、可以用在任何 JavaScript 專案後，接著把先前寫的計數器邏輯搬進一個真正的 React 專案，並安裝 redux 與 react-redux 兩個套件。
+
+6. [在 React 專案中建立 Store 與 Reducer](#自行實作練習建立-store-與-reducer)
+   概念：在 `src/store/index.js` 裡用 `import { createStore } from 'redux'` 重新實作計數器的 Store 與 Reducer，並強調 Reducer 必須是純函式、不能直接修改傳入的 state。
+
+7. [使用 Provider 連結 Redux 與 React](#匯出-redux-store-以供-react-使用)
+   概念：從 react-redux 匯入 `Provider` 元件，把 `store` 當作 prop 傳入並包住整個 App，讓被包裹範圍內的所有組件都能存取這個 Redux store。
+
+8. [useSelector 讀取 Redux 狀態](#react-組件與-redux-的互動能力)
+   概念：`useSelector` 接收一個選擇器函式從 state 裡挑出想要的切片（例如 `state.counter`），而且會自動幫組件建立訂閱，狀態一變就自動重新渲染、卸載時也會自動清除訂閱。
+
+9. [useDispatch 發送 Action：Increment/Decrement 按鈕](#準備-dispatch-actions)
+   概念：用 `useDispatch()` 拿到 dispatch 函式，替 Increment 與 Decrement 按鈕各寫一個處理函式來送出對應的 action，並提醒 dispatch 的 `type` 字串一定要跟 Reducer 裡的完全一致。
+
+10. [類別組件與 connect 函式](#類別組件-class-based-components-簡介)
+    概念：因為 Hooks 沒辦法用在類別組件裡，改用 react-redux 的 `connect` 這個高階組件，搭配 `mapStateToProps` 把 state 映射成 props、`mapDispatchToProps` 把 dispatch 包成 props，並記得處理類別方法裡 `this` 的綁定問題。
+
+11. [Action Payload：攜帶動態數值](#攜帶額外數值的-action)
+    概念：與其為每個數值都建立一個 action type（不可行的做法），不如讓 action 物件多帶一個像 `amount` 這樣的自訂屬性，Reducer 再用 `action.amount` 讀出來做動態運算。
+
+12. [新增 showCounter 狀態與 toggle Action](#決定狀態管理方式redux-vs-local-state)
+    概念：討論狀態該放 Redux 還是 local state 之後，決定把「是否顯示計數器」也當作全域狀態，新增 `showCounter` 欄位並實作 `toggle` action，同時提醒每次回傳新狀態都要把其他欄位一起帶上。
+
+13. [多重 useSelector 提取與條件渲染](#useselector-的多重數據提取)
+    概念：同一個組件裡可以多次呼叫 `useSelector` 分別取出 `counter` 與 `showCounter`，再用 `&&` 運算子依照 `show` 的值決定要不要渲染計數器區塊。
+
+14. [Reducer 的狀態覆蓋機制與不可變性原則](#reducer-回傳物件的覆蓋機制)
+    概念：Redux 是用新物件「整個取代」舊狀態而不是合併，所以回傳時漏掉某個欄位它就會消失；也再三強調絕對不能直接修改（mutate）state，一定要回傳全新的物件。
+
+15. [傳統 Redux 的痛點：拼寫錯誤與大型 Reducer 檔案](#redux-使用的複雜度與現代化趨勢)
+    概念：說明大型專案裡容易因為 action type 字串打錯字或撞名而出錯，Reducer 檔案也會隨著功能增加越寫越長，於是引入用常數（例如 `INCREMENT`）取代寫死字串來降低風險。
+
+16. [Redux Toolkit 與 createSlice 簡化開發](#redux-toolkit-簡介)
+    概念：安裝 `@reduxjs/toolkit` 之後用 `createSlice` 一次定義 `name`、`initialState` 與 `reducers`，底層靠 Immer 套件讓你可以直接寫 `state.counter++` 這種「看似修改」的程式碼，卻依然保持不可變性。
+
+17. [configureStore 整合多個 Slice](#從-slice-到-store-的整合)
+    概念：`configureStore` 取代 `createStore`，接收的是一個設定物件；當有多個 slice 時，把它們各自的 `.reducer` 放進 `reducer` 這個物件裡，Redux Toolkit 會自動合併成一個根 reducer。
+
+18. [slice.actions 與自動生成的 Action Creator](#使用-createslice-簡化-action-識別)
+    概念：`createSlice` 會自動幫每個 reducer 方法產生對應的 Action Creator，存放在 `slice.actions` 裡，呼叫這些方法就能自動產生帶有正確 `type` 與 `payload` 的 action 物件，不用再手動拼字串。
+
+19. [Redux Toolkit 重構總結與組件整合](#從傳統-redux-到-redux-toolkit-的重構總結)
+    概念：把原本手寫的 Redux 邏輯整個改用 Redux Toolkit 重構一輪，驗證 increment/decrement/increase/toggle 功能都正常，並在 `App.js` 用 `Fragment` 把 Header、Auth、Counter 等多個組件組在一起。
+
+20. [建立 authSlice 管理身份驗證狀態](#擴展-demo-應用程式的狀態管理)
+    概念：為了遵守「關注點分離」原則，另外建立一個獨立的 `authSlice` 專門管理 `isAuthenticated`，實作 `login` 與 `logout` 兩個 reducer，並把它跟 `counterSlice` 一起註冊進同一個 store。
+
+21. [多 Slice 下的資料路徑鑽取與條件渲染](#利用-redux-狀態進行條件渲染)
+    概念：合併多個 slice 後，讀取狀態要多鑽一層路徑，例如 `state.auth.isAuthenticated`，第一層是 `configureStore` 裡設定的 key，第二層才是 slice 內部真正的屬性名稱。
+
+22. [Header 組件依登入狀態條件渲染](#使用-useselector-提取特定狀態)
+    概念：在 `Header` 組件裡用 `useSelector` 讀出 `isAuth`，依照登入與否決定要不要顯示整個導覽列（`<nav>`），確保未登入的使用者完全看不到這些選單項目。
+
+23. [實作登入與登出功能](#實作登入表單提交處理)
+    概念：替表單加上 `onSubmit` 並呼叫 `event.preventDefault()` 避免頁面重新整理，接著在 `loginHandler` 裡 dispatch `authActions.login()`，登出則在 `Header` 裡 dispatch `authActions.logout()`。
+
+24. [拆分 Slice 至獨立檔案的模組化架構](#多切片狀態管理架構)
+    概念：當 `store/index.js` 越來越肥大時，把 `counterSlice` 跟 `authSlice` 各自搬到獨立檔案（如 `counter.js`、`auth.js`），`index.js` 只負責匯入 reducer 並組合進 `configureStore`，讓專案結構更容易維護。
+
+25. [Redux 學習總結與 Context 的取捨](#redux-學習總結)
+    概念：回顧從手刻 Redux 到改用 Toolkit 的完整學習路徑，並比較什麼時候該用輕量的 React Context、什麼時候該上 Redux——狀態簡單就用 Context，複雜或效能要求高再考慮 Redux。
+
+26. [Reducer 純函式限制與非同步任務處理方案](#redux-進階主題預覽)
+    概念：Reducer 必須維持純函式、無副作用、同步執行這三個規則，所以像 HTTP 請求這種非同步任務不能寫在 Reducer 裡，只能放在組件的 `useEffect` 或是 action creator 裡處理。
+
+27. [ReduxCart 專案啟動與 ui-slice 建立](#reduxcart-實作專案)
+    概念：開始實作一個練習用的購物車專案，規劃出切換購物車顯示、加入商品、增減數量等功能，並先建立 `ui-slice.js` 用 `toggle` reducer 控制 `cartIsVisible` 這個布林狀態。
+
+28. [configureStore 設定與購物車顯示切換](#在-indexjs-中建立-redux-store)
+    概念：在 `store/index.js` 用 `configureStore` 註冊 `ui` reducer 並透過 `Provider` 提供給整個 App，接著在 `CartButton` 用 `useDispatch` 送出 `uiActions.toggle()`，再用 `useSelector` 讀出 `cartIsVisible` 來控制購物車面板要不要顯示。
+
+29. [建立 cart-slice：addItemToCart 與 removeItemFromCart](#建立-cart-slice)
+    概念：設計購物車的 `items`、`totalQuantity`、`totalAmount` 初始狀態，`addItemToCart` 用 `find` 判斷商品是否已存在來決定要新增還是累加數量，`removeItemFromCart` 則用 `filter` 產生新陣列來移除或用遞減處理數量。
+
+30. [動態產品資料與加入購物車功能](#產品數據動態化與-redux-管理規劃)
+    概念：把 `Products.js` 的硬編碼資料改成用 `map()` 動態渲染的 `DUMMY_PRODUCTS` 陣列，並在 `ProductItem` 裡用物件簡寫語法把 `id`、`title`、`price` 整包當 payload dispatch 出去，確保加入購物車時資料完整。
+
+31. [同步更新 totalQuantity 並顯示於 CartButton](#更新購物車的總數量)
+    概念：修正 `addItemToCart` 與 `removeItemFromCart` 讓 `totalQuantity` 也跟著增減，再用 `useSelector` 讀出 `state.cart.totalQuantity`，讓購物車按鈕上的數字徽章能即時反映正確件數。
+
+32. [Card 組件動態渲染購物車清單與驗證優化](#在-card-組件中實作動態購物車清單)
+    概念：用 `useSelector` 讀出 `state.cart.items` 並 `map()` 成多個 `CartItem`，過程中要把 Redux 內部欄位名稱（如 `name`、`totalPrice`）轉換成組件預期的 props（如 `title`、`total`），並修正比對 `id` 錯用 `itemId` 的 bug、補上 `key` 屬性優化渲染。
+
+33. [CartItem 的增減與移除項目功能](#在-cartitem-中實作動作發送)
+    概念：讓購物車項目裡的「+」「−」按鈕真正動起來，把 `id` 一路從 `Card` 傳到 `CartItem`，再分別 dispatch `cartActions.addItemToCart()` 與 `cartActions.removeItemFromCart(id)` 完成數量增減與移除。
+
+-----------------------------------------------------------
+
 ### Redux 基礎專案設定
 
 - 建立一個全新的空資料夾作為專案根目錄

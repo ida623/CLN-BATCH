@@ -10,6 +10,82 @@ tags:
 hovernotes-id: doc_cab4c071-67de-4fda-a388-61a1bcd7d8f4
 ---
 
+# 目錄
+
+1. [DeleteConfirmation 組件功能擴充](#deleteconfirmation-組件功能擴充)
+   概念：用 `setTimeout` 讓刪除確認 Modal 三秒後自動觸發 onConfirm，並透過條件渲染確保組件只在 Modal 開啟時才掛載，避免定時器在應用程式啟動時就提早跑掉。
+
+2. [尚未解決的問題：定時器清理](#尚未解決的問題定時器清理)
+   概念：光靠條件渲染還不夠，使用者取消操作後定時器仍會在背景繼續跑；改用 `useEffect` 並在裡面 `return` 一個清理函式，搭配 `clearTimeout`，讓組件卸載或重新執行前能正確停止舊的定時器。
+
+3. [將函式作為依賴項的風險](#將函式作為依賴項的風險)
+   概念：JavaScript 的函式本質上是物件，每次組件重新渲染都會產生內容相同但引用不同的新函式，若把這種函式放進 `useEffect` 依賴陣列又在裡面更新狀態，就可能形成無窮迴圈。
+
+4. [使用 `useCallback` 解決無窮迴圈](#使用-usecallback-解決無窮迴圈)
+   概念：用 `useCallback` 包裹函式，讓它在依賴項沒變時保持同一個引用，這樣子組件裡的 `useEffect` 就不會誤判「函式變了」而不斷重新執行。
+
+5. [新功能規劃：Modal 中的倒數進度條](#新功能規劃modal-中的倒數進度條)
+   概念：為了讓使用者看到刪除倒數的視覺提示，用 `<progress>` 元素搭配 `remainingTime` 狀態與 `setInterval` 每 10 毫秒更新一次，做出平滑的進度條動畫。
+
+6. [正確實作定時器清理](#正確實作定時器清理)
+   概念：`setInterval` 一樣要在 `useEffect` 的清理函式中用 `clearInterval` 停掉，否則背景會一直跑；接著把這段頻繁更新的邏輯拆成獨立的 `ProgressBar` 組件，避免拖累整個 Modal 的渲染效能。
+
+7. [Working with Effects: Practice & Dive Deeper](#working-with-effects-practice--dive-deeper)
+   概念：從零開始建立一個 Quiz 測驗專案，練習 Effects 的實際應用，先做出 `Header` 組件，再讓 `Quiz` 組件用 `useState` 管理目前題目索引與使用者答案。
+
+8. [準備題目資料](#準備題目資料)
+   概念：建立 `questions.js` 存放題目與選項（第一個選項固定是正確答案），並發現 `activeQuestionIndex` 其實可以直接用 `userAnswers.length` 推導出來，不需要額外的 state（衍生狀態 Derived State）。
+
+9. [實作題目呈現邏輯](#實作題目呈現邏輯)
+   概念：把題目文字與選項渲染到畫面上，用 `.map()` 產生選項按鈕，並學到 `onClick` 裡要用箭頭函式包住處理函式（而不是直接呼叫），才不會在渲染當下就立即執行。
+
+10. [App 組件：整合與渲染](#app-組件整合與渲染)
+    概念：用 React Fragment 讓 `App` 同時輸出 `Header` 和 `Quiz`，調整 HTML 結構讓版面置中，並確認整個測驗流程能跑，但也發現題目答完後索引會超出範圍導致崩潰。
+
+11. [Quiz 組件：功能優化規劃](#quiz-組件功能優化規劃)
+    概念：用 `.sort(() => Math.random() - 0.5)` 把選項洗牌、新增 `quizIsComplete` 衍生狀態判斷測驗是否結束，並把依賴「還有題目」的邏輯都移到 `if (quizIsComplete)` 判斷之後，避免存取不存在的題目而崩潰。
+
+12. [Quiz 組件：新增限時回答功能](#quiz-組件新增限時回答功能)
+    概念：把倒數計時邏輯抽成獨立的 `QuestionTimer` 組件，透過 `timeout`／`onTimeout` props 接收設定，內部用 `useState` 加 `useEffect`（`setTimeout` 加 `setInterval`）做出進度條動畫，並學到要用函式形式更新狀態才能拿到最新的剩餘時間。
+
+13. [Quiz 組件：整合 `QuestionTimer`](#quiz-組件整合-questiontimer)
+    概念：把 `QuestionTimer` 接進 `Quiz` 後發現計時器一直被重新設定，透過 `console.log` 和 React Strict Mode 抽絲剝繭，找出原因是父組件每次渲染都會產生新的 `onTimeout` 函式引用。
+
+14. [使用 `useCallback` 穩定函式引用](#使用-usecallback-穩定函式引用)
+    概念：把 `handleSelectAnswer` 和 `handleSkipAnswer` 都包上 `useCallback` 並設好依賴陣列，讓它們的引用保持穩定，才能安全地當作 `onTimeout` 傳給 `QuestionTimer` 而不觸發重複執行。
+
+15. [React Strict Mode 的行為](#react-strict-mode-的行為)
+    概念：開發模式下 Strict Mode 會刻意執行兩次 Effect 來抓出沒清理乾淨的副作用，藉此揪出計時器重複啟動的 bug；最後用 `key={activeQuestionIndex}` 強迫 `QuestionTimer` 在換題時整個重新掛載，讓計時器確實歸零重來。
+
+16. [優化使用者回答後的互動流程](#優化使用者回答後的互動流程)
+    概念：新增 `answerState` 狀態，讓使用者選完答案後能先看到選中效果，用巢狀 `setTimeout` 依序延遲顯示對錯結果、再延遲切換到下一題，並調整 `activeQuestionIndex` 的算法讓畫面在回饋期間先停留在原題。
+
+17. [實作動態樣式回饋](#實作動態樣式回饋)
+    概念：依照 `answerState` 動態組出 CSS class 讓選項變色，同時發現點擊答案後畫面會「跳動」，追查發現是因為每次重新渲染都重新洗牌了選項順序，進而思考該用哪種方式讓洗牌結果穩定下來。
+
+18. [使用 `useRef` 管理非渲染數值](#使用-useref-管理非渲染數值)
+    概念：用 `useRef` 存放洗牌後的答案，讓它不會隨組件重新渲染而改變，但也因此在換題時選項卡住不更新；最終改用把邏輯抽成獨立的 `Answers` 組件、搭配 `key` 屬性，讓換題時組件自然重新掛載並重新洗牌。
+
+19. [React 控制台警告：重複的 Key 值](#react-控制台警告重複的-key-值)
+    概念：`QuestionTimer` 和 `Answers` 這兩個兄弟組件用了同一個 `key`（`activeQuestionIndex`）而跳出警告，解法是把它們包進一個新的 `Question` 組件，讓 `key` 統一放在 `Question` 這一層。
+
+20. [優化狀態管理：將狀態下移至 `Question` 組件](#優化狀態管理將狀態下移至-question-組件)
+    概念：把原本放在 `Quiz` 的答案選取狀態（`answer`）下移到 `Question` 組件內部自行管理，減少要往下傳的 props，並改用 `QUESTIONS[index]` 直接取資料而不是逐層傳遞 `questionText` 和 `answers`。
+
+21. [Quiz 組件：進一步精簡與優化](#quiz-組件進一步精簡與優化)
+    概念：`key` 是 React 保留字不能直接當一般 prop 用，所以改傳 `index` 這個自訂名稱；同時把「已選中」和「已判定對錯」拆成兩個階段顯示視覺回饋，並讓 `Answers` 組件在使用者選完答案後把按鈕都 disable 掉，避免重複選擇。
+
+22. [計時器功能的潛在問題](#計時器功能的潛在問題)
+    概念：計時器到期和答案判定的時間點會互相搶答，導致重複切換題目；解法是讓 `timer` 依照目前的作答階段動態變化（作答中、顯示結果、等待切題），並加上 `key={timer}` 強制重掛計時器組件，同時只有在使用者還沒作答時才會觸發自動跳題。
+
+23. [Question 組件功能總結](#question-組件功能總結)
+    概念：整合完成後的 `Question` 組件已經能穩定處理換題、視覺回饋與計時器；接著新增 `Summary` 組件，統計使用者答對、答錯、跳過的題目比例，並列出每一題的詳細作答紀錄，最後修正把 `answer`（可能重複為 `null`）當 `key` 導致的警告，改用 `index` 當 `key`。
+
+24. [Behind The Scenes](#behind-the-scenes)
+    概念：進入新的章節，準備深入研究 React 底層如何更新 DOM、組件函數的執行流程，以及如何運用這些知識避免不必要的重新渲染，並更進一步認識 `key` 屬性的角色。
+
+-----------------------------------------------------------
+
 ### DeleteConfirmation 組件功能擴充
 
 - 目標：實作自動化刪除流程
