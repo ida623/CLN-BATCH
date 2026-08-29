@@ -1,3 +1,54 @@
+# 目錄
+
+1. [PART 5：單句文法與詞彙](#part-5)
+   概念：這回 Part 5(101～130 題)以「詞性判斷」(形容詞/副詞/名詞辨位，如 105、109、110、116、119 題)和「同詞性選詞彙」(依語意挑出最適合的單字，如 104、106、108、111、113、117、118、123、126、127、130 題)為大宗，另外還有動詞時態/語態與非限定動詞用法(101、103、112、115、124 題)、代名詞格位與關係代名詞(102、120 題)、介系詞與連接詞/慣用語(107、114、121、122、128、129 題)，以及一題「the + 比較級…, the + 比較級…」的比較句型(125 題)。整體來說是文法概念(詞性、時態、代名詞、介系詞)搭配詞彙量的綜合考點。
+
+2. [PART 6：段落填空](#part-6)
+   概念：這回 Part 6 共 4 篇短文(通知、信件、報導、電子郵件)，每篇 4 題，考點組合大致是：1 題介系詞/連接詞或轉折語(慣用語、邏輯連接詞)、1～2 題詞彙/詞性選擇、以及每篇固定會有 1 題「選出空格中正確的句子」(需讀懂上下文邏輯，不是單純文法題)。
+   1. [Questions 131-134 refer to the following notice.](#questions-131-134-refer-to-the-following-notice)
+      概念：百貨公司會員通知，主題是「集點對帳單改成半年寄一次」。131 是選句子題(開頭主旨句)；132 考介系詞慣用語(apart from / in case of / regardless of / on behalf of)；133 考動詞詞彙(查詢/監控點數該用哪個字)；134 考轉折副詞(consequently / nevertheless / moreover / occasionally)。
+   2. [Questions 135-138 refer to the following letter.](#questions-135-138-refer-to-the-following-letter)
+      概念：電信公司寫信通知客戶新開通高速網路服務與優惠方案。135 考介系詞(on + 日期)；136 考動詞詞彙(improves / guarantees / demands / receives)；137 是選句子題(要呼應上下文的儲存服務優點)；138 考名詞詞彙(指帳單 statement)。
+   3. [Questions 139-142 refer to the following article.](#questions-139-142-refer-to-the-following-article)
+      概念：新聞報導市府篩選大樓整修開發商的進度。139 考名詞詞彙(入選剩三家用哪個字)；140 考形容詞詞彙(即將到來的簡報)；141 是選句子題；142 考詞性判斷(impression / impressionable / impressed / impressive，選形容詞修飾候選人)。
+   4. [Questions 143-146 refer to the following e-mail.](#questions-143-146-refer-to-the-following-e-mail)
+      概念：保險公司通知客戶公司即將改名。143 考動詞時態(過去持有保單至今用哪個時態)；144 考動詞詞彙(invite / extend / offer / inform)；145 是選句子題；146 考不定詞/動名詞用法(句首「To make an appointment」表目的)。
+
+3. [PART 7：閱讀理解](#part-7)
+   概念：這回 Part 7 從單篇短文一路排到三篇文章的組合題，題型涵蓋主旨/目的題、wh- 細節題、Not/True 是非題、同義詞題、推論題、句子插入題([1][2][3][4])以及掌握說話者意圖題("what does X mean when...?")，文體則包含廣告、簡訊/對話串、公告、報導、線上表單、備忘錄、網頁、電子郵件等常見多益商業文本。
+   1. [Questions 147-148 refer to the following advertisement.](#questions-147-148-refer-to-the-following-advertisement)
+      概念：鞋店 Shoe Gold 周年慶折扣廣告。147 是主旨題(廣告在賣什麼)；148 是 Not/True 題(哪個選項沒有被提到)。
+   2. [Questions 149-150 refer to the following text message chain.](#questions-149-150-refer-to-the-following-text-message-chain)
+      概念：家具業務員與客戶討論訂購辦公椅、會議桌的簡訊對話。149 是掌握意圖題("Nothing major" 是什麼意思)；150 是 Not 題(問客戶「不」想買的品項)。
+   3. [Questions 151-152 refer to the following notice.](#questions-151-152-refer-to-the-following-notice)
+      概念：公司布告欄貼文，員工想幫兒子找二手車。151 是目的題(為何寫這則通知)；152 是 Not/True 題。
+   4. [Questions 153-155 refer to the following article.](#questions-153-155-refer-to-the-following-article)
+      概念：新聞報導電視台 CCT News 聘請新主播的消息。153 是主旨題；154 是 wh- 細節題(關於 George McDonough 的敘述)；155 是 wh- 細節題(推算主角上一份工作是什麼職稱)。
+   5. [Questions 156-157 refer to the following online form.](#questions-156-157-refer-to-the-following-online-form)
+      概念：半程馬拉松線上報名表單。156 是 wh- 細節/推論題；157 是 wh- 細節題(對照表單勾選項目，判斷會寄到家裡的東西)。
+   6. [Questions 158-161 refer to the following information.](#questions-158-161-refer-to-the-following-information)
+      概念：Bennett House 參觀資訊網頁介紹。158 是細節題(文中給的建議)；159 是細節題(需額外付費的項目)；160 是 Not/True 題；161 是句子插入題(在 [1][2][3][4] 中選出句子該放的位置)。
+   7. [Questions 162-164 refer to the following memo.](#questions-162-164-refer-to-the-following-memo)
+      概念：辦公室裝修公告備忘錄。162 是目的題；163 是 wh- 細節/推論題(推算大樓樓層數)；164 是 wh- 細節題(三樓員工被要求做什麼)。
+   8. [Questions 165-167 refer to the following Web page.](#questions-165-167-refer-to-the-following-web-page)
+      概念：訂餐外送網站 Lunch on Demand 服務介紹。165 是 wh- 細節題；166 是 wh- 細節題(如何獲得折價券)；167 是 Not/True 題。
+   9. [Questions 168-171 refer to the following text-message chain.](#questions-168-171-refer-to-the-following-text-message-chain)
+      概念：劇組餐飲團隊討論續約與排班的簡訊對話。168 是掌握意圖題("It's fine by him" 意思)；169 是 wh- 細節題(需推算班表時間)；170 是推論題(關於節目 Timelight 的推論)；171 是 wh- 細節題(下週會發生的事)。
+   10. [Questions 172-175 refer to the following memo.](#questions-172-175-refer-to-the-following-memo)
+       概念：廣告部門一分為二、搬遷辦公室的備忘錄。172 是主旨題；173 是 wh- 細節題；174 是 True 題(關於廣告部門的正確敘述)；175 是句子插入題。
+   11. [Questions 176-180 refer to the following e-mails.](#questions-176-180-refer-to-the-following-e-mails)
+       概念：雙封信，朋友推薦插畫家給出版社編輯，編輯回信說明合作流程。176 是目的題；177 是同義詞題("concerns" 字義)；178 是推論題；179 是 True 題(關於繪本專案的正確敘述)；180 是 wh- 細節題(需交叉比對兩封信的流程天數，算出最終修改天數)。
+   12. [Questions 181-185 refer to the following memo and e-mail.](#questions-181-185-refer-to-the-following-memo-and-e-mail)
+       概念：雙篇，物流公司退休金提撥制度變更備忘錄，加上員工回信詢問調整比例、約時間討論。181 是推論題；182 是推論題(關於 Mr. Cartwright 年資的推論)；183 是 wh- 細節題；184 是 wh- 細節題(Mr. Cartwright 想做什麼)；185 是 wh- 細節/推論題(需對照收件人身分判斷 Ms. Chang 的角色)。
+   13. [Questions 186-190 refer to the following announcement, e-mail, and information.](#questions-186-190-refer-to-the-following-announcement-e-mail-and-information)
+       概念：三篇組合，材料工程師協會年度研討會公告、贊助廠商詢問票價的信、報名費用表。186 是 Not/True 題；187 是推論題(關於贊助廠商 Hiller Engineering 的推論)；188 是 wh- 細節題；189 是 wh- 細節題(關於報名費用的敘述)；190 是需跨三篇比對數字的細節題(算出同事該付多少票價)。
+   14. [Questions 191-195 refer to the following advertisement, e-mail, and program.](#questions-191-195-refer-to-the-following-advertisement-e-mail-and-program)
+       概念：三篇組合，飯店開幕廣告、研究中心詢問訂房訂宴會廳的信、頒獎晚宴節目表。191 是 wh- 細節/推論題(關於溫哥華的敘述)；192 是 Not 題(飯店沒有的設施)；193 是同義詞題("momentous" 字義)；194 是推論題(需比對出席人數與場地容量，判斷慶祝活動會在哪個場地舉行)；195 是推論題(關於 Derek Raymond 的推論)。
+   15. [Questions 196-200 refer to the following notice, Web page, and text message.](#questions-196-200-refer-to-the-following-notice-web-page-and-text-message)
+       概念：三篇組合，地鐵維修公告、替代接駁公車服務網頁、朋友間約碰面的簡訊。196 是 wh- 細節/True 題；197 是 wh- 細節題(網頁上提到的資訊)；198 是 wh- 細節題(需跨文比對暫時公車服務何時結束)；199 是需整合三篇資訊的推論題(推算 Mr. Lieb 該搭哪班公車)；200 是推論題(關於 Mr. Lieb 的推論)。
+
+-----------------------------------------------------------
+
 <!-- page 065 -->
 
 ## READING TEST

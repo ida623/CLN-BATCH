@@ -1,3 +1,54 @@
+# 目錄
+
+1. [PART 5：單句文法與詞彙](#part-5)
+   概念：這回涵蓋的概念很廣，有不少「詞性判斷」題，要從動詞、名詞、形容詞、副詞的字尾變化去挑對的詞性放進句子（例如 remarkably/remarkable、safety/safely、extract/extractor）；也有大量「詞彙」題，選項詞性相同但意思不同，要靠語意判斷（像 various、moderate、coincides、up 16 percent）。另外還有不少「介系詞／連接詞」慣用語題（among、in response to、as of、so that）和「動詞時態語態／不定詞動名詞」題（are distinguished、to aid、reaching），偶爾夾雜代名詞（who/whom/whose）與數量詞（few/others）的用法判斷。
+
+2. [PART 6：段落填空](#part-6)
+   概念：這回選了 4 篇不同文體的短文（新聞稿、客訴信、產品說明書、訂購詢問信），每篇 4 題中通常有 1 題是「選出空格中正確的句子」，需要讀懂上下文邏輯才能判斷；其餘題目混合詞彙、詞性、動詞時態/不定詞用法，以及轉承語（連接詞/副詞）邏輯判斷。
+   1. [Questions 131-134 refer to the following article. 🆕](#questions-131-134-refer-to-the-following-article)
+      概念：新聞稿報導加拿大帆船代表隊指派新隊長 Scott Harper 的消息。131 考動詞詞彙（be selected to lead）；132 是「選出正確句子」題，要承接記者會脈絡；133 考代名詞/連接詞用法（this time）；134 考轉折語詞彙（In fact）。
+   2. [Questions 135-138 refer to the following e-mail. 🆕](#questions-135-138-refer-to-the-following-e-mail)
+      概念：客戶寫信給廠商反映工廠設備故障，要求派工程師檢修。135 考動詞時態（malfunctioned，修飾 equipment 的關代子句）；136 考副詞詞彙（violently）；137 是「選出正確句子」題；138 考名詞詞彙（installation）。
+   3. [Questions 139-142 refer to the following instruction. 🆕](#questions-139-142-refer-to-the-following-instruction)
+      概念：冷凍披薩的烹調說明書。139 考介系詞慣用語（reduce...by）；140 是「選出正確句子」題；141 考形容詞詞彙（hotter temperature）；142 考不定詞用法（allow it to cool）。
+   4. [Questions 143-146 refer to the following e-mail. 🆕](#questions-143-146-refer-to-the-following-e-mail)
+      概念：消費者寫信詢問美妝保養品能否改用線上方式訂購。143 考動詞詞彙（market door-to-door）；144 考轉承副詞邏輯（Additionally）；145 考名詞詞彙（vitality）；146 是「選出正確句子」題。
+
+3. [PART 7：閱讀理解](#part-7)
+   概念：這回共有 15 篇文章，從單篇一路到雙篇、三篇閱讀都有，題型以 wh- 細節題、Not/True 題、推論題為主，穿插同義詞題、句子插入題、掌握意圖題（常見於線上聊天/簡訊對話）；雙篇、三篇閱讀通常會有 1 題以上需要跨文章比對資訊才能作答。
+   1. [Questions 147-148 refer to the following advertisement.](#questions-147-148-refer-to-the-following-advertisement)
+      概念：會計師事務所服務項目廣告。147 是「NOT mentioned」題，要對照服務清單找出沒提到的項目；148 考造訪官網目的的 wh- 細節題。
+   2. [Questions 149-150 refer to the following invitation.](#questions-149-150-refer-to-the-following-invitation)
+      概念：慈善音樂會邀請函。149 是「NOT indicated」題；150 考人物身分的 wh- 細節題（作曲家 vs 指揮/慈善機構代表）。
+   3. [Questions 151-152 refer to the following text message chain. 🆕](#questions-151-152-refer-to-the-following-text-message-chain)
+      概念：籌辦公司活動找志工的簡訊對話。151 是「掌握意圖題」，要判斷 "No worries" 這句話的言外之意；152 是關於 Ms. Farley 的推論題。
+   4. [Questions 153-155 refer to the following advertisement.](#questions-153-155-refer-to-the-following-advertisement)
+      概念：飲料販賣機的產品廣告。153 是「NOT provided」題（比對規格表）；154 考公司做了什麼的 wh- 細節題（推出改款機型）；155 考付款裝置細節的 True 題。
+   5. [Questions 156-158 refer to the following notice.](#questions-156-158-refer-to-the-following-notice)
+      概念：節慶禮品市集的公告。156 考讀者對象推論題；157 是「NOT indicated」題；158 考會展中心相關的推論題。
+   6. [Questions 159-160 refer to the following e-mail.](#questions-159-160-refer-to-the-following-e-mail)
+      概念：電信公司客服回覆客戶收訊不良投訴的信。159 考信件主旨目的題；160 考客服提供補償方案的 wh- 細節題。
+   7. [Questions 161-164 refer to the following information.](#questions-161-164-refer-to-the-following-information)
+      概念：市政府提供給居民的免費服務介紹。161、163 是 wh- 細節題；162 需要跨段落比對各項服務是否需要預約的 Not/True 題；164 是「句子插入題」，要判斷檢測報告等待時間該放在哪個 [1]-[4] 位置。
+   8. [Questions 165-168 refer to the following online chat discussion. 🆕](#questions-165-168-refer-to-the-following-online-chat-discussion)
+      概念：行銷團隊線上討論準備給大客戶 AEK 的提案簡報。165 考 AEK 相關的 True 題；166 考 Ms. Bailey 會用什麼資料的 wh- 細節題；167 是「掌握意圖題」，判斷 "Got it" 的意思；168 考 Mr. Zalewski 在簡報當天會做什麼的推論題。
+   9. [Questions 169-171 refer to the following letter.](#questions-169-171-refer-to-the-following-letter)
+      概念：非營利環保組織寫給企業贊助商、隨年報附上的感謝信。169 考信件主旨題；170 考收件人 Ms. Koteva 身分的推論題；171 是「NOT mentioned」題（比對組織近期的各項改變）。
+   10. [Questions 172-175 refer to the following article.](#questions-172-175-refer-to-the-following-article)
+       概念：動物園新開放鱷魚農場的新聞報導。172 是「serve」的同義詞題；173、174 考設施現況與未來計畫的 wh- 細節題；175 是「句子插入題」，判斷保育相關的句子該放在哪個位置。
+   11. [Questions 176-180 refer to the following Web page and brochure.](#questions-176-180-refer-to-the-following-web-page-and-brochure)
+       概念：雙篇閱讀，服飾設計師在布行網頁留下的顧客意見＋布料型錄。176 考顧客喜歡該店的原因（wh- 細節）；177 是「taste」的同義詞題；178 考關於這位顧客的推論題；179 是需要對照兩篇內容判斷她過去可能買過哪種布料的跨文章推論題；180 是關於美麗諾羊毛的「NOT mentioned」題（比對型錄）。
+   12. [Questions 181-185 refer to the following article and order form.](#questions-181-185-refer-to-the-following-article-and-order-form)
+       概念：雙篇閱讀，儲物空間出租公司的報導＋一張訂單。181-183 是報導內容的 wh- 細節題（顧客特性、計價方式、免費服務）；184 是需要對照訂單姓名地址、判斷 Mr. Johansen 身分的跨文章推論題；185 考訂單內容的細節/True 題。
+   13. [Questions 186-190 refer to the following advertisement, table and e-mail. 🆕](#questions-186-190-refer-to-the-following-advertisement-table-and-e-mail)
+       概念：三篇閱讀，百貨公司特賣廣告＋各部門業績表格＋行銷會議後續信件。186 考辦特賣目的的 wh- 題；187 是「NOT mentioned」題；188、189、190 都需要跨三篇比對業績數字與信件內容才能作答，屬於推論題（哪個部門業績下滑、Ms. Atkins 的職務角色等）。
+   14. [Questions 191-195 refer to the following flyer, e-mail, and registration form. 🆕](#questions-191-195-refer-to-the-following-flyer-e-mail-and-registration-form)
+       概念：三篇閱讀，創業者研討會傳單＋朋友邀約參加的信＋線上課程報名表。191 是需要跨三篇比對時間地點等資訊的「NOT true」題；192、193 考 Mr. Marcoux 與 Ms. Maille 相關的推論題；194 考課程付款方式的 wh- 細節題；195 是需要對照信件與傳單才能判斷研討會地點的跨文章細節題。
+   15. [Questions 196-200 refer to the following letter, e-mail and foreword of a book. 🆕](#questions-196-200-refer-to-the-following-letter-e-mail-and-foreword-of-a-book)
+       概念：三篇閱讀，作家邀請書評人寫序的信＋書評人的回信＋書籍序言正文。196 考第一封信主旨題；197 考 Ms. Harkness 相關的 True 題；198 考她何時收到手稿、需要推算日期的 wh- 細節題；199 是「Drawing」的同義詞題；200 考序言中提到的另一本書 *Cry of the Seagull* 的推論題。
+
+-----------------------------------------------------------
+
 <!-- page 238 -->
 
 READING TEST

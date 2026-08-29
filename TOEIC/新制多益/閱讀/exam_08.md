@@ -1,3 +1,54 @@
+# 目錄
+
+1. [PART 5：單句文法與詞彙](#part-5)
+   概念：這回 Part 5 涵蓋的考點滿完整，有一批考詞性判斷的題目（像 assistance / interested / consistently / authorized / supervising / excluding 這種同字根的名詞、形容詞、副詞、分詞要選對位置），也有動詞時態與主詞動詞一致的題目（像 takes、concluded），還有大量詞彙題要選出語意最適合的字（unattended、secure、plea、investment、potential 等），另外也有介系詞、連接詞、關係代名詞和固定用法的題目（as long as、despite、in keeping with、whatever 等）。整體來說詞性判斷、詞彙選字、介系詞/連接詞是這回的大宗。
+
+2. [PART 6：段落填空](#part-6)
+   概念：四篇短文分別是公民身分申請的回信、飯店寫給裝潢公司的感謝信、五金行的促銷廣告、以及介紹紀錄片的文章，每篇都固定會考一題「選出空格中正確的句子」（要讀懂上下文邏輯才能判斷），再搭配 1~2 題詞彙選字，以及 1 題詞性、時態或語態的文法題。
+   1. [Questions 131-134 refer to the following letter.](#questions-131-134-refer-to-the-following-letter)
+      概念：一封回覆詢問「如何取得國籍」的信。131 考名詞詞彙（nationality）、132 考動詞詞彙（verified，語意是「透過文件證明」）、133 考轉折連接詞（Additionally）、134 是「選出空格中正確的句子」題型，要銜接下一句「可以點選離你最近的政府機關」的邏輯。
+   2. [Questions 135-138 refer to the following letter.](#questions-135-138-refer-to-the-following-letter)
+      概念：飯店經理寫信感謝裝潢公司把大廳翻新得很好。135 考動詞詞彙（commend，稱讚）、136 是「選出空格中正確的句子」題型（要呼應前後對翻新成果的讚美）、137 考名詞詞彙（atmosphere，氛圍）、138 考動詞時態/語態（未來式 will be expanding，因為後段在講未來計畫）。
+   3. [Questions 139-142 refer to the following advertisement.](#questions-139-142-refer-to-the-following-advertisement)
+      概念：五金行年度清倉特賣的廣告。139 考片語動詞詞彙（marked down，降價）、140 是「選出空格中正確的句子」題型、141 考動詞語態（be entitled，被動語態表示「有資格」）、142 考介系詞（per，每一次交易）。
+   4. [Questions 143-146 refer to the following article.](#questions-143-146-refer-to-the-following-article)
+      概念：介紹一部關於食品產業的紀錄片《Feed》的影評文章。143 考詞性判斷（enthusiastically 副詞修飾動詞 explores）、144 考名詞詞彙（topic，主題）、145 是「選出空格中正確的句子」題型、146 考 such...that 的固定句型搭配。
+
+3. [PART 7：閱讀理解](#part-7)
+   概念：這回 Part 7 從單篇到三篇文章都有，涵蓋備忘錄、簡訊、email、報導、網頁、公告、線上聊天、傳單、廣告、表單、信件、發票、收據等各種文體。題型很齊全，主旨題、wh- 細節題、Not/True 題、推論題、同義詞題、句子插入題、掌握意圖題都會出現，雙篇/三篇文章的題目常常要交叉比對兩份或三份文件的資訊才能作答。
+   1. [Questions 147-148 refer to the following memo.](#questions-147-148-refer-to-the-following-memo)
+      概念：公司內部發布歡迎新任區域副總裁的備忘錄。147 考主旨題（memo 的目的），148 考 Not/True 題（她過去沒待過的地方）。
+   2. [Questions 149-150 refer to the following text messages.](#questions-149-150-refer-to-the-following-text-messages)
+      概念：兩位同事討論展覽會用品採買進度的簡訊對話。149 考掌握意圖題（"It isn't any trouble" 這句話的言外之意），150 考 True/推論題（關於對方公司的敘述）。
+   3. [Questions 151-152 refer to the following e-mail.](#questions-151-152-refer-to-the-following-e-mail)
+      概念：房仲公司通知租客押金已收到、可以搬進辦公室的 email。151 考推論身分題（Mr. Webster 最可能是什麼身分），152 考 Not/True 題（關於押金的敘述哪個沒提到）。
+   4. [Questions 153-155 refer to the following article.](#questions-153-155-refer-to-the-following-article)
+      概念：報導奈洛比國際馬拉松報名人數大增的新聞稿。153 考 wh- 細節題（今年與去年的不同之處），154 考推論題（文章暗示奈洛比的什麼狀況），155 考 wh- 細節題（全程馬拉松終點在哪）。
+   5. [Questions 156-157 refer to the following Web page.](#questions-156-157-refer-to-the-following-web-page)
+      概念：介紹一套免費會計軟體的公司網頁。156 考主旨題（網頁目的），157 考 Not/True 題（關於 Ace Venture Systems 沒提到的事）。
+   6. [Questions 158-160 refer to the following announcement.](#questions-158-160-refer-to-the-following-announcement)
+      概念：社區休閒中心招募兒童暑期運動課程的公告。158 考 True/推論題（活動相關敘述），159 考 wh- 細節題（怎麼報名），160 考 wh- 細節題（候補名額多久後釋出）。
+   7. [Questions 161-164 refer to the following online chat discussion.](#questions-161-164-refer-to-the-following-online-chat-discussion)
+      概念：市府團隊在線上討論垃圾問題解決方案的對話紀錄。161 考主旨/細節題（被交辦的任務），162 考掌握意圖題（"I couldn't agree more" 的意思），163 考 Not/True 題（哪個解法沒被提到），164 考推論題（關於 Edith Holmes 的暗示）。
+   8. [Questions 165-167 refer to the following flyer.](#questions-165-167-refer-to-the-following-flyer)
+      概念：法國歌手演唱會的宣傳傳單。165 考細節/推論題（後台通行證的取得條件），166 考 Not/True 題（關於演唱會沒提到的事），167 考句子插入題（"This does not apply to regular tickets." 該放在哪個位置）。
+   9. [Questions 168-171 refer to the following e-mail.](#questions-168-171-refer-to-the-following-e-mail)
+      概念：禮品公司通知客戶訂單有品項缺貨延遲的 email。168 考 wh- 細節題（訂單的問題是什麼），169 考推論題（關於 Mr. Haggerty 的暗示），170 考推論/細節題（不回信的話會怎樣），171 考 wh- 細節題（要換貨該怎麼做）。
+   10. [Questions 172-175 refer to the following article.](#questions-172-175-refer-to-the-following-article)
+       概念：介紹一齣由小說改編的音樂劇即將首演的藝文報導。172 考主旨題（文章主要在講什麼），173 考 Not/True 題（關於這部作品沒提到的事），174 考同義詞題（"realized" 這個字在文中最接近的意思），175 考句子插入題（補充句子該放在哪個位置）。
+   11. [Questions 176-180 refer to the following advertisement and form.](#questions-176-180-refer-to-the-following-advertisement-and-form)
+       概念：人體工學辦公家具店的廣告，搭配一張線上訂購單（雙篇）。176 考細節題（廣告提到上班族的什麼問題），177 考細節/True 題（LED 檯燈的特色），178 考推論題（要交叉比對廣告與訂單才能判斷 Optimo Web Design 的狀況），179 考細節比對題（哪個品項符合送贈品的條件），180 考 wh- 細節題（4 月 8 日會發生什麼事）。
+   12. [Questions 181-185 refer to the following letter and e-mail.](#questions-181-185-refer-to-the-following-letter-and-e-mail)
+       概念：公司助理寫信詢問飯店能否承辦高層退修會，飯店回信說明需調整安排（雙篇）。181 考主旨題（信件目的），182 考 True/推論題（關於 Burke Capital 的敘述），183 考推論題，184 考推論比對題（5 月 8 日飯店最可能缺什麼房型），185 考 Not/True 題（關於飯店沒提到的事）。
+   13. [Questions 186-190 refer to the following Web page, e-mail, and invoice.](#questions-186-190-refer-to-the-following-web-page-e-mail-and-invoice)
+       概念：自由接案作家的個人網站、客戶詢價的 email，加上開給客戶的發票（三篇）。186 考 Not/True 題（關於 St. Claire 沒提到的事），187 考主旨題（email 的目的），188 考推論比對題（Ms. Gables 最熟悉哪個客戶，要對照網站的品牌背景），189 考 wh- 細節題（Gables 要求對方做什麼），190 考推論題（關於 Gables 的暗示）。
+   14. [Questions 191-195 refer to the following article, Web page, and map.](#questions-191-195-refer-to-the-following-article-web-page-and-map)
+       概念：報導賣場提供免費接駁車服務的新聞、顧客在網頁上留言反映意見，加上接駁路線地圖（三篇）。191 考 wh- 細節題（為什麼開始提供接駁車），192 考 True/推論比對題（新服務的細節，需要對照地圖），193 考細節比對題（Harper 週末搭哪一站，要對照地圖），194 考 Not/True 題（關於 Harper 沒提到的事），195 考同義詞題（"presents" 最接近的意思）。
+   15. [Questions 196-200 refer to the following article, advertisement, and receipt.](#questions-196-200-refer-to-the-following-article-advertisement-and-receipt)
+       概念：報導服飾店即將展店的新聞、開幕特賣廣告，加上顧客的購物收據（三篇）。196 考主旨題（文章目的），197 考同義詞題（"performance" 最接近的意思），198 考細節/True 題（特賣活動的內容），199 考推論題（關於原本那間超市的暗示），200 考推論比對題（要對照廣告與收據才能判斷 Ms. Jones 的購物狀況）。
+
+-----------------------------------------------------------
+
 <!-- page 208 -->
 READING TEST
 

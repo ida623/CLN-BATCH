@@ -1,3 +1,54 @@
+# 目錄
+
+1. [PART 5：單句文法與詞彙](#part-5)
+   概念：這回合的 101~130 題涵蓋詞性判斷（名詞、形容詞、副詞的詞彙與位置）、動詞相關考點（單複數一致、未來進行式、被動態、對等句型的動詞形式）、代名詞（人稱代名詞的格、whoever 複合關係代名詞）、連接詞與介系詞的選擇（相關連接詞、副詞子句連接詞如讓步/時間、期間介系詞），以及分詞當形容詞（現在分詞 vs. 過去分詞）、沒有 if 的假設句、最高級等特殊句型，另外也穿插不少動詞、名詞、形容詞、副詞的詞彙題，考的是「看上下文選最合邏輯的字」。
+
+2. [PART 6：段落填空](#part-6)
+   概念：四篇短文分別是活動邀請函、投書信件、公司內部信件與徵才資訊，每篇挖 4 個空格。除了動詞時態語態、詞彙（動詞/名詞/副詞）、介系詞等基本文法之外，每篇都至少有一題「選出空格中正確的句子」（整句選擇題）與連接詞/連接副詞的判斷，需要讀懂上下文邏輯脈絡才能作答，不能只看單句。
+   1. [Questions 131-134 refer to the following invitation.](#questions-131-134-refer-to-the-following-invitation)
+      概念：Dogorail 公司邀請商業夥伴參加運輸物流展覽的邀請函，說明展覽期間安排、執行長專題演講與私人諮詢服務。空格考點包含期間介系詞、名詞/副詞詞彙，以及一題整句選擇（選出空格中正確的句子）。
+   2. [Questions 135-138 refer to the following letter.](#questions-135-138-refer-to-the-following-letter)
+      概念：讀者投書報社，澄清一篇報導誤傳兩家醫療機構合併會裁員的消息。空格考點包含動詞的單複數/時態/語態、動詞與名詞詞彙，以及一題整句選擇題。
+   3. [Questions 139-142 refer to the following e-mail.](#questions-139-142-refer-to-the-following-e-mail)
+      概念：公司內部信件，說明新分公司設備到貨延遲、可能延後開幕，以及是否改向其他供應商調貨的因應方案。空格考點包含未來式、動詞詞彙、接 to 不定詞的動詞用法，以及一題整句選擇題。
+   4. [Questions 143-146 refer to the following information.](#questions-143-146-refer-to-the-following-information)
+      概念：Goldline Staffing 公司徵才資訊，說明薪資事務人員的職務內容與公司提供的員工培訓資源。空格考點包含動詞詞彙、副詞選擇、連接副詞（表示因果的上下文銜接），以及一題整句選擇題。
+
+3. [PART 7：閱讀理解](#part-7)
+   概念：共 15 篇文章，文體涵蓋備忘錄、公告、網頁、簡訊/線上聊天對話、報告、廣告、信件、表單、議程表等；題型包括尋找主旨/目的、wh- 問題、Not/True 細節比對、推論題（含跨文章綜合推論）、替換表達（同義詞置換）、找出句子位置（插入句題），以及簡訊與聊天對話特有的「掌握意圖」題（判斷某句話的言外之意）。176 題之後多為雙篇或三篇文章的整合閱讀，需要對照不同文章才能作答。
+   1. [Questions 147-148 refer to the following memo.](#questions-147-148-refer-to-the-following-memo)
+      概念：公司內部備忘錄，宣布新任採購經理 Matthew Webb 將接替 Daniel Rodgers，並提醒同仁後續請購流程。考尋找主題/目的、wh- 問題（How）與替換表達。
+   2. [Questions 149-150 refer to the following announcement.](#questions-149-150-refer-to-the-following-announcement)
+      概念：西大寫作中心公告，介紹提供給學生的作業校對與寫作指導服務。考掌握文章目的、Not/True（找出未提及的選項）與替換表達。
+   3. [Questions 151-152 refer to the following information.](#questions-151-152-refer-to-the-following-information)
+      概念：拉法葉郡公園的入園規則公告，說明開放時間、遛狗規定、球場與花園位置等。考 Not/True 細節比對、wh- 問題（What）與替換表達。
+   4. [Questions 153-156 refer to the following text-message chain.](#questions-153-156-refer-to-the-following-text-message-chain)
+      概念：Hilda 與 Larry 討論本週工作排程、Hanifan 專案進度與能否互相支援的簡訊對話。考推論細節資訊、Not/True、「掌握意圖」（判斷某句話真正想表達什麼）與 wh- 問題。
+   5. [Questions 157-159 refer to the following Web page.](#questions-157-159-refer-to-the-following-web-page)
+      概念：MyPost.com 網頁介紹其海外代收轉運服務的運作方式與加值服務。考整體與細節推論題，以及替換表達（同義詞置換）。
+   6. [Questions 160-161 refer to the following online chat discussion.](#questions-160-161-refer-to-the-following-online-chat-discussion)
+      概念：同事間討論各部門薪資尚未入帳的線上聊天紀錄。考推論細節資訊與「掌握意圖」（判斷某句話的言外之意）。
+   7. [Questions 162-164 refer to the following report.](#questions-162-164-refer-to-the-following-report)
+      概念：市議會會議報告，說明老舊高架道路的三種處理方案及各自利弊。考 Not/True 細節比對與替換表達。
+   8. [Questions 165-167 refer to the following e-mail.](#questions-165-167-refer-to-the-following-e-mail)
+      概念：網路商店客服信，說明客戶訂購的兩個包包其中一款缺貨、預計到貨時間及後續處理選項。考尋找主題/目的、Not/True、替換表達，以及「找出句子位置」（插入句題）。
+   9. [Questions 168-171 refer to the following article.](#questions-168-171-refer-to-the-following-article)
+      概念：報導 Blackwell 海事博物館即將舉辦以 The Armitage 號郵輪為主題的展覽內容與門票資訊。考尋找主題/目的、Not/True、替換表達與同義詞判斷。
+   10. [Questions 172-175 refer to the following memo.](#questions-172-175-refer-to-the-following-memo)
+       概念：會計公司內部備忘錄，說明即將汰換辦公室硬體設備（伺服器、電腦、印表機）的計畫與員工需配合事項。考尋找主題/目的、Not/True、wh- 問題（What）、替換表達，以及「找出句子位置」。
+   11. [Questions 176-180 refer to the following article and e-mail.](#questions-176-180-refer-to-the-following-article-and-e-mail)
+       概念：雙篇文章——第一篇是 Generix 汽車公司召回瑕疵休旅車的新聞報導，第二篇是相關聯絡信件。考文章主旨、細節推論、wh- 問題（What）與跨兩篇文章的綜合推論題。
+   12. [Questions 181-185 refer to the following advertisement and letter.](#questions-181-185-refer-to-the-following-advertisement-and-letter)
+       概念：雙篇文章——第一篇是 Donnelly & Chung 品牌顧問公司的廣告，第二篇是客戶回覆信件。考 wh- 問題，以及需要對照兩篇文章才能作答的綜合推論題。
+   13. [Questions 186-190 refer to the following e-mails, and form.](#questions-186-190-refer-to-the-following-e-mails-and-form)
+       概念：三篇文章——乘客 Maggie Flowers 因班機取消向航空公司申請補償與租車費用核銷的往來信件與表單。考尋找主題/目的、wh- 問題、替換表達、同義詞判斷，以及需要對照多篇文章的綜合推論與細節推論題。
+   14. [Questions 191-195 refer to the following schedule, e-mail, and article.](#questions-191-195-refer-to-the-following-schedule-e-mail-and-article)
+       概念：三篇文章——綠色科技研討會的議程表，加上相關的信件與後續報導。考 Not/True（含跨文章綜合版）、多篇文章綜合推論、替換表達與同義詞判斷。
+   15. [Questions 196-200 refer to the following information, Web page, and e-mail.](#questions-196-200-refer-to-the-following-information-web-page-and-e-mail)
+       概念：三篇文章——Westerburn 公立圖書館的線上續借規則、館藏查詢網頁與會員來信。考尋找主題/目的、Not/True（含跨文章綜合版）、替換表達，以及跨文章的 wh- 問題。
+
+-----------------------------------------------------------
+
 <!-- page 302 -->
 
 # TEST 06

@@ -1,3 +1,54 @@
+# 目錄
+
+1. [PART 5：單句文法與詞彙](#part-5)
+   概念：這 30 題考的是「一句話裡挑一個空格填對字」的能力，重點分三塊——詞性判斷（名詞、形容詞、副詞要放對位置）、動詞相關（時態、主動被動、分詞構句、動詞詞彙）、還有代名詞（反身代名詞、不定代名詞、指示代名詞）。另外也很愛考介系詞、連接詞的固定搭配，以及動詞/名詞的慣用語詞彙，很多時候得看懂整句甚至前後句的語意才能選對答案。
+
+2. [PART 6：段落填空](#part-6)
+   概念：4 篇短文、每篇 4 格，題型是 Part 5 文法詞彙題再加上兩種跨句題型——「選出空格中正確的句子」（要看懂上下文邏輯挑一整句）和「連接副詞」（判斷前後句是轉折、補充還是因果關係）。所以除了單字文法，還要把整篇短文的脈絡讀順。
+   1. [Questions 131-134 refer to the following article.](#questions-131-134-refer-to-the-following-article)
+      概念：一篇報導，講 Scott Harper 獲選帶領加拿大國家帆船隊。考點包含動詞詞彙（select 被選中）、指示形容詞 this、連接副詞 In fact（補充說明前一句），還有一題「選出正確句子」要對應上一句「記者會」的情境。
+   2. [Questions 135-138 refer to the following e-mail.](#questions-135-138-refer-to-the-following-e-mail)
+      概念：一封客訴信，工廠人員回報 Denver 廠設備故障、要求廠商派工程師來檢查。考點有動詞時態（過去式）、副詞詞彙、名詞詞彙，以及一題「選出正確句子」呼應上下文的設備交貨情境。
+   3. [Questions 139-142 refer to the following instruction.](#questions-139-142-refer-to-the-following-instruction)
+      概念：冷凍披薩的烹調說明書。考點有介系詞用法、形容詞詞彙、「接 to 不定詞的動詞」（allow it to rest 的固定搭配），再加一題「選出正確句子」要銜接前後的烤箱操作步驟。
+   4. [Questions 143-146 refer to the following e-mail.](#questions-143-146-refer-to-the-following-e-mail)
+      概念：一封詢問信，顧客想跟保養品公司改用線上訂購方式。考點有動詞詞彙、連接副詞、名詞詞彙，以及一題「選出正確句子」要接得上上下文的產品描述。
+
+3. [PART 7：閱讀理解](#part-7)
+   概念：15 篇文章，從單篇到三篇文章綜合都有。主要題型是主旨/目的題、wh- 問題（What/Who/Why/How/Whom）、Not/True 細節比對、推論題（含跨文章綜合推論）、同義詞與替換表達（paraphrase）、找出句子插入位置，以及聊天訊息類的「掌握意圖」題。多半要抓住原文重點，再對照選項做同義轉換或跨段落比對。
+   1. [Questions 147-148 refer to the following advertisement.](#questions-147-148-refer-to-the-following-advertisement)
+      概念：會計師事務所（ECA）的服務廣告。考 Not/True（細節比對哪項服務有/沒有提供）與 wh- 問題 Why，兩題都需要靠替換表達找出原文對應的同義說法。
+   2. [Questions 149-150 refer to the following invitation.](#questions-149-150-refer-to-the-following-invitation)
+      概念：慈善音樂會的邀請函（New Hampton 專業人士協會）。考 Not/True 細節比對（邀請函上寫了什麼/沒寫什麼）與 wh- 問題 Who（誰參與演出）。
+   3. [Questions 151-152 refer to the following text message chain.](#questions-151-152-refer-to-the-following-text-message-chain)
+      概念：兩人討論活動志工排班的簡訊對話。考「掌握意圖」（要讀懂對話中沒明講的言外之意）與推論細節資訊，是簡訊/聊天類文章的招牌題型。
+   4. [Questions 153-155 refer to the following advertisement.](#questions-153-155-refer-to-the-following-advertisement)
+      概念：冷飲販賣機的產品廣告，附規格表格。考 Not/True（Not 跟 True 題型都有出現，要對照表格細節）與 wh- 問題 What，同義詞替換是這篇的重點。
+   5. [Questions 156-158 refer to the following notice.](#questions-156-158-refer-to-the-following-notice)
+      概念：波特蘭假期禮品展的活動公告。考整體推論（活動大意）、細節推論，加上 Not/True 題，都要靠替換表達對應原文用詞。
+   6. [Questions 159-160 refer to the following e-mail.](#questions-159-160-refer-to-the-following-e-mail)
+      概念：電信公司客服回覆用戶抱怨訊號不良的信，說明原因並提供退費。考「尋找主題／目的」（這封信是為了什麼而寫）與 wh- 問題 What（退費金額等細節）。
+   7. [Questions 161-164 refer to the following information.](#questions-161-164-refer-to-the-following-information)
+      概念：Burbank 市政府提供的免費市民服務介紹（能源評估、除樹、水質檢驗、接駁車）。考 wh- 問題 What/Whom、Not/True，再加一題「找出句子位置」，是考篇章結構、判斷一句話該插在文章哪個空格的題型。
+   8. [Questions 165-168 refer to the following online chat discussion.](#questions-165-168-refer-to-the-following-online-chat-discussion)
+      概念：團隊在線上聊天討論要向客戶 AEK 做行銷提案簡報的分工。考 Not/True、wh- 問題 What，還有「掌握意圖」和推論細節，同樣是聊天記錄類文章的常見題型組合。
+   9. [Questions 169-171 refer to the following letter.](#questions-169-171-refer-to-the-following-letter)
+      概念：非營利組織寫給贊助商的感謝信，附上年度報告重點。考「尋找主題／目的」（寫這封信要做什麼）、推論細節資訊，以及 Not/True 題。
+   10. [Questions 172-175 refer to the following article.](#questions-172-175-refer-to-the-following-article)
+       概念：動物園開放鱷魚園的新聞報導。考同義詞題、wh- 問題 What（考兩次），再加「找出句子位置」的篇章結構題。
+   11. [Questions 176-180 refer to the following Web page and brochure.](#questions-176-180-refer-to-the-following-web-page-and-brochure)
+       概念：雙篇文章——顧客在網頁上寫的意見回饋 + 布料手冊。考 wh- 問題 What、同義詞、推論細節資訊，還有需要對照兩篇文章才能作答的「推論多篇文章綜合題」與 Not/True。
+   12. [Questions 181-185 refer to the following article and order form.](#questions-181-185-refer-to-the-following-article-and-order-form)
+       概念：雙篇文章——介紹收納出租公司的雜誌報導 + 訂購單。考 Not/True（True 題型出現兩次）、wh- 問題 How/What，以及要跨文章比對的「推論多篇文章綜合題」。
+   13. [Questions 186-190 refer to the following advertisement, table, and e-mail.](#questions-186-190-refer-to-the-following-advertisement-table-and-e-mail)
+       概念：三篇文章——百貨公司清倉特賣廣告、折扣表格、客服電子郵件。考 wh- 問題 Why、Not/True（含跨三篇文章的綜合題型），還有推論細節資訊，考驗把三份資料兜在一起看的能力。
+   14. [Questions 191-195 refer to the following flyer, e-mail, and registration form.](#questions-191-195-refer-to-the-following-flyer-e-mail-and-registration-form)
+       概念：三篇文章——企業家年會的宣傳傳單、報名相關的電子郵件、報名表。考 Not/True（Not 跟 True 都有）、推論細節資訊，以及需要對照三篇資料的「推論／wh- 多篇文章綜合題」。
+   15. [Questions 196-200 refer to the following letter, e-mail, and foreword of a book.](#questions-196-200-refer-to-the-following-letter-e-mail-and-foreword-of-a-book)
+       概念：三篇文章——作家邀請書評人寫序的信、回信、書籍序言內容。考「尋找主題／目的」、Not/True、同義詞，以及需要串連三篇文章的 wh- 問題與推論綜合題。
+
+-----------------------------------------------------------
+
 <!-- page 472 -->
 # TEST 09
 Part 5 翻譯・解說

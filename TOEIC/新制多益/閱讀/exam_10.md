@@ -1,3 +1,54 @@
+# 目錄
+
+1. [PART 5：單句文法與詞彙](#part-5)
+   概念：這回 Part 5 涵蓋範圍很廣，有大量「詞性判斷」題（如 102 rigorous/rigorousness/rigor/rigorously、109 opposition、111 approximately、115 confidential、120 observation、124 longer、125 related 等，要看空格前後是修飾名詞的形容詞、修飾動詞的副詞、還是當受詞的名詞），也有不少「單字語意」題要挑意思最貼切的字（101 occasionally、104 operates、112 facility、113 affordable、118 reorganizing、121 request、128 discrepancies、129 revitalize、130 drew on 這種片語動詞）。另外還有動詞時態/語態題（105 未來式、108 過去分詞當化簡子句、122 主動 vs 被動、127 貨物送達的被動式），以及介系詞、連接詞和慣用語題（106 through、107 within、117 The fact that 引導名詞子句、119 so...that 句型、123 each other、126 before）。整體來說是文法概念（詞性、時態語態）與詞彙辨義並重的一回。
+
+2. [PART 6：段落填空](#part-6)
+   概念：四篇短文分別是公告、email、信件、廣告，每篇 4 題都固定包含 1 題「選出空格中正確句子」的題型，其餘 3 題則是詞性、時態語態或詞彙辨義題，需要讀懂上下文邏輯才能選對。
+   1. [Questions 131-134 refer to the following announcement.](#questions-131-134-refer-to-the-following-announcement)
+      概念：這是社區公告，通知居民社區中心要開會討論 Kingston Road 的交通議題。131 考動詞時態語態（未來式 will take place）、132 考詞彙（名詞 increase，表車流量的「增加」）、133 是句子選擇題（要接在討論交通議題之後、垃圾與分區議題之前，邏輯要通順）、134 考詞性（修飾動詞 arrive 的副詞 punctually）。
+   2. [Questions 135-138 refer to the following e-mail.](#questions-135-138-refer-to-the-following-e-mail)
+      概念：這是公司內部同事間的 email，寫信人 Nelson Lee 請 Denise 幫忙找遺失的銷售提案文件。135 考詞性（名詞 proposal）、136 是句子選擇題（銜接「這份文件很重要，因為上面寫了筆記」的補充說明）、137 考連接詞（Whether... 的條件/讓步句型）、138 考詞彙（名詞 customer，表要留住 Acton 這個客戶）。
+   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter)
+      概念：這是顧客寫給電腦公司客服部門的感謝信，稱讚員工 Patrick Kelley 的服務。139 考詞彙（形容詞 unhelpful，與後面「卻很驚喜」形成語意對比）、140 考詞彙副詞（immediately，立刻理解問題）、141 是句子選擇題（銜接客服建議送修的內容）、142 考動詞時態（現在完成式 have received，強調至今最好的服務）。
+   4. [Questions 143-146 refer to the following advertisement.](#questions-143-146-refer-to-the-following-advertisement)
+      概念：這是安養院的廣告，強調住民的身心健康活動與交通便利。143 考詞性（名詞 distance）、144 考詞彙動詞（maintain，維持社交互動）、145 是句子選擇題（銜接前面提到的活動如何提升生活品質）、146 考詞彙名詞（care，員工提供的日常照顧與關注）。
+
+3. [PART 7：閱讀理解](#part-7)
+   概念：Part 7 共 15 篇文章，涵蓋單篇、雙篇、三篇合併閱讀，文體包含 email、簡訊對話、行程表、資訊說明、廣告、公告、新聞報導、線上聊天，以及雙篇/三篇合併閱讀（報導+email、email+通知、邀請函+email+表單等）。題型很多元，包含主旨題、wh- 細節題、Not/True 題、推論題、同義詞題、句子插入題、掌握意圖題，雙篇與三篇合併閱讀通常會有 1-2 題需要跨文本比對資訊才能作答。
+   1. [Questions 147-148 refer to the following e-mail.](#questions-147-148-refer-to-the-following-e-mail)
+      概念：Gina Herald 寫信給銀行行員，反映線上轉帳時被要求輸入六位數安全碼，但想不起來何時設定過。147 是主旨題（What is the purpose）、148 是 wh- 細節題（問她需要銀行提供什麼）。
+   2. [Questions 149-150 refer to the following text message chain.](#questions-149-150-refer-to-the-following-text-message-chain)
+      概念：兩位律師 Mitchell 與 Jillian 用簡訊討論新案件並約時間見面。149 是 wh- 細節題（問 Mr. Roach 被指派代表哪家公司）、150 是掌握意圖題（問 "That's perfect for me as well" 這句話真正在講什麼）。
+   3. [Questions 151-152 refer to the following schedule.](#questions-151-152-refer-to-the-following-schedule)
+      概念：這是網路行銷協會研討會第一天的議程表。151 是 wh- 細節題（哪位講者會討論實習生議題）、152 是推論題（從議程內容推測研討會的性質）。
+   4. [Questions 153-154 refer to the following information.](#questions-153-154-refer-to-the-following-information)
+      概念：這是說明遠距工作者可申報哪些稅務減免項目的資訊文件。153 是推論題（從內容風格推測這份資訊最可能出現在哪裡）、154 是細節/True 題（問文中指出了什麼，例如需要通話紀錄佐證）。
+   5. [Questions 155-157 refer to the following e-mail.](#questions-155-157-refer-to-the-following-e-mail)
+      概念：家教中心回覆家長詢問歷史家教服務，介紹兩位老師並詢問更多細節。155 是 Not 題（問這封信「不是」為了什麼目的）、156 與 157 都是 wh- 細節題（問 Gatineau 老師授課地點、以及 Harcourt 之後要討論什麼）。
+   6. [Questions 158-160 refer to the following advertisement.](#questions-158-160-refer-to-the-following-advertisement)
+      概念：這是都柏林美術學院為藝術家 Annie O'Dell 舉辦回顧展的廣告。158 是 True/推論題（問文中指出展覽的哪個特點）、159 是細節題（問文中提到 O'Dell 的什麼背景）、160 是 Not 題（問哪個活動「不是」展覽安排的節目之一）。
+   7. [Questions 161-163 refer to the following notice.](#questions-161-163-refer-to-the-following-notice)
+      概念：這是公司公告六樓餐廳即將整修並升級成新餐飲品牌的通知。161 是主旨題、162 是 wh- 細節題（問員工去哪裡查看菜單）、163 是句子插入題（判斷補充句該放在 [1]~[4] 哪個位置）。
+   8. [Questions 164-167 refer to the following article.](#questions-164-167-refer-to-the-following-article)
+      概念：這是電子公司 First Global 宣布擴建海外工廠的新聞報導。164 是主旨題（為什麼寫這篇報導）、165 是 wh- 細節題（問公司打算如何籌措資金）、166 是推論題（從內容推測公司狀況）、167 是句子插入題。
+   9. [Questions 168-171 refer to the following online chat discussion.](#questions-168-171-refer-to-the-following-online-chat-discussion)
+      概念：這是公司同事討論網路商店商品照片拍攝風格的線上聊天記錄。168 是主旨題（討論的主要內容）、169 是掌握意圖題（問 "give him another shot at it" 真正的意思）、170 是 True 題（關於 Ms. Swenson 的敘述）、171 是推論題（推測 Ms. Orbison 的職務）。
+   10. [Questions 172-175 refer to the following e-mail.](#questions-172-175-refer-to-the-following-e-mail)
+       概念：這是同事間關於前往華盛頓總部出差行程安排的 email。172 是主旨題、173 是 Not 題（問信中「沒有」提到什麼）、174 是 wh- 細節/原因推論題（問 Krakowski 為何選在飯店碰面）、175 是 wh- 細節題（問 Andrews 需要 Pinkerton 提供什麼資訊）。
+   11. [Questions 176-180 refer to the following article and e-mail.](#questions-176-180-refer-to-the-following-article-and-e-mail)
+       概念：這是報導紐西蘭合作農場 Lamington Ranch 成功故事的文章，搭配一封雜誌記者要求採訪的 email，屬於雙篇閱讀。176 是 Not 題（問文中「沒有」提到他們考慮過哪個解決方案）、177 是細節/True 題、178 是主旨題（email 的目的）、179 與 180 是推論題，部分題目需要合併參考兩篇文本才能作答。
+   12. [Questions 181-185 refer to the following e-mail and notice.](#questions-181-185-refer-to-the-following-e-mail-and-notice)
+       概念：這是理財顧問寫給客戶的退休規劃建議信，搭配大學職涯發展中心的活動公告，屬於雙篇閱讀。181 是主旨題、182 是同義詞題（問 "Since" 在文中最接近的意思）、183 與 184 是 wh- 細節題、185 是推論題，需要對照兩篇文本才能判斷答案。
+   13. [Questions 186-190 refer to the following invitation, e-mail, and form.](#questions-186-190-refer-to-the-following-invitation-e-mail-and-form)
+       概念：這是商業協會創業講座的邀請函、銀行主管請同事代班的 email，以及一份實際送出的貸款申請表，屬於三篇合併閱讀。186、187、188 是 wh- 細節/True 題，189 與 190 是推論題，需要交叉比對三篇文本內容才能作答。
+   14. [Questions 191-195 refer to the following announcement, e-mail, and review.](#questions-191-195-refer-to-the-following-announcement-e-mail-and-review)
+       概念：這是時尚學院年度學生服裝秀的公告、攝影師詢問合作的 email，以及雜誌對這場秀的報導評論，屬於三篇合併閱讀。191 是 Not 題、192 與 193 是 wh- 細節題（攝影師欣賞活動的哪一點、為何想設攤位）、194 是需要跨文本比對的 True 題（關於主持人 Melvin Lee 的背景）、195 是 wh- 細節題（評論裡如何形容這次的服裝風格）。
+   15. [Questions 196-200 refer to the following advertisement, form, and e-mail.](#questions-196-200-refer-to-the-following-advertisement-form-and-e-mail)
+       概念：這是消防灑水系統公司 PFS 的廣告、客戶 Gwyneth Pierce 填寫的服務申請表，以及她發現裝錯系統後寄出的客訴 email，屬於三篇合併閱讀。196 是 Not 題、197 是同義詞題（問 "executed" 最接近的意思）、198 是推論題（關於 Pierce 想要的灑水系統特性）、199 是需要對照申請表與 email 的 wh- 細節題（PFS 實際裝了哪種系統）、200 是推論題（根據廣告中「48 小時內處理」的承諾，推測 Pierce 有什麼權益）。
+
+-----------------------------------------------------------
+
 <!-- page 267 -->
 
 # READING TEST

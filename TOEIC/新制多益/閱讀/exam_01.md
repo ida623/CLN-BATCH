@@ -1,3 +1,54 @@
+# 目錄
+
+1. [PART 5：單句文法與詞彙](#part-5)
+   概念：這回 Part 5 詞性變化題（詞彙該填名詞／動詞／形容詞／副詞哪個詞性，例如 102 祈使句開頭的 Respond、104 protect、107 elaborately、108 active、116 formative、119 Attendance、121 permit、123 worthier、129 respected）跟單字語意選擇題（選項詞性相同但意思不同，靠句意判斷，例如 103 purpose、105 prior、109 came up with、111 consistently、113 minor、115 suggested、117 overview、122 simplified、124 deliver、125 disposable、127 recognition）是大宗；另外還有幾題考動詞時態／語態（106 are arriving、112 would furnish、126 is considered），以及一串介系詞／連接詞邏輯題（110 under、114 Anyone、118 regarding、120 notwithstanding、128 Besides、130 thereafter），第一題 101 則考反身代名詞 herself。
+
+2. [PART 6：段落填空](#part-6)
+   概念：這四篇短文分別是租金收款系統改電子化的通知、筆電維修進度回覆信、賣場公休門禁安排公告、工廠年度稽查通知信，每篇都是固定「3 題單字／文法選擇 + 1 題選出空格中正確句子」的克漏字題型組合。
+   1. [Questions 131-134 refer to the following notice.](#questions-131-134-refer-to-the-following-notice)
+      概念：房東通知房客收租方式改成電子化。131 考動詞語意（convert「轉換成」）、133 考動詞語意（make a payment 固定用法）、134 考連接詞邏輯（As soon as「一…就…」）；132 是選出空格中正確句子的題型，要靠後文「現金與支票不再被接受」判斷邏輯銜接。
+   2. [Questions 135-138 refer to the following e-mail.](#questions-135-138-refer-to-the-following-e-mail)
+      概念：電腦維修店回覆客戶筆電螢幕故障處理進度。135 考詞性（our + 名詞，選 technicians）、136 考動詞語意（repaired，被動語態描述筆電正在被維修）、137 考轉折副詞邏輯（Alternatively「或者」）；138 是選出空格中正確句子的題型，要靠下一句「若沒收到請聯絡客服」推斷答案在講寄回電腦的時間。
+   3. [Questions 139-142 refer to the following announcement.](#questions-139-142-refer-to-the-following-announcement)
+      概念：賣場經理通知員工商場公休期間如何進出。139 考轉折連接詞邏輯（Besides「此外」）、141 考動詞時態（it is vital that you meet，虛擬語氣用原形動詞）、142 考副詞語意（punctually「準時地」）；140 是選出空格中正確句子的題型，要靠下一句「保全通行碼」的線索判斷答案跟門禁方式有關。
+   4. [Questions 143-146 refer to the following e-mail.](#questions-143-146-refer-to-the-following-e-mail)
+      概念：政府單位通知工廠即將進行年度勞動稽查。143 考名詞語意（assessment「評估」）、144 考形容詞語意（previous「上一次的」）、145 考詞性（legally 修飾 obliged 的副詞）；146 是選出空格中正確句子的題型，要靠前一句「稽查員需確認薪資合理」判斷答案在講人資部門要準備相關文件。
+
+3. [PART 7：閱讀理解](#part-7)
+   概念：這回 Part 7 涵蓋單篇、雙篇、三篇閱讀，文體很多元（邀請函、票券、推銷信、簡訊對話、電子報公告、線上聊天紀錄、企業社會責任說明、人物新聞、城市趨勢報告、金融公司信件、社區公告、多篇新聞留言組、三篇商業書信組），題型涵蓋主旨題、wh- 細節題、Not/True 題、推論題、同義詞題、句子插入題、掌握意圖題等常見題型，雙篇／三篇文章通常會有 1-2 題需要跨文本比對資訊。
+   1. [Questions 147-148 refer to the following invitation.](#questions-147-148-refer-to-the-following-invitation)
+      概念：醫院為改建東側病房辦募款餐會的邀請函。147 是 wh- 細節題（問為什麼需要資金），148 是 wh- 細節題（問怎麼取得贈品，考「買 4 張票以上」這個細節）。
+   2. [Questions 149-150 refer to the following ticket.](#questions-149-150-refer-to-the-following-ticket)
+      概念：巴士公司開給乘客的電子車票。149 是推論／細節題（問乘客身上可以「indicated」出什麼，要從地址等資訊推斷他是紐約居民），150 是 Not/True 題（問票券上沒有列出哪項資訊）。
+   3. [Questions 151-152 refer to the following letter.](#questions-151-152-refer-to-the-following-letter)
+      概念：保險公司業務寫給客戶（企業福利經理）的推銷信。151 是主旨題（問這封信的目的），152 是 wh- 細節題（問公司如何取得育嬰假保險，要對照 Choice Care 方案細節）。
+   4. [Questions 153-154 refer to the following text message chain.](#questions-153-154-refer-to-the-following-text-message-chain)
+      概念：兩位同事討論代送租約文件的簡訊對話。153 是推論題（問關於 Market Street 可推論出什麼，要從「找車位」的線索推斷該區難停車），154 是掌握意圖題（問 Sonya 說「它應該在我桌上」是什麼意思）。
+   5. [Questions 155-157 refer to the following e-mail.](#questions-155-157-refer-to-the-following-e-mail)
+      概念：唱片行寄給會員介紹 Record Store Day 當天各店活動時間表的電子報。155 是主旨題，156 是 Not/True 題（問哪個活動「沒有」被提到，注意「樂評唸自己的作品」跟「音樂人的演講」是不同事，後者是陷阱），157 是細節／True 題（問關於 Marshalltown Records 的敘述哪個正確）。
+   6. [Questions 158-161 refer to the following announcement.](#questions-158-161-refer-to-the-following-announcement)
+      概念：公園管理處提醒遊客浣熊出沒問題並招募清潔志工的公告。158 是主旨題（問公告目的），159 是 Not/True 題，160 是 wh- 細節題（問志工會拿到什麼），161 是句子插入題（判斷「兩天前截止報名」這句該放在 [1]～[4] 哪個位置）。
+   7. [Questions 162-165 refer to the following online chat discussion.](#questions-162-165-refer-to-the-following-online-chat-discussion)
+      概念：廣告公司同事在線上討論客戶專案（電視廣告、拍攝、網站）進度的聊天紀錄。162 是推論題（問 Hanson 最可能任職哪種公司），163 是掌握意圖題（問她說「on the right track」是什麼意思），164 是細節／True 題（問關於 Rodriguez 哪項正確），165 是 wh- 細節題（問 Hopkins 被要求做什麼）。
+   8. [Questions 166-168 refer to the following information.](#questions-166-168-refer-to-the-following-information)
+      概念：咖啡公司說明自己直接跟農場簽約、額外付款、成立基金會回饋社區的企業社會責任說明文。166 是推論／細節題（問合作農場可推論出什麼，要從「瓜地馬拉、衣索比亞、越南」判斷分布多國），167 是 wh- 細節題（問基金會主要嘉惠對象），168 是句子插入題。
+   9. [Questions 169-171 refer to the following article.](#questions-169-171-refer-to-the-following-article)
+      概念：報導軟體公司 CEO 獲選科技女性風雲人物的新聞文章。169 是細節／True 題（問關於 Ping 公司哪項正確，需判斷「曾經以文書處理軟體聞名」），170 是 Not/True 題（問關於 Curtis 哪項「沒有」被提到，「第一位女性 CEO」文章並未提及，是陷阱），171 是 wh- 細節題（問公司預期會發生什麼事）。
+   10. [Questions 172-175 refer to the following report.](#questions-172-175-refer-to-the-following-report)
+       概念：介紹西班牙瓦倫西亞市觀光數字成長趨勢的城市報告。172 是主旨題，173 是 Not/True 題（問哪個「不是」成長原因，「稅制更新」是文章沒提到的陷阱選項），174 是推論／細節題（問關於馬德里可得知什麼，要從「鐵路更新縮短交通時間」判斷），175 是 wh- 細節題（問為什麼被評為第三名）。
+   11. [Questions 176-180 refer to the following letter and e-mail.](#questions-176-180-refer-to-the-following-letter-and-e-mail)
+       概念：雙篇文章——金融公司先寄信通知客戶改成無紙化對帳單，接著寄出第一份電子對帳單。176 是主旨題（問信件目的），177 是細節／True 題（問信中對無紙化對帳單的敘述），178 是 wh- 細節題（問如何申請紙本副本），179 是 wh- 細節題（問為什麼要仔細檢查電子對帳單，需對照 e-mail 提到「這是第一份電子對帳單」），180 是推論題（問可推論客戶做了什麼，需跨兩篇文本比對，例如已繳年費才會收到紙本副本）。
+   12. [Questions 181-185 refer to the following announcement and schedule.](#questions-181-185-refer-to-the-following-announcement-and-schedule)
+       概念：雙篇文章——商家協會招募企業贊助週四露天音樂會的公告，搭配演出時間與贊助費用表格。181 是主旨題，182 是 wh- 細節題（問活動目標，對照文章「促進商家與居民互動」），183 是推論題（問可推論出音樂會的什麼，例如贊助商能在現場發傳單），184 是 wh- 細節題（問贊助商被要求做什麼，答案是自付發送物品費用），185 是需跨文本比對表格金額的細節題（問哪一場贊助商資訊「不會」被刊登在報紙上，要對照公告「贊助 500 元以上才刊登」與時間表各場贊助金額）。
+   13. [Questions 186-190 refer to the following article, Web page, and e-mail.](#questions-186-190-refer-to-the-following-article-web-page-and-e-mail)
+       概念：三篇文章——新聞報導大型超市想在小鎮蓋分店引發在地商家反彈、讀者投書留言，以及商會秘書回信邀請投書者出席公聽會。186 是主旨題，187 是 wh- 細節／推論題（問 Pinero 希望市長做什麼），188 是同義詞題（問 limits 在文中最接近哪個意思，這裡指「市界」borders），189 是 wh- 細節題（問 6 月 3 日會發生什麼事，需對照 e-mail 內容跨文本作答），190 是推論題（問關於 Morris 女士可推論出什麼）。
+   14. [Questions 191-195 refer to the following invoice, e-mail, and message.](#questions-191-195-refer-to-the-following-invoice-e-mail-and-message)
+       概念：三篇文章——設計公司開給投資公司的請款單、投資公司要求修改封面照片的回信，以及投資公司年終員工電子報。191 是細節／True 題（問關於設計公司哪項正確，需對照發票內容），192 是推論題（問可推論出投資公司的什麼，需跨發票與 e-mail 比對出「修改封面可能被收取額外費用」），193 是主旨題（問電子報的其中一個目的），194 是同義詞題（問 outperformed 最接近哪個意思），195 是推論題（問投資公司最近很可能做了什麼，需跨 e-mail 與電子報比對出「已在美國發送過行銷手冊／辦過活動」）。
+   15. [Questions 196-200 refer to the following e-mail, program, and form.](#questions-196-200-refer-to-the-following-e-mail-program-and-form)
+       概念：三篇文章——攝影社團會長詢問攝影課程資訊的 e-mail、藝術中心一週課程表，以及會長本人的報名表。196 是主旨題（問 e-mail 目的，即詢問課程資訊），197 是細節／True 題（問關於攝影社團哪項正確，需對照 e-mail 提到的人數與課表），198 是同義詞題（問 focused on 最接近哪個意思），199 是需跨三篇文本計算的細節題（問 Hardy 大概要付多少錢，要對照課表的風景攝影課、報名表的付款方式，以及「三人以上團體優惠 $30」的條件），200 是 wh- 細節題（問 Hardy 被要求要做什麼，答案是要自備攝影器材）。
+
+-----------------------------------------------------------
+
 <!-- page 006 -->
 
 ## READING TEST

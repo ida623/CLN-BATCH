@@ -1,3 +1,54 @@
+# 目錄
+
+1. [PART 5：單句文法與詞彙](#part-5)
+   概念：101~130 題是單句文法／詞彙選擇題，重點分成兩大類。一類是「詞性判斷」，看空格在句中的位置決定要填名詞、形容詞還是副詞（含可數／不可數名詞、比較級、反身代名詞、指示代名詞等）；另一類是「詞彙／慣用語」，要靠上下文語意選出正確的動詞、名詞、形容詞、副詞，或是固定搭配的介系詞／連接詞慣用語。另外也會考動詞的時態、語態、單複數一致，以及祈使句、to 不定詞這類固定句型結構。
+
+2. [PART 6：段落填空](#part-6)
+   概念：131~146 題共 4 篇短文克漏字，每篇 4 格。除了和 Part 5 一樣的詞性、詞彙、慣用語考點之外，多了兩種跨句題型：「連接副詞」要判斷空格前後兩句的邏輯關係（轉折、因果、附加說明等），「選出空格中正確的句子」則要讀懂整段文意才能選出銜接最順的句子，不能只看單句。
+   1. [Questions 131-134 refer to the following notice](#questions-131-134-refer-to-the-following-notice)
+      概念：公寓管理公司 Wimberley Group 通知房客，收租方式將改為線上電子系統。考點：動詞詞彙（convert）、選出空格中正確的句子（呼應上下句的邏輯）、動詞慣用語（make a payment）、表時間的副詞子句連接詞（As soon as）。
+   2. [Questions 135-138 refer to the following e-mail](#questions-135-138-refer-to-the-following-e-mail)
+      概念：電腦店客服人員寫信給顧客，說明送修筆電的維修進度及賠償方案。考點：人物名詞 vs. 抽象名詞（technicians）、動詞詞彙（repaired）、連接副詞（Alternatively，表示「或者」的補充選項）、選出空格中正確的句子。
+   3. [Questions 139-142 refer to the following announcement](#questions-139-142-refer-to-the-following-announcement)
+      概念：店經理發給全體員工的公告，說明購物中心休館期間該如何進入店面準備特賣活動。考點：連接副詞（However，表轉折）、選出空格中正確的句子、主要子句表建議／義務時 that 子句用動詞原形（meet）、副詞詞彙（punctually）。
+   4. [Questions 143-146 refer to the following e-mail](#questions-143-146-refer-to-the-following-e-mail)
+      概念：政府稽查人員寫給服飾工廠負責人的信，通知年度勞動法規稽查及配合事項。考點：名詞詞彙（assessment）、形容詞詞彙（previous）、副詞位置（legally 修飾動詞）、選出空格中正確的句子。
+
+3. [PART 7：閱讀理解](#part-7)
+   概念：147~200 題共 15 篇文章，從單篇到雙篇、三篇綜合閱讀都有。主要題型包括：尋找文章主題／目的（通常看文章開頭）、wh- 問題（針對 Why/How/What/Who 等找細節）、Not/True 是非題（比對選項與文章敘述）、推論題（含需要交叉比對多篇文章線索的「多篇文章綜合題」）、掌握意圖題（判斷對話或訊息中某句話的言外之意）、同義詞題，以及新制題型「找出句子插入位置」。雙篇、三篇文章的題目通常需要串連不同文章中的線索才能作答。
+   1. [Questions 147-148 refer to the following invitation](#questions-147-148-refer-to-the-following-invitation)
+      概念：醫院募款晚宴的邀請函，說明為何需要資金整修建築物東側，以及購票贈書的優惠方式。考點：wh- 問題（Why 需要資金、How 取得贈品）。
+   2. [Questions 149-150 refer to the following ticket](#questions-149-150-refer-to-the-following-ticket)
+      概念：巴士公司開立的車票，記載乘客資料、行程時刻表、行李與退費規定。考點：Not/True 是非題（關於乘客的敘述、車票上未記載的資訊）。
+   3. [Questions 151-152 refer to the following letter](#questions-151-152-refer-to-the-following-letter)
+      概念：員工福利保險公司業務寫給製藥公司福利經理的推銷信，介紹保險套裝方案。考點：尋找信件目的（介紹公司產品）、wh- 問題（How 取得育嬰假保險）。
+   4. [Questions 153-154 refer to the following text message chain](#questions-153-154-refer-to-the-following-text-message-chain)
+      概念：同事之間關於代送辦公室租約合約的簡訊對話紀錄。考點：推論題（從對話內容推知某地區停車不易）、掌握意圖題（判斷「應該在我桌上」這句話的實際意思）。
+   5. [Questions 155-157 refer to the following e-mail](#questions-155-157-refer-to-the-following-e-mail)
+      概念：唱片行寄給會員關於「世界唱片行日」活動行程的電子郵件。考點：尋找郵件目的（提供活動時間表）、Not/True 是非題（未提及的活動類型、關於特定店家的敘述）。
+   6. [Questions 158-161 refer to the following announcement](#questions-158-161-refer-to-the-following-announcement)
+      概念：城市公園關於浣熊出沒問題的公告，並附志工清掃活動報名資訊。考點：尋找公告理由（提醒遊客注意問題）、Not/True 是非題（關於浣熊未提及的敘述）、wh- 問題（志工會得到的物品）、找出句子插入位置。
+   7. [Questions 162-165 refer to the following online chat discussion](#questions-162-165-refer-to-the-following-online-chat-discussion)
+      概念：廣告公司同事討論汽車客戶宣傳案進度的線上聊天記錄。考點：推論題（推知說話者所屬產業）、掌握意圖題（片語「on the right track」的含義）、Not/True 是非題（關於特定人物的敘述）、wh- 問題（某人被要求做的事）。
+   8. [Questions 166-168 refer to the following information](#questions-166-168-refer-to-the-following-information)
+      概念：咖啡公司說明道德採購政策、如何回饋咖啡農社區的文件。考點：Not/True 是非題（關於合作農場的敘述）、wh- 問題（開發基金會的主要受益對象）、找出句子插入位置。
+   9. [Questions 169-171 refer to the following article](#questions-169-171-refer-to-the-following-article)
+      概念：報導軟體公司執行長獲選年度科技女性的新聞。考點：Not/True 是非題（關於公司過去產品定位的敘述、關於人物未提及的敘述）、wh- 問題（公司未來預計發生的事）。
+   10. [Questions 172-175 refer to the following report](#questions-172-175-refer-to-the-following-report)
+       概念：城市趨勢報告，分析西班牙瓦倫西亞市觀光人數成長的原因。考點：尋找文章主題（觀光業的改善）、Not/True 是非題（未提及的成長原因、關於馬德里的敘述）、wh- 問題（Why 排名第三）。
+   11. [Questions 176-180 refer to the following letter and e-mail](#questions-176-180-refer-to-the-following-letter-and-e-mail)
+       概念：雙篇文章。金融公司寄給客戶說明改為無紙化對帳單的信件，以及後續寄送第一份電子對帳單的電子郵件。考點：尋找信件理由、Not/True 是非題（無紙對帳單的特性）、wh- 問題（如何申請紙本副本、為何被要求檢查對帳單）、推論題（多篇文章綜合，判斷客戶是否付了年費）。
+   12. [Questions 181-185 refer to the following announcement and schedule](#questions-181-185-refer-to-the-following-announcement-and-schedule)
+       概念：雙篇文章。商人協會徵求企業贊助夏季音樂會的公告，以及各場音樂會贊助費用的日程表。考點：尋找公告主題（本地企業的宣傳機會）、wh- 問題（活動目標）、推論題（多篇文章綜合，共同贊助者可做的事）、wh- 問題（贊助者的義務）、Not/True 是非題（多篇文章綜合，判斷哪場音樂會未達刊登報紙的贊助門檻）。
+   13. [Questions 186-190 refer to the following article, Web page, and e-mail](#questions-186-190-refer-to-the-following-article-web-page-and-e-mail)
+       概念：三篇文章。報導市議會討論大型超市進駐提案的新聞、市民在報社網站上反對此案的留言、商會秘書邀請該市民出席公聽會的電子郵件。考點：尋找文章主題、wh- 問題（多篇文章綜合，某人希望市長採取的行動）、同義詞題（limits）、wh- 問題（特定日期會發生的事）、推論題（多篇文章綜合，判斷人物立場）。
+   14. [Questions 191-195 refer to the following invoice, e-mail, and message](#questions-191-195-refer-to-the-following-invoice-e-mail-and-message)
+       概念：三篇文章。設計公司寄給投資顧問公司的發票、客戶要求更換封面照片的回信、公司執行長的年終公司內部通訊。考點：Not/True 是非題（關於設計公司服務項目的敘述）、推論題（多篇文章綜合，須支付的額外修改費用）、尋找訊息目的、同義詞題（outperformed）、推論題（多篇文章綜合，判斷公司最近做了什麼活動）。
+   15. [Questions 196-200 refer to the following e-mail, program, and form](#questions-196-200-refer-to-the-following-e-mail-program-and-form)
+       概念：三篇文章。攝影社團社長寫信詢問數位藝術中心團體課程資訊的電子郵件、中心的一日課程表、社長填寫的報名表。考點：尋找郵件目的（詢問課程資訊）、Not/True 是非題（多篇文章綜合，判斷社團成員可上的課程）、同義詞題（focused on）、推論題（多篇文章綜合，須支付的團體報名費用）、wh- 問題（報名者須自備的物品）。
+
+-----------------------------------------------------------
+
 <!-- page 022 -->
 
 # TEST 01

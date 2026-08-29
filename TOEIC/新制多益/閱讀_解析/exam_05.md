@@ -1,3 +1,54 @@
+# 目錄
+
+1. [PART 5：單句文法與詞彙](#part-5)
+   概念：涵蓋詞性判斷（名詞、形容詞、副詞的位置與詞彙選擇）、動詞相關考點（單複數、時態、語態、被動態、動詞詞彙與「be + 形容詞」慣用語）、代名詞（反身代名詞、不定代名詞）、關聯詞（關係代名詞、對等連接詞、副詞子句連接詞）、介系詞固定搭配，以及分詞（現在分詞 vs. 過去分詞）、to 不定詞、動名詞慣用表達、最高級等其他文法重點。
+
+2. [PART 6：段落填空](#part-6)
+   概念：四篇短文分別是公告、報導、信件、資訊說明，每篇挖 4 個空格。考點大致分兩類：一類是單句層級的文法詞彙（名詞/形容詞/副詞詞彙與位置、介系詞、連接副詞、動詞時態如現在完成式/未來式），另一類是跨句題型「選出空格中正確的句子」，要讀懂上下文邏輯才能選出通順銜接的句子。
+   1. [Questions 131-134 refer to the following announcement.](#questions-131-134-refer-to-the-following-announcement)
+      概念：社區大樓公告，說明週一會停電維修電路與配電箱。四題考名詞詞性、動詞詞彙、一題選出語意通順的句子，以及連接副詞的用法。
+   2. [Questions 135-138 refer to the following article.](#questions-135-138-refer-to-the-following-article)
+      概念：報導 Parnopius 美術館整修後重新開幕的消息。四題考形容詞詞彙、動詞詞彙、一題選出正確句子，以及未來式動詞的判斷。
+   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter)
+      概念：公司回覆客戶 Charles Nave 關於老客戶折扣的詢問信。四題考副詞詞彙、一題選出正確句子、現在完成式動詞，以及名詞詞彙。
+   4. [Questions 143-146 refer to the following information.](#questions-143-146-refer-to-the-following-information)
+      概念：Robinson 圖書館關於到期提醒與逾期規定的說明。四題考介系詞選擇、連接副詞、名詞詞彙，以及一題選出正確句子。
+
+3. [PART 7：閱讀理解](#part-7)
+   概念：15 組單篇、雙篇、三篇閱讀文章，文體涵蓋邀請函、備忘錄、簡訊/線上對話、報導、電子郵件、信件、表格等。主要題型有：尋找主題／目的、wh- 問題（What/Why/How）、Not/True 判斷、推論題、掌握意圖、找出句子位置（句子插入）、同義詞或替換表達，以及雙篇/三篇的「多篇文章綜合題」，越到後面的多篇文章組合，跨文章比對的推論題和綜合題比重越高。
+   1. [Questions 147-148 refer to the following invitation.](#questions-147-148-refer-to-the-following-invitation)
+      概念：邀請函，邀請大家參加 Almeida 教授主講的「強化區域關係」座談會。兩題都考 Not/True（一題 True、一題 Not），要逐一比對選項與文章細節。
+   2. [Questions 149-150 refer to the following memo.](#questions-149-150-refer-to-the-following-memo)
+      概念：公司內部備忘錄，宣布依銷售量分級發放獎金的新制度。考主旨題（備忘錄目的）和 Not/True（Not 題型），要抓大意並用排除法找出文中未提及的選項。
+   3. [Questions 151-152 refer to the following text message chain.](#questions-151-152-refer-to-the-following-text-message-chain)
+      概念：房仲與房東討論今天能否帶客戶看公寓的簡訊對話。考推論題和「掌握意圖」題，要理解對話中某句話背後的真正意思，並搭配同義詞替換。
+   4. [Questions 153-155 refer to the following article.](#questions-153-155-refer-to-the-following-article)
+      概念：報導介紹 Hartford 年度藝術拍賣會 25 週年，展出三位畫家的作品。考兩題 Not/True（一 True 一 Not）加一題推論題，選項常用同義詞改寫原文細節。
+   5. [Questions 156-157 refer to the following e-mail.](#questions-156-157-refer-to-the-following-e-mail)
+      概念：公司內部信件，提醒廣告部同仁下週新品發表會的行程安排。考推論題和 Not/True（True 題型），需對照行程表細節作答。
+   6. [Questions 158-160 refer to the following e-mail.](#questions-158-160-refer-to-the-following-e-mail)
+      概念：Kimberley 寫信推薦自己旗下的行銷經理 Anna Harwood 去應徵新度假村的活動經理職缺。考 wh- 問題（What）、Not/True（True），以及「找出句子位置」的句子插入題。
+   7. [Questions 161-163 refer to the following article.](#questions-161-163-refer-to-the-following-article)
+      概念：商業週刊報導，探討企業導入永續環保做法值不值得的正反意見。考主旨題（文章目的）、Not/True（Not）與 wh- 問題（What），要區分文中不同專家的立場。
+   8. [Questions 164-167 refer to the following online chat discussion.](#questions-164-167-refer-to-the-following-online-chat-discussion)
+      概念：團隊在線上聊天群組討論明天產品發表會的場地佈置進度。考「掌握意圖」題、wh- 問題（What）、Not/True（Not）與推論題，同義詞替換也很多，要留意口語對話中的間接訊息。
+   9. [Questions 168-171 refer to the following letter.](#questions-168-171-refer-to-the-following-letter)
+      概念：電信公司提醒訂戶 Cable Plus 方案的合約條款與付款義務的信件。考主旨題（寫信理由）、Not/True（True）、wh- 問題（Why）與句子插入題。
+   10. [Questions 172-175 refer to the following article.](#questions-172-175-refer-to-the-following-article)
+       概念：報導介紹科幻經典電影《Outer Reaches》40 週年在倫敦重映，回顧電影從票房平平到成為經典的過程。考主旨題（文章目的）、Not/True（True）、wh- 問題（How）與同義詞題。
+   11. [Questions 176-180 refer to the following e-mail and form.](#questions-176-180-refer-to-the-following-e-mail-and-form)
+       概念：雙篇文章，第一篇是寵物用品電商 Furry Friends 的出貨通知信（含訂單明細），第二篇為相關表格。考 wh- 問題（How、Why）、Not/True（Not）、推論題，其中一題需跨兩篇文章比對的多篇文章綜合題。
+   12. [Questions 181-185 refer to the following form and e-mail.](#questions-181-185-refer-to-the-following-form-and-e-mail)
+       概念：雙篇文章，第一篇是 Burlington Towers 大樓管理費繳費通知表格，列出租戶費用明細；第二篇為相關電子郵件。考推論題、wh- 問題（What）、主旨題（寫信理由）與多篇文章綜合推論題，需同時參照表格數字與信件內容。
+   13. [Questions 186-190 refer to the following e-mail, schedule, and article.](#questions-186-190-refer-to-the-following-e-mail-schedule-and-article)
+       概念：三篇文章，第一篇是活動當天的緊急通知信，說明講者班機延誤、流程要調整，搭配時間表與報導。考 wh- 問題（What）、多篇文章綜合推論題（兩題）、同義詞題與 Not/True（True），需交叉對照三篇文章的時間與內容變動。
+   14. [Questions 191-195 refer to the following article, e-mail, and form.](#questions-191-195-refer-to-the-following-article-e-mail-and-form)
+       概念：三篇文章，第一篇報導介紹 Aurora 市首屆就業博覽會的資訊與攤位收費，搭配報名相關的電子郵件與表格。考 Not/True（兩題 True）、主旨題（寫文章的理由）與多篇文章綜合推論題（兩題），常需核對報導中的日期/價格與表格或信件內容是否一致。
+   15. [Questions 196-200 refer to the following e-mail, information, and review.](#questions-196-200-refer-to-the-following-e-mail-information-and-review)
+       概念：三篇文章，第一篇是度假小屋業主寫給網頁設計師的信，討論官網要新增的風景照片與客房服務選單，搭配一份資訊頁與一則顧客評論。考 wh- 問題（含跨文章題）、推論題、Not/True（含跨文章綜合題）與大量同義詞替換，是全份試卷中多篇文章綜合題最密集的一組。
+
+-----------------------------------------------------------
+
 <!-- page 243 -->
 
 # TEST 05
