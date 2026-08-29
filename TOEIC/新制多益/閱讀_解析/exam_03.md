@@ -5,20 +5,20 @@
 
 2. [PART 6：段落填空](#part-6)
    概念：4 篇短文各挖 4 個空格，除了跟 Part 5 一樣的詞性、動詞詞彙、介系詞選擇之外，還多了「選出空格中正確的句子」和「連接副詞」這種要看懂整段文意、前後句邏輯關係的題型。
-   1. [Questions 131-134 refer to the following notice.](#questions-131-134-refer-to-the-following-notice)
+   1. [Questions 131-134 refer to the following notice.](#questions-131-134-refer-to-the-following-notice-)
       概念：Eddington's 百貨公司通知會員卡持卡人，集點對帳單改成每半年寄發一次。考選句（131）、介系詞片語 Regardless of（132）、動詞詞彙 monitor（133）、連接副詞 Moreover（134）。
-   2. [Questions 135-138 refer to the following letter.](#questions-135-138-refer-to-the-following-letter)
+   2. [Questions 135-138 refer to the following letter.](#questions-135-138-refer-to-the-following-letter-)
       概念：電信公司 Best Link Telecom 寫信給新客戶推銷高速網路和折扣方案。考時間介系詞 on（135）、動詞詞彙 guarantees（136）、選句（137）、名詞詞彙 statement（138）。
-   3. [Questions 139-142 refer to the following article.](#questions-139-142-refer-to-the-following-article)
+   3. [Questions 139-142 refer to the following article.](#questions-139-142-refer-to-the-following-article-)
       概念：報導 Marinville 市中心 Halpern 大樓重建案，開發商從 25 家篩選到剩 3 家的甄選進度。考名詞詞彙（139、140）、選句（141）、容易混淆的形容詞位置 impressive（142）。
-   4. [Questions 143-146 refer to the following e-mail.](#questions-143-146-refer-to-the-following-e-mail)
+   4. [Questions 143-146 refer to the following e-mail.](#questions-143-146-refer-to-the-following-e-mail-)
       概念：保險公司寄信通知既有保戶，公司名稱即將變更。考現在式動詞（143）、動詞詞彙 inform（144）、選句（145）、to 不定詞表目的（146）。
 
 3. [PART 7：閱讀理解](#part-7)
    概念：15 篇單篇、雙篇、三篇文章的閱讀測驗，題型主要是「尋找主題／目的」（問文章在講什麼、為什麼寫）、「wh- 問題」（What/How/When 等細節題）、「Not/True」（找出文中沒提到或有提到的選項）、「推論」（尤其是多篇文章綜合題，要把兩三篇文章的線索拼在一起才能作答）、「掌握意圖」（問某句話真正想表達什麼）、「同義詞」、「找出句子位置」（把漏掉的句子塞回文章正確位置）。
    1. [Questions 147-148 refer to the following advertisement.](#questions-147-148-refer-to-the-following-advertisement)
       概念：Shoe Gold 鞋店的年度特賣廣告，說明折扣方案和分店地址。考尋找主題（147）、Not/True（148）。
-   2. [Questions 149-150 refer to the following text message chain.](#questions-149-150-refer-to-the-following-text-message-chain)
+   2. [Questions 149-150 refer to the following text message chain.](#questions-149-150-refer-to-the-following-text-message-chain-)
       概念：辦公室家具供應商和客戶 Justin Wachtel 用簡訊討論辦公椅、會議桌、投影螢幕的訂購細節。考掌握意圖（149）、Not/True（150）。
    3. [Questions 151-152 refer to the following notice.](#questions-151-152-refer-to-the-following-notice)
       概念：公司員工布告欄上一則徵求二手車的貼文，Roy Long 想幫兒子買車。考尋找目的（151）、Not/True（152）。
@@ -32,7 +32,7 @@
       概念：辦公室主管的備忘錄，提醒員工總部大樓將分樓層整修，並說明工作場所調整方案。考尋找目的（162）、推論細節（163）、wh- 問題 What（164）。
    8. [Questions 165-167 refer to the following Web page.](#questions-165-167-refer-to-the-following-web-page)
       概念：Lunch on Demand 線上訂餐網頁，介紹訂餐流程、菜單內容和會員推薦優惠。考 wh- 問題 What（165）、wh- 問題 How（166）、Not/True（167）。
-   9. [Questions 168-171 refer to the following text message chain.](#questions-168-171-refer-to-the-following-text-message-chain)
+   9. [Questions 168-171 refer to the following text message chain.](#questions-168-171-refer-to-the-following-text-message-chain-)
       概念：外燴公司 Kitchen Belle 的員工們用簡訊討論電視劇《Timelight》續約後的排班安排。考掌握意圖（168）、wh- 問題 When（169）、推論細節（170）、wh- 問題 What（171）。
    10. [Questions 172-175 refer to the following memo.](#questions-172-175-refer-to-the-following-memo)
        概念：廣告部部長發出的備忘錄，宣布部門一分為二並說明搬遷辦公室的時程與流程。考尋找目的（172）、wh- 問題 What（173）、Not/True（174）、找出句子位置（175）。

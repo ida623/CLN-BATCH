@@ -5,20 +5,20 @@
 
 2. [PART 6：段落填空](#part-6)
    概念：4 篇短文，每篇挖 4 個空格，題型除了跟 Part 5 類似的詞性/詞彙判斷外，每篇一定會出現一題「選出空格中正確的句子」（考上下文邏輯銜接），偶爾也會考需要讀完全文才能選出正確詞彙的題目。
-   1. [Questions 131-134 refer to the following announcement.](#questions-131-134-refer-to-the-following-announcement)
+   1. [Questions 131-134 refer to the following announcement.](#questions-131-134-refer-to-the-following-announcement-)
       概念：Sudbury 社區公告，通知居民鄰里大會的時間及交通議題討論。考點包含未來式動詞、名詞詞彙、跨句選句、副詞位置。
-   2. [Questions 135-138 refer to the following e-mail.](#questions-135-138-refer-to-the-following-e-mail)
+   2. [Questions 135-138 refer to the following e-mail.](#questions-135-138-refer-to-the-following-e-mail-)
       概念：同事間的郵件，Nelson 請 Denise 幫忙尋找遺失的業務文件草稿（Acton 客戶案）。考點包含名詞位置、跨句選句、表條件的副詞子句連接詞，以及要讀完全文才能判斷的名詞詞彙。
-   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter)
+   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter-)
       概念：顧客寫信給 Mythos Computers 客服部門，稱讚客服員工 Patrick Kelley 的服務。考點包含要參考上下文的副詞詞彙、跨句選句，以及現在完成式的動詞位置判斷。
-   4. [Questions 143-146 refer to the following advertisement.](#questions-143-146-refer-to-the-following-advertisement)
+   4. [Questions 143-146 refer to the following advertisement.](#questions-143-146-refer-to-the-following-advertisement-)
       概念：Seattle New Light 安養中心的廣告，強調長者的社交生活與生活品質。考點包含動名詞 vs. 名詞的名詞位置判斷、要參考上下文的動詞詞彙、跨句選句，以及名詞詞彙。
 
 3. [PART 7：閱讀理解](#part-7)
    概念：15 篇單篇/雙篇/三篇文章，題型以「尋找主題／目的」「wh- 問題」「Not/True」「推論」「同義詞／替換表達」「找出句子位置」為主，雙篇、三篇文章常出現需要比對多篇資訊的「推論／Not/True／wh- 問題（多篇文章綜合題）」。
    1. [Questions 147-148 refer to the following e-mail.](#questions-147-148-refer-to-the-following-e-mail)
       概念：Gina 寫信給銀行行員 Frederick Montaigne，詢問線上轉帳時要求輸入六位數安全碼的問題。考主旨／目的題，以及 wh- 問題（What）。
-   2. [Questions 149-150 refer to the following text message chain.](#questions-149-150-refer-to-the-following-text-message-chain)
+   2. [Questions 149-150 refer to the following text message chain.](#questions-149-150-refer-to-the-following-text-message-chain-)
       概念：律師 Mitchell Roach 傳訊息找同事 Jillian Barrera 討論新案子並約碰面時間。考 wh- 問題（Which）與掌握意圖（判斷對話弦外之音）。
    3. [Questions 151-152 refer to the following schedule.](#questions-151-152-refer-to-the-following-schedule)
       概念：NEIMA 網路行銷協會研討會第一天的活動時間表。考 wh- 問題（Which）與需要對照表格細節的推論題。
@@ -32,7 +32,7 @@
       概念：GlobalFerm 公司內部通知，說明自助餐廳整修為 Servex Modern 的計畫。考主旨／目的題、wh- 問題（Where）、替換表達，以及依文章邏輯找出插入句子正確位置的題型。
    8. [Questions 164-167 refer to the following article.](#questions-164-167-refer-to-the-following-article)
       概念：電子公司 First Global 擴廠的新聞報導。考主旨／目的（寫文章的理由）、wh- 問題（How）、替換表達、推論細節，以及找出句子插入位置的題型。
-   9. [Questions 168-171 refer to the following online chat discussion.](#questions-168-171-refer-to-the-following-online-chat-discussion)
+   9. [Questions 168-171 refer to the following online chat discussion.](#questions-168-171-refer-to-the-following-online-chat-discussion-)
       概念：三位同事在線上聊天討論網路商店的產品拍攝風格與各自進度。考主旨題、掌握意圖（判斷發言弦外之音）、Not/True、推論細節與替換表達。
    10. [Questions 172-175 refer to the following e-mail.](#questions-172-175-refer-to-the-following-e-mail)
        概念：Carol Andrews 寫信給同事說明出差華盛頓特區總部的行程安排。考主旨（寫信理由）、Not/True（Not 問題），以及 wh- 問題（Why、What）。
@@ -40,11 +40,11 @@
        概念：雙篇文章，一篇是紐西蘭 Lamington 牧場改採合作農牧的成功報導，一篇是記者 Darius Carver 寫信想採訪牧場主人。考 Not/True（True 與 Not 混合）、主旨（寫信理由），以及需要比對兩篇文章的推論題。
    12. [Questions 181-185 refer to the following e-mail and notice.](#questions-181-185-refer-to-the-following-e-mail-and-notice)
        概念：雙篇文章，一篇是退休規劃顧問 Wendy Rhodes 給客戶的建議信，一篇是大學職涯發展中心的活動公告。考主旨題、同義詞題、wh- 問題（What、Who），以及替換表達。
-   13. [Questions 186-190 refer to the following invitation, e-mail, and form.](#questions-186-190-refer-to-the-following-invitation-e-mail-and-form)
+   13. [Questions 186-190 refer to the following invitation, e-mail, and form.](#questions-186-190-refer-to-the-following-invitation-e-mail-and-form-)
        概念：三篇文章，匹茲堡商業協會「Business 101」創業研討會的邀請函，以及銀行貸款專員請假、安排代理人的通知信。考 wh- 問題（What）、Not/True（含跨文章綜合題）、替換表達，以及需要比對細節與跨文章資訊的推論題。
-   14. [Questions 191-195 refer to the following announcement, e-mail, and review.](#questions-191-195-refer-to-the-following-announcement-e-mail-and-review)
+   14. [Questions 191-195 refer to the following announcement, e-mail, and review.](#questions-191-195-refer-to-the-following-announcement-e-mail-and-review-)
        概念：三篇文章，Meredith 時尚學院春季時裝秀公告、攝影師 Anna Cruise 回覆合作條件的信，以及雜誌對時裝秀的報導評論。考 Not/True（含跨文章綜合題）、wh- 問題（含跨文章綜合題、Why），以及替換表達。
-   15. [Questions 196-200 refer to the following advertisement, form, and e-mail.](#questions-196-200-refer-to-the-following-advertisement-form-and-e-mail)
+   15. [Questions 196-200 refer to the following advertisement, form, and e-mail.](#questions-196-200-refer-to-the-following-advertisement-form-and-e-mail-)
        概念：三篇文章，消防安全系統公司 PFS 的廣告、客戶 Gwyneth Pierce 的服務申請表，以及客戶反映安裝錯誤系統的抱怨信。考 Not/True（Not 問題）、同義詞、推論細節，以及需要比對三篇文章的 wh- 問題。
 
 -----------------------------------------------------------

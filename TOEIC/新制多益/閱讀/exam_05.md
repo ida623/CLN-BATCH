@@ -5,13 +5,13 @@
 
 2. [PART 6：段落填空](#part-6)
    概念：四篇短文都是商業情境的公告、文章、書信、資訊說明，每篇 4 題大致固定考「詞性/詞彙選擇各 1~2 題＋邏輯連接詞 1 題＋選出空格中正確句子 1 題」的組合。
-   1. [Questions 131-134 refer to the following announcement.](#questions-131-134-refer-to-the-following-announcement)
+   1. [Questions 131-134 refer to the following announcement.](#questions-131-134-refer-to-the-following-announcement-)
       概念：社區大樓公告停電維修事宜。131 考名詞詞性（administration 當主詞）、132 考動詞語意（power supply 被 interrupted）、133 是選出空格中正確句子的題型、134 考轉折/邏輯連接詞（In this case 等）。
-   2. [Questions 135-138 refer to the following article.](#questions-135-138-refer-to-the-following-article)
+   2. [Questions 135-138 refer to the following article.](#questions-135-138-refer-to-the-following-article-)
       概念：報導博物館整修後重新開幕的新聞稿。135、136 考形容詞與動詞語意選擇（prominent officials、house the works）、137 是選出空格中正確句子的題型、138 考動詞時態/語態（feature 系列，與主詞 the first exhibit 的搭配）。
-   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter)
+   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter-)
       概念：公司回覆客戶詢問折扣的商業書信。139 考副詞語意（usually）、140 是選出空格中正確句子的題型、141 考動詞時態/語態（forward 系列）、142 考名詞語意（confirmation）。
-   4. [Questions 143-146 refer to the following information.](#questions-143-146-refer-to-the-following-information)
+   4. [Questions 143-146 refer to the following information.](#questions-143-146-refer-to-the-following-information-)
       概念：圖書館到期提醒服務的說明文。143 考介系詞（near their due date）、144 考轉折/邏輯連接詞（Nevertheless/Otherwise/Therefore）、145 考名詞語意（items）、146 是選出空格中正確句子的題型。
 
 3. [PART 7：閱讀理解](#part-7)
@@ -20,7 +20,7 @@
       概念：一份研討會邀請函。147 考細節（wh- 題，關於講者的背景），148 考 NOT stated（哪個活動沒被提到）。
    2. [Questions 149-150 refer to the following memo.](#questions-149-150-refer-to-the-following-memo)
       概念：公司內部宣布獎金制度變動的備忘錄。149 考主旨/目的題，150 考 NOT mentioned 題。
-   3. [Questions 151-152 refer to the following text message chain.](#questions-151-152-refer-to-the-following-text-message-chain)
+   3. [Questions 151-152 refer to the following text message chain.](#questions-151-152-refer-to-the-following-text-message-chain-)
       概念：房仲與屋主討論帶看公寓的簡訊對話。151 考推論題，152 考掌握說話者意圖題（"I know he's busy after 5" 的言外之意）。
    4. [Questions 153-155 refer to the following article.](#questions-153-155-refer-to-the-following-article)
       概念：藝術拍賣會的新聞報導。153 考 True 題、154 考 NOT indicated 題、155 考推論題（關於受贈基金會）。
@@ -30,7 +30,7 @@
       概念：一封推薦人才的商業書信。158 考 wh- 細節題、159 考 True/indicated 題，160 是句子插入題（需判斷 [1]~[4] 哪個位置語意銜接最順）。
    7. [Questions 161-163 refer to the following article.](#questions-161-163-refer-to-the-following-article)
       概念：討論企業永續經營利弊的評論文章。161 考主旨題、162 考 NOT mentioned 題、163 考 wh- 細節題（根據作者觀點，某案例顯示了什麼）。
-   8. [Questions 164-167 refer to the following online chat discussion.](#questions-164-167-refer-to-the-following-online-chat-discussion)
+   8. [Questions 164-167 refer to the following online chat discussion.](#questions-164-167-refer-to-the-following-online-chat-discussion-)
       概念：團隊籌備產品發表會的線上多人對話。164 考掌握意圖題（"That's a shame" 的言外之意），165 考 wh- 細節題，166 考 NOT true 題，167 考推論題（某人任職公司性質）。
    9. [Questions 168-171 refer to the following letter.](#questions-168-171-refer-to-the-following-letter)
       概念：有線電視公司說明服務條款的信件。168 考主旨/目的題、169 考 True/indicated 題、170 考 wh- 細節題（何時需額外付費），171 是句子插入題。
@@ -40,11 +40,11 @@
        概念：雙篇文章，出貨通知信＋顧客滿意度調查表。176、177、178 考 wh- 細節與 True/NOT 題，179 考 wh- 細節題（顧客不滿意的原因），180 是需要比對信件商品清單與問卷內容的跨文本推論題。
    12. [Questions 181-185 refer to the following form and e-mail.](#questions-181-185-refer-to-the-following-form-and-e-mail)
        概念：雙篇文章，管理費繳費通知單＋房客指出帳單錯誤的回信。181、182 考 True/wh- 細節題，183 考主旨/目的題，184 考推論題，185 則需比對通知單與信件內容才能作答的跨文本推論題（房客最初承租的房號）。
-   13. [Questions 186-190 refer to the following e-mail, schedule, and article.](#questions-186-190-refer-to-the-following-e-mail-schedule-and-article)
+   13. [Questions 186-190 refer to the following e-mail, schedule, and article.](#questions-186-190-refer-to-the-following-e-mail-schedule-and-article-)
        概念：三篇文章，活動異動通知信＋原訂流程表＋事後報導。186 考 wh- 細節題，187、189、190 都需要比對三份文件內容作答的跨文本推論/細節題，188 考同義詞題（"duty" 的近義字）。
-   14. [Questions 191-195 refer to the following article, e-mail, and form.](#questions-191-195-refer-to-the-following-article-e-mail-and-form)
+   14. [Questions 191-195 refer to the following article, e-mail, and form.](#questions-191-195-refer-to-the-following-article-e-mail-and-form-)
        概念：三篇文章，就業博覽會新聞稿＋廠商洽談攤位的信件＋參展確認表。191 考 True/indicated 題，192 考主旨/目的題，193、194、195 都是需要比對三份文件細節才能作答的跨文本推論題。
-   15. [Questions 196-200 refer to the following e-mail, information, and review.](#questions-196-200-refer-to-the-following-e-mail-information-and-review)
+   15. [Questions 196-200 refer to the following e-mail, information, and review.](#questions-196-200-refer-to-the-following-e-mail-information-and-review-)
        概念：三篇文章，民宿網站製作進度信＋網站餐飲頁面資訊＋房客評論。196 考 wh- 細節題，197 考推論題，198、199、200 都需要比對三份文件內容才能作答的 True/跨文本推論題。
 
 -----------------------------------------------------------

@@ -5,20 +5,20 @@
 
 2. [PART 6：段落填空](#part-6)（131~146 題，共 4 篇）
    概念：這個 Part 是段落填空，共 4 篇短文、每篇 4 題，除了跟 Part 5 一樣會考詞性、時態、介系詞、動詞慣用語等文法詞彙題以外，每篇都會有 1 題新制多益特有的「選出空格中正確的句子」題型，需要讀懂前後句意才能選出銜接最順的句子，也常出現要判斷句子邏輯關係的連接副詞題。
-   1. [Questions 131-134 refer to the following letter. 🆕](#questions-131-134-refer-to-the-following-letter)
+   1. [Questions 131-134 refer to the following letter. ](#questions-131-134-refer-to-the-following-letter-)
       概念：一封回覆 Murillo 小姐詢問子女美國國籍申請手續的信。考點包括要靠全文判斷語意的名詞詞彙題、動詞詞彙（verify）、連接副詞（Additionally），以及選出正確句子（幫忙找最近的政府辦事處）。
-   2. [Questions 135-138 refer to the following letter. 🆕](#questions-135-138-refer-to-the-following-letter)
+   2. [Questions 135-138 refer to the following letter. ](#questions-135-138-refer-to-the-following-letter-)
       概念：飯店經理寫給室內裝潢公司的感謝信，稱讚裝潢成果並預告接下來要整修客房、擴大商務中心。考點是動詞詞彙（commend 稱讚）、選出正確句子、名詞詞彙（atmosphere 氛圍），以及要靠上下文判斷的未來式動詞時態題。
-   3. [Questions 139-142 refer to the following advertisement. 🆕](#questions-139-142-refer-to-the-following-advertisement)
+   3. [Questions 139-142 refer to the following advertisement. ](#questions-139-142-refer-to-the-following-advertisement-)
       概念：五金用品店的年度清倉特賣廣告，介紹折扣內容和滿額贈送折價券的活動。考點有動詞片語（marked down 降價）、選出正確句子、被動態慣用語（be entitled to 有資格）、以及介系詞選擇（per 每…）。
-   4. [Questions 143-146 refer to the following article. 🆕](#questions-143-146-refer-to-the-following-article)
+   4. [Questions 143-146 refer to the following article. ](#questions-143-146-refer-to-the-following-article-)
       概念：介紹紀錄片《Feed》深入探討現代食品產業的影評報導。考點是修飾動詞的副詞位置題、名詞詞彙（topic 主題）、選出正確句子，以及 so~that 句型的副詞選擇題。
 
 3. [PART 7：閱讀理解](#part-7)（147~200 題，共 15 篇）
    概念：這是閱讀理解，從單篇搭配 2 題的短文到 3 篇文章互相參照的題組都有。常見題型包括尋找主題/目的、wh- 問題（What/Where/Why/How/How long）、Not/True 是非題、推論題（包含需要對照多篇文章的「多篇文章綜合題」）、掌握說話者意圖（線上對話、簡訊常考）、單字同義詞替換，以及判斷句子該插入文章哪個位置。
    1. [Questions 147-148 refer to the following memo.](#questions-147-148-refer-to-the-following-memo)
       概念：公司內部備忘錄，宣布為新任區域副總裁舉辦歡迎會並簡述她過去待過的城市。考點是尋找文章目的的主旨題，以及需要比對她待過哪些城市的 Not/True 是非題。
-   2. [Questions 149-150 refer to the following text messages. 🆕](#questions-149-150-refer-to-the-following-text-messages)
+   2. [Questions 149-150 refer to the following text messages. ](#questions-149-150-refer-to-the-following-text-messages-)
       概念：兩位同事用簡訊討論貿易展要準備的用品和宣傳摺頁。考點是掌握說話意圖（判斷「It isn't any trouble」的言外之意），以及需要整合對話內容的 Not/True 是非題。
    3. [Questions 151-152 refer to the following e-mail.](#questions-151-152-refer-to-the-following-e-mail)
       概念：房仲公司寄給新承租戶的信，說明押金保管與退還的相關規定。考點是從內容推論收件人身分的推論題，以及關於押金規定的 Not/True 是非題。
@@ -28,7 +28,7 @@
       概念：公司推廣免費會計軟體的網頁。考點是尋找網頁目的的主旨題，以及關於公司產品／服務內容的 Not/True 是非題。
    6. [Questions 158-160 refer to the following announcement.](#questions-158-160-refer-to-the-following-announcement)
       概念：社區休閒中心開放兒童與青少年暑期運動課程報名的公告。考點是關於活動內容的 Not/True 是非題、報名方式的 wh- 問題（How），以及候補名額釋出時間的 wh- 問題（How long）。
-   7. [Questions 161-164 refer to the following online chat discussion. 🆕](#questions-161-164-refer-to-the-following-online-chat-discussion)
+   7. [Questions 161-164 refer to the following online chat discussion. ](#questions-161-164-refer-to-the-following-online-chat-discussion-)
       概念：市府職員線上討論如何解決城市垃圾問題、要提出哪些建議給市長的對話串。考點是被要求做什麼的 wh- 問題（What）、掌握某人發言意圖、哪些解決方案沒被提到的 Not/True 題，以及對某人身分的推論題。
    8. [Questions 165-167 refer to the following flyer.](#questions-165-167-refer-to-the-following-flyer)
       概念：歌手演唱會的宣傳傳單，附早鳥票贈後台通行證的優惠。考點是關於後台通行證條件的推論題、關於演唱會內容的 Not/True 是非題，以及判斷句子該插入文章哪個位置的題型。
@@ -40,11 +40,11 @@
        概念：第一篇是辦公家具店的廣告，第二篇是客戶的網路訂購表格。考點包含關於辦公室工作者、LED 檯燈的 Not/True 是非題，以及需要同時對照兩篇文章才能算出運費、判斷哪項產品送贈品、公司哪天休館等細節的多篇文章綜合題。
    12. [Questions 181-185 refer to the following letter and e-mail.](#questions-181-185-refer-to-the-following-letter-and-e-mail)
        概念：第一篇是公司詢問飯店辦理年度高階主管退修會的信，第二篇是飯店回覆房型、會議室調整方案的電子郵件。考點包含尋找信件目的的主旨題、對公司背景的推論題、單篇文章的細節推論，以及需要對照兩封信才能算出哪種房型不夠、哪些飯店服務沒被提到的多篇文章綜合題。
-   13. [Questions 186-190 refer to the following Web page, e-mail, and invoice. 🆕](#questions-186-190-refer-to-the-following-web-page-e-mail-and-invoice)
+   13. [Questions 186-190 refer to the following Web page, e-mail, and invoice. ](#questions-186-190-refer-to-the-following-web-page-e-mail-and-invoice-)
        概念：第一篇是自由撰稿人的個人網站介紹，第二篇是潛在客戶詢問合作的電子郵件，第三篇是完成案子後開立的發票。考點包含關於撰稿人背景的 Not/True 是非題、電子郵件目的的主旨題，以及需要對照多篇文章才能推論客戶熟悉哪個舊客戶、要求報價、以及她低估研究工時的多篇文章綜合題。
-   14. [Questions 191-195 refer to the following article, Web page, and map. 🆕](#questions-191-195-refer-to-the-following-article-web-page-and-map)
+   14. [Questions 191-195 refer to the following article, Web page, and map. ](#questions-191-195-refer-to-the-following-article-web-page-and-map-)
        概念：第一篇是超市推出免費接駁車服務的新聞報導，第二篇是顧客留言反映接駁車班次問題的網頁留言，第三篇是接駁車站點地圖。考點包含開辦接駁車原因的 wh- 問題（Why）、需對照地圖確認站名的多篇文章 Not/True 題、需要對照留言與地圖才能算出顧客週末用哪一站的 wh- 問題、關於顧客意見的 Not/True 是非題，以及單字同義詞替換（presents）。
-   15. [Questions 196-200 refer to the following article, advertisement, and receipt. 🆕](#questions-196-200-refer-to-the-following-article-advertisement-and-receipt)
+   15. [Questions 196-200 refer to the following article, advertisement, and receipt. ](#questions-196-200-refer-to-the-following-article-advertisement-and-receipt-)
        概念：第一篇是服飾店即將在購物中心展店的新聞報導，第二篇是該店開幕特賣的廣告，第三篇是顧客消費後拿到的收據。考點包含尋找報導主旨的主題題、單字同義詞替換，以及需要對照廣告與收據等多篇文章才能確認促銷內容是否符合、算出折扣金額的多篇文章綜合題。
 
 -----------------------------------------------------------

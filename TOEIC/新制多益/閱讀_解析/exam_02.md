@@ -5,13 +5,13 @@
 
 2. [PART 6：段落填空](#part-6)
    概念：4 篇短文克漏字，每篇除了單句文法/詞彙填空以外，都會有一題「選出空格中正確的句子」，考的是通讀上下文、掌握文章邏輯的能力。
-   1. [Questions 131-134 refer to the following advertisement.](#questions-131-134-refer-to-the-following-advertisement)
+   1. [Questions 131-134 refer to the following advertisement.](#questions-131-134-refer-to-the-following-advertisement-)
       概念：這是一篇餐廳廣告，介紹提供中、日、印、泰、韓、越等多國料理的 Sensasia；題目考名詞詞彙選擇、動詞主動態與被動態的判斷、連接副詞的語意銜接，以及「選出空格中正確的句子」的上下文推論。
-   2. [Questions 135-138 refer to the following e-mail.](#questions-135-138-refer-to-the-following-e-mail)
+   2. [Questions 135-138 refer to the following e-mail.](#questions-135-138-refer-to-the-following-e-mail-)
       概念：這是一封請印刷廠修改小冊子設計的電子郵件；題目考形容詞詞彙（滿意程度用字）、to 不定詞的功能，以及「選出空格中正確的句子」的邏輯銜接。
-   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter)
+   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter-)
       概念：這是一封保險公司回覆客戶理賠申請進度的信；題目考副詞詞彙、名詞詞彙、現在完成式的時態判斷，以及「選出空格中正確的句子」的上下文推論。
-   4. [Questions 143-146 refer to the following memo.](#questions-143-146-refer-to-the-following-memo)
+   4. [Questions 143-146 refer to the following memo.](#questions-143-146-refer-to-the-following-memo-)
       概念：這是一則公司內部關於製作員工作業手冊的備忘錄；題目考動詞詞彙、分詞當形容詞的位置判斷（現在分詞 vs. 過去分詞）、補語詞性判斷（名詞補語 vs. 形容詞補語），以及「選出空格中正確的句子」的邏輯銜接。
 
 3. [PART 7：閱讀理解](#part-7)
@@ -20,7 +20,7 @@
       概念：一份雜誌訂閱的取消申請表，讀者填寫取消原因；題型考 wh- 問題（What、Why）與替換表達的同義句判斷。
    2. [Questions 149-150 refer to the following memo.](#questions-149-150-refer-to-the-following-memo)
       概念：公司內部關於年終聚會活動的備忘錄，通知員工時間地點並要求報名；題型考文章主題的掌握與 wh- 問題（What）的細節查找。
-   3. [Questions 151-152 refer to the following text message chain.](#questions-151-152-refer-to-the-following-text-message-chain)
+   3. [Questions 151-152 refer to the following text message chain.](#questions-151-152-refer-to-the-following-text-message-chain-)
       概念：一則關於裝潢施工中油漆顏色問題的簡訊對話紀錄；題型考「掌握意圖」（說話者言下之意）與 wh- 問題（What）的細節理解。
    4. [Questions 153-155 refer to the following announcement.](#questions-153-155-refer-to-the-following-announcement)
       概念：一份研討會（Spatial Computing Conference）當天議程的公告；題型考文章目的掌握、替換表達的同義判斷、Not/True（Not 問題）的細節核對，以及 wh- 問題（Which）的表格細節查找。
@@ -40,11 +40,11 @@
        概念：雙篇文章，一封安排司機接送客戶行程的電子郵件，搭配對應的四月行事曆時間表；題型考寫信理由、Not/True（True/Not 問題），以及需要對照兩篇文章的 wh- 問題與推論細節資訊等多篇文章綜合題。
    12. [Questions 181-185 refer to the following notice and article.](#questions-181-185-refer-to-the-following-notice-and-article)
        概念：雙篇文章，一份藝術節（Edge Festival）在多倫多舉辦的官方通知，搭配記者實際參與後撰寫的報導；題型考 Not/True（True 問題）、wh- 問題（What）、同義詞替換，以及需要交叉比對兩篇文章的「推論（多篇文章綜合題）」。
-   13. [Questions 186-190 refer to the following advertisement, Web page, and e-mail.](#questions-186-190-refer-to-the-following-advertisement-web-page-and-e-mail)
+   13. [Questions 186-190 refer to the following advertisement, Web page, and e-mail.](#questions-186-190-refer-to-the-following-advertisement-web-page-and-e-mail-)
        概念：三篇文章，禮車出租公司的廣告、線上預約網頁表單，以及後續的電子郵件往來；題型考 Not/True（True/Not 問題）、替換表達、wh- 問題（What），以及需要交叉比對三篇文章的多篇文章綜合題。
-   14. [Questions 191-195 refer to the following flyer, e-mail, and schedule.](#questions-191-195-refer-to-the-following-flyer-e-mail-and-schedule)
+   14. [Questions 191-195 refer to the following flyer, e-mail, and schedule.](#questions-191-195-refer-to-the-following-flyer-e-mail-and-schedule-)
        概念：三篇文章，圖書館 3-D 列印工作坊的宣傳單、藝術社團詢問客製課程的電子郵件，以及對應的課程時間表；題型考文章主題掌握、同義詞與替換表達，以及需要交叉比對三篇文章的 Not/True 與推論綜合題。
-   15. [Questions 196-200 refer to the following e-mail, form, and coupon.](#questions-196-200-refer-to-the-following-e-mail-form-and-coupon)
+   15. [Questions 196-200 refer to the following e-mail, form, and coupon.](#questions-196-200-refer-to-the-following-e-mail-form-and-coupon-)
        概念：三篇文章，一封向農場詢問大宗訂購草莓的電子郵件、對應的訂購表單，以及優惠券；題型考 Not/True（True 問題）、同義詞與替換表達，以及需要交叉比對三篇文章細節的推論與 Not/True 綜合題。
 
 -----------------------------------------------------------

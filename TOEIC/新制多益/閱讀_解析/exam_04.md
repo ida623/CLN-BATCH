@@ -5,13 +5,13 @@
 
 2. [PART 6：段落填空](#part-6)
    概念：這部分（131~146 題）共 4 篇短文，每篇挖 4 個空格。除了跟 Part 5 類似的詞性、時態、詞彙題之外，每篇一定會出現一題「選出空格中正確的句子」，要讀懂整段文意、前後句邏輯才能作答。
-   1. [Questions 131-134 refer to the following notice.](#questions-131-134-refer-to-the-following-notice)
+   1. [Questions 131-134 refer to the following notice.](#questions-131-134-refer-to-the-following-notice-)
       概念：一則市政府的停車公告，說明每月固定時間路邊禁停以利清掃、違規罰款及拖吊規定。考點包含名詞位置、形容詞詞彙（要看上下文）、助動詞後接原形動詞的動詞位置題，以及選句子的篇章理解題。
-   2. [Questions 135-138 refer to the following e-mail.](#questions-135-138-refer-to-the-following-e-mail)
+   2. [Questions 135-138 refer to the following e-mail.](#questions-135-138-refer-to-the-following-e-mail-)
       概念：顧客寫信詢問特價印表機是否還有貨、想購買的 e-mail。考點包含名詞詞彙、形容詞詞彙、可放在動詞位置的（助動詞＋）動詞判斷，以及選句子題。
-   3. [Questions 139-142 refer to the following article.](#questions-139-142-refer-to-the-following-article)
+   3. [Questions 139-142 refer to the following article.](#questions-139-142-refer-to-the-following-article-)
       概念：一篇報導 Tulsa 機場即將大規模整修、擴建的新聞稿。考點包含形容詞位置、動詞時態（未來式）、動詞詞彙，以及選句子題。
-   4. [Questions 143-146 refer to the following letter.](#questions-143-146-refer-to-the-following-letter)
+   4. [Questions 143-146 refer to the following letter.](#questions-143-146-refer-to-the-following-letter-)
       概念：可可豆農場主人寫信給舊識，推銷自家產品並希望對方下訂單的商業書信。考點包含 to 不定詞的功能、動詞詞彙、名詞詞彙（要看上下文），以及選句子題。
 
 3. [PART 7：閱讀理解](#part-7)
@@ -34,7 +34,7 @@
       概念：微型貸款機構感謝新會員加入、介紹如何貸款與招募志工的信。考尋找主題/目的、wh- 問題 What，以及找出句子插入位置的題型。
    9. [Questions 168-171 refer to the following memo.](#questions-168-171-refer-to-the-following-memo)
       概念：公司通知員工年度大會暨宴會場地、時程、菜單安排的備忘錄。考尋找主題/目的、Not/True 題、wh- 問題 Why，以及找出句子插入位置的題型。
-   10. [Questions 172-175 refer to the following online chat discussion.](#questions-172-175-refer-to-the-following-online-chat-discussion)
+   10. [Questions 172-175 refer to the following online chat discussion.](#questions-172-175-refer-to-the-following-online-chat-discussion-)
        概念：各地分公司主管在線上討論區域會議出席人數與代表安排的對話紀錄。考 wh- 問題 Where/What、掌握言外之意（「I am not sure I can make it」的意思），以及推論細節資訊。
    11. [Questions 176-180 refer to the following e-mails.](#questions-176-180-refer-to-the-following-e-mails)
        概念：印刷公司寄請款單給客戶，客戶回信讚賞成品並加訂型錄與印刷品的往來信件（雙篇）。考尋找主題/目的、Not/True 題、同義詞替換，以及需要對照兩封信才能作答的 wh- 問題。
@@ -44,7 +44,7 @@
        概念：辦公用品公司的紙張特賣廣告、客戶大量訂購的詢問信，以及對應的發票（三篇）。考同義詞替換、尋找主題/目的，以及需要對照三篇文章線索的 wh- 問題（例如為何多收運費、發票漏掉哪項訂購物品）。
    14. [Questions 191-195 refer to the following Web page, e-mail, and review.](#questions-191-195-refer-to-the-following-web-page-e-mail-and-review)
        概念：行動裝置包公司的產品網頁、客戶詢問大量客製訂購的信，以及該客戶事後留下的評論（三篇）。考 Not/True 題、wh- 問題 Why，以及需要對照多篇文章的推論題（例如是否拿到折扣、客製了非常規顏色）。
-   15. [Questions 196-200 refer to the following advertisement, letter, and e-mail.](#questions-196-200-refer-to-the-following-advertisement-letter-and-e-mail)
+   15. [Questions 196-200 refer to the following advertisement, letter, and e-mail.](#questions-196-200-refer-to-the-following-advertisement-letter-and-e-mail-)
        概念：電信公司的國際電話優惠廣告、建議客戶升級方案的信，以及回覆客戶詢問解約費用與手機資訊的 e-mail（三篇）。考 Not/True 題，以及需要對照多篇文章的推論題與 wh- 問題（例如優惠期限、解約費用、客戶要求的資訊內容）。
 
 -----------------------------------------------------------

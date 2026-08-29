@@ -5,13 +5,13 @@
 
 2. [PART 6：段落填空](#part-6)
    概念：這回 Part 6 共 4 篇短文，文體涵蓋廣告、email、信件、備忘錄。每篇固定會有一題是「選出空格中正確的句子」（需讀懂上下文邏輯），其餘 3 題則分散考詞彙選擇、動詞時態/語態、詞性判斷（含分詞當形容詞）。
-   1. [Questions 131-134 refer to the following advertisement.](#questions-131-134-refer-to-the-following-advertisement)
+   1. [Questions 131-134 refer to the following advertisement.](#questions-131-134-refer-to-the-following-advertisement-)
       概念：介紹亞洲餐廳 Sensasia 的廣告文案。考點包含名詞詞彙（dishes）、選出空格中正確的句子（132）、動詞被動語態（is prepared）、轉折連接副詞（To that end 等）。
-   2. [Questions 135-138 refer to the following e-mail.](#questions-135-138-refer-to-the-following-e-mail)
+   2. [Questions 135-138 refer to the following e-mail.](#questions-135-138-refer-to-the-following-e-mail-)
       概念：客戶對印刷廠溝通手冊修改需求的 email。考點包含形容詞/動詞詞彙（satisfied、missing）、選出空格中正確的句子（137）、不定詞動詞形式（happy to cover）。
-   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter)
+   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter-)
       概念：保險公司回覆理賠申請的正式信件。考點包含副詞詞彙（currently）、動詞時態（現在完成式主動語態 have requested）、選出空格中正確的句子（141）、名詞詞彙（estimate）。
-   4. [Questions 143-146 refer to the following memo.](#questions-143-146-refer-to-the-following-memo)
+   4. [Questions 143-146 refer to the following memo.](#questions-143-146-refer-to-the-following-memo-)
       概念：公司內部關於制定員工手冊的備忘錄。考點包含動詞詞彙（address）、選出空格中正確的句子（144）、過去分詞當形容詞（firmly established）、形容詞詞性（accessible）。
 
 3. [PART 7：閱讀理解](#part-7)
@@ -20,7 +20,7 @@
       概念：健身雜誌訂閱取消表單。考點為 wh- 細節題，分別問「該怎麼做」與「取消原因」。
    2. [Questions 149-150 refer to the following memo.](#questions-149-150-refer-to-the-following-memo)
       概念：公司年終聚會通知備忘錄。考點為主旨題與 wh- 細節題（員工被要求做什麼）。
-   3. [Questions 151-152 refer to the following text-message chain.](#questions-151-152-refer-to-the-following-text-message-chain)
+   3. [Questions 151-152 refer to the following text-message chain.](#questions-151-152-refer-to-the-following-text-message-chain-)
       概念：兩位同事討論油漆顏色問題的簡訊對話。考點為「掌握說話者意圖」題（151，"that might be the case" 的言下之意）與需要整合對話內容的細節題（152）。
    4. [Questions 153-155 refer to the following announcement.](#questions-153-155-refer-to-the-following-announcement)
       概念：研討會歡迎公告，內含當日議程時間表。考點包含目的題、NOT/True 題，以及需要對照時間表才能作答的細節題。
@@ -28,7 +28,7 @@
       概念：郵政調漲價格的公告，附價目調整表格。考點包含 True/細節題（對照表格）與 why 原因推論題。
    6. [Questions 158-160 refer to the following notice.](#questions-158-160-refer-to-the-following-notice)
       概念：度假村活動介紹公告。考點包含目的題、True 題、NOT 題。
-   7. [Questions 161-164 refer to the following online chat discussion.](#questions-161-164-refer-to-the-following-online-chat-discussion)
+   7. [Questions 161-164 refer to the following online chat discussion.](#questions-161-164-refer-to-the-following-online-chat-discussion-)
       概念：多人線上聊天討論拜訪客戶、安排會議行程。考點包含多題推論題（161、162、164）以及「掌握說話者意圖」題（163，"That works perfectly for me" 的言下之意）。
    8. [Questions 165-167 refer to the following letter.](#questions-165-167-refer-to-the-following-letter)
       概念：化妝品檢測實驗室向客戶推銷服務的信件。考點包含身分推論題（收件人是誰）、NOT 題，以及句子插入題（167）。
@@ -40,11 +40,11 @@
        概念：雙篇閱讀，房仲助理向新司機交代客戶接送行事曆。考點包含目的題、True/NOT 題，多題需交叉比對 email 與行事曆兩份文件才能作答。
    12. [Questions 181-185 refer to the following notice and article.](#questions-181-185-refer-to-the-following-notice-and-article)
        概念：雙篇閱讀，多倫多藝術節公告與後續新聞報導。考點包含 True 題、wh- 細節題、推論題，以及同義詞題（184，"host"）。
-   13. [Questions 186-190 refer to the following advertisement, Web page, and e-mail.](#questions-186-190-refer-to-the-following-advertisement-web-page-and-e-mail)
+   13. [Questions 186-190 refer to the following advertisement, Web page, and e-mail.](#questions-186-190-refer-to-the-following-advertisement-web-page-and-e-mail-)
        概念：三篇閱讀，豪華轎車租賃公司的廣告、線上預約表單與確認 email。考點包含 NOT 題、細節題，以及多題需整合三篇文件資訊的 True 題。
-   14. [Questions 191-195 refer to the following flyer, e-mail, and schedule.](#questions-191-195-refer-to-the-following-flyer-e-mail-and-schedule)
+   14. [Questions 191-195 refer to the following flyer, e-mail, and schedule.](#questions-191-195-refer-to-the-following-flyer-e-mail-and-schedule-)
        概念：三篇閱讀，圖書館 3D 列印工作坊宣傳單、詢問客製課程的 email 與活動時間表。考點包含主旨題、同義詞題（192，"surrounding"）、NOT 題、True 題，以及需整合三篇文件的推論題。
-   15. [Questions 196-200 refer to the following e-mail, form, and coupon.](#questions-196-200-refer-to-the-following-e-mail-form-and-coupon)
+   15. [Questions 196-200 refer to the following e-mail, form, and coupon.](#questions-196-200-refer-to-the-following-e-mail-form-and-coupon-)
        概念：三篇閱讀，乳品公司向農場採購原料的 email、訂購單與優惠券。考點包含 True 題、同義詞題（197，"means"），以及需交叉比對訂購細節變化的推論題。
 
 -----------------------------------------------------------

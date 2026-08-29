@@ -5,13 +5,13 @@
 
 2. [PART 6：段落填空](#part-6)
    概念：四篇短文分別是邀請函、投書給編輯的信、公司內部信件（e-mail）、徵才資訊，每篇都固定考「單字/片語填空」（詞性、詞彙、時態語態、介系詞、不定詞等）加上一題「選出空格中正確的句子」（需讀懂上下文邏輯銜接，不是單純文法題）。
-   1. [Questions 131-134 refer to the following invitation.](#questions-131-134-refer-to-the-following-invitation)
+   1. [Questions 131-134 refer to the following invitation.](#questions-131-134-refer-to-the-following-invitation-)
       概念：Dogorail 公司邀請商業夥伴參加展覽的邀請函。131 考介系詞（throughout 表示「貫穿整個活動期間」）；132 是「選出正確句子」題，要銜接前後文中 CEO 演講的段落邏輯；133 考名詞詞彙（consultations，商談／諮詢）；134 考副詞詞彙（fully filled out，完整填寫）。
-   2. [Questions 135-138 refer to the following letter.](#questions-135-138-refer-to-the-following-letter)
+   2. [Questions 135-138 refer to the following letter.](#questions-135-138-refer-to-the-following-letter-)
       概念：投書報社更正併購新聞錯誤的信。135 考動詞時態與被動語態（it was reported，過去被動）；136 考名詞詞彙（negotiations，協商尚未完成）；137 考動詞詞彙（generate jobs，創造工作機會）；138 是「選出正確句子」題，要呼應信件最後段落要求更正報導的邏輯。
    3. [Questions 139-142 refer to the following e-mail.](#questions-139-142-refer-to-the-following-e-mail)
       概念：公司內部提醒設備延遲送達的 e-mail。139 考動詞時態（will take longer，未來式）；140 考動詞詞彙（cancel the order）；141 考不定詞用法（asked Mr. Sampson to check，asked sb to V）；142 是「選出正確句子」題，要銜接後段供應商能否及時取貨的結論。
-   4. [Questions 143-146 refer to the following information.](#questions-143-146-refer-to-the-following-information)
+   4. [Questions 143-146 refer to the following information.](#questions-143-146-refer-to-the-following-information-)
       概念：Goldline Staffing 招募薪資事務人員的職缺資訊。143、144 考形容詞/副詞詞彙（工作內容描述、軟體技能要求）；145 是「選出正確句子」題，要呼應前後文提到員工希望獲得新技能的邏輯；146 考轉折連接詞（Furthermore 等，判斷句間邏輯關係）。
 
 3. [PART 7：閱讀理解](#part-7)
@@ -22,11 +22,11 @@
       概念：大學寫作中心服務公告。149 考主旨/目的題；150 考 Not/True 題（未提及的服務項目）。
    3. [Questions 151-152 refer to the following information.](#questions-151-152-refer-to-the-following-information)
       概念：公園規則說明文。151 考 Not/True 題（未提及的公園設施）；152 考 wh- 細節題（提醒訪客注意的事項）。
-   4. [Questions 153-156 refer to the following text-message chain.](#questions-153-156-refer-to-the-following-text-message-chain)
+   4. [Questions 153-156 refer to the following text-message chain.](#questions-153-156-refer-to-the-following-text-message-chain-)
       概念：兩位同事討論拜訪客戶（Digitek）的簡訊對話。153 考推論題（關於 Boyd 先生的工作狀態）；154 考 True 題（關於 Jacobsen 女士）；155 考掌握意圖題（"It's a deal" 這句話真正的意思）；156 考 wh- 細節題（午餐後要做什麼）。
    5. [Questions 157-159 refer to the following Web page.](#questions-157-159-refer-to-the-following-web-page)
       概念：MyPost 海外代轉運服務網頁 FAQ。157 考推論題（誰會對此服務有興趣）；158、159 考細節/推論題（服務內容、計費方式）。
-   6. [Questions 160-161 refer to the following online chat discussion.](#questions-160-161-refer-to-the-following-online-chat-discussion)
+   6. [Questions 160-161 refer to the following online chat discussion.](#questions-160-161-refer-to-the-following-online-chat-discussion-)
       概念：公司內部薪資延遲發放的線上群組對話。160 考推論題（關於 Stuttgart 先生所屬部門）；161 考掌握意圖題（"I can do that" 的實際意思）。
    7. [Questions 162-164 refer to the following memo.](#questions-162-164-refer-to-the-following-memo)
       概念：市議會關於高架道路（Truman Expressway）處理方案的報告。162 考 Not/True 題（報告中未提到的方案）；163 考推論題（關於濱水區現況）；164 考細節題（關於 Greenville 居民的態度）。
@@ -40,11 +40,11 @@
        概念：雙篇文章——汽車召回新聞報導＋車主詢問信。176 考主旨題（文章主題）；177 考推論題（誰會造訪官網）；178 考細節題（公關主管做了什麼事）；179 考主旨/目的題（車主寫信原因）；180 考推論題，需跨兩篇文章比對（關於車主 Worthington 先生的情況）。
    12. [Questions 181-185 refer to the following advertisement and letter.](#questions-181-185-refer-to-the-following-advertisement-and-letter)
        概念：雙篇文章——行銷顧問公司廣告＋客戶洽談合作信。181、183~185 考細節題（服務內容、人物身分、對方要求、附件內容）；182 考推論題，需跨兩篇文章比對（關於 Kevin Swords 的背景）。
-   13. [Questions 186-190 refer to the following e-mails, and form.](#questions-186-190-refer-to-the-following-e-mails-and-form)
+   13. [Questions 186-190 refer to the following e-mails, and form.](#questions-186-190-refer-to-the-following-e-mails-and-form-)
        概念：三篇文本——航班取消求償信、客服回覆信、理賠表單。186 考主旨/目的題；187 考細節題（客服要求提供的文件）；188 考同義詞題（convey 的意思最接近哪個字）；189、190 考推論題，需跨三篇文本比對（其他乘客的待遇、表單透露的資訊）。
-   14. [Questions 191-195 refer to the following schedule, e-mail, and article.](#questions-191-195-refer-to-the-following-schedule-e-mail-and-article)
+   14. [Questions 191-195 refer to the following schedule, e-mail, and article.](#questions-191-195-refer-to-the-following-schedule-e-mail-and-article-)
        概念：三篇文本——綠色科技研討會議程表、主辦人更改講者的 e-mail、會後新聞稿。191 考 Not/True 題；192 考推論題，需比對議程表與 e-mail 才能推出新講者的時段；193 考細節題；194 考同義詞題（critical 的意思最接近哪個字）；195 考推論題，需跨三篇文本比對（關於 David Mah 的角色）。
-   15. [Questions 196-200 refer to the following information, Web page, and e-mail.](#questions-196-200-refer-to-the-following-information-web-page-and-e-mail)
+   15. [Questions 196-200 refer to the following information, Web page, and e-mail.](#questions-196-200-refer-to-the-following-information-web-page-and-e-mail-)
        概念：三篇文本——圖書館線上續借規則說明、會員借閱清單網頁、館員回覆會員疑問的 e-mail。196 考主旨題；197 考 Not/True 題；198~200 考 True/推論/細節題，都需要比對借閱清單表格與 e-mail 內容才能作答（例如哪本書已經續借過一次）。
 
 -----------------------------------------------------------

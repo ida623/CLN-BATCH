@@ -5,24 +5,24 @@
 
 2. [PART 6：段落填空](#part-6)
    概念：131~146 題共 4 篇短文，每篇考 4 個空格。除了 Part 5 那些詞性、時態語態、詞彙題型之外，這裡多了兩種要「讀完整篇文章」才能作答的題型：一種是「選出空格中正確的句子」，要靠上下句的邏輯銜接判斷；另一種是「連接副詞」，要判斷前後句是轉折、舉例還是換句話說的關係。
-   1. [Questions 131-134 refer to the following memo.](#questions-131-134-refer-to-the-following-memo)
+   1. [Questions 131-134 refer to the following memo.](#questions-131-134-refer-to-the-following-memo-)
       概念：公司內部發的備忘錄，宣布幫 Kaur 先生辦退休歡送會的流程安排。考點有時間副詞（onward）、要看全文才能判斷的未來式、選出銜接執行長致辭後內容的正確句子，以及動詞詞彙（circulate 傳閱）。
-   2. [Questions 135-138 refer to the following letter.](#questions-135-138-refer-to-the-following-letter)
+   2. [Questions 135-138 refer to the following letter.](#questions-135-138-refer-to-the-following-letter-)
       概念：投資顧問寫信恭喜客戶升職，並建議調整投資策略、增加投資項目。考點有名詞詞彙（promotion 升職）、選出提醒重新考慮投資策略的句子、to 不定詞表目的，以及名詞詞彙（status 狀態）。
-   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter)
+   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter-)
       概念：醫院寫給病患的患者關懷調查感謝信，請對方填問卷評分。考點有選出強調醫院重視病患需求的句子、被動語態判斷（is rated）、祈使句要用動詞原形（include），以及表轉折的連接副詞（Nonetheless）。
-   4. [Questions 143-146 refer to the following article.](#questions-143-146-refer-to-the-following-article)
+   4. [Questions 143-146 refer to the following article.](#questions-143-146-refer-to-the-following-article-)
       概念：科技公司 GizmoTech 展示會新聞稿，宣傳新手機開賣資訊與報名誘因。考點有表時間點的介系詞（following）、副詞詞彙（readily）、選出說明報名好處的句子，以及動詞 avoid 後面要接動名詞當受詞（getting）。
 
 3. [PART 7：閱讀理解](#part-7)
    概念：147~200 題共 15 篇文章，從單篇的表格、信件、公告，到雙篇、三篇混合閱讀（網頁+email、email+公告、報導+收據+email 等）都有。常見題型是尋找主題／目的、wh- 問題（Why/Who/What/Where/How）、Not/True 是非題、推論題（尤其多篇文章要交叉比對）、同義詞／替換表達，以及找出句子插入的正確位置。
    1. [Questions 147-148 refer to the following form.](#questions-147-148-refer-to-the-following-form)
       概念：有線電視公司 SHARPNET 的帳號「重新啟用申請表」，客戶填寫搬家後想恢復訂閱的原因。考點是 wh- 問題 Why（退租原因）和 wh- 問題 Who（誰要在表格上簽名批准），屬於直接在表格裡找細節的題型。
-   2. [Questions 149-150 refer to the following letter.](#questions-149-150-refer-to-the-following-letter)
+   2. [Questions 149-150 refer to the following letter.](#questions-149-150-refer-to-the-following-letter-)
       概念：spa 業主寫信詢問 POS 收銀系統廠商，能否客製化追蹤折扣、點數消費等功能。考點是 wh- 問題 What（POS 系統能做什麼）和推論細節資訊（從常客回饋計畫推知該店允許用點數付款）。
    3. [Questions 151-153 refer to the following information.](#questions-151-153-refer-to-the-following-information)
       概念：Great Files 公司內部的會議室線上預約規則說明，附各樓層負責管理人對照表。考點是尋找主題／目的、Not/True 是非題（對照樓層與規則細節），以及推論細節資訊。
-   4. [Questions 154-155 refer to the following text message chain.](#questions-154-155-refer-to-the-following-text-message-chain)
+   4. [Questions 154-155 refer to the following text message chain.](#questions-154-155-refer-to-the-following-text-message-chain-)
       概念：兩位同事的簡訊對話，討論幫主管訂機票需要飛行常客卡號、以及點數不夠時該怎麼處理。考點是 wh- 問題 Why（還沒訂票的原因）和掌握意圖題（判斷某句話在對話中真正想表達的用意）。
    5. [Questions 156-157 refer to the following article.](#questions-156-157-refer-to-the-following-article)
       概念：報導中國科技公司 Chaoji 推出太陽能電腦 Hyperbar，可供偏鄉乾淨水電與網路。考點是 Not/True 是非題（比對文章細節與選項）和 wh- 問題 What（該公司今年內的下一步計畫）。
@@ -30,7 +30,7 @@
       概念：顧問公司人資主管寫給全體員工的信，說明因常態外包平面設計工作，想開內部訓練課程。考點是推論題、wh- 問題 What（主管在考慮做什麼），以及找出句子插入位置（[1][2][3][4] 標記）。
    7. [Questions 161-163 refer to the following announcement.](#questions-161-163-refer-to-the-following-announcement)
       概念：小學給家長的每週公告，說明假期前提早放學的安排以及書展活動。考點是兩題 Not/True 是非題（分別針對提早放學安排、書展與指定閱讀）和 wh- 問題 How。
-   8. [Questions 164-167 refer to the following online chat.](#questions-164-167-refer-to-the-following-online-chat)
+   8. [Questions 164-167 refer to the following online chat.](#questions-164-167-refer-to-the-following-online-chat-)
       概念：銀行客服與客戶的線上對話紀錄，處理客戶想恢復已過期支票帳戶的問題。考點是掌握意圖題、推論題，以及兩題 wh- 問題 What（銀行政策、客戶偏好的處理方式）。
    9. [Questions 168-171 refer to the following notice.](#questions-168-171-refer-to-the-following-notice)
       概念：遊樂園公告萬聖節期間 Fright Nights 系列活動內容，附活動日期地點表格。考點是尋找主題／目的、wh- 問題 Where，以及兩題 Not/True 是非題（比對表格與內文細節）。
@@ -40,11 +40,11 @@
        概念：雙篇閱讀，第一篇是滑雪度假村介紹網頁（設施、房型、優惠），第二篇是顧客詢問訂房與課程的 email。考點是 Not/True 是非題、同義詞題，以及兩題需要交叉比對兩篇文章的推論題，加上一題 wh- 問題 What。
    12. [Questions 181-185 refer to the following e-mail and notice.](#questions-181-185-refer-to-the-following-e-mail-and-notice)
        概念：雙篇閱讀，第一篇是主管寫給同事說明假期排班規定的 email，第二篇是公司發給全體員工的正式休假申請公告。考點是尋找主題／目的、兩題 Not/True 是非題，以及兩題要交叉比對兩篇文章時間點的 wh- 問題。
-   13. [Questions 186-190 refer to the following article, receipt, and e-mail.](#questions-186-190-refer-to-the-following-article-receipt-and-e-mail)
+   13. [Questions 186-190 refer to the following article, receipt, and e-mail.](#questions-186-190-refer-to-the-following-article-receipt-and-e-mail-)
        概念：三篇混合閱讀，依序是美術館重新開幕特展的雜誌報導、購票收據，以及館內因文物延誤而通知展覽延期的 email。考點是尋找主題／目的、需交叉比對三篇文章的推論題、wh- 問題 What，以及需交叉比對的 Not/True 是非題。
-   14. [Questions 191-195 refer to the following memo, e-mail, and online form.](#questions-191-195-refer-to-the-following-memo-e-mail-and-online-form)
+   14. [Questions 191-195 refer to the following memo, e-mail, and online form.](#questions-191-195-refer-to-the-following-memo-e-mail-and-online-form-)
        概念：三篇混合閱讀，依序是通知公司併購後新員工報到的備忘錄、部門主管請採購部訂購辦公用品的 email，以及線上購物車訂單明細。考點是需交叉比對三篇文章的 wh- 問題與推論題，以及一題 Not/True 是非題。
-   15. [Questions 196-200 refer to the following article, e-mail, and form.](#questions-196-200-refer-to-the-following-article-e-mail-and-form)
+   15. [Questions 196-200 refer to the following article, e-mail, and form.](#questions-196-200-refer-to-the-following-article-e-mail-and-form-)
        概念：三篇混合閱讀，依序是報導市政府計畫翻修火車站的新聞、市府回覆承包商投標詢問的 email，以及投標申請表。考點是尋找主題／目的、兩題需交叉比對三篇文章的推論題，以及兩題 Not/True 是非題。
 
 -----------------------------------------------------------

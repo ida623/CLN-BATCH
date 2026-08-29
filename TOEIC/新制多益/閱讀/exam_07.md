@@ -5,13 +5,13 @@
 
 2. [PART 6：段落填空](#part-6)
    概念：這回 Part 6 四篇短文分別是公司退休派對備忘錄、投資顧問寫給客戶的信、醫院感謝就診並邀填問卷的信，以及科技展活動報導。每篇都固定有一題是「選出空格中正確的句子」，需要讀懂前後文邏輯才能判斷；其他題目穿插時態/語態、介系詞慣用語、動名詞/不定詞用法，以及一些詞彙選字題。
-   1. [Questions 131-134 refer to the following memo.](#questions-131-134-refer-to-the-following-memo)
+   1. [Questions 131-134 refer to the following memo.](#questions-131-134-refer-to-the-following-memo-)
       概念：文體是公司內部備忘錄，主題是幫 Kaur 先生辦退休歡送會的流程說明。131 考「from 6 p.m. onward」這類時間介系詞慣用語，132 考動詞未來式，133 是選出空格中正確的句子（要銜接後文「頒發忠誠獎」的邏輯），134 考動詞詞彙（circulate 傳閱）。
-   2. [Questions 135-138 refer to the following letter.](#questions-135-138-refer-to-the-following-letter)
+   2. [Questions 135-138 refer to the following letter.](#questions-135-138-refer-to-the-following-letter-)
       概念：文體是投資顧問寫給客戶的祝賀信，主題是恭喜升遷並趁機討論投資規劃。135 考名詞詞彙（promotion 升遷），136 是選出空格中正確的句子（銜接後文重新檢視投資策略的建議），137 考不定詞表目的（to increase），138 考名詞詞彙（status 現況）。
-   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter)
+   3. [Questions 139-142 refer to the following letter.](#questions-139-142-refer-to-the-following-letter-)
       概念：文體是醫院寫給病患的信，主題是感謝就診並邀請填寫滿意度問卷。139 是選出空格中正確的句子（醫院自我介紹的開場句），140 考被動語態（each item is rated），141 考祈使句動詞原形（please include），142 考轉折連接詞（Nonetheless）。
-   4. [Questions 143-146 refer to the following article.](#questions-143-146-refer-to-the-following-article)
+   4. [Questions 143-146 refer to the following article.](#questions-143-146-refer-to-the-following-article-)
       概念：文體是科技產品發表會的新聞稿，主題是介紹 GizmoTech 展示會流程與注意事項。143 考介系詞邏輯（following the event，活動結束後），144 考副詞詞彙（readily available），145 是選出空格中正確的句子（銜接前文「優先購買資格」的說明），146 考動名詞用法（avoid getting shut out）。
 
 3. [PART 7：閱讀理解](#part-7)
@@ -22,7 +22,7 @@
       概念：書信文體，SPA 業者寫信詢問 POS 收銀系統的功能。考細節題（系統能做什麼）與推論題（suggested，關於這間 SPA 的營業型態）。
    3. [Questions 151-153 refer to the following information.](#questions-151-153-refer-to-the-following-information)
       概念：辦公室公告文體，說明會議室預約流程與各樓層聯絡窗口。考主旨題、NOT/True 題（樓層代表的相關敘述何者未提及），以及推論題（會議室使用時間的變動）。
-   4. [Questions 154-155 refer to the following text message chain.](#questions-154-155-refer-to-the-following-text-message-chain)
+   4. [Questions 154-155 refer to the following text message chain.](#questions-154-155-refer-to-the-following-text-message-chain-)
       概念：簡訊對話文體，兩位同事討論幫主管訂機票、查詢累積點數。考原因細節題，以及掌握口語意圖題（"Don't bother" 這句話真正想表達什麼）。
    5. [Questions 156-157 refer to the following article.](#questions-156-157-refer-to-the-following-article)
       概念：科技新聞文章，介紹一款太陽能供水兼發電裝置 Hyperbar。考 NOT/True 題（哪個敘述不正確）與 wh- 細節題（公司近期的計畫）。
@@ -30,7 +30,7 @@
       概念：email 文體，人資主管提議開辦內部平面設計課程以減少外包費用。考細節/推論題（indicated）、目的題（Mr. Rogerson 想做什麼），以及句子插入題（[1][2][3][4] 選出句子該放哪個位置）。
    7. [Questions 161-163 refer to the following announcement.](#questions-161-163-refer-to-the-following-announcement)
       概念：學校給家長的公告，說明提早放學的時間安排與書展資訊。考 NOT/True 題與 wh- 細節題（如何買書、閱讀清單的相關敘述）。
-   8. [Questions 164-167 refer to the following online chat.](#questions-164-167-refer-to-the-following-online-chat)
+   8. [Questions 164-167 refer to the following online chat.](#questions-164-167-refer-to-the-following-online-chat-)
       概念：線上客服聊天紀錄，客戶詢問海外歸國後帳戶能否重新啟用。考掌握意圖題（"That's the problem" 的言外之意）、推論題，以及 wh- 細節題（開新戶需要做什麼）。
    9. [Questions 172-175 refer to the following article.](#questions-172-175-refer-to-the-following-article)
       概念：新聞文章，報導一名律師當選法官職位的消息。考主旨題、推論/細節題（關於前任法官 Delwes 的敘述）、NOT 題，以及句子插入題。
@@ -38,11 +38,11 @@
        概念：雙篇閱讀，滑雪度假村的官網介紹搭配一位顧客的訂房詢問信。考 NOT 題（度假村沒提供的服務）、同義詞題（"on hand" 的意思），以及多題需要對照兩篇文件才能答的推論題（房型、免費課程、藝文活動偏好）。
    11. [Questions 181-185 refer to the following e-mail and notice.](#questions-181-185-refer-to-the-following-e-mail-and-notice)
        概念：雙篇閱讀，一封主管間的內部 email 搭配公司張貼給全員的假期排班公告。考目的題（Mr. Daley 寫信原因）、細節/推論題、NOT 題，以及需要交叉比對兩篇文件時間點的 wh- 題（何時能收到排班確認）。
-   12. [Questions 186-190 refer to the following article, receipt, and e-mail.](#questions-186-190-refer-to-the-following-article-receipt-and-e-mail)
+   12. [Questions 186-190 refer to the following article, receipt, and e-mail.](#questions-186-190-refer-to-the-following-article-receipt-and-e-mail-)
        概念：三篇閱讀，藝術雜誌報導美術館重新開幕、一張購票收據，加上館長寫給公關的延期通知信。考主旨題，以及多個需要交叉比對三份文件日期與金額的推論/細節題（購票人資訊、展覽延期、已購票者的權益）。
-   13. [Questions 191-195 refer to the following memo, e-mail, and online form.](#questions-191-195-refer-to-the-following-memo-e-mail-and-online-form)
+   13. [Questions 191-195 refer to the following memo, e-mail, and online form.](#questions-191-195-refer-to-the-following-memo-e-mail-and-online-form-)
        概念：三篇閱讀，公司併購後新進員工安排的備忘錄、採購部門的加急訂購 email，以及線上購物車訂單明細。考細節題與多個推論題，需要交叉比對三份文件的人員部門、日期與金額資訊（例如免運門檻、到貨時間是否來得及）。
-   14. [Questions 196-200 refer to the following article, e-mail, and form.](#questions-196-200-refer-to-the-following-article-e-mail-and-form)
+   14. [Questions 196-200 refer to the following article, e-mail, and form.](#questions-196-200-refer-to-the-following-article-e-mail-and-form-)
        概念：三篇閱讀，報導鐵路車站更新計畫的新聞、政府機關說明投標流程的 email，以及廠商填寫的投標申請表。考主旨題、推論題與 NOT 題，多題需要交叉比對三份文件中的規定、日期與簽名資訊。
 
 -----------------------------------------------------------
