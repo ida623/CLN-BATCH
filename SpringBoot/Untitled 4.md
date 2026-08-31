@@ -12,108 +12,108 @@ hovernotes-id: doc_c794409b-9f6c-46c9-8eb1-f757dc3df73b
 
 # 目錄
 
-1. [JPA/Hibernate 進階映射快速導覽](#jpa--hibernate-進階映射)
+1. [JPA/Hibernate 進階映射快速導覽](#1-jpa--hibernate-進階映射)
    概念:開場先說明真實世界的資料庫幾乎不會只有一張表,這門課接下來會依序教一對一、一對多、多對一、多對多這幾種資料表之間常見的關聯方式,讓你對整個章節的地圖先有個底。
 
-2. [資料庫關聯性基礎:主鍵與外鍵](#資料庫關聯性基礎概念)
+2. [資料庫關聯性基礎:主鍵與外鍵](#2-資料庫關聯性基礎概念)
    概念:複習資料庫最基本的兩個角色——主鍵(每一列資料的身分證字號,保證獨一無二)和外鍵(某張表裡存著另一張表主鍵的欄位,像一條牽線把兩張表綁在一起),這是後面所有關聯映射的地基。
 
-3. [級聯操作、抓取策略與單雙向關聯預告](#資料庫級聯操作-cascading)
+3. [級聯操作、抓取策略與單雙向關聯預告](#3-資料庫級聯操作-cascading)
    概念:介紹級聯(Cascading)——對父資料做的操作(存檔、刪除)要不要自動套用到子資料上;並先預告接下來會用到的及時載入/延遲載入(一次抓完 vs. 真的要用才去拿)、以及單向/雙向關聯(兩個物件是不是都能互相查到對方)這幾個之後會反覆出現的核心觀念。
 
-4. [一對一映射:概念與資料庫層設計](#一對一映射-one-to-one-mapping-的開發流程)
+4. [一對一映射:概念與資料庫層設計](#4-一對一映射-one-to-one-mapping-的開發流程)
    概念:用 Instructor(講師)與 Instructor Detail(講師的詳細資料)這組經典例子講解什麼是「一對一」關聯,並動手設計資料表結構、寫 SQL 加上外鍵約束(Foreign Key Constraint),讓資料庫自己就會擋掉不合法的關聯資料。
 
-5. [建立 Spring Boot 專案與資料庫連線設定](#建立-spring-boot-命令列應用程式-command-line-app)
+5. [建立 Spring Boot 專案與資料庫連線設定](#5-建立-spring-boot-命令列應用程式-command-line-app)
    概念:用 Spring Initializr 產生新專案、匯入 IntelliJ,寫一個一啟動就跑的命令列測試程式,接上 application.properties 裡的資料庫帳密,並把 Hibernate 預設會狂噴的一堆 SQL 語法用日誌等級調整成看得順眼的樣子。
 
-6. [實作 InstructorDetail 與 Instructor 的 Entity 映射](#一對一映射開發流程建立-instructordetail-實體類別)
+6. [實作 InstructorDetail 與 Instructor 的 Entity 映射](#6-一對一映射開發流程建立-instructordetail-實體類別)
    概念:把 Instructor 跟 InstructorDetail 這兩個 Java 類別加上 @Entity、@Id、@Column 這些註解「貼標籤」,對應到資料庫的表跟欄位,並用 @JoinColumn 標出誰是外鍵,讓 Hibernate 知道這兩張表要透過哪個欄位串起來。
 
-7. [建立 AppDAO、儲存與驗證一對一關聯](#建立-appdao-介面)
+7. [建立 AppDAO、儲存與驗證一對一關聯](#7-建立-appdao-介面)
    概念:寫一個 DAO(資料存取物件,專門負責跟資料庫溝通的窗口)把 Instructor 跟它的 InstructorDetail 一起存進資料庫,靠級聯設定讓你存一次 Instructor,關聯的 Detail 資料就自動跟著寫入,再用 MySQL Workbench 打開資料庫確認真的存對了。
 
-8. [查詢與刪除:一對一關聯的讀取和級聯刪除](#jpa--hibernate-一對一刪除實體)
+8. [查詢與刪除:一對一關聯的讀取和級聯刪除](#8-jpa--hibernate-一對一刪除實體)
    概念:示範怎麼依主鍵把 Instructor 連同它的 Detail 一起查回來,以及刪除 Instructor 時怎麼設定,讓 Hibernate 自動把不再需要的 Detail 資料一併清掉,不留下孤兒資料。
 
-9. [雙向一對一映射:用 mappedBy 讓兩邊互相查得到](#單向映射-uni-directional-mapping-的限制)
+9. [雙向一對一映射:用 mappedBy 讓兩邊互相查得到](#9-單向映射-uni-directional-mapping-的限制)
    概念:前面單向關聯只能從 Instructor 查到 Detail、查不回來;這裡改成雙向,讓兩邊都能互相查到對方,關鍵是用 mappedBy 告訴 Hibernate「外鍵其實已經在另一邊定義過了,這邊不用重複建一個」,避免資料庫多長出一張不必要的表。
 
-10. [雙向關聯的級聯刪除細節與斷開關聯](#雙向一對一關聯-bidirectional-one-to-one-的特性)
+10. [雙向關聯的級聯刪除細節與斷開關聯](#10-雙向一對一關聯-bidirectional-one-to-one-的特性)
     概念:深入處理雙向關聯刪除時比較棘手的情境——怎麼調整 Cascade 類型,讓刪除 Detail 時不會連帶波及 Instructor,以及怎麼「斷開」兩個物件之間的關聯而不是直接刪掉整筆資料。
 
-11. [JPA 一對多與多對一:資料庫設計與 mappedBy 原理](#jpa--hibernate-一對多與多對一映射)
+11. [JPA 一對多與多對一:資料庫設計與 mappedBy 原理](#11-jpa--hibernate-一對多與多對一映射)
     概念:進入這門課份量最重的單元——一個 Instructor(講師)可以教很多 Course(課程),這叫「一對多」;反過來每個 Course 只屬於一個 Instructor 就是「多對一」,這裡先講資料庫怎麼設計、Course 表的外鍵怎麼設,以及 mappedBy 在雙向關聯裡到底扮演什麼角色。
 
-12. [完整實作 Course 與 Instructor 的一對多雙向關聯](#建立-course-實體類別)
+12. [完整實作 Course 與 Instructor 的一對多雙向關聯](#12-建立-course-實體類別)
     概念:把 Course 類別寫完整(欄位、建構子、toString),用 @ManyToOne / @OneToMany 兩個註解讓 Course 跟 Instructor 雙向互相標記對方,並寫一個 add 便利方法,讓「幫講師加一門課」的同時兩邊的關聯資料能自動維持一致,最後存進資料庫驗證關聯有沒有建對。
 
-13. [Eager 與 Lazy Loading:抓取策略與 LazyInitializationException](#fetch-types-eager-vs-lazy-loading)
+13. [Eager 與 Lazy Loading:抓取策略與 LazyInitializationException](#13-fetch-types-eager-vs-lazy-loading)
     概念:解釋查一個 Instructor 時,要不要順便把底下所有課程也一次抓出來(Eager,像是套餐直接全上)還是先不抓、真的要用才去拿(Lazy,像是單點現點現做),以及沒設定好 Lazy 導致查詢時噴出 LazyInitializationException 錯誤該怎麼排查解決。
 
-14. [優化查詢:用 JOIN FETCH 一次撈出關聯資料](#優化查詢在單一查詢中取得講師與課程)
+14. [優化查詢:用 JOIN FETCH 一次撈出關聯資料](#14-優化查詢在單一查詢中取得講師與課程)
     概念:教你用 JPQL 的 JOIN FETCH 語法,在同一次 SQL 查詢裡就把 Instructor 跟它底下的 Course 一起撈出來,不用再靠 Lazy Loading 多發一次查詢,藉此減少資料庫來回次數、提升效能。
 
-15. [一對多關聯的更新與刪除操作](#更新-instructor-的流程)
+15. [一對多關聯的更新與刪除操作](#15-更新-instructor-的流程)
     概念:示範怎麼更新 Instructor 跟 Course 的資料,以及刪除時遇到的資料庫「完整性約束違反」問題——因為外鍵還指著它,不能直接刪掉父資料,必須先在程式碼裡解除關聯才能安全刪除。
 
-16. [單向一對多關聯示範:Course 與 Review](#單向一對多關聯-onetomany-uni-directional)
+16. [單向一對多關聯示範:Course 與 Review](#16-單向一對多關聯-onetomany-uni-directional)
     概念:換一個新例子——一門 Course 底下有很多則 Review(評論),但這次故意只做「單向」關聯(只能從 Course 查到 Review、查不回去),讓你對照體會單向跟雙向設計上的差異跟取捨。
 
-17. [完整實作 Review 一對多關聯練習專案](#建立-review-實體類別)
+17. [完整實作 Review 一對多關聯練習專案](#17-建立-review-實體類別)
     概念:延續 Review 的例子,重新走一遍完整的開發流程——資料表設計、Entity 類別、級聯儲存、用 JOIN FETCH 查詢課程跟評論、刪除課程時連帶清掉評論,把前面學到的一對多技巧整合成一個小練習專案。
 
-18. [多對多關聯(@ManyToMany)是什麼:連接表概念](#多對多關聯-manytomany)
+18. [多對多關聯(@ManyToMany)是什麼:連接表概念](#18-多對多關聯-manytomany)
     概念:介紹多對多關聯要靠一張額外的「連接表(Join Table)」來記錄兩邊的對應關係(例如一個學生選很多課、一門課也有很多學生),說明這張表長什麼樣子、資料怎麼存取。
 
-19. [多對多開發起手式:Join Table 設計與反向工程](#多對多關聯開發流程)
+19. [多對多開發起手式:Join Table 設計與反向工程](#19-多對多關聯開發流程)
     概念:動手設計 course_student 這張連接表、用 MySQL Workbench 反向工程畫出 ER 圖確認結構正確,並開始建立 Student 這個 Entity 類別。
 
-20. [完整實作 Course 與 Student 的多對多映射](#更新-course-實體類別以建立多對多關聯)
+20. [完整實作 Course 與 Student 的多對多映射](#20-更新-course-實體類別以建立多對多關聯)
     概念:用 @JoinTable 註解把 Course 跟 Student 兩個 Entity 透過連接表串起來,搭配 mappedBy 分清楚誰是「擁有端」誰是「非擁有端」,並寫 addStudent / addCourse 便利方法維持雙向資料一致,最後存檔驗證。
 
-21. [多對多關聯的查詢、更新與刪除操作](#透過學生查找其關聯課程)
+21. [多對多關聯的查詢、更新與刪除操作](#21-透過學生查找其關聯課程)
     概念:示範怎麼分別從 Course 查它的學生、從 Student 查他修的課(雙向都要查得到),以及幫學生加選新課程的更新邏輯,還有刪除課程或學生時連接表資料要怎麼一併處理。
 
-22. [AOP 概觀:從重複程式碼問題談起](#面向切面程式設計-aop-概觀)
+22. [AOP 概觀:從重複程式碼問題談起](#22-面向切面程式設計-aop-概觀)
     概念:用一個「幫 DAO 方法加日誌記錄、加安全性檢查」的情境,說明如果每個方法都手動加這些程式碼會多麼重複又難維護(程式碼糾結與分散),進而帶出 AOP 這種可以把這些「橫切關注點」統一抽出來管理的技術,以及它背後用代理模式(Proxy)實作的原理。
 
-23. [Spring AOP 與 AspectJ、AOP 術語總覽](#java-aop-框架)
+23. [Spring AOP 與 AspectJ、AOP 術語總覽](#23-java-aop-框架)
     概念:比較 Spring AOP 跟 AspectJ 這兩套 Java AOP 框架的差異與各自適用時機,並整理 AOP 的專有名詞(Aspect、Advice、Pointcut、Weaving 等)和不同 Advice 類型的總覽,方便後面對照學習。
 
-24. [建立 AOP 示範專案與第一個 @Before Advice](#aop-示範專案初始化)
+24. [建立 AOP 示範專案與第一個 @Before Advice](#24-aop-示範專案初始化)
     概念:動手建立第一個 AOP 練習專案,加上 Spring Boot AOP 的依賴套件,寫一個 AccountDAO 當作示範目標,再用 @Before 這個最基本的 Advice 類型,讓程式在呼叫 DAO 方法「之前」自動插入一段日誌邏輯。
 
-25. [點切點表達式(Pointcut Expression):execution 語法與萬用字元](#點切點表達式-pointcut-expressions)
+25. [點切點表達式(Pointcut Expression):execution 語法與萬用字元](#25-點切點表達式-pointcut-expressions)
     概念:拆解點切點表達式(Pointcut Expression)的語法——用 execution(...) 描述要攔截哪個套件、哪個類別、哪個方法,並用星號等萬用字元放寬或收緊攔截範圍。
 
-26. [進階點切點比對:回傳型別、參數與套件](#根據回傳類型進行方法匹配)
+26. [進階點切點比對:回傳型別、參數與套件](#26-根據回傳類型進行方法匹配)
     概念:繼續深入點切點表達式,教你怎麼依照方法的回傳型別、參數型態(甚至是任意數量的參數)、以及所在的套件來精確篩選要攔截的目標方法。
 
-27. [點切點宣告(Pointcut Declaration):重用與組合](#點切點宣告-pointcut-declarations)
+27. [點切點宣告(Pointcut Declaration):重用與組合](#27-點切點宣告-pointcut-declarations)
     概念:同一個攔截範圍常常要套用在好幾個 Advice 上,與其每次複製貼上表達式,不如用 @Pointcut 註解把它宣告成一個有名字的方法,之後所有 Advice 都可以直接引用這個名字,還能把多個點切點宣告組合起來用。
 
-28. [在 Advice 裡存取方法參數,並攔截 Getter/Setter](#存取與顯示方法參數)
+28. [在 Advice 裡存取方法參數,並攔截 Getter/Setter](#28-存取與顯示方法參數)
     概念:示範怎麼在 Advice 裡面拿到被攔截方法實際傳進來的參數值,並印出來看,順便展示 AOP 也能攔截到看起來很普通的 Getter/Setter 方法。
 
-29. [@AfterReturning Advice:攔截並修改方法的回傳值](#afterreturning-advice---修改回傳值)
+29. [@AfterReturning Advice:攔截並修改方法的回傳值](#29-afterreturning-advice---修改回傳值)
     概念:@AfterReturning 是在目標方法「成功執行完畢、拿到回傳值之後」才觸發的 Advice,這裡教你怎麼在裡面存取那個回傳值,甚至進一步修改要回傳給呼叫端的資料內容。
 
-30. [@AfterThrowing 與 @After:攔截例外與收尾動作](#afterthrowing-advice)
+30. [@AfterThrowing 與 @After:攔截例外與收尾動作](#30-afterthrowing-advice)
     概念:@AfterThrowing 專門攔截方法「拋出例外」的那個時刻,可以在裡面記錄錯誤資訊;而 @After(相當於 try-finally 裡的 finally)則是不管方法成功還是失敗都一定會執行,適合拿來做收尾清理的動作。
 
-31. [@Around Advice:效能監控與完全掌控方法執行](#around-advice)
+31. [@Around Advice:效能監控與完全掌控方法執行](#31-around-advice)
     概念:@Around 是威力最強的 Advice,可以完全包住目標方法的執行過程,示範拿它來做效能監控(記錄方法跑了多久),並認識 ProceedingJoinPoint 這個用來手動觸發目標方法執行的物件。
 
-32. [@Around 的例外處理:自己處理還是重新拋出](#around-advice---異常處理)
+32. [@Around 的例外處理:自己處理還是重新拋出](#32-around-advice---異常處理)
     概念:討論用 @Around 攔截到例外之後,是要自己在 Advice 裡把例外處理掉,還是要重新拋出(rethrow)讓例外繼續往上傳遞給呼叫端,兩種做法各自的影響跟怎麼選擇。
 
-33. [實戰整合:把 AOP 日誌套進真正的 Spring MVC CRUD 專案](#aop-與-spring-mvc-的整合)
+33. [實戰整合:把 AOP 日誌套進真正的 Spring MVC CRUD 專案](#33-aop-與-spring-mvc-的整合)
     概念:把前面學到的 AOP 技巧套進一個真正的 Spring MVC CRUD 專案裡,對 Controller、Service、DAO 這三層一次性加上 @Before(記錄請求進入)跟 @AfterReturning(記錄資料回傳)的日誌功能,完成一次端到端的實戰整合。
 
 -----------------------------------------------------------
 
-## JPA / Hibernate 進階映射
+## 1. JPA / Hibernate 進階映射
 
 - **[進階映射的目的]** 因為在實際的資料庫中，通常不只有一個資料表，而是會有複數個資料表以及它們之間的關聯性
     - 我們需要使用 Hibernate 來對這些複雜的資料庫結構進行建模
@@ -200,7 +200,7 @@ erDiagram
     }
 ```
 
-## 資料庫關聯性基礎概念
+## 2. 資料庫關聯性基礎概念
 
 - **[學習目標]** 在深入探討 JPA 映射之前，必須先掌握資料庫中定義實體關係的核心機制
 - **主鍵 (Primary Key)**
@@ -237,7 +237,7 @@ erDiagram
         - 此數值 `100` 會連結到 `instructor_detail` 資料表中 `id` 為 `100` 的那一筆資料
     - 藉此建立 Instructor 實體與其對應詳細資料實體的單一關聯（One-to-One）
 
-## 資料庫級聯操作 (Cascading)
+## 3. 資料庫級聯操作 (Cascading)
 
 - **[級聯的核心定義]** 指的是將同一個操作（Operation）自動應用到所有相關聯的實體（Related Entities）上
 - **[常見的操作類型]**
@@ -339,7 +339,7 @@ erDiagram
     - **[特性]** 我們可以從講師物件存取其詳細資料，但無法直接從詳細資料物件反向取得所屬的講師
     - 這種模式是學習雙向關聯 (Bidirectional) 之前的基礎步驟
 
-### 一對一映射 (One-to-One Mapping) 的開發流程
+### 4. 一對一映射 (One-to-One Mapping) 的開發流程
 
 實作一對一關聯時，建議遵循以下開發步驟以確保邏輯清晰且結構正確：
 
@@ -684,7 +684,7 @@ CONSTRAINT fk_instructor_detail
     private InstructorDetail instructorDetail;
 ```
 
-### 建立 Spring Boot 命令列應用程式 (Command Line App)
+### 5. 建立 Spring Boot 命令列應用程式 (Command Line App)
 
 - **開發目標**：建立一個專門的命令列工具，以便專注於 JPA、Hibernate 以及 DAO 模式的實作與測試。
 - **設計架構**：採用先前課程中學過的 **DAO (Data Access Object) 模式**，將應用程式邏輯與資料庫存取邏輯分離。
@@ -1109,7 +1109,7 @@ spring.datasource.password=springstudent
     - 系統依然會記錄並顯示 **警告 (Warnings)** 與 **錯誤 (Errors)**
     - 若程式發生異常 (Exception) 或其他嚴重問題，Spring 仍會將相關資訊輸出，確保開發者能及時發現問題
 
-### 一對一映射開發流程：建立 InstructorDetail 實體類別
+### 6. 一對一映射開發流程：建立 InstructorDetail 實體類別
 
 - **[開發流程] One-to-One 實作步驟**
     - 1. 準備工作 (Prep Work)
@@ -1609,7 +1609,7 @@ public String toString() {
 - **[實作動作]** 為了組織程式碼，首先會建立一個專用的套件 (package) 來存放 DAO 相關元件
     - **目標套件名稱**：`dao`
 
-### 建立 AppDAO 介面
+### 7. 建立 AppDAO 介面
 
 - 在 `dao` 套件下建立一個新的 Java 介面
     - **[操作步驟]** 在 IntelliJ IDEA 中：
@@ -2229,7 +2229,7 @@ flowchart LR
     A[Instructor: Madhu Patel] --> B[InstructorDetail: youtubeChannel='http://www.luv2code.com', hobby='Guitar']
 ```
 
-### JPA / Hibernate 一對一：刪除實體
+### 8. JPA / Hibernate 一對一：刪除實體
 
 - **[刪除流程]** 在 DAO 實作類別中，刪除一個具有一對一關聯的實體需要兩個步驟：
 
@@ -2420,7 +2420,7 @@ flowchart TD
 
 ## JPA / Hibernate 一對一雙向映射
 
-### 單向映射 (Uni-directional Mapping) 的限制
+### 9. 單向映射 (Uni-directional Mapping) 的限制
 
 - 目前的實作僅為單向映射，關係流向如下：
 
@@ -2988,7 +2988,7 @@ where i1_0.id=?
         - **路徑 A**：從 `Instructor` $\rightarrow$ 取得 `InstructorDetail`
         - **路徑 B**：從 `InstructorDetail` $\rightarrow$ 取得 `Instructor`
 
-### 雙向一對一關聯 (Bidirectional One-to-One) 的特性
+### 10. 雙向一對一關聯 (Bidirectional One-to-One) 的特性
 
 - **雙向導航 (Two-way street)**
     - 實體之間建立起互通的關係，不僅可以從主實體找到關聯實體，也可以從關聯實體反向找到主實體
@@ -3372,7 +3372,7 @@ flowchart LR
     style B fill:#fff,stroke:#f00,stroke-width:2px
 ```
 
-## JPA / Hibernate 一對多與多對一映射
+## 11. JPA / Hibernate 一對多與多對一映射
 
 ### 一對多映射 (One-to-Many Mapping)
 
@@ -3804,7 +3804,7 @@ erDiagram
     - 並已透過反向工程確認了各表間的關聯性
 - **[後續計畫]** 開始撰寫 Hibernate 程式碼，實際對這些資料表進行 CRUD (建立、讀取、更新、刪除) 操作
 
-### 建立 `Course` 實體類別
+### 12. 建立 `Course` 實體類別
 
 - **[開發流程進度]**：已完成第一步「定義資料庫資料表」，現在進入第二步：建立 `Course` 類別
 - **專案備份作業**：
@@ -4525,7 +4525,7 @@ ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 | 10 | Air Guitar - The Ultimate Guide | 1 |
 | 11 | The Pinball Masterclass | 1 |
 
-### Fetch Types: Eager vs Lazy Loading
+### 13. Fetch Types: Eager vs Lazy Loading
 
 當從資料庫檢索（fetch/retrieve）資料時，需要決定是否要同時抓取所有關聯的資料。
 
@@ -5262,7 +5262,7 @@ Done!
 Process finished with exit code 0
 ```
 
-### 優化查詢：在單一查詢中取得講師與課程
+### 14. 優化查詢：在單一查詢中取得講師與課程
 
 - **[現有方案的缺點]**：
     - 之前的解決方案雖然可行，但效率較低，因為它需要執行額外的查詢。
@@ -5659,7 +5659,7 @@ Finding instructor id: 1
 
     - 觀察輸出可知，`associated courses` 已成功被抓取並印出，且沒有拋出任何異常。
 
-### 更新 Instructor 的流程
+### 15. 更新 Instructor 的流程
 
 更新一個講師實體通常遵循以下三個步驟：
 
@@ -6620,7 +6620,7 @@ SELECT * FROM hb-03-one-to-many.course;
     - 重新整理後，原本 `id` 為 `10` 的課程紀錄已不再顯示於結果列表中。
     - 成功證實 `deleteCourseById` 方法已正確將目標課程從資料庫中移除。
 
-### 單向一對多關聯 (@OneToMany: Uni-Directional)
+### 16. 單向一對多關聯 (@OneToMany: Uni-Directional)
 
 - 設定一個 `Course` 實體可以擁有許多個 `Review` 實體
 - 此關係為**單向**：關聯僅從 `Course` 指向 `Review`
@@ -7139,7 +7139,7 @@ spring.datasource.url=jdbc:mysql://localhost:3306/hb-04-one-to-many-uni
     - 由於先前已建立專案備份，因此可以安全地移除這些不再需要的程式碼。
     - 將該方法暫時保持空白，以便在後續開發過程中，根據需求逐步添加新的測試邏輯。
 
-### 建立 `Review` 實體類別
+### 17. 建立 `Review` 實體類別
 
 進入 `entity` 套件並建立名為 `Review` 的新 Java 類別。
 
@@ -7964,7 +7964,7 @@ flowchart LR
     D -->|Review| F[關聯資料也已消失]
 ```
 
-## 多對多關聯 (@ManyToMany)
+## 18. 多對多關聯 (@ManyToMany)
 
 在某些業務場景中，實體之間存在多對多的關係。例如：
 
@@ -8372,7 +8372,7 @@ flowchart LR
         - **[原因]**：為了防止在刪除其中一方時，意外刪除與其關聯的其他實體。
         - **範例**：若刪除一個 `Course`，不應刪除其關聯的 `Student`；同理，刪除 `Student` 也不應刪除其關聯的 `Course`。
 
-## 多對多關聯開發流程
+## 19. 多對多關聯開發流程
 
 ### 步驟 1：準備工作 - 定義資料庫表
 
@@ -8657,7 +8657,7 @@ public String toString() {
 }
 ```
 
-### 更新 Course 實體類別以建立多對多關聯
+### 20. 更新 Course 實體類別以建立多對多關聯
 
 - **[開發流程]** 多對多關聯的實作步驟如下：
 
@@ -9284,7 +9284,7 @@ private void createCourseAndStudents(AppDAO appDAO) {
 | 10 | 1 |
 | 10 | 2 |
 
-### 透過學生查找其關聯課程
+### 21. 透過學生查找其關聯課程
 
 - 採取與先前相反的查詢方向：不再從課程出發，而是從學生出發
 - **目標**：找出特定的學生，並顯示該學生所分配或關聯的所有課程列表
@@ -10049,7 +10049,7 @@ public class Student {
     - 網路上可能存在不同的解決方案與實作方式
     - **[建議]** 本課程提供的範例應視為「通用指南」，開發者應根據應用程式的具體業務需求 (Domain Needs) 與功能要求進行調整與優化
 
-## 面向切面程式設計 (AOP) 概觀
+## 22. 面向切面程式設計 (AOP) 概觀
 
 ### 應用架構設計
 
@@ -10406,7 +10406,7 @@ public void doSomeStuff() {
     - 執行時編織 (Run-time weaving)
 - **[效能考量]**：執行時編織 (Run-time weaving) 的速度最慢，因為它是在程式執行過程中才進行處理
 
-### Java AOP 框架
+### 23. Java AOP 框架
 
 - Java 領域中有兩個領先的 AOP 框架：
     - **Spring AOP**
@@ -10829,7 +10829,7 @@ public class MyDemoLoggingAspect {
     - **Avoid expensive operations**：不要在通知中執行任何昂貴或耗時的操作（如複雜的計算或長時間的 I/O）。
 - **[核心目標]** 就像在間諜網路中一樣，切面的目標是「迅速進入並迅速離開 (Get in and out as QUICKLY as possible)」，以最小化對目標物件 (Target Object) 執行流程的干擾。
 
-## AOP 示範專案初始化
+## 24. AOP 示範專案初始化
 
 使用 Spring Initializr (start.spring.io) 來建立新的專案。
 
@@ -11428,7 +11428,7 @@ sequenceDiagram
     - **點切點表達式 (Pointcut Expressions)**：學習如何精確地定義攔截範圍，避免過度攔截不相關的方法
     - **其他通知類型 (Other Advice Types)**：除了 `@Before`，還會學習其他在方法執行不同階段觸發的通知方式
 
-### 點切點表達式 (Pointcut Expressions)
+### 25. 點切點表達式 (Pointcut Expressions)
 
 - **點切點 (Pointcut) 的定義**
     - 本質上是一個**斷言式 (predicate expression)**
@@ -12180,7 +12180,7 @@ class com.luv2code.aopdemo.dao.MembershipDAOImpl: DOING MY DB WORK: ADDING A MEM
 - **結論**：
     - 實驗結果完全符合預期。由於點切點表達式設定為 `@Before("execution(public void add*())")`，它成功地捕捉到了不同類別中所有以 `add` 開頭的方法，證實了萬用字元的廣泛匹配能力。
 
-### 根據回傳類型進行方法匹配
+### 26. 根據回傳類型進行方法匹配
 
 - 目前的點切點表達式主要關注方法名稱與修飾符
     - 例如：`@Before("execution(public void add*())")`
@@ -12969,7 +12969,7 @@ private void demoTheBeforeAdvice(AccountDAO theAccountDAO, MembershipDAO theMemb
 - **執行結果驗證**：
     - 透過測試，確認此表達式能正確攔截 `AccountDAOImpl` 與 `MembershipDAOImpl` 中的多個方法（如 `addAccount`、`doWork`、`addSillyMember` 與 `goToSleep`）。
 
-### 點切點宣告 (Pointcut Declarations)
+### 27. 點切點宣告 (Pointcut Declarations)
 
 在開發 AOP 切面時，可能會遇到需要將同一個點切點表達式應用於多個不同 Advice 的情境。
 
@@ -13895,7 +13895,7 @@ private void demoTheBeforeAdvice(AccountDAO theAccountDAO, MembershipDAO theMemb
 - **實作手段**
     - 將利用「組合點切點 (combining pointcuts)」的技術來達成精確的攔截控制
 
-### 存取與顯示方法參數
+### 28. 存取與顯示方法參數
 
 為了讓通知（Advice）不僅僅記錄方法名稱，還能記錄傳入的參數，需要執行以下兩個步驟：
 
@@ -14785,7 +14785,7 @@ Process finished with exit code 0
     - `@AfterReturning` 的日誌會出現在主程式印出結果之前
     - 這證實了 Advice 在目標方法回傳值送回主程式呼叫者之前，就已經先一步介入並完成了任務
 
-## `@AfterReturning` Advice - 修改回傳值
+## 29. `@AfterReturning` Advice - 修改回傳值
 
 除了常見的日誌記錄與安全檢查，`@AfterReturning` 的一個強大用途是進行**數據後處理 (Post-processing Data)**。
 
@@ -15139,7 +15139,7 @@ flowchart TD
     - `@AfterReturning` 可以被用作數據後處理（Post-processing）的工具。
     - 這種機制允許在不改變目標方法原始邏輯的情況下，對回傳結果進行統一的轉換、清洗或增強。
 
-### `@AfterThrowing` Advice
+### 30. `@AfterThrowing` Advice
 
 - **定義**：當目標方法執行過程中拋出異常（Exception）時，會觸發此類型的 advice
 - **常見的 Advice 類型對照**：
@@ -16122,7 +16122,7 @@ Main Program: demoTheAfterAdvice
 - **總結**
     - 這是一個完整的端到端（end-to-end）範例，展示了如何使用 `@After` advice 來處理不論成功或失敗都必須執行的邏輯。
 
-### `@Around` Advice
+### 31. `@Around` Advice
 
 - **定義**：在目標方法執行**之前**與**之後**都會執行的 advice
 - **Advice 類型總覽**：
@@ -16749,7 +16749,7 @@ public String getFortune() {
         - 根據控制台輸出，若設定 5 秒延遲，則顯示的 `Duration` 應接近 5 秒（例如 `5.005 seconds`）
         - **[注意]** 顯示的持續時間是一個近似值（approximation）
 
-## `@Around` Advice - 異常處理
+## 32. `@Around` Advice - 異常處理
 
 - **[控制權]** `@Around` advice 提供了對目標方法調用的細粒度控制 (fine-grained control)
 - **[處理異常的策略]** 當 `ProceedingJoinPoint` 拋出異常時，可以採取以下行動：
@@ -17398,7 +17398,7 @@ Caused by: java.lang.RuntimeException: Createbreakpoint: Major accident! Highway
     - 異常訊息中包含了來自 Advice 的記錄資訊與原始異常的內容
     - 透過 `tripWire = true` 成功模擬了從「攔截 $\rightarrow$ 記錄 $\rightarrow$ 重新拋出 $\rightarrow$ 主程式接收」的完整生命週期
 
-### AOP 與 Spring MVC 的整合
+### 33. AOP 與 Spring MVC 的整合
 
 - **目標**：為現有的 Spring MVC CRUD 應用程式增加 AOP 日誌支援
 - **Spring MVC 應用程式架構流程**

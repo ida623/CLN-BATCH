@@ -10,7 +10,224 @@ tags:
 hovernotes-id: doc_c794409b-9f6c-46c9-8eb1-f757dc3df73b
 ---
 
-## JPA / Hibernate 進階映射
+# 目錄
+
+1. [JPA / Hibernate 進階映射](#1-jpa--hibernate-進階映射)
+   概念：說明為什麼需要「進階映射」——真實資料庫不會只有一張表，而是多張表彼此關聯，單一映射（一個 Java Class 對一張表）不夠用。
+
+2. [一對一映射 (One-to-One Mapping)](#2-一對一映射-one-to-one-mapping)
+   概念：用「講師 (Instructor)」與「講師詳細資料 (Instructor Detail)」為例，說明一個實體對應另一個實體的關係，並附上 ER 圖。
+
+3. [一對多映射 (One-to-Many Mapping)](#3-一對多映射-one-to-many-mapping)
+   概念：一名講師可以開設多門課程，說明一個實體對應多個實體的關係。
+
+4. [多對一映射 (Many-to-One Mapping)](#4-多對一映射-many-to-one-mapping)
+   概念：一對多的反向角度——多門課程指向同一位講師。
+
+5. [多對多映射 (Many-to-Many Mapping)](#5-多對多映射-many-to-many-mapping)
+   概念：用學生與課程為例，說明兩邊都可以有多筆對應關係的複雜關聯。
+
+6. [資料庫關聯性基礎概念](#6-資料庫關聯性基礎概念)
+   概念：複習主鍵、外鍵、級聯操作，這三個是深入 JPA 映射前必懂的資料庫基礎機制。
+
+7. [資料庫關聯性核心要素](#7-資料庫關聯性核心要素)
+   概念：進一步定義主鍵（唯一識別一列資料）與外鍵（指向另一表主鍵）的作用。
+
+8. [外鍵的實務應用範例](#8-外鍵的實務應用範例)
+   概念：用 instructor_detail_id 這個欄位實際示範外鍵怎麼把兩張表串起來。
+
+9. [資料庫級聯操作 (Cascading)](#9-資料庫級聯操作-cascading)
+   概念：定義級聯——對主實體做的操作（如儲存、刪除）自動套用到關聯實體上，並用刪除講師連帶刪除其詳細資料為例。
+
+10. [刪除級聯 (Cascading Delete) 的運作實例](#10-刪除級聯-cascading-delete-的運作實例)
+   概念：具體示範刪除 Darby 講師時，系統會自動刪除他的 instructor_detail 資料，並提醒級聯刪除要依業務情境謹慎使用。
+
+11. [級聯操作的決策邏輯](#11-級聯操作的決策邏輯)
+   概念：用「刪除學生不該連帶刪除課程」這個反例，說明級聯設定要看業務邏輯決定，不是為了方便就全部打開。
+
+12. [資料檢索策略預覽](#12-資料檢索策略預覽)
+   概念：預告接下來要講的兩種資料讀取模式——及時載入與延遲載入。
+
+13. [及時載入 (Eager Loading) 與 延遲載入 (Lazy Loading) 詳解](#13-及時載入-eager-loading-與-延遲載入-lazy-loading-詳解)
+   概念：說明查詢時是要一次把關聯資料都抓回來（Eager），還是等真的用到才去資料庫拿（Lazy）。
+
+14. [單向關聯 (Unidirectional Relationship) 概念預覽](#14-單向關聯-unidirectional-relationship-概念預覽)
+   概念：用 Instructor → Instructor Detail 為例，說明關聯只能單方向查詢（反過來不行）。
+
+15. [單向與雙向關聯 (Unidirectional vs. Bidirectional)](#15-單向與雙向關聯-unidirectional-vs-bidirectional)
+   概念：比較單向（只能從一邊查另一邊）跟雙向（兩邊都能互查）關聯的差別。
+
+16. [資料建模的靈活性與適應性](#16-資料建模的靈活性與適應性)
+   概念：強調一對一／一對多／多對一／多對多都只是通用範例，實際設計要依需求調整，沒有標準答案。
+
+17. [Hibernate 一對一映射 (One-to-One Mapping)](#17-hibernate-一對一映射-one-to-one-mapping)
+   概念：正式進入本篇主軸——用講師與其詳細資料的一對一關聯，從資料庫到 Java 程式碼一步步實作。
+
+18. [單向一對一關聯 (Unidirectional One-to-One)](#18-單向一對一關聯-unidirectional-one-to-one)
+   概念：說明這次要做的是「只能從講師查到詳細資料」的單向版本，是學雙向關聯前的暖身。
+
+19. [一對一映射 (One-to-One Mapping) 的開發流程](#19-一對一映射-one-to-one-mapping-的開發流程)
+   概念：列出三個開發步驟：先準備資料庫、再寫 Entity 類別、最後整合到應用程式。
+
+20. [初始資料庫設計：Instructor Detail 表](#20-初始資料庫設計instructor-detail-表)
+   概念：開始設計 instructor_detail 表的欄位，先從主鍵 id 開始。
+
+21. [實作 `instructor_detail` 資料表腳本](#21-實作-instructor_detail-資料表腳本)
+   概念：寫出建立 instructor_detail 表的 SQL 腳本，包含自動遞增主鍵、頻道名稱、興趣欄位。
+
+22. [`instructor` 資料表結構初步規劃](#22-instructor-資料表結構初步規劃)
+   概念：初步列出 instructor 表要有哪些欄位（先列 id、first_name）。
+
+23. [`instructor` 資料表完整結構規劃](#23-instructor-資料表完整結構規劃)
+   概念：補齊 instructor 表完整欄位，並加入 instructor_detail_id 這個之後要當外鍵用的欄位，但此時兩表還沒有正式關聯。
+
+24. [外鍵 (Foreign Key) 的概念與作用](#24-外鍵-foreign-key-的概念與作用)
+   概念：定義外鍵——一個表裡引用另一個表主鍵的欄位，用來把兩張表連結起來。
+
+25. [實作一對一關聯：以 Instructor 為例](#25-實作一對一關聯以-instructor-為例)
+   概念：用流程圖示範外鍵怎麼從 instructor 表指向 instructor_detail 表的主鍵。
+
+26. [在 SQL 中實作外鍵約束 (Foreign Key Constraint)](#26-在-sql-中實作外鍵約束-foreign-key-constraint)
+   概念：用 CONSTRAINT ... FOREIGN KEY 語法把外鍵規則正式寫進資料表建立腳本。
+
+27. [參照完整性 (Referential Integrity)](#27-參照完整性-referential-integrity)
+   概念：解釋定義外鍵的真正目的是確保「如果 A 引用了 B，B 就一定要存在」這條規則。
+
+28. [外鍵約束的防禦機制](#28-外鍵約束的防禦機制)
+   概念：說明外鍵約束會擋掉無效的外鍵值，插入不存在的主鍵會直接報錯。
+
+29. [實作進度總結與展望](#29-實作進度總結與展望)
+   概念：小結目前完成的資料庫端工作，準備轉往 Java 程式碼層級的實作。
+
+30. [進入 Java 實體類別開發階段](#30-進入-java-實體類別開發階段)
+   概念：正式開始寫 InstructorDetail 這個 Java 類別，對應到資料庫的 instructor_detail 表。
+
+31. [實作 `InstructorDetail` 實體類別映射](#31-實作-instructordetail-實體類別映射)
+   概念：用 @Entity、@Table 註解把 InstructorDetail 類別對應到資料表，並映射主鍵與一般欄位。
+
+32. [實作 `Instructor` 實體類別映射](#32-實作-instructor-實體類別映射)
+   概念：比照辦理，用 @Entity、@Table 建立 Instructor 類別對應 instructor 表。
+
+33. [建立實體類別間的關聯映射](#33-建立實體類別間的關聯映射)
+   概念：指出兩個類別目前雖然都各自映射好了，但彼此還沒有關聯，需要用 @OneToOne 把它們串起來。
+
+34. [實作關聯的連結機制 (Hooking up the Relationship)](#34-實作關聯的連結機制-hooking-up-the-relationship)
+   概念：用 @JoinColumn 指定實際存放外鍵的欄位，讓 Hibernate 知道怎麼去對應表撈資料。
+
+35. [Hibernate 實體生命週期 (Entity Life Cycle)](#35-hibernate-實體生命週期-entity-life-cycle)
+   概念：介紹 Hibernate 實體在應用程式執行期間會經歷的狀態，先從「游離狀態 (Detached)」開始。
+
+36. [Hibernate 實體狀態操作方法](#36-hibernate-實體狀態操作方法)
+   概念：介紹 merge、persist、remove、refresh 四個操作方法分別用來處理實體的哪種狀態轉換。
+
+37. [Hibernate 實體狀態轉換流程圖](#37-hibernate-實體狀態轉換流程圖)
+   概念：用狀態圖整理 Transient、Persistent、Detached 三種狀態之間怎麼轉換。
+
+38. [狀態與操作細節說明](#38-狀態與操作細節說明)
+   概念：細部說明每個狀態（暫時、持久化、游離）的定義跟能做的操作。
+
+39. [Hibernate 狀態轉換的進階細節](#39-hibernate-狀態轉換的進階細節)
+   概念：補充 remove 之後會進入 Removed 狀態、rollback 會退回 Detached 狀態等細節，並提醒不用死背所有轉換路徑。
+
+40. [Hibernate 級聯操作 (Cascading) 概念](#40-hibernate-級聯操作-cascading-概念)
+   概念：再次定義級聯——對主實體的操作自動套用到關聯實體，減少手動處理多個物件的麻煩。
+
+41. [Hibernate 級聯操作類型 (Cascade Types)](#41-hibernate-級聯操作類型-cascade-types)
+   概念：說明級聯不是全開全關的開關，而是可以用 CascadeType 精確選擇要套用哪些操作。
+
+42. [級聯刪除 (CascadeType.DELETE)](#42-級聯刪除-cascadetypedelete)
+   概念：主實體被刪除時，關聯的實體也會自動一起被刪除，避免留下孤兒資料。
+
+43. [級聯持久化 (CascadeType.PERSIST)](#43-級聯持久化-cascadetypepersist)
+   概念：儲存主實體時，關聯的實體也會自動一起被存進資料庫，只需呼叫一次儲存方法。
+
+44. [Hibernate 級聯操作類型 (續)](#44-hibernate-級聯操作類型-續)
+   概念：用表格整理 REMOVE、REFRESH、DETACH、MERGE、ALL 這幾種級聯類型分別做什麼，並示範 CascadeType.ALL 的寫法。
+
+45. [Hibernate 級聯操作的配置細節](#45-hibernate-級聯操作的配置細節)
+   概念：強調 Hibernate 預設不會做任何級聯，需要自己明確指定；也可以用逗號列出多種類型只做部分級聯。
+
+46. [建立 Spring Boot 命令列應用程式 (Command Line App)](#46-建立-spring-boot-命令列應用程式-command-line-app)
+   概念：用 DAO 模式建一個命令列小工具，專門用來測試 JPA/Hibernate 的實作。
+
+47. [第一步：定義 DAO 介面 (AppDAO Interface)](#47-第一步定義-dao-介面-appdao-interface)
+   概念：定義 AppDAO 介面跟一個 save 方法，先只定行為不寫實作。
+
+48. [實作 AppDAO 實作類別 (AppDAO Implementation)](#48-實作-appdao-實作類別-appdao-implementation)
+   概念：寫 AppDAOImpl，用建構子注入拿到 EntityManager，並用 entityManager.persist() 實作儲存，順便說明設了 CascadeType.ALL 後存主實體就會自動存到關聯實體。
+
+49. [在應用程式中整合 AppDAO 與實體關聯](#49-在應用程式中整合-appdao-與實體關聯)
+   概念：在 CommandLineRunner 裡注入 AppDAO，寫一個 createInstructor 方法把建立物件、建立關聯、呼叫存檔三個步驟串起來。
+
+50. [實作一對一關係的物件關聯與儲存](#50-實作一對一關係的物件關聯與儲存)
+   概念：示範用 setInstructorDetail() 把兩個物件連起來後，只呼叫一次 appDAO.save() 就能靠級聯把兩筆資料一起存進去。
+
+51. [一對一單向關聯 (One-to-One Unidirectional) 的實作細節](#51-一對一單向關聯-one-to-one-unidirectional-的實作細節)
+   概念：解釋「擁有方 (Owning Side)」的概念——Instructor 是擁有方，所以外鍵欄位放在 instructor 表裡。
+
+52. [執行資料庫腳本以建立資料表](#52-執行資料庫腳本以建立資料表)
+   概念：實際跑 SQL 腳本建出 instructor 跟 instructor_detail 兩張表，並設好外鍵關聯。
+
+53. [實作資源檔案概覽](#53-實作資源檔案概覽)
+   概念：說明下載的範例壓縮檔裡有 one-to-one、one-to-many、many-to-many 三種關聯的範例資料夾。
+
+54. [建立進階 JPA 映射專案目錄](#54-建立進階-jpa-映射專案目錄)
+   概念：在專案資料夾下新建一個「09 Spring Boot JPA Advanced Mappings」目錄，把進階內容跟之前的基礎內容分開放。
+
+55. [準備實作資源與環境](#55-準備實作資源與環境)
+   概念：把起始檔案搬進新目錄，並開啟 MySQL Workbench 準備跑 SQL 腳本。
+
+56. [初始化資料庫架構 (Schema)](#56-初始化資料庫架構-schema)
+   概念：找到 createDB.SQL 腳本，說明 Schema 就是一組資料表的集合，這個腳本會建出 HB01_1_to_1_Uni 這個 Schema。
+
+57. [實作 SQL 腳本：重建資料表結構](#57-實作-sql-腳本重建資料表結構)
+   概念：腳本會先關掉外鍵檢查、刪除舊表，再重新建立 instructor_detail 跟 instructor 兩張表。
+
+58. [`instructor` 資料表結構詳解](#58-instructor-資料表結構詳解)
+   概念：詳細列出 instructor 表的每個欄位定義，並用 CONSTRAINT 語法把 instructor_detail_id 設成外鍵。
+
+59. [執行 SQL 腳本與結果驗證](#59-執行-sql-腳本與結果驗證)
+   概念：在 MySQL Workbench 按下閃電圖示執行腳本，教你怎麼看綠色勾勾、黃色警告、紅色錯誤這些執行結果訊息。
+
+60. [Schema 的進階概念與操作](#60-schema-的進階概念與操作)
+   概念：提醒執行完要手動 Refresh 才看得到新 Schema，並補充 Schema 其實還包含 Views、預存程序、函數，不是只有資料表。
+
+61. [使用 MySQL Workbench 進行反向工程 (Reverse Engineer)](#61-使用-mysql-workbench-進行反向工程-reverse-engineer)
+   概念：教你怎麼用 Workbench 把現有資料庫結構自動轉成視覺化的 ER 圖表。
+
+62. [完成反向工程與圖表檢查](#62-完成反向工程與圖表檢查)
+   概念：說明產生圖表時要記得勾選匯入資料表物件、把物件放進畫布，並提醒圖表判讀的關聯類型有時會顯示錯誤，但只是視覺問題不影響實際結構。
+
+63. [手動修正圖表中的關聯基數 (Cardinality)](#63-手動修正圖表中的關聯基數-cardinality)
+   概念：教你在圖表裡點連線、選 Edit Relationship，手動把關聯基數改成 one to one。
+
+64. [手動修正圖表關聯基數 (Cardinality)](#64-手動修正圖表關聯基數-cardinality)
+   概念：重複整理同一個手動修正步驟，並再次強調圖表修改只是視覺呈現，真正決定關聯行為的還是程式碼裡的 @OneToOne 註解。
+
+65. [使用 Spring Initializr 建立 Spring Boot 專案](#65-使用-spring-initializr-建立-spring-boot-專案)
+   概念：到 start.spring.io 設定 Maven、Java、專案 group/artifact 等基本資訊，準備生成新專案。
+
+66. [使用 Spring Initializr 建立 Spring Boot 專案 (續)](#66-使用-spring-initializr-建立-spring-boot-專案-續)
+   概念：接著設定專案描述、package name，並加入 MySQL Driver 與 Spring Data JPA 這兩個依賴，最後按 GENERATE 下載專案。
+
+67. [專案檔案準備與配置](#67-專案檔案準備與配置)
+   概念：把下載的 cruddemo.zip 解壓縮，搬到 DevSpringBoot 底下的 09 資料夾。
+
+68. [開啟專案至 IntelliJ IDEA](#68-開啟專案至-intellij-idea)
+   概念：用 IntelliJ 開啟專案，準備開始寫命令列應用程式。
+
+69. [建立 Command Line 應用程式 (Command Line App)](#69-建立-command-line-應用程式-command-line-app)
+   概念：介紹 CommandLineRunner 這個介面——等所有 Spring Bean 都載入完成後，裡面定義的方法就會自動執行。
+
+70. [使用 Java Lambda 表達式實作 CommandLineRunner](#70-使用-java-lambda-表達式實作-commandlinerunner)
+   概念：用 Lambda 簡化寫法實作 CommandLineRunner，目前先印出 Hello World 當測試。
+
+71. [基礎架構與框架準備](#71-基礎架構與框架準備)
+   概念：收尾說明目前只是把基礎設施搭好，後續會在這個基礎上寫更複雜的商業邏輯。
+
+-----------------------------------------------------------
+
+## 1. JPA / Hibernate 進階映射
 
 - **[進階映射的目的]** 因為在實際的資料庫中，通常不只有一個資料表，而是會有複數個資料表以及它們之間的關聯性
     - 我們需要使用 Hibernate 來對這些複雜的資料庫結構進行建模
@@ -18,7 +235,7 @@ hovernotes-id: doc_c794409b-9f6c-46c9-8eb1-f757dc3df73b
     - 基礎映射：將單一 Java Class 對應到單一 Database Table
     - 進階映射：處理多個資料表及其相互關係
 
-### 一對一映射 (One-to-One Mapping)
+### 2. 一對一映射 (One-to-One Mapping)
 
 - 一個實體可以擁有另一個對應的詳細資料實體
     - 例如：講師（Instructor）可以有一個「講師詳細資料」（Instructor Detail）實體
@@ -52,7 +269,7 @@ erDiagram
     }
 ```
 
-### 一對多映射 (One-to-Many Mapping)
+### 3. 一對多映射 (One-to-Many Mapping)
 
 - 一個實體可以擁有複數個關聯實體
     - 例如：一名講師（Instructor）可以開設多門課程（Courses）
@@ -69,7 +286,7 @@ erDiagram
     }
 ```
 
-### 多對一映射 (Many-to-One Mapping)
+### 4. 多對一映射 (Many-to-One Mapping)
 
 - 為了一對多映射的「反向」或「逆向」關係
     - 即從多個實體指向同一個實體的關係
@@ -77,7 +294,7 @@ erDiagram
     - 即從多個實體指向同一個實體的關係
     - 例如：許多門課程（Many Courses）可以對應到同一位講師（One Instructor）
 
-### 多對多映射 (Many-to-Many Mapping)
+### 5. 多對多映射 (Many-to-Many Mapping)
 
 - 當兩個實體之間都存在複數關聯時使用
 - **[實例：學生與課程]**
@@ -97,7 +314,7 @@ erDiagram
     }
 ```
 
-## 資料庫關聯性基礎概念
+## 6. 資料庫關聯性基礎概念
 
 - **[學習目標]** 在深入探討 JPA 映射之前，必須先掌握資料庫中定義實體關係的核心機制
 - **主鍵 (Primary Key)**
@@ -109,7 +326,7 @@ erDiagram
 - **級聯操作 (Cascading)**
     - 處理關聯實體之間連動變更的機制（例如：當刪除父實體時，是否自動刪除關聯的子實體）
 
-### 資料庫關聯性核心要素
+### 7. 資料庫關聯性核心要素
 
 - **主鍵 (Primary Key)**
     - 用於唯一標識資料表中的每一筆記錄
@@ -120,7 +337,7 @@ erDiagram
 - **級聯操作 (Cascading)**
     - 定義當一個實體發生變更時，如何自動影響關聯的實體
 
-### 外鍵的實務應用範例
+### 8. 外鍵的實務應用範例
 
 - **外鍵的核心功能**
     - 作為建立不同資料表之間關聯的橋樑
@@ -134,7 +351,7 @@ erDiagram
         - 此數值 `100` 會連結到 `instructor_detail` 資料表中 `id` 為 `100` 的那一筆資料
     - 藉此建立 Instructor 實體與其對應詳細資料實體的單一關聯（One-to-One）
 
-## 資料庫級聯操作 (Cascading)
+## 9. 資料庫級聯操作 (Cascading)
 
 - **[級聯的核心定義]** 指的是將同一個操作（Operation）自動應用到所有相關聯的實體（Related Entities）上
 - **[常見的操作類型]**
@@ -146,7 +363,7 @@ erDiagram
         - **[為什麼需要刪除級聯？]** 為了維持資料的一致性與整潔，避免留下「孤立」的資料
         - **範例**：若刪除了一位 `Instructor`，由於該講師已不存在，其對應的 `Instructor Detail`（詳細資料）也失去了存在的意義，因此應一併刪除，不應保留無效的詳細資訊
 
-### 刪除級聯 (Cascading Delete) 的運作實例
+### 10. 刪除級聯 (Cascading Delete) 的運作實例
 
 - **[運作機制]** 當對父實體執行刪除操作時，系統會自動尋找並刪除所有與之關聯的子實體，以防止資料庫中殘留無意義的孤立資料。
 - **[具體範例：Instructor 與 Instructor Detail]**
@@ -157,7 +374,7 @@ erDiagram
     - 在某些複雜關係中（例如：學生與課程之間的「多對多」關係），自動刪除可能會導致非預期的資料流失
     - 必須評估刪除父實體是否真的應該連帶移除所有關聯資訊
 
-### 級聯操作的決策邏輯
+### 11. 級聯操作的決策邏輯
 
 - **[核心原則]** 級聯操作的配置必須完全取決於特定的**業務案例 (Use Case)** 與應用程式邏輯，而非僅僅為了開發方便。
 - **[實務決策範例：學生與課程]**
@@ -170,14 +387,14 @@ erDiagram
 
 ---
 
-### 資料檢索策略預覽
+### 12. 資料檢索策略預覽
 
 - **[核心問題]** 當我們從資料庫檢索（Retrieve）一個實體時，應該如何處理其關聯的資料？
 - **[關鍵概念]** 接下來將探討兩種主要的載入模式：
     - **及時載入 (Eager Loading)**
     - **延遲載入 (Lazy Loading)**
 
-### 及時載入 (Eager Loading) 與 延遲載入 (Lazy Loading) 詳解
+### 13. 及時載入 (Eager Loading) 與 延遲載入 (Lazy Loading) 詳解
 
 - **及時載入 (Eager Loading)**
     - **運作方式**：在一次檢索過程中，立即將所有相關聯的資料一併抓取回來。
@@ -186,7 +403,7 @@ erDiagram
     - **運作方式**：在初次檢索時僅取得主實體，只有當程式碼明確「要求」存取關聯資料時，才會再去資料庫抓取。
     - **特性**：按需取用（On request），能有效減少不必要的資料傳輸與記憶體消耗。
 
-### 單向關聯 (Unidirectional Relationship) 概念預覽
+### 14. 單向關聯 (Unidirectional Relationship) 概念預覽
 
 - **[定義]** 指的是關聯僅存在於一個方向上的關係。
 - **[實務範例：Instructor 與 Instructor Detail]**
@@ -194,7 +411,7 @@ erDiagram
     - **流程**：開發者先載入 `Instructor` 物件，隨後可以透過該物件存取其對應的詳細資訊。
     - 此種模式下，`Instructor Detail` 本身並不直接持有指向 `Instructor` 的引用。
 
-### 單向與雙向關聯 (Unidirectional vs. Bidirectional)
+### 15. 單向與雙向關聯 (Unidirectional vs. Bidirectional)
 
 - **單向關聯 (Unidirectional)**
     - **特性**：關係僅存在於一個方向上。
@@ -206,7 +423,7 @@ erDiagram
     - 在使用 JPA/Hibernate 處理實體關係時，**不存在唯一的「正確」映射方式**。
     - 根據具體的業務需求與系統架構，有多種有效的設計模式可以選擇。
 
-### 資料建模的靈活性與適應性
+### 16. 資料建模的靈活性與適應性
 
 - **[多樣化的關係模型]** 資料庫設計中存在多種建模方式，常見的包含：
     - 一對一 (One-to-One)
@@ -219,7 +436,7 @@ erDiagram
         - 應用程式的具體功能需求
         - 業務領域的邏輯需求 (Domain Needs)
 
-## Hibernate 一對一映射 (One-to-One Mapping)
+## 17. Hibernate 一對一映射 (One-to-One Mapping)
 
 - **[核心概念]** 指的是兩個實體之間存在一對一的關聯，即一個實體的實例僅對應另一個實體的單一實例。
 - **[實務範例：講師與個人檔案]**
@@ -228,7 +445,7 @@ erDiagram
 - **[資料庫建模]**
     - 在資料庫層級，這種關係會透過**兩個獨立的資料表**來實作
 
-### 單向一對一關聯 (Unidirectional One-to-One)
+### 18. 單向一對一關聯 (Unidirectional One-to-One)
 
 - **[運作方式]** 關係僅從一個實體指向另一個實體。
 - **[本案例的結構]**
@@ -236,7 +453,7 @@ erDiagram
     - **[特性]** 我們可以從講師物件存取其詳細資料，但無法直接從詳細資料物件反向取得所屬的講師
     - 這種模式是學習雙向關聯 (Bidirectional) 之前的基礎步驟
 
-### 一對一映射 (One-to-One Mapping) 的開發流程
+### 19. 一對一映射 (One-to-One Mapping) 的開發流程
 
 實作一對一關聯時，建議遵循以下開發步驟以確保邏輯清晰且結構正確：
 
@@ -254,13 +471,13 @@ erDiagram
 
     - 建立主應用程式程式碼，將所有組件整合在一起
 
-### 初始資料庫設計：Instructor Detail 表
+### 20. 初始資料庫設計：Instructor Detail 表
 
 在建立 Java 類別之前，首先需根據業務需求設計資料庫表結構。以 `Instructor Detail` 為例，其核心欄位包含：
 
 - `id`：作為該資料表的主鍵 (Primary Key)
 
-### 實作 `instructor_detail` 資料表腳本
+### 21. 實作 `instructor_detail` 資料表腳本
 
 為了建立 `instructor_detail` 資料表，需要撰寫 SQL 腳本並透過 MySQL Workbench 或其他資料庫管理工具執行。該資料表的結構設計如下：
 
@@ -279,7 +496,7 @@ CREATE TABLE instructor_detail (
 );
 ```
 
-### `instructor` 資料表結構初步規劃
+### 22. `instructor` 資料表結構初步規劃
 
 除了詳細資料表外，主實體 `instructor` 資料表也需要建立，其規劃包含以下欄位（部分展示）：
 
@@ -287,7 +504,7 @@ CREATE TABLE instructor_detail (
 - `first_name`：名
 - (其餘欄位待續...)
 
-### `instructor` 資料表完整結構規劃
+### 23. `instructor` 資料表完整結構規劃
 
 為了建立完整的講師資訊系統，`instructor` 資料表的設計不僅包含基本個人資料，還需要預留與詳細資料表連結的欄位。
 
@@ -303,12 +520,12 @@ CREATE TABLE instructor_detail (
     - 雖然我們在 `instructor` 表中加入了 `instructor_detail_id` 作為「把手 (Handle)」，但尚未正式定義它們之間的資料庫關聯（例如設定外鍵 Foreign Key）。
     - **下一步目標**：需要透過定義關聯，將這兩個原本分離的資料表正式連結起來。
 
-### 外鍵 (Foreign Key) 的概念與作用
+### 24. 外鍵 (Foreign Key) 的概念與作用
 
 - **[核心定義]** 外鍵是指在一個資料表中，有一個欄位會「引用」另一個資料表的主鍵 (Primary Key)。
 - **[功能]** 外鍵的主要作用是將兩個不同的資料表連結 (Link) 在一起，建立起實體之間的關聯。
 
-### 實作一對一關聯：以 Instructor 為例
+### 25. 實作一對一關聯：以 Instructor 為例
 
 透過外鍵，我們可以將原本獨立的兩個資料表正式對接：
 
@@ -343,7 +560,7 @@ flowchart LR
     I3 -->|"引用 (Refers to)"| D1
 ```
 
-### 在 SQL 中實作外鍵約束 (Foreign Key Constraint)
+### 26. 在 SQL 中實作外鍵約束 (Foreign Key Constraint)
 
 雖然在設計階段我們已經規劃了關聯欄位（如 `instructor_detail_id`），但必須透過 SQL 的約束語法來正式建立這層關係。
 
@@ -361,7 +578,7 @@ CONSTRAINT fk_instructor_detail
     REFERENCES instructor_detail(id)
 ```
 
-### 參照完整性 (Referential Integrity)
+### 27. 參照完整性 (Referential Integrity)
 
 定義外鍵不僅僅是建立連結，更重要的是為了確保資料庫的**參照完整性**。
 
@@ -371,7 +588,7 @@ CONSTRAINT fk_instructor_detail
     - **無效的刪除**：防止刪除一個仍被其他資料表引用的主表紀錄（除非有設定級聯操作）。
 - **[總結]** 參照完整性確保了「如果 A 引用了 B，那麼 B 必須真的存在」這一邏輯在資料庫層級得到強制執行。
 
-### 外鍵約束的防禦機制
+### 28. 外鍵約束的防禦機制
 
 - **[資料驗證作用]** 外鍵約束能確保只有「有效」的資料能被寫入該欄位。
     - **[強制規則]** 外鍵欄位中的值，必須是另一個資料表（被引用表）中確實存在的主鍵 (Primary Key)。
@@ -381,7 +598,7 @@ CONSTRAINT fk_instructor_detail
 
 ---
 
-### 實作進度總結與展望
+### 29. 實作進度總結與展望
 
 - **[已完成項目]**
     - 資料庫表結構設計 (Database Table Setup)
@@ -390,7 +607,7 @@ CONSTRAINT fk_instructor_detail
     - 從資料庫層級的建模，轉向 **Java 程式碼層級** 的實作。
     - 學習如何使用 JPA/Hibernate 撰寫 Java 類別，以完成完整的「一對一映射 (One-to-One Mapping)」功能。
 
-### 進入 Java 實體類別開發階段
+### 30. 進入 Java 實體類別開發階段
 
 - **[開發進度回顧]**
     - 已完成第一階段：資料庫準備工作 (Prep Work)，包含定義資料表與設定外鍵。
@@ -399,7 +616,7 @@ CONSTRAINT fk_instructor_detail
     - **目標**：建立對應的 Java 類別，並將其與資料庫中已存在的 `instructor_detail` 資料表進行映射 (Mapping)。
     - **核心邏輯**：Java 中的實體類別 (Entity Class) 將作為資料庫紀錄在程式碼中的代表，透過映射機制，讓開發者能以物件導向的方式操作資料庫資料。
 
-### 實作 `InstructorDetail` 實體類別映射
+### 31. 實作 `InstructorDetail` 實體類別映射
 
 在建立 Java 類別時，必須使用 JPA 提供的註解來告訴 Hibernate 這個類別與資料庫中的哪張表以及哪些欄位有關聯。
 
@@ -414,7 +631,7 @@ CONSTRAINT fk_instructor_detail
         - 建構函式 (Constructors)
         - Getter 與 Setter 方法
 
-### 實作 `Instructor` 實體類別映射
+### 32. 實作 `Instructor` 實體類別映射
 
 完成子實體（`InstructorDetail`）後，接著為主實體 `Instructor` 建立對應的 Java 類別。
 
@@ -423,7 +640,7 @@ CONSTRAINT fk_instructor_detail
 - **[開發邏輯]**
     - 建立類別的過程本質上是在定義「Java 物件」與「資料庫紀錄」之間的對應關係，讓程式碼能以物件導向的方式操作資料表內容。
 
-### 建立實體類別間的關聯映射
+### 33. 建立實體類別間的關聯映射
 
 目前雖然已完成 `Instructor` 與 `InstructorDetail` 的基礎欄位映射（如姓名、電子郵件等），但這兩個類別在 Java 層級目前仍是**完全獨立**的物件。
 
@@ -435,7 +652,7 @@ CONSTRAINT fk_instructor_detail
     - **目的**：透過 Hibernate 的註解機制，將這兩個獨立的實體類別串聯起來。
     - **實作方式**：在 `Instructor` 類別中新增一個屬性，並加上 `@OneToOne` 註解，藉此定義兩者之間的一對一關係。
 
-### 實作關聯的連結機制 (Hooking up the Relationship)
+### 34. 實作關聯的連結機制 (Hooking up the Relationship)
 
 僅僅在實體類別之間加上 `@OneToOne` 是不夠的，還必須明確告訴 Hibernate 如何在資料庫層級找到對應的紀錄。
 
@@ -450,7 +667,7 @@ CONSTRAINT fk_instructor_detail
     - **步驟三：物件組裝**
         - **[結果]**：在程式執行時（In-memory），開發者拿到的 `Instructor` 物件會自動包含其關聯的 `InstructorDetail` 物件，整個關聯過程由 Hibernate 在背景自動完成。
 
-### Hibernate 實體生命週期 (Entity Life Cycle)
+### 35. Hibernate 實體生命週期 (Entity Life Cycle)
 
 在深入探討級聯類型 (Cascade Types) 之前，必須先理解 Hibernate 實體在應用程式中使用時會經歷的一系列狀態。這些狀態決定了 Hibernate 如何追蹤與管理實體的變更。
 
@@ -462,7 +679,7 @@ CONSTRAINT fk_instructor_detail
         - 雖然實體物件仍然存在於 Java 的記憶體中，但 Hibernate 不再監控該物件的任何變動。
         - 對於此狀態下的實體進行修改，其變更不會自動同步（Persist）到資料庫中，除非重新將其與 Session 關聯。
 
-### Hibernate 實體狀態操作方法
+### 36. Hibernate 實體狀態操作方法
 
 除了理解實體所處的狀態外，開發者還需要掌握如何透過 Hibernate Session 來切換或操作這些狀態，以確保記憶體中的物件與資料庫保持同步。
 
@@ -480,11 +697,11 @@ CONSTRAINT fk_instructor_detail
     - **作用**：強制將記憶體中的物件與資料庫中的實際數據進行同步（Reload）。
     - **[為什麼需要它？]**：防止記憶體中出現 **Stale Data (陳舊資料)**。當資料庫中的資料已被其他程序修改，而本地記憶體中的物件仍保有舊值時，透過 `refresh` 可以確保物件內容與資料庫最新狀態一致。
 
-### Hibernate 實體狀態轉換流程圖
+### 37. Hibernate 實體狀態轉換流程圖
 
 對於視覺學習者來說，透過狀態轉換圖可以更直觀地理解物件在不同生命週期階段的流動與操作方式。
 
-#### 狀態與操作細節說明
+#### 38. 狀態與操作細節說明
 
 - **Transient (暫時狀態 / New)**
     - **定義**：剛使用 `new` 關鍵字建立，尚未與資料庫關聯的物件。
@@ -499,7 +716,7 @@ CONSTRAINT fk_instructor_detail
     - **定義**：原本受管理，但因為 Session 已關閉（`close`）而失去與 Hibernate 關聯的物件。
     - **轉換**：可以透過 `merge` 重新回到 **Persistent** 狀態，或直接丟棄回到 **Transient** 狀態。
 
-### Hibernate 狀態轉換的進階細節
+### 39. Hibernate 狀態轉換的進階細節
 
 在執行特定的交易操作（Transaction operations）時，實體會進入更細微的狀態變化，這對於理解資料一致性至關重要。
 
@@ -515,7 +732,7 @@ CONSTRAINT fk_instructor_detail
     - **掌握核心概念**
         - 學習重點應放在理解「物件與 Session 的關聯性」以及「記憶體與資料庫的同步機制」等主要概念，而非所有特殊的轉換路徑。
 
-### Hibernate 級聯操作 (Cascading) 概念
+### 40. Hibernate 級聯操作 (Cascading) 概念
 
 - **定義**：將對一個實體（主實體）執行的操作，自動套用到與其相關聯的實體上。
 - **核心目的**：自動化管理關聯實體的生命週期，減少手動處理多個物件的繁瑣步驟。
@@ -524,11 +741,11 @@ CONSTRAINT fk_instructor_detail
     - **[級聯行為]**：當我們對 `Instructor` 執行 `save` 操作時，若設定了級聯，Hibernate 會自動同時將關聯的 `InstructorDetail` 也儲存到資料庫中。
 - **應用場景**：當關聯實體在邏輯上依附於主實體存在時（例如：沒有講師就沒有講師詳細資料），級聯操作非常有用。
 
-### Hibernate 級聯操作類型 (Cascade Types)
+### 41. Hibernate 級聯操作類型 (Cascade Types)
 
 級聯操作允許開發者精確控制哪些實體操作會傳遞給關聯實體。這不是一個「全開或全關」的開關，而是可以根據業務邏輯選擇特定的 `CascadeType`。
 
-#### 級聯刪除 (CascadeType.DELETE)
+#### 42. 級聯刪除 (CascadeType.DELETE)
 
 - **行為**：當主實體被刪除時，Hibernate 會自動刪除所有與其關聯的相關實體紀錄。
 - **實例說明**：
@@ -536,7 +753,7 @@ CONSTRAINT fk_instructor_detail
     - **[動作]**：當我們刪除某位 `Instructor` 時，系統會自動從資料庫中移除對應的 `InstructorDetail` 紀錄。
     - **[目的]**：確保資料的一致性，避免在資料庫中留下「孤兒資料」（即指向不存在主實體的詳細資料）。
 
-#### 級聯持久化 (CascadeType.PERSIST)
+#### 43. 級聯持久化 (CascadeType.PERSIST)
 
 - **行為**：當主實體進入 **Persistent (持久化)** 狀態時，關聯實體也會同步進入該狀態。
 - **實例說明**：
@@ -544,7 +761,7 @@ CONSTRAINT fk_instructor_detail
     - **[動作]**：Hibernate 會自動將關聯的 `InstructorDetail` 也一起儲存到資料庫中。
     - **[優點]**：開發者只需呼叫一次儲存主實體的方法，即可完成整組關聯物件的持久化工作。
 
-### Hibernate 級聯操作類型 (續)
+### 44. Hibernate 級聯操作類型 (續)
 
 除了前面提到的類型外，Hibernate 還提供了更全面的控制選項：
 
@@ -565,7 +782,7 @@ CONSTRAINT fk_instructor_detail
     private InstructorDetail instructorDetail;
 ```
 
-### Hibernate 級聯操作的配置細節
+### 45. Hibernate 級聯操作的配置細節
 
 - **預設行為：無級聯 (No Cascading by default)**
     - **重要特性**：若在註解中未明確指定 `cascade` 屬性，Hibernate **不會**對任何操作進行級聯。
@@ -581,14 +798,14 @@ CONSTRAINT fk_instructor_detail
     private InstructorDetail instructorDetail;
 ```
 
-### 建立 Spring Boot 命令列應用程式 (Command Line App)
+### 46. 建立 Spring Boot 命令列應用程式 (Command Line App)
 
 - **開發目標**：建立一個專門的命令列工具，以便專注於 JPA、Hibernate 以及 DAO 模式的實作與測試。
 - **設計架構**：採用先前課程中學過的 **DAO (Data Access Object) 模式**，將應用程式邏輯與資料庫存取邏輯分離。
     - **Main Application**：作為程式進入點，負責執行業務邏輯。
     - **AppDAO**：作為資料存取層，負責與後端資料庫進行溝通與互動。
 
-#### 第一步：定義 DAO 介面 (AppDAO Interface)
+#### 47. 第一步：定義 DAO 介面 (AppDAO Interface)
 
 - **目的**：定義資料存取的標準行為，而不涉及具體的實作細節。
 - **實作內容**：建立一個名為 `AppDAO` 的介面，並定義核心方法。
@@ -602,7 +819,7 @@ public interface AppDAO {
 
 - **[功能說明]**：`save` 方法接受一個 `Instructor` 物件作為參數，其目標是將該講師及其所有關聯的組件（如 `InstructorDetail`）一併儲存至資料庫中。
 
-### 實作 AppDAO 實作類別 (AppDAO Implementation)
+### 48. 實作 AppDAO 實作類別 (AppDAO Implementation)
 
 - **開發目標**：建立 `AppDAOImpl` 類別來實作先前定義的 `AppDAO` 介面，提供具體的資料存取邏輯。
 - **核心組件：EntityManager**
@@ -614,7 +831,7 @@ public interface AppDAO {
     - **[原理]**：由於在 `Instructor` 實體中配置了 `CascadeType.ALL`。
     - **[結果]**：當呼叫 `entityManager.persist(theInstructor)` 時，Hibernate 不僅會儲存 `Instructor` 本身，還會自動將關聯的 `InstructorDetail` 物件一併執行 `persist` 操作並儲存至資料庫。
 
-### 在應用程式中整合 AppDAO 與實體關聯
+### 49. 在應用程式中整合 AppDAO 與實體關聯
 
 - **更新 Main Application 邏輯**
     - 在 `CommandLineRunner` 中注入 `AppDAO` 實例，以便在應用程式啟動時執行業務邏輯。
@@ -630,7 +847,7 @@ public interface AppDAO {
         - 呼叫 `appDAO.save(theInstructor)`。
         - **[運作原理]**：由於先前已配置 `CascadeType.ALL`，僅需對主實體（Instructor）執行一次 `persist`，Hibernate 就會自動處理關聯實體（InstructorDetail）的儲存。
 
-### 實作一對一關係的物件關聯與儲存
+### 50. 實作一對一關係的物件關聯與儲存
 
 - **建立物件間的連結 (Connecting Objects)**
     - 在執行儲存之前，必須先透過 Setter 方法將兩個實體物件關聯起來。
@@ -649,7 +866,7 @@ public interface AppDAO {
         - **[關鍵機制]**：由於配置了 `CascadeType.ALL`，當 `tempInstructor` 被持久化時，Hibernate 會自動偵測到其關聯的 `instructorDetail` 物件，並自動對該關聯物件執行 `persist` 操作。
     - **[優點]**：開發者不需要分別對兩個物件執行儲存，只需對主實體進行操作，即可完成整個關聯物件樹的持久化，大幅簡化程式碼。
 
-### 一對一單向關聯 (One-to-One Unidirectional) 的實作細節
+### 51. 一對一單向關聯 (One-to-One Unidirectional) 的實作細節
 
 - **關聯結構與映射**
     - 在單向關聯中，由一個實體（例如 `Instructor`）直接引用另一個實體（例如 `InstructorDetail`）。
@@ -661,7 +878,7 @@ public interface AppDAO {
 - **設計建議**
     - 關聯的配置（如單向或雙向）應根據應用程式的具體需求與領域模型（Domain Needs）來靈活調整，不應死守單一模式。
 
-### 執行資料庫腳本以建立資料表
+### 52. 執行資料庫腳本以建立資料表
 
 - **建立實體表結構**
     - 執行腳本以建立用於一對一關係的資料表：
@@ -681,7 +898,7 @@ public interface AppDAO {
         - `youtube_channel` (VARCHAR(128))
         - `hobby` (VARCHAR(45))
 
-### 實作資源檔案概覽
+### 53. 實作資源檔案概覽
 
 - **解壓縮資源檔**
     - 從下載目錄中解壓縮提供的 ZIP 檔案。
@@ -692,14 +909,14 @@ public interface AppDAO {
         - `many-to-many` (多對多)
     - **[用途]**：這些資料夾將作為後續教學影片中的實作基礎。
 
-### 建立進階 JPA 映射專案目錄
+### 54. 建立進階 JPA 映射專案目錄
 
 - **目錄組織與管理**
     - 在 `Dev Spring Boot` 資料夾下建立一個新的目錄，用於存放進階主題的實作內容。
     - **[新建立的目錄名稱]**：`09 Spring Boot JPA Advanced Mappings`
     - **[目的]**：將進階的 JPA 映射技術（Advanced Mappings）與之前的基礎實作進行物理隔離，確保開發環境的整潔與學習進度的條理化。
 
-### 準備實作資源與環境
+### 55. 準備實作資源與環境
 
 - **整合資源檔案**
     - 從下載目錄中取得 `OO starter files`（教學提供的起始程式碼檔案）。
@@ -708,7 +925,7 @@ public interface AppDAO {
     - 開啟 **MySQL Workbench** 並登入資料庫服務。
     - **[下一步操作]**：準備開啟先前整理好的 SQL 腳本，以便進行資料庫結構的初始化或操作。
 
-### 初始化資料庫架構 (Schema)
+### 56. 初始化資料庫架構 (Schema)
 
 - **定位實作腳本**
     - 開啟目錄：`09 Spring Boot JPA Advanced Mappings` $\rightarrow$ `OO` $\rightarrow$ `HB01 1 to 1 uni`。
@@ -717,7 +934,7 @@ public interface AppDAO {
     - **[定義]**：Schema 本質上就是一組資料表（Collection of tables）的集合。
     - **[在本範例中的作用]**：腳本會建立一個名為 `HB01_1_to_1_Uni` 的 Schema，用來存放後續建立的 `instructor` 與 `instructor_detail` 資料表。
 
-### 實作 SQL 腳本：重建資料表結構
+### 57. 實作 SQL 腳本：重建資料表結構
 
 - **確保腳本執行順暢的預處理**
     - **停用外鍵檢查**
@@ -735,7 +952,7 @@ public interface AppDAO {
         - 遵循類似的流程：先檢查並刪除舊表，再重新定義結構。
         - 需確保該表包含指向 `instructor_detail` 的外鍵欄位，以完成一對一的關聯映射。
 
-### `instructor` 資料表結構詳解
+### 58. `instructor` 資料表結構詳解
 
 - **欄位定義**
     - `id`：設定為 **Auto Increment**（自動遞增），作為主鍵使用。
@@ -754,7 +971,7 @@ CONSTRAINT fk_instructor_detail
       REFERENCES instructor_detail(id)
 ```
 
-### 執行 SQL 腳本與結果驗證
+### 59. 執行 SQL 腳本與結果驗證
 
 - **執行腳本的操作**
     - 在 MySQL Workbench 工具列中點擊 **黃色閃電圖示 (Yellow Lightning Bolt)** 以執行撰寫好的 SQL 腳本。
@@ -767,7 +984,7 @@ CONSTRAINT fk_instructor_detail
     - **[開發原則]**：雖然 SQL 中可以定義 `ON DELETE NO ACTION` 等級聯約束，但在本實作流程中，我們傾向於**不在 SQL 腳本層級定義級聯行為**。
     - **[替代方案]**：將級聯操作的邏輯交由 **Hibernate** 在應用程式層級進行管理，以獲得更高的靈活性。
 
-### Schema 的進階概念與操作
+### 60. Schema 的進階概念與操作
 
 - **更新與查看 Schema**
     - 在 MySQL Workbench 中，若執行完 SQL 腳本後未看到新建立的資料庫，需點擊 **Refresh All (重新整理)** 以更新左側的 Schema 列表。
@@ -782,7 +999,7 @@ CONSTRAINT fk_instructor_detail
     - **[查詢方法]**：透過右鍵點擊資料表並選擇 **Select Rows** 來查看內容。
     - **[目前狀態]**：在建立結構後，若尚未執行插入資料的腳本，`instructor` 等資料表目前應為**空表 (Empty)**。
 
-### 使用 MySQL Workbench 進行反向工程 (Reverse Engineer)
+### 61. 使用 MySQL Workbench 進行反向工程 (Reverse Engineer)
 
 - **[目的]**：將現有的資料庫結構（Tables, Schemas）自動轉換為視覺化的資料庫圖表 (Database Diagrams)，以便直觀地查看實體間的關聯。
 - **實作步驟**
@@ -792,7 +1009,7 @@ CONSTRAINT fk_instructor_detail
     3. **選擇 Schema**：在清單中勾選目標 Schema（例如 `hb-01-one-to-one-uni`），點擊 **OK**。
     4. **自動生成**：系統會讀取該 Schema 下的所有資料表，並自動繪製出圖表。
 
-### 完成反向工程與圖表檢查
+### 62. 完成反向工程與圖表檢查
 
 - **匯入選項確認**
     - 在執行反向工程的過程中，需確保以下兩項已勾選：
@@ -804,7 +1021,7 @@ CONSTRAINT fk_instructor_detail
         - **[現象]**：MySQL Workbench 有時無法正確判讀實體間的精確關聯類型（例如將「一對一」誤判為其他關係）。
         - **[性質]**：這通常屬於**視覺上的修飾問題 (Cosmetic Issue)**，並不會影響資料庫實際的物理結構或約束條件。
 
-### 手動修正圖表中的關聯基數 (Cardinality)
+### 63. 手動修正圖表中的關聯基數 (Cardinality)
 
 - **[修正目的]**：當自動生成的圖表無法正確判讀關聯類型（例如將一對一誤判為其他類型）時，可以手動編輯以提升圖表的可讀性與美觀。
 - **實作步驟**
@@ -822,7 +1039,7 @@ CONSTRAINT fk_instructor_detail
     - 圖表上的修正僅屬於**視覺上的修飾 (Cosmetic)**。
     - 實際的業務邏輯與關聯行為，仍必須依照後續的 Java 程式碼實作（例如 JPA/Hibernate 的設定）來決定，而非僅依賴圖表的顯示。
 
-### 手動修正圖表關聯基數 (Cardinality)
+### 64. 手動修正圖表關聯基數 (Cardinality)
 
 - **[視覺化修正]**：若自動生成的圖表無法正確顯示「一對一」關係，可以手動進行編輯以提升圖表的可讀性。
     - **操作步驟**：
@@ -836,7 +1053,7 @@ CONSTRAINT fk_instructor_detail
     - **視覺修飾 (Cosmetic)**：在 Workbench 中手動修改僅是為了讓圖表看起來符合預期，屬於視覺上的優化。
     - **邏輯定義 (Logical)**：實際的實體關係邏輯（如一對一映射）必須透過 Java 程式碼中的 `@OneToOne` 註解來實作與管理，這才是決定系統行為的關鍵。
 
-### 使用 Spring Initializr 建立 Spring Boot 專案
+### 65. 使用 Spring Initializr 建立 Spring Boot 專案
 
 - **訪問網站**：前往 [start.spring.io](https://start.spring.io)
 - **專案基本設定 (Project Settings)**
@@ -852,7 +1069,7 @@ CONSTRAINT fk_instructor_detail
     - **Packaging**：選擇 `Jar`
     - **Java**：選擇 `25` (依據畫面顯示)
 
-### 使用 Spring Initializr 建立 Spring Boot 專案 (續)
+### 66. 使用 Spring Initializr 建立 Spring Boot 專案 (續)
 
 - **專案元數據 (Project Metadata) 設定**
     - **Artifact**: `cruddemo`
@@ -869,7 +1086,7 @@ CONSTRAINT fk_instructor_detail
 - **完成專案建立**
     - 檢查依賴項與配置無誤後，點擊 **GENERATE** 按鈕，系統將生成專案檔案並下載至本地系統。
 
-### 專案檔案準備與配置
+### 67. 專案檔案準備與配置
 
 - **[操作流程]**：將先前下載的專案壓縮檔移動至正確的開發目錄
     - **尋找檔案**：在 `Downloads` 資料夾中找到 `cruddemo.zip`
@@ -877,13 +1094,13 @@ CONSTRAINT fk_instructor_detail
         - 解壓縮 `cruddemo.zip`
         - 將解壓縮後的資料夾複製到指定的開發路徑：`DevSpringBoot` $\rightarrow$ `09` 資料夾中
 
-### 開啟專案至 IntelliJ IDEA
+### 68. 開啟專案至 IntelliJ IDEA
 
 - **[操作步驟]**：使用 IntelliJ IDEA 開啟已準備好的專案與應用程式
     - **開啟專案**：在 IDE 中導航至 `09-spring-boot-jpa-advanced-...` 目錄
     - **啟動應用程式**：開啟主要的 Spring Boot 應用程式檔案，準備開始開發命令列應用程式 (Command Line App)
 
-### 建立 Command Line 應用程式 (Command Line App)
+### 69. 建立 Command Line 應用程式 (Command Line App)
 
 - **Command Line Runner**：來自於 Spring Boot 框架的一個介面
     - **執行時機**：當所有的 Spring Beans 都已經成功載入（loaded）之後，該介面定義的方法就會被自動執行
@@ -898,7 +1115,7 @@ public CommandLineRunner commandLineRunner(String[] args) {
 }
 ```
 
-### 使用 Java Lambda 表達式實作 CommandLineRunner
+### 70. 使用 Java Lambda 表達式實作 CommandLineRunner
 
 - **Lambda 表達式的作用**
     - 作為實作 `CommandLineRunner` 介面的簡寫語法 (Shorthand notation)
@@ -919,7 +1136,7 @@ public CommandLineRunner commandLineRunner(String[] args) {
     - 目前僅實作簡單的 `System.out.println("Hello World")` 作為自定義代碼 (Custom code)
     - 後續將會利用已載入的 Spring Beans 來執行更複雜的業務邏輯
 
-### 基礎架構與框架準備
+### 71. 基礎架構與框架準備
 
 - **目前的開發進度**：目前的工作重點在於建立基礎設施 (Infrastructure) 與框架 (Framework)
     - 這為後續在 Java 程式碼中進行更深入的擴充與實作提供了預備環境

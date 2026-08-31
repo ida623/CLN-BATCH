@@ -12,114 +12,114 @@ hovernotes-id: doc_ce731876-fb83-41ae-8b4e-5c99c682152f
 
 # 目錄
 
-1. [Java 開發環境準備](#java-開發環境)
+1. [Java 開發環境準備](#1-java-開發環境)
    概念:上課前要先裝好 Java 與 IntelliJ 這套 IDE(可以想成是「寫程式用的專業文書處理軟體」),並確認版本沒問題,這樣後面的範例才跑得起來。
 
-2. [Spring 框架是什麼、為什麼需要它](#spring-框架簡介)
+2. [Spring 框架是什麼、為什麼需要它](#2-spring-框架簡介)
    概念:說明 Spring 框架的賣點,以及沒有 Spring Boot 之前,傳統 Spring 專案光是「設定」就要寫一堆繁瑣的樣板程式碼。
 
-3. [Spring Boot 怎麼解決傳統 Spring 的麻煩](#spring-boot-解決方案)
+3. [Spring Boot 怎麼解決傳統 Spring 的麻煩](#3-spring-boot-解決方案)
    概念:Spring Boot 內建了一個「內嵌伺服器」,讓你不用額外裝 Tomcat、不用把專案包成 WAR 檔丟到外部伺服器,寫完直接執行就能跑網站。
 
-4. [常見問題 Q&A、建立第一個專案與 Maven 建置工具](#spring-boot-常見問題-faq)
+4. [常見問題 Q&A、建立第一個專案與 Maven 建置工具](#4-spring-boot-常見問題-faq)
    概念:解答「Spring Boot 會不會取代 Spring MVC」「需不需要特定 IDE」這類新手疑問,並實際用 Spring Initializr(線上專案產生器)建出第一個專案、寫出第一支 REST API,順便認識 Maven 這個「自動幫你下載套件的採購員」。
 
-5. [Spring Boot 專案結構長怎樣](#spring-boot-專案結構)
+5. [Spring Boot 專案結構長怎樣](#5-spring-boot-專案結構)
    概念:介紹 Maven 標準的資料夾配置、application.properties 設定檔放哪裡,以及 Starter 套件包(一次幫你打包好一組相關依賴)的作用。
 
-6. [Starter Parent:統一管理套件版本](#spring-boot-starter-parent)
+6. [Starter Parent:統一管理套件版本](#6-spring-boot-starter-parent)
    概念:pom.xml 裡繼承的 parent 設定,幫你統一決定每個套件該用哪個版本,避免自己手動指定版本號時互相衝突。
 
-7. [DevTools:改完程式碼自動重啟](#spring-boot-devtools)
+7. [DevTools:改完程式碼自動重啟](#7-spring-boot-devtools)
    概念:開發時最煩的就是改一行程式碼要手動重開伺服器,加上 DevTools 這個工具後,存檔就會自動幫你重啟應用程式。
 
-8. [Actuator:監控端點與安全防護](#spring-boot-actuator)
+8. [Actuator:監控端點與安全防護](#8-spring-boot-actuator)
    概念:裝上 Actuator 套件後,應用程式會自動多出健康檢查、應用程式資訊等一堆 /actuator 開頭的檢查端點,並教你用 Spring Security 把這些端點加上登入保護,避免任何人都能看到系統內部資訊。
 
-9. [脫離 IDE:命令列執行與自訂設定屬性](#從命令列執行-spring-boot)
+9. [脫離 IDE:命令列執行與自訂設定屬性](#9-從命令列執行-spring-boot)
    概念:示範怎麼用 mvnw 打包成 JAR 檔,直接在終端機用 java -jar 執行(不用開 IDE),並學會用 application.properties 搭配 @Value 註解讀取自己定義的設定值,認識 Spring Boot 上千個內建屬性大致怎麼分類。
 
-10. [控制反轉(IoC)與依賴注入(DI)是什麼](#控制反轉-inversion-of-control-ioc)
+10. [控制反轉(IoC)與依賴注入(DI)是什麼](#10-控制反轉-inversion-of-control-ioc)
     概念:物件不用自己手動 new 出來,而是交給 Spring 這個「總管」(Container)統一建立跟組裝,這個概念叫控制反轉;而「怎麼把需要的物件塞進去」的具體做法就是依賴注入。
 
-11. [動手做:建構子注入實戰](#使用-spring-initializr-初始化專案)
+11. [動手做:建構子注入實戰](#11-使用-spring-initializr-初始化專案)
     概念:實際寫一個教練建議 App,示範怎麼定義介面、標記 @Component 讓 Spring 認得這個物件,再透過建構子把依賴自動注入進 Controller。
 
-12. [組件掃描:Spring 怎麼找到你寫的類別](#組件掃描-component-scanning)
+12. [組件掃描:Spring 怎麼找到你寫的類別](#12-組件掃描-component-scanning)
     概念:Spring 預設只會掃描主程式所在套件底下的東西,如果你的類別放錯資料夾位置,Spring 就找不到它,這裡教你怎麼排查跟手動指定掃描範圍。
 
-13. [Setter 注入、欄位注入,以及多個實作衝突時怎麼選](#setter-注入-setter-injection)
+13. [Setter 注入、欄位注入,以及多個實作衝突時怎麼選](#13-setter-注入-setter-injection)
     概念:除了建構子,也可以用 Setter 方法或直接在欄位上標 @Autowired 來注入依賴;當同一個介面有好幾個實作類別讓 Spring 不知道選誰時,用 @Qualifier 指名要哪一個,或用 @Primary 設一個預設首選。
 
-14. [@Lazy:讓 Bean 用到才建立](#延遲初始化-lazy-initialization)
+14. [@Lazy:讓 Bean 用到才建立](#14-延遲初始化-lazy-initialization)
     概念:Spring 預設一啟動就把所有物件都建好,加上 @Lazy 可以改成「真正被呼叫到才建立」,說明這樣做的好處跟要注意的地方。
 
-15. [Bean 作用域:共用一份還是每次都重做](#bean-作用域-bean-scopes)
+15. [Bean 作用域:共用一份還是每次都重做](#15-bean-作用域-bean-scopes)
     概念:解釋 Spring 建立的物件(Bean)預設是整個應用程式共用同一份(Singleton),還是每次要用都重新做一份(Prototype),以及怎麼切換這個行為。
 
-16. [Bean 生命週期:出生到銷毀的掛勾方法](#bean-生命週期方法)
+16. [Bean 生命週期:出生到銷毀的掛勾方法](#16-bean-生命週期方法)
     概念:Bean 建立完成後、被銷毀前都可以掛一個自訂方法自動執行,適合拿來做初始化或釋放資源的動作。
 
-17. [用 Java 程式碼手動配置 Bean](#使用-java-程式碼配置-bean-configuring-beans-with-java-code)
+17. [用 Java 程式碼手動配置 Bean](#17-使用-java-程式碼配置-bean-configuring-beans-with-java-code)
     概念:遇到別人寫好的類別(例如 AWS SDK)沒辦法加 @Component 註解時,改用 @Configuration 類別搭配 @Bean 方法,手動教 Spring 怎麼組出這個物件。
 
-18. [Hibernate/JPA 概覽與 MySQL 資料庫安裝](#hibernate--jpa-概覽)
+18. [Hibernate/JPA 概覽與 MySQL 資料庫安裝](#18-hibernate--jpa-概覽)
     概念:認識 Hibernate 跟 JPA 這兩個「幫你把 Java 物件跟資料庫資料表對應起來」的技術(ORM),並動手安裝 MySQL、建好之後範例要用的資料表。
 
-19. [接上資料庫:資料來源設定與 Entity 映射注解](#automatic-data-source-configuration)
+19. [接上資料庫:資料來源設定與 Entity 映射注解](#19-automatic-data-source-configuration)
     概念:設定資料庫連線帳密,用 CommandLineRunner 在程式一啟動時跑測試確認連得上,再用 @Entity、@Id、@Column 這些註解把 Java 類別「貼標籤」對應到資料庫表格跟欄位。
 
-20. [DAO 模式:用 EntityManager 把物件存進資料庫](#儲存-java-物件-save-a-java-object)
+20. [DAO 模式:用 EntityManager 把物件存進資料庫](#20-儲存-java-物件-save-a-java-object)
     概念:透過 DAO(資料存取物件,可以想成是專門負責跟資料庫溝通的窗口)搭配 EntityManager,實作新增單筆與批次新增多筆資料,並觀察主鍵自動遞增的行為。
 
-21. [讀取物件:依主鍵查回單筆資料](#使用-jpa-讀取物件)
+21. [讀取物件:依主鍵查回單筆資料](#21-使用-jpa-讀取物件)
     概念:用 entityManager.find() 依主鍵取回單一物件,並整理成 DAO 的讀取方法讓外部呼叫。
 
-22. [查詢物件:認識 JPQL 查詢語言](#查詢物件-query-objects)
+22. [查詢物件:認識 JPQL 查詢語言](#22-查詢物件-query-objects)
     概念:JPQL 是專門針對 Java 物件(而不是資料表)寫的查詢語言,這裡示範基本語法跟具名參數的用法。
 
-23. [排序、依條件查詢、更新與刪除](#實作按姓氏排序-sort-by-last-name)
+23. [排序、依條件查詢、更新與刪除](#23-實作按姓氏排序-sort-by-last-name)
     概念:延續 DAO 加入依姓氏排序、依姓氏搜尋、更新單筆資料,以及刪除單筆或清空全部資料的方法。
 
-24. [讓 Hibernate 自動建立資料表(ddl-auto)](#根據-java-程式碼生成資料表-creating-tables-based-on-java-code)
+24. [讓 Hibernate 自動建立資料表(ddl-auto)](#24-根據-java-程式碼生成資料表-creating-tables-based-on-java-code)
     概念:不用自己手寫建表 SQL,讓 Hibernate 根據 Entity 類別自動生成資料表,並說明 ddl-auto 設定值(create/update/none 等)分別會不會把既有資料洗掉,正式環境該怎麼選才安全。
 
-25. [REST API 是什麼:用天氣 App 舉例](#spring-rest-開發實作案例)
+25. [REST API 是什麼:用天氣 App 舉例](#25-spring-rest-開發實作案例)
     概念:用「手機 App 查天氣」的例子說明前後端為什麼可以用不同程式語言各自開發,只要靠 REST API 溝通就好,並複習 JSON 資料格式的基本寫法。
 
-26. [HTTP 訊息結構、狀態碼與 Postman 工具](#http-訊息結構)
+26. [HTTP 訊息結構、狀態碼與 Postman 工具](#26-http-訊息結構)
     概念:拆解一個 HTTP 請求跟回應長什麼樣子(標頭、狀態碼、內容類型),並介紹 Postman 這個工具,讓你不用寫前端也能手動測試 API。
 
-27. [動手做出第一個 Spring REST Controller](#spring-rest-controller-開發流程)
+27. [動手做出第一個 Spring REST Controller](#27-spring-rest-controller-開發流程)
     概念:建一個全新專案,加上 Web 依賴,寫一個標記 @RestController 的類別,實作 /hello 端點,再用 Postman 打打看驗證回傳結果。
 
-28. [Jackson:Java 物件與 JSON 怎麼自動互轉](#java-json-資料繫結-data-binding)
+28. [Jackson:Java 物件與 JSON 怎麼自動互轉](#28-java-json-資料繫結-data-binding)
     概念:Spring 背後其實是靠 Jackson 這個套件,自動把 Java 物件轉成 JSON 回傳給前端,也能把前端傳來的 JSON 自動轉回 Java 物件,開發者完全不用手動寫轉換程式碼。
 
-29. [學生資料 API 與路徑變數(Path Variable)](#path-variables-路徑變數)
+29. [學生資料 API 與路徑變數(Path Variable)](#29-path-variables-路徑變數)
     概念:做出回傳學生清單的 API,並用路徑變數(例如網址 /students/1 裡的 1)做出查詢單一學生的端點,示範網址上的變數怎麼被 Spring 自動接進方法參數裡。
 
-30. [例外處理:自訂錯誤訊息與全域統一管理](#spring-rest-例外處理目標)
+30. [例外處理:自訂錯誤訊息與全域統一管理](#30-spring-rest-例外處理目標)
     概念:查詢不存在的學生 ID 時,與其丟出一坨看不懂的 500 錯誤,不如自訂例外類別跟錯誤格式,搭配 @ExceptionHandler 回傳乾淨的 404 訊息;後面再用 @ControllerAdvice 把這套錯誤處理邏輯抽出來,讓全部 Controller 共用同一套規則,不用每個 Controller 都寫一遍。
 
-31. [怎樣算一個「好」的 REST API 設計](#spring-rest-api-設計)
+31. [怎樣算一個「好」的 REST API 設計](#31-spring-rest-api-設計)
     概念:整理設計 API 的慣例(資源命名用名詞、用 HTTP 方法表達動作而不是塞在網址裡),並拿 PayPal、GitHub、Salesforce 的真實 API 當範例。
 
-32. [即時專案第一步:員工資料表、Entity 與 DAO 查詢](#spring-boot-rest-api-即時專案)
+32. [即時專案第一步:員工資料表、Entity 與 DAO 查詢](#32-spring-boot-rest-api-即時專案)
     概念:開始做一個完整的「員工目錄」專案:設計資料庫表格、建立 Employee 這個 Entity 類別,並寫出用 EntityManager 取得員工清單的 DAO。
 
-33. [加上 REST Controller 與 Service 分層架構](#引入-service-layer)
+33. [加上 REST Controller 與 Service 分層架構](#33-引入-service-layer)
     概念:先把 DAO 包成對外的查詢 API,接著在 Controller 跟 DAO 中間多加一層 Service,變成「Controller 收發請求、Service 處理商業邏輯、DAO 管資料庫」的三層分工,並用 @Transactional 確保一連串資料庫操作要嘛全部成功要嘛全部復原。
 
-34. [完成 CRUD:新增、更新、PATCH 局部更新與刪除 API](#建立新增員工的-api)
+34. [完成 CRUD:新增、更新、PATCH 局部更新與刪除 API](#34-建立新增員工的-api)
     概念:依序做出新增(POST)、整筆更新(PUT)、只改部分欄位的局部更新(PATCH),以及刪除(DELETE)員工的四個 API,並解釋為什麼 PUT 容易不小心把沒傳的欄位洗成空值,所以才需要 PATCH。
 
-35. [Spring Data JPA:一個介面讓 DAO 大幅簡化](#spring-data-jpa-簡介)
+35. [Spring Data JPA:一個介面讓 DAO 大幅簡化](#35-spring-data-jpa-簡介)
     概念:前面手寫的 DAO 其實有很多重複邏輯,這裡改用 Spring Data JPA 的 JpaRepository,只要宣告一個介面,連 findAll、save、deleteById 這些方法都不用自己寫,程式碼大幅減少。
 
 -----------------------------------------------------------
 
-## Java 開發環境
+## 1. Java 開發環境
 
 - **先備知識需求**
     - 需具備 Java 開發經驗
@@ -158,7 +158,7 @@ hovernotes-id: doc_ce731876-fb83-41ae-8b4e-5c99c682152f
     - 在繼續課程前，請確保能在 IDE 中成功執行一個基礎的 **Hello World** Java 應用程式
     - **[目的]** 用於驗證 JDK 與 IDE 是否都已正確安裝並能正常運作，避免在進入 Spring 階段時才發現環境問題
 
-## Spring 框架簡介
+## 2. Spring 框架簡介
 
 ### Spring 核心特性
 
@@ -174,7 +174,7 @@ hovernotes-id: doc_ce731876-fb83-41ae-8b4e-5c99c682152f
     - 伺服器安裝與部署問題
         - 例如：Tomcat, JBoss, WebSphere 等伺服器的安裝與設定
 
-## Spring Boot 解決方案
+## 3. Spring Boot 解決方案
 
 - **[核心價值]** 讓 Spring 開發的起步變得更加容易
 - **簡化配置**
@@ -290,7 +290,7 @@ graph TD
     end
 ```
 
-## Spring Boot 常見問題 (FAQ)
+## 4. Spring Boot 常見問題 (FAQ)
 
 ### Spring Boot 是否取代了 Spring MVC 或 Spring REST？
 
@@ -1083,7 +1083,7 @@ flowchart LR
 - 可以將其視為獲取所有依賴項座標資訊的「一站式商店」(one-stop shop)
 - 訪問網址：`https://central.sonatype.com`
 
-## Spring Boot 專案結構
+## 5. Spring Boot 專案結構
 
 由於先前透過 Spring Initializr 建立專案，因此生成的實際上是一個 Maven 專案。Spring Boot 遵循標準的 Maven 目錄結構：
 
@@ -1567,7 +1567,7 @@ src
     - 在開啟的 Maven 視窗中，展開 `Dependencies` 區塊
 - **[功能說明]**：在 `Dependencies` 列表中可以展開任何一個 Starter，進而查看其內部實際包含的所有依賴組件
 
-## Spring Boot Starter Parent
+## 6. Spring Boot Starter Parent
 
 - **[定義]**：Spring Boot 提供的一個特殊 Starter，專門用於提供 Maven 的預設設定 (Maven defaults)
 - **[主要功能]**\*\*：提供一系列開發常用的預設值，讓開發者無需手動配置
@@ -1698,7 +1698,7 @@ src
 
 `mvn spring-boot:run`
 
-## Spring Boot DevTools
+## 7. Spring Boot DevTools
 
 ### 開發中的痛點
 
@@ -2023,7 +2023,7 @@ public String getDailyFortune() {
     - **[為什麼推薦使用]** 只需要在 Maven 依賴檔中加入相關組件，就能在開發過程中獲得自動重載功能
     - 這能讓開發者在修改程式碼後，無需手動重啟伺服器即可看到結果，極大化開發效率
 
-### Spring Boot Actuator
+### 8. Spring Boot Actuator
 
 - **[面臨的問題]** 在應用程式運行期間，開發者與維運人員通常需要解決以下問題：
     - 如何監控與管理應用程式？
@@ -2659,7 +2659,7 @@ management.endpoints.web.exposure.exclude=health,info
 
 - **[測試結論]** 透過此操作，可以成功重新存取 `/health` 與 `/info` 端點，同時驗證了 Spring Boot Actuator 與 Spring Security 結合後，能有效地在提供監控資訊的同時兼顧安全性。
 
-## 從命令列執行 Spring Boot
+## 9. 從命令列執行 Spring Boot
 
 - **[開發環境 vs. 執行環境]**
     - 開發期間：大部分時間會使用 IDE (如 IntelliJ, Eclipse, NetBeans)
@@ -3598,7 +3598,7 @@ server.servlet.context-path=/mycoolapp
     - **[範例 URL]** `http://localhost:7070/mycoolapp/fortune`
 - **[配置生效確認]** 透過瀏覽器存取上述 URL，若能正確顯示應用程式內容（例如：`Today is your lucky day.`），則代表 `server.servlet.context-path` 的配置已成功生效
 
-## 控制反轉 (Inversion of Control, IoC)
+## 10. 控制反轉 (Inversion of Control, IoC)
 
 - **[定義]** 一種將物件的「建構」與「管理」過程外包給其他實體的設計方法
     - **[核心思想]** 不再由開發者手動在程式碼中建立物件，而是交由外部機制來處理
@@ -3952,7 +3952,7 @@ sequenceDiagram
     Controller-->>User: 回傳結果給瀏覽器
 ```
 
-## 使用 Spring Initializr 初始化專案
+## 11. 使用 Spring Initializr 初始化專案
 
 - **存取網站**
     - 使用瀏覽器前往 [start.spring.io](https://start.spring.io)
@@ -4343,7 +4343,7 @@ sequenceDiagram
 
 > **[總結]** Spring 的價值在於它是一個完整的生態系統，能為複雜的企業需求提供全方位的解決方案。
 
-## 組件掃描 (Component Scanning)
+## 12. 組件掃描 (Component Scanning)
 
 - **[運作原理]** Spring 會自動掃描 Java 類別，尋找特定的註解
     - 例如：`@Component` 等特殊註解
@@ -4624,7 +4624,7 @@ public class SpringcoredemoApplication {
     - 重新啟動應用程式後，Spring Boot 依舊能正確偵測到位於預設套件路徑下的組件。
     - 瀏覽器端點（如 `/dailyworkout`）可以正常運作，確認預設掃描機制在目前的專案結構下依然有效。
 
-## Setter 注入 (Setter Injection)
+## 13. Setter 注入 (Setter Injection)
 
 - **定義**：透過呼叫類別中的 setter 方法來注入依賴項 (dependencies)
 - **[地位]**：與建構子注入 (Constructor Injection) 並列為兩種推薦的注入方式
@@ -5589,7 +5589,7 @@ public class TrackCoach implements Coach {
 }
 ```
 
-### 延遲初始化 (Lazy Initialization)
+### 14. 延遲初始化 (Lazy Initialization)
 
 - **[預設行為]** 在預設情況下，當應用程式啟動時，所有的 Bean 都會被初始化
     - Spring 會掃描所有標記為 `@Component` 等註解的組件
@@ -5990,7 +5990,7 @@ spring.main.lazy-initialization=true
     - `In constructor: DemoController`
 - **[核心結論]** 這證實了在全域延遲初始化模式下，Bean 不會在啟動時立即建立，而是在第一次被存取（即真正需要它時）才按順序完成實例化與注入
 
-## Bean 作用域 (Bean Scopes)
+## 15. Bean 作用域 (Bean Scopes)
 
 - **[定義]** 作用域指的是 Bean 的生命週期 (Lifecycle)
     - Bean 能存活多久？
@@ -6274,7 +6274,7 @@ flowchart LR
     - **Singleton (預設)**：整個應用程式生命週期內只建立一個實例，所有注入點都共享它
     - **Prototype**：每次請求注入時，都會建立一個全新的實例
 
-## Bean 生命週期方法
+## 16. Bean 生命週期方法
 
 ### Bean 生命週期流程
 
@@ -6573,7 +6573,7 @@ public class CricketCoach implements Coach {
 }
 ```
 
-## 使用 Java 程式碼配置 Bean (Configuring Beans with Java Code)
+## 17. 使用 Java 程式碼配置 Bean (Configuring Beans with Java Code)
 
 除了使用組件掃描（Component Scanning）之外，也可以透過純 Java 程式碼來配置 Bean。這種方式不需要在類別上使用 `@Component` 等註解。
 
@@ -7074,7 +7074,7 @@ public class DemoController {
 
 - **[驗證結果]** 重新載入應用程式後，瀏覽器端點仍能正確顯示預期的內容（例如：`Swim 1000 meters as a warm up`），證明自定義 ID 的注入機制運作正常
 
-## Hibernate / JPA 概覽
+## 18. Hibernate / JPA 概覽
 
 ### Hibernate 定義
 
@@ -7561,7 +7561,7 @@ flowchart LR
 
 ## Setting Up Spring Boot Project
 
-### Automatic Data Source Configuration
+### 19. Automatic Data Source Configuration
 
 - **[JPA 實作]**
     - 在 Spring Boot 中，**Hibernate** 是 JPA (Jakarta Persistence API) 的預設實作方式
@@ -8438,7 +8438,7 @@ public class Student {
 }
 ```
 
-### 儲存 Java 物件 (Save a Java Object)
+### 20. 儲存 Java 物件 (Save a Java Object)
 
 實作一個範例應用程式，展示如何透過程式碼將 Java 物件儲存至資料庫。
 
@@ -9406,7 +9406,7 @@ TRUNCATE student_tracker.student;
 - **執行結果**
     - 執行後重新整理查詢，會發現資料表已清空，且下一次新增資料時，`id` 將會從 1 開始。
 
-## 使用 JPA 讀取物件
+## 21. 使用 JPA 讀取物件
 
 ### 使用 `entityManager.find()` 檢索物件
 
@@ -9678,7 +9678,7 @@ sequenceDiagram
     Note over App, DB: 透過 MySQL Workbench 驗證資料存在
 ```
 
-## 查詢物件 (Query Objects)
+## 22. 查詢物件 (Query Objects)
 
 - **[進度回顧]** 目前已完成 CRUD 中的基礎單一物件讀取 (Read single object)
 - **[新目標]** 學習如何查詢多個物件 (Query for multiple objects)
@@ -10029,7 +10029,7 @@ private void queryForStudents(StudentDAO studentDAO) {
 
 - **[功能增強]** 實作按姓氏 (last name) 進行排序的功能
 
-### 實作按姓氏排序 (Sort by Last Name)
+### 23. 實作按姓氏排序 (Sort by Last Name)
 
 - **[開發目標]** 修改 `findAll` 方法，讓查詢結果能依照姓氏進行字母順序排序
 - **[實作方式]** 在 JPQL 語句中加入 `ORDER BY` 子句
@@ -10810,7 +10810,7 @@ flowchart LR
     - **[運作邏輯]** 當應用程式啟動時，Hibernate 會先 **drop**（刪除）現有的資料表，然後根據 Java 程式碼中的註解重新 **create**（建立）全新的資料表
     - **[適用場景]** 非常適合開發與測試階段，因為它可以確保資料庫結構與程式碼始終保持同步
 
-### 根據 Java 程式碼生成資料表 (Creating Tables based on Java Code)
+### 24. 根據 Java 程式碼生成資料表 (Creating Tables based on Java Code)
 
 - **[核心機制]** Hibernate 會解析 Java 類別中的 JPA/Hibernate 註解，並將其轉換為對應的 SQL 指令
 - **[範例實作]**
@@ -11202,7 +11202,7 @@ spring.jpa.hibernate.ddl-auto=update
     - **實作開發技術**：使用 `@RestController` 來開發 REST API
     - **資料庫整合**：利用 Spring REST 建立資料庫的 CRUD（增刪查改）介面
 
-## Spring REST 開發實作案例
+## 25. Spring REST 開發實作案例
 
 ### 業務問題 (Business Problem)
 
@@ -11588,7 +11588,7 @@ sequenceDiagram
 | PUT | Update an existing entity |
 | DELETE | Delete an existing entity |
 
-## HTTP 訊息結構
+## 26. HTTP 訊息結構
 
 - **[組成]** 一個完整的 HTTP 請求訊息包含三個主要部分
 
@@ -11867,7 +11867,7 @@ public class DemoRestController {
         - 進行身分驗證 (Authentication)
 - **[結論]** Postman 是專為 REST 客戶端測試而設計的工具，對於進階開發工作來說是不可或缺的
 
-## Spring REST Controller 開發流程
+## 27. Spring REST Controller 開發流程
 
 ### 開發步驟概覽
 
@@ -12060,7 +12060,7 @@ sequenceDiagram
     - **200 OK**：代表請求已成功處理
 - **[總結]** 透過瀏覽器與 Postman 的交叉驗證，確認第一個 REST 服務已成功運行
 
-## Java JSON 資料繫結 (Data Binding)
+## 28. Java JSON 資料繫結 (Data Binding)
 
 ### 資料繫結的概念
 
@@ -12685,7 +12685,7 @@ flowchart LR
     - **端點功能完備**：新建立的端點（Endpoint）能夠正確處理請求並回傳學生列表。
     - **流程驗證**：從建立控制器、定義路徑、實作邏輯到最終測試，已完成一個完整的 RESTful Web Service 基礎開發循環。
 
-### Path Variables (路徑變數)
+### 29. Path Variables (路徑變數)
 
 - **[定義]** 在端點路徑中使用大括號 `{}` 包圍的佔位符，稱為路徑變數
     - **[目的]** 用於參數化路徑（Parameterizing the path），讓同一個端點能根據傳入的不同值處理不同的資源
@@ -13055,7 +13055,7 @@ public Student getStudent(@PathVariable int studentId) {
     - 目前的 500 錯誤對使用者來說並不友善
     - 未來將會學習如何進行**例外處理 (Exception Handling)**，以取代這種原始的錯誤回傳，並提供自定義的錯誤訊息或回應
 
-### Spring REST 例外處理目標
+### 30. Spring REST 例外處理目標
 
 - **[現狀問題]** 當傳入無效的 ID（例如 `9999`）時，系統會拋出 `IndexOutOfBoundsException` 並回傳不友善的 `500 Internal Server Error`
 - **[優化目標]** 捕捉例外並將其轉換為結構化的 **JSON 格式** 回應，提供給客戶端更具參考價值的資訊
@@ -14292,7 +14292,7 @@ public class StudentRestExceptionHandler {
     - 兩次測試的輸出格式完全一致，證明重構後的程式碼已成功利用 `@ControllerAdvice` 實現了全域例外處理。
     - **業界最佳實踐**：在大型或即時專案中，使用 `@ControllerAdvice` 是標準做法，能確保系統在面對各種異常時，回傳給客戶端的錯誤資訊具備高度的一致性。
 
-## Spring REST API 設計
+## 31. Spring REST API 設計
 
 - 在進行即時專案（real-time project）開發時，設計 API 需思考以下關鍵問題：
     - 誰會使用這個 API？
@@ -14454,7 +14454,7 @@ Salesforce 的 API 展示了如何透過標準的 HTTP 方法來對資源（Indi
     - 進行 CRM REST API 的環境設定 (Setup)
     - 開始實際建置與開發 API 功能
 
-## Spring Boot REST API 即時專案
+## 32. Spring Boot REST API 即時專案
 
 - 目標：開發一個使用 Spring Boot 並連接資料庫的 REST API
 
@@ -15415,7 +15415,7 @@ SELECT * FROM employee_directory.employee;
 | 4 | Yuri | Petrov | yuri@luv2code.com |
 | 5 | Juan | Vega | juan@luv2code.com |
 
-### 引入 Service Layer
+### 33. 引入 Service Layer
 
 - **[架構調整]** 重構程式碼以加入 Service 層，使其位於 REST 控制器與 DAO 之間
 
@@ -16385,7 +16385,7 @@ public Employee getEmployee(@PathVariable int employeeId) {
     - 成功回傳包含所有員工的 JSON 列表（例如 Leslie, Emma 等）
     - 確認「取得所有員工」的 API 功能與瀏覽器測試結果一致
 
-### 建立「新增員工」的 API
+### 34. 建立「新增員工」的 API
 
 - **[開發目標]** 實作一個新的 API 端點，允許透過 REST API 新增（建立）一名新員工
 - **[HTTP 方法]** 使用 `POST` 方法
@@ -17589,7 +17589,7 @@ return "Deleted employee id " + employeeId;
 - **刪除成功**：資料庫顯示 `Employee Deleted: id=5 Success!!!`，確認 ID 為 5 的員工已被正確移除。
 - **安全性檢查驗證**：先前測試中，若在 PATCH 請求的 JSON 酬載中包含 `id` 欄位，程式碼會正確攔截並拋出例外，確保客戶端無法透過部分更新來修改主鍵。
 
-### Spring Data JPA 簡介
+### 35. Spring Data JPA 簡介
 
 目前的應用架構是基於標準 JPA API 進行開發：
 

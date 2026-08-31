@@ -12,81 +12,81 @@ hovernotes-id: doc_d5c186b8-bcac-4c4e-be8f-c6a946729764
 
 # 目錄
 
-1. [驗證 Spring Data REST 自動產生的 API(HATEOAS、Postman CRUD 測試)](#驗證-api-運作)
+1. [驗證 Spring Data REST 自動產生的 API(HATEOAS、Postman CRUD 測試)](#1-驗證-api-運作)
    概念:延續上一份筆記,示範怎麼用瀏覽器和 Postman 對 Spring Data REST 自動生成的 API 做 GET / POST / PUT / DELETE 測試,並解釋回傳資料裡 `_links` 導覽連結和分頁 metadata(size、totalElements 等)是什麼意思。
 
-2. [自訂 REST API 的路徑、分頁與排序規則](#spring-data-rest-的開發優勢)
+2. [自訂 REST API 的路徑、分頁與排序規則](#2-spring-data-rest-的開發優勢)
    概念:教你怎麼透過設定檔改掉 Spring Data REST 自動產生的網址(base path、端點命名),以及調整每頁筆數、預設分頁大小、多欄位排序等細節,拿回對 API 網址結構的控制權。
 
-3. [用 OpenAPI / Swagger 自動產生 API 文件](#使用-openapi-與-swagger-進行-rest-api-文件化-documenting-rest-apis-with-openapi-and-swagger)
+3. [用 OpenAPI / Swagger 自動產生 API 文件](#3-使用-openapi-與-swagger-進行-rest-api-文件化-documenting-rest-apis-with-openapi-and-swagger)
    概念:介紹 SpringDoc 這個工具,只要加一個依賴就能自動幫你的 API 產生一個可以互動測試的 Swagger 網頁,還能取得 JSON/YAML 格式的 API 規格文件,並示範怎麼自訂這些文件的路徑。
 
-4. [Spring Security 是什麼:身分驗證 vs 授權、運作模型](#spring-boot-rest-api-安全性概覽)
+4. [Spring Security 是什麼:身分驗證 vs 授權、運作模型](#4-spring-boot-rest-api-安全性概覽)
    概念:用「你是誰」(Authentication)跟「你能做什麼」(Authorization)的差別來解釋 Spring Security 的核心概念,並說明它其實是靠一層一層的 Servlet Filter 去攔截每個進來的請求做檢查。
 
-5. [啟用 Spring Security 後,所有 API 預設會被鎖起來](#配置基礎安全性-configuring-basic-security)
+5. [啟用 Spring Security 後,所有 API 預設會被鎖起來](#5-配置基礎安全性-configuring-basic-security)
    概念:只要加入 Spring Security 依賴,專案裡所有網址都會自動要求登入(預設會產生一組帳密),示範怎麼覆寫這組預設帳密、以及怎麼用 In-Memory UserDetailsManager 直接把使用者名稱/密碼/角色寫在程式碼裡做測試。
 
-6. [用角色(Role)限制誰能呼叫哪些 API,並整合成一份安全性設定](#使用-postman-進行安全性測試)
+6. [用角色(Role)限制誰能呼叫哪些 API,並整合成一份安全性設定](#6-使用-postman-進行安全性測試)
    概念:用 hasRole / hasAnyRole 規定「只有 ADMIN 能刪除員工」這類規則,把所有規則整合進一個 SecurityFilterChain 設定方法裡,順便講 CSRF 攻擊是什麼、什麼情況該關掉這個保護,最後用 Postman 模擬不同角色的使用者實際測試權限、並修掉 Spring Data REST 對 PUT/PATCH 請求授權判斷的坑。
 
-7. [把帳號密碼從程式碼搬進資料庫(users / authorities 資料表)](#使用資料庫儲存使用者帳號)
+7. [把帳號密碼從程式碼搬進資料庫(users / authorities 資料表)](#7-使用資料庫儲存使用者帳號)
    概念:說明 Spring Security 內建支援的資料庫驗證方式,需要哪兩張表(users 存帳密、authorities 存角色)、欄位長什麼樣子,並用 JdbcUserDetailsManager 讓 Spring Security 直接查資料庫做登入驗證,改密碼馬上生效不用重啟程式。
 
-8. [密碼不能明文存!用 bcrypt 加密雜湊](#spring-security-密碼加密-password-encryption)
+8. [密碼不能明文存!用 bcrypt 加密雜湊](#8-spring-security-密碼加密-password-encryption)
    概念:解釋為什麼資料庫裡的密碼不能直接存明文,介紹 bcrypt 這種「加鹽雜湊」演算法的概念,示範用線上工具產生 bcrypt 密碼、更新資料庫,並驗證新舊密碼登入的結果差異。
 
-9. [公司資料庫欄位/表名不一樣?自訂 SQL 查詢語句串接 Spring Security](#配置-spring-security-使用自定義資料表)
+9. [公司資料庫欄位/表名不一樣?自訂 SQL 查詢語句串接 Spring Security](#9-配置-spring-security-使用自定義資料表)
    概念:如果既有資料庫的表名、欄位名跟 Spring Security 預設要求的不一樣,教你怎麼自己寫 SQL 查詢語句告訴它去哪裡查帳號密碼和權限,並示範排除中間踩到的 SQL 語法錯誤。
 
-10. [認識 Thymeleaf:Spring Boot 的網頁模板引擎](#thymeleaf-與-spring-boot)
+10. [認識 Thymeleaf:Spring Boot 的網頁模板引擎](#10-thymeleaf-與-spring-boot)
     概念:Thymeleaf 是什麼、跟 Spring MVC 怎麼搭配運作,用一個最簡單的 Controller 回傳 HTML 頁面的例子建立第一印象。
 
-11. [建立 Spring Boot 專案,套上 CSS 與 Bootstrap 美化畫面](#使用-spring-initializr-建立專案)
+11. [建立 Spring Boot 專案,套上 CSS 與 Bootstrap 美化畫面](#11-使用-spring-initializr-建立專案)
     概念:用 Spring Initializr 這個工具快速產生專案骨架,寫一個回傳 Thymeleaf 頁面的 Controller,並教你 Spring Boot 找靜態資源(CSS 檔、Bootstrap 函式庫)的規則,讓網頁套上樣式。
 
-12. [Spring MVC 的分工架構:Controller / Model / View 三兄弟](#spring-mvc-應用程式的組成元件)
+12. [Spring MVC 的分工架構:Controller / Model / View 三兄弟](#12-spring-mvc-應用程式的組成元件)
     概念:用「前端控制器(DispatcherServlet)接收請求 → 分派給 Controller 處理 → 資料放進 Model → 交給 View 模板渲染」這條流程,解釋一個網頁請求進來後 Spring MVC 內部怎麼分工。
 
-13. [Spring Model 是資料的容器:Controller 怎麼把資料傳給頁面](#spring-model)
+13. [Spring Model 是資料的容器:Controller 怎麼把資料傳給頁面](#13-spring-model)
     概念:Model 就像一個共用的置物籃,Controller 把處理好的資料(字串、物件、查資料庫的結果)放進去,View 頁面再從裡面把資料拿出來顯示,並示範讀取表單、處理、存回 Model、顯示在下一頁的完整流程。
 
-14. [用 @RequestParam 自動接住表單欄位值](#使用-requestparam-讀取-html-表單資料)
+14. [用 @RequestParam 自動接住表單欄位值](#14-使用-requestparam-讀取-html-表單資料)
     概念:不用自己手動從 request 物件裡一個個撈欄位值,教你用 `@RequestParam` 這個註解讓 Spring 自動把 HTML 表單送出的欄位值綁進 Controller 方法的參數。
 
-15. [GET 與 POST 的差異,以及怎麼限制 API 只接受特定方法](#getmapping-與-postmapping)
+15. [GET 與 POST 的差異,以及怎麼限制 API 只接受特定方法](#15-getmapping-與-postmapping)
     概念:解釋 GET(資料放在網址上、有長度限制、會被瀏覽器記錄快取)跟 POST(資料放在請求本體裡、看不到、沒有長度限制)的差別,並示範用 `@GetMapping` / `@PostMapping` 限定方法,以及踩到 405 Method Not Allowed 錯誤時怎麼修。
 
-16. [Thymeleaf 表單標籤:th:object / th:field 怎麼把欄位跟物件屬性自動綁在一起](#spring-mvc-form-tag)
+16. [Thymeleaf 表單標籤:th:object / th:field 怎麼把欄位跟物件屬性自動綁在一起](#16-spring-mvc-form-tag)
     概念:教你怎麼用 Spring 提供的表單標籤,把 HTML 表單欄位跟後端物件的屬性自動綁定(靠 getter/setter 對應),不用自己手動組資料,並用一個完整的 Student 表單 + 確認頁範例走一遍全流程。
 
-17. [下拉式選單:選項清單怎麼從設定檔動態產生,而不是寫死在 HTML 裡](#html-select-標籤複習)
+17. [下拉式選單:選項清單怎麼從設定檔動態產生,而不是寫死在 HTML 裡](#17-html-select-標籤複習)
     概念:複習 HTML `<select>` 標籤,再示範用 Thymeleaf 迴圈把 Java 的清單資料轉成 `<option>` 選項,並教你把選項內容放進 `application.properties` 用 `@Value` 注入,做到改設定檔就能調整選項、不用改程式碼。
 
-18. [單選按鈕與核取方塊:一個只能選一個、一個可以選多個](#spring-mvc-表單---單選按鈕-radio-buttons)
+18. [單選按鈕與核取方塊:一個只能選一個、一個可以選多個](#18-spring-mvc-表單---單選按鈕-radio-buttons)
     概念:單選按鈕(Radio Button)的綁定方式跟下拉選單類似、一樣能動態化選項清單;核取方塊(Checkbox)因為使用者可以勾選多個,後端物件要改用陣列/List 來接資料,這段一併示範兩種綁定方式的差異。
 
-19. [表單驗證為什麼重要:Bean Validation 常用註解一覽](#spring-mvc-表單驗證)
+19. [表單驗證為什麼重要:Bean Validation 常用註解一覽](#19-spring-mvc-表單驗證)
     概念:說明光靠前端 HTML 檔案做驗證不夠可靠,後端也要再檢查一次資料合不合規定,介紹 Java 標準 Bean Validation API 常用的驗證註解(例如必填、長度限制等)以及後續要學的路線圖。
 
-20. [實作「必填欄位」驗證:從加註解到頁面顯示紅字錯誤訊息](#spring-mvc-表單驗證必填欄位實作)
+20. [實作「必填欄位」驗證:從加註解到頁面顯示紅字錯誤訊息](#20-spring-mvc-表單驗證必填欄位實作)
     概念:幫 Customer 物件的欄位加上驗證註解,Controller 方法用 `BindingResult` 檢查有沒有驗證失敗,失敗就導回原本的表單頁並在欄位旁邊顯示錯誤訊息,通過才跳到確認頁,並示範一段除錯 Thymeleaf 語法錯誤的過程。
 
-21. [邊界案例:使用者只打空白也算「有填」?用 @InitBinder 修正](#spring-mvc-驗證使用-initbinder)
+21. [邊界案例:使用者只打空白也算「有填」?用 @InitBinder 修正](#21-spring-mvc-驗證使用-initbinder)
     概念:預設的必填驗證只檢查欄位是不是 null 或空字串,但使用者如果打一堆空白鍵,還是會被誤判成「有填寫」,這段教你用 `@InitBinder` 註冊一個字串處理器,自動去除頭尾空白後再驗證。
 
-22. [Spring MVC 表單驗證:修剪空白字元的漏洞](#空白字元處理-white-space)
+22. [Spring MVC 表單驗證:修剪空白字元的漏洞](#22-空白字元處理-white-space)
    概念:這段開始疑似把 Java 後端課程的筆記混進同一份檔案裡,跟 TOEIC 完全無關。內容是在講一個常見的表單驗證漏洞——使用者只打空白鍵也能通過「必填」驗證,解法是用 `@InitBinder` 搭配 `StringTrimmerEditor`,先把「純空白字串」轉成 `null`,後面的驗證才抓得到這種偷吃步。
 
-23. [Spring MVC 數字範圍驗證與 int vs Integer 的地雷](#spring-mvc-數字範圍驗證)
+23. [Spring MVC 數字範圍驗證與 int vs Integer 的地雷](#23-spring-mvc-數字範圍驗證)
     概念:同一段插曲的延續。教你用 `@Min`/`@Max` 限制數字欄位只能在某個範圍內,以及一個很多新手會踩的地雷——欄位留空時如果用原始型別 `int` 接會直接噴例外(因為 int 沒辦法是 null),要改用包裝類別 `Integer` 才能讓「必填」驗證正常顯示錯誤訊息而不是系統崩潰。
 
-24. [用正規表達式驗證郵遞區號格式](#regular-expressions)
+24. [用正規表達式驗證郵遞區號格式](#24-regular-expressions)
     概念:插曲的最後一段,講正規表達式(Regex)是什麼、怎麼用 `@Pattern` 註解規定郵遞區號要剛好是 5 碼英數字,以及怎麼把系統原本又長又難懂的錯誤訊息換成自訂的好懂提示(靠一個叫 `messages.properties` 的設定檔)。
 
 -----------------------------------------------------------
 
-### 驗證 API 運作
+### 1. 驗證 API 運作
 
 - 透過瀏覽器訪問 `http://localhost:8080/employees` 即可取得員工列表數據
 - 該功能由 Spring Data REST 自動實現
@@ -222,7 +222,7 @@ spring.data.rest.base-path=/magic-api
     - **U**pdate (PUT)
     - **D**elete (DELETE)
 
-### Spring Data REST 的開發優勢
+### 2. Spring Data REST 的開發優勢
 
 - **[核心機制]** 僅需在 `pom.xml` 中加入 Spring Boot Starter Data REST 的 Maven 依賴即可啟用功能
 - **[大幅減少樣板程式碼]** 透過 Spring Data REST，可以移除原本手動撰寫的程式碼，包括：
@@ -503,7 +503,7 @@ spring.data.rest.default-page-size=20
     - 排序方向可以設定為 `desc` (降冪) 或 `asc` (升冪)
     - 在範例中，結果顯示員工資料已依照姓氏降冪排列
 
-### 使用 OpenAPI 與 Swagger 進行 REST API 文件化 (Documenting REST APIs with OpenAPI and Swagger)
+### 3. 使用 OpenAPI 與 Swagger 進行 REST API 文件化 (Documenting REST APIs with OpenAPI and Swagger)
 
 - **[面臨的問題]** 當 REST API 缺乏文件時，開發者必須採取極其低效的方式來理解 API：
     - 必須仔細查閱原始碼，以尋找所有的端點（例如 `@GetMapping`、`@PostMapping` 等）
@@ -956,7 +956,7 @@ springdoc.api-docs.path=/my-api-docs
     - 透過 `http://localhost:8080/v3/api-docs` 存取
     - 提供用於自動化工具或文件生成的原始 JSON 資料
 
-## Spring Boot REST API 安全性概覽
+## 4. Spring Boot REST API 安全性概覽
 
 本章節將聚焦於 Spring Security 在日常開發中最常見的實務任務，而非作為完整的 A 到 Z 參考手冊。
 
@@ -1335,7 +1335,7 @@ spring.security.user.password=test123
 {"id":5,"firstName":"Juan","lastName":"Vega","email":"juan@luv2code.com"}]
 ```
 
-### 配置基礎安全性 (Configuring Basic Security)
+### 5. 配置基礎安全性 (Configuring Basic Security)
 
 - **範例使用者設定**：
     - 可以為使用者定義不同的角色（Role），角色名稱可以根據需求自定義。
@@ -2060,7 +2060,7 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
 在完成所有安全性配置與程式碼重構後，啟動 Spring Boot 應用程式以進行功能驗證。
 
-### 使用 Postman 進行安全性測試
+### 6. 使用 Postman 進行安全性測試
 
 在應用程式啟動後，可以使用 Postman 來驗證權限規則是否生效。
 
@@ -2635,7 +2635,7 @@ requestMatchers(HttpMethod.PATCH, "/api/employees/**").hasRole("MANAGER")
 - **成功原因**：
     - 使用者 `mary` 擁有 `MANAGER` 角色，符合先前為 `PATCH` 方法設定的權限要求。
 
-## 使用資料庫儲存使用者帳號
+## 7. 使用資料庫儲存使用者帳號
 
 - **目前的做法**：使用者帳號目前是硬編碼（hard-coded）在 Java 原始碼中，主要是為了保持簡單。
 - **目標**：將使用者資訊移至資料庫中，實現資料庫存取（Database Access）。
@@ -3299,7 +3299,7 @@ UPDATE employee_directory.users SET password = 'ABC123' WHERE username = 'john';
     - **[管理方式]** 使用者資訊（如帳號、密碼、角色）現在直接儲存在資料庫中
     - **[開發效益]** 這種方式讓系統更具彈性，管理員可以直接透過 SQL 操作來增刪改查使用者，而無需修改並重新部署程式碼
 
-### Spring Security 密碼加密 (Password Encryption)
+### 8. Spring Security 密碼加密 (Password Encryption)
 
 - **[現況]** 目前使用者的密碼是以明文 (plain text) 形式儲存
     - **[風險]** 這種做法僅適用於初步開發階段，不符合生產環境 (production) 的安全標準
@@ -3633,7 +3633,7 @@ VALUES ('john', '$2a$10$qe50HEh7urweMojsnWARvcXJXR1UcMRZ2WcQ19YeuspUdgF.q', 1);
     - **bcrypt 自動處理**：Spring Security 會在背景自動處理所有的 bcrypt 雜湊比對工作。
     - **即時生效 (On the fly)**：更新資料庫中的加密密碼後，不需要重啟 Spring Boot 應用程式，新的密碼即可立即用於身份驗證。
 
-### 配置 Spring Security 使用自定義資料表
+### 9. 配置 Spring Security 使用自定義資料表
 
 - **[現狀]** 目前使用的 Spring Security 預設資料庫結構 (Default Schema)
     - **[限制]** 必須使用完全相同的資料表名稱與欄位名稱才能運作
@@ -4251,7 +4251,7 @@ jdbcUserDetailsManager.setAuthoritiesByUsernameQuery(
     - 設定根據給定名稱尋找權限/角色的查詢方式。
     - 這種做法讓 Spring Security 能完美適應任何現有的資料庫設計。
 
-## Thymeleaf 與 Spring Boot
+## 10. Thymeleaf 與 Spring Boot
 
 ### 什麼是 Thymeleaf?
 
@@ -4395,7 +4395,7 @@ public class DemoController {
 - **模板重用**：支援模板佈局 (Template Layouts) 與片段 (Fragments)，方便建立一致的頁面結構
 - **更多資訊**：可參考官方網站 [thymeleaf.org](https://www.thymeleaf.org) 獲取詳細技術細節
 
-## 使用 Spring Initializr 建立專案
+## 11. 使用 Spring Initializr 建立專案
 
 ### 專案基本設定
 
@@ -4793,7 +4793,7 @@ src
 }
 ```
 
-### Spring MVC 應用程式的組成元件
+### 12. Spring MVC 應用程式的組成元件
 
 - **Web 頁面 (Web Pages)**
     - 用於佈局 UI 元件的一組網頁
@@ -5205,7 +5205,7 @@ public String processForm() {
     - **結果**：頁面成功顯示 `Hello World of Spring` 以及使用者輸入的 `Student name: John`
     - **意義**：驗證了 Spring MVC 能正確處理表單資料（Form Data），並將其傳遞至 View Template 進行渲染
 
-### Spring Model
+### 13. Spring Model
 
 - **[定義]** Spring Model 是一個用來存放應用程式資料的容器 (Container)
 - **[在 Controller 中的作用]** 開發者可以在 Controller 程式碼中將任何資料放入 Model 中
@@ -5635,7 +5635,7 @@ public String letsShoutDude(HttpServletRequest request, Model model) {
         - Student name: Larry
         - The message: **Yo! LARRY**
 
-### 使用 @RequestParam 讀取 HTML 表單資料
+### 14. 使用 @RequestParam 讀取 HTML 表單資料
 
 - **[開發目標]** 建立一個新的方法來處理表單資料，流程如下：
     - 讀取表單中的 `studentName`
@@ -5846,7 +5846,7 @@ public String processFormVersionThree(@RequestParam("studentName") String theNam
     - **處理**：Controller 將其轉換為大寫 `MARY` 並組合訊息
     - **輸出**：網頁顯示 `Student name: Mary` 以及 `The message: Hey My Friend from v3! MARY`
 
-## @GetMapping 與 @PostMapping
+## 15. @GetMapping 與 @PostMapping
 
 - **[HTTP 請求/回應模型]** 當透過 HTML 表單傳送資料時，會遵循以下流程：
     - **請求 (Request)**：由 HTML 表單發起，傳送至 Spring MVC 控制器
@@ -6258,7 +6258,7 @@ sequenceDiagram
     - `firefox how to view http request`
     - `microsoft edge how to view http request`
 
-## Spring MVC Form Tag
+## 16. Spring MVC Form Tag
 
 ### HTML 表單回顧
 
@@ -6964,7 +6964,7 @@ mindmap
     - 在 Controller 中使用 `System.out.println` 紀錄輸入資料。
     - 透過 IntelliJ IDEA 的 **Console 視窗** 檢查輸出，確認資料已正確從前端傳遞至後端物件中（例如：`theStudent: John Doe`）。
 
-### HTML `<select>` 標籤複習
+### 17. HTML `<select>` 標籤複習
 
 在建立 Web 表單時，常用 `<select>` 標籤來實作下拉式選單（drop-down list），讓使用者從多個選項中挑選一個（例如在電子商務結帳頁面選擇國家）。
 
@@ -7357,7 +7357,7 @@ flowchart LR
     2. 點擊提交按鈕（Submit）。
     3. 確認頁面（Confirmation Page）成功顯示所選的國家，證明資料已正確從 properties 檔案流轉至前端。
 
-## Spring MVC 表單 - 單選按鈕 (Radio Buttons)
+## 18. Spring MVC 表單 - 單選按鈕 (Radio Buttons)
 
 - 在 HTML 表單中，單選按鈕用於讓使用者從一組互斥的選項中選擇其中一個
 - **[視覺範例]**：
@@ -8130,7 +8130,7 @@ theModel.addAttribute("systems", systems);
 
 這證明了整個開發流程——從後端設定檔讀取資料、Controller 傳遞 Model、到 Thymeleaf 模板動態渲染——皆已正確連動並運作正常。
 
-## Spring MVC 表單驗證
+## 19. Spring MVC 表單驗證
 
 ### 驗證的需求 (The Need for Validation)
 
@@ -8261,7 +8261,7 @@ theModel.addAttribute("systems", systems);
 - 目前專案已完成初始化與環境設定
 - 準備進入下一階段：學習如何設定各種表單驗證規則 (Validations)
 
-## Spring MVC 表單驗證：必填欄位實作
+## 20. Spring MVC 表單驗證：必填欄位實作
 
 ### 實作目標範例
 
@@ -8992,7 +8992,7 @@ flowchart TD
 - **[問題根源]**：現有的驗證邏輯（例如 `@NotNull`）可能只檢查了欄位是否為空，而未檢查內容是否僅由空白字元組成。
 - **[後續對策]**：需要針對「全空格」情況進行額外的驗證邏輯更新或程式碼調整，以確保資料的品質。
 
-### Spring MVC 驗證：使用 `@InitBinder`
+### 21. Spring MVC 驗證：使用 `@InitBinder`
 
 在 Spring MVC 的開發流程中，除了基本的資料驗證外，還可以使用特定的註解來進一步控制資料綁定的行為：
 
@@ -9001,7 +9001,7 @@ flowchart TD
     - **[功能]**：允許開發者在進行資料驗證之前，對輸入的參數進行預處理或設定特定的驗證規則。
     - **[應用情境]**：例如需要對特定格式的字串進行轉換，或是需要對某些欄位進行更精細的格式化控制時。
 
-### 空白字元處理 (White Space)
+### 22. 空白字元處理 (White Space)
 
 - 之前的範例中存在問題：僅包含空白字元的 `last name` 欄位竟然通過了驗證
     - 這是不正確的，應該要攔截並讓其失敗
@@ -9137,7 +9137,7 @@ public void initBinder(WebDataBinder dataBinder) {
 
 - **[預期目標]** 測試 `StringTrimmerEditor` 是否能成功將純空白字串轉換為 `null`，進而觸發驗證錯誤，防止無效資料通過
 
-## Spring MVC 數字範圍驗證
+## 23. Spring MVC 數字範圍驗證
 
 - 使用 `@Min` 與 `@Max` 註解來限制輸入數值的範圍
 - **範例需求**：
@@ -9229,7 +9229,7 @@ Free passes: <input type="text" th:field="*{freePasses}" />
 Free passes: <span th:text="${customer.freePasses}"></span>
 ```
 
-## Regular Expressions
+## 24. Regular Expressions
 
 - 定義為一組用來定義「搜尋模式」的字元序列
     - 可以利用此模式來尋找或比對字串

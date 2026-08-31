@@ -12,75 +12,75 @@ hovernotes-id: doc_45531139-6df7-46c8-84ae-079f14607c36
 
 # 目錄
 
-1. [除錯 BindingResult:看懂 Spring MVC 表單驗證錯誤訊息](#檢查-bindingresult-物件)
+1. [除錯 BindingResult:看懂 Spring MVC 表單驗證錯誤訊息](#1-檢查-bindingresult-物件)
    概念:表單驗證失敗時,教你怎麼在 Controller 印出 BindingResult 物件看清楚錯誤細節,並解析 Spring 內部比對錯誤代碼「由具體到通用」的順序,搭配 messages.properties 把預設英文錯誤訊息換成自己想要的文字。
 
-2. [自訂驗證規則是什麼:內建驗證不夠用時的解法](#spring-mvc-自定義驗證-custom-validation)
+2. [自訂驗證規則是什麼:內建驗證不夠用時的解法](#2-spring-mvc-自定義驗證-custom-validation)
    概念:當 @Min、@Max 這類內建規則無法表達複雜的業務邏輯(例如課程代碼要以特定字母開頭)時,說明整體的自訂驗證流程藍圖,讓你先有個全貌再往下動手做。
 
-3. [動手打造一個自己的 Java Annotation:@CourseCode](#從頭開始建立自定義-java-annotation)
+3. [動手打造一個自己的 Java Annotation:@CourseCode](#3-從頭開始建立自定義-java-annotation)
    概念:示範怎麼從零開始寫出一個自訂標籤(Annotation),可以想成自己發明一種貼在欄位上的標記,還能帶參數決定驗證的內容跟驗證失敗要顯示的訊息。
 
-4. [驗證邏輯寫在哪:ConstraintValidator 的實作細節](#建立自定義驗證規則-create-custom-validation-rule)
+4. [驗證邏輯寫在哪:ConstraintValidator 的實作細節](#4-建立自定義驗證規則-create-custom-validation-rule)
    概念:Annotation 本身只是標籤,真正判斷「輸入合不合格」的程式邏輯要寫在一個叫 ConstraintValidator 的輔助類別裡,這裡帶你實作 isValid 方法,回傳 true 或 false 決定驗證通過與否。
 
-5. [把自訂驗證套進表單:實際套用、顯示錯誤與踩雷排除](#步驟-2將驗證規則加入到-customer-類別)
+5. [把自訂驗證套進表單:實際套用、顯示錯誤與踩雷排除](#5-步驟-2將驗證規則加入到-customer-類別)
    概念:把剛做好的 @CourseCode 標籤貼到 Customer 資料類別的欄位上,在 HTML 表單跟確認頁面顯示對應錯誤訊息,並修掉測試時遇到的 NullPointerException,順便提醒非必填欄位驗證要先擋空值。
 
-6. [Thymeleaf CRUD 專案總覽:從 REST API 改造成完整員工目錄網頁](#應用需求-application-requirements)
+6. [Thymeleaf CRUD 專案總覽:從 REST API 改造成完整員工目錄網頁](#6-應用需求-application-requirements)
    概念:這是一個從零打造「員工目錄」網頁的實戰專案總覽,說明要做出新增、查詢、修改、刪除員工資料的完整流程,並規劃專案資料夾、資料庫怎麼準備,再把之前只回傳 JSON 的 REST API 專案改造成會直接吐出網頁畫面的 Spring MVC 專案,寫出 Controller 串接 Service 顯示員工清單。
 
-7. [用 Bootstrap 美化員工列表頁,並整理專案結構](#介面美化引入-bootstrap-css)
+7. [用 Bootstrap 美化員工列表頁,並整理專案結構](#7-介面美化引入-bootstrap-css)
    概念:把陽春的純文字列表換成 Bootstrap 美化的表格畫面,一列一列顯示每個員工資料,順便讓網站首頁自動導去列表頁,並把整個專案跟測試類別重新命名整理乾淨。
 
-8. [新增員工功能全流程:按鈕、空白表單、送出與存檔](#使用-thymeleaf-新增員工流程演示)
+8. [新增員工功能全流程:按鈕、空白表單、送出與存檔](#8-使用-thymeleaf-新增員工流程演示)
    概念:完整做出「新增員工」——列表頁加一顆新增按鈕、跳出空白表單讓你填資料、送出後存進資料庫,並處理表單欄位跟 Java 物件屬性怎麼自動對應,還有避免使用者重複送出同一份表單的技巧(PRG 模式)。
 
-9. [依姓氏排序員工清單](#實作按姓氏排序功能)
+9. [依姓氏排序員工清單](#9-實作按姓氏排序功能)
    概念:讓員工列表可以依姓氏字母順序排列,示範 Spring Data JPA 只要照特定命名規則取方法名稱,就能自動生出排序查詢,完全不用自己寫 SQL。
 
-10. [更新員工功能全流程:表單先預填舊資料再送出修改](#使用-thymeleaf-更新員工資料)
+10. [更新員工功能全流程:表單先預填舊資料再送出修改](#10-使用-thymeleaf-更新員工資料)
     概念:做出「更新」按鈕,點下去要先把該員工原本的資料預先帶進表單(不是空白表單),送出後用同一套邏輯判斷這是新增還是修改,再存回資料庫。
 
-11. [刪除員工功能全流程](#使用-thymeleaf-刪除員工)
+11. [刪除員工功能全流程](#11-使用-thymeleaf-刪除員工)
     概念:做出「刪除」按鈕跟對應連結,點下去帶著員工 ID 呼叫 Controller 把該筆資料從資料庫移除,並提醒刪除這種有風險的動作最好用 POST 而不是單純的連結。
 
-12. [Spring Security 是怎麼運作的:認證與授權的基本概念](#spring-security-模型)
+12. [Spring Security 是怎麼運作的:認證與授權的基本概念](#12-spring-security-模型)
     概念:把 Spring Security 想成一套「保全系統」,每個進來的請求都先檢查「你是誰」(認證),再檢查「你能不能做這件事」(授權),說明它內部靠一連串過濾器(Filter)串起來處理的整體流程與安全層級。
 
-13. [登入畫面怎麼選、不同角色看到的內容也不一樣](#不同登入方式-different-login-methods)
+13. [登入畫面怎麼選、不同角色看到的內容也不一樣](#13-不同登入方式-different-login-methods)
     概念:介紹 Spring Security 內建的登入畫面選項(預設頁面 vs 自訂頁面),並示範同一個頁面依照登入者角色(一般人 vs 管理員)顯示不同的連結或內容。
 
-14. [Spring MVC Security 專案實戰:從零建置到預設保護生效](#開發流程-development-process)
+14. [Spring MVC Security 專案實戰:從零建置到預設保護生效](#14-開發流程-development-process)
     概念:建一個全新的 Spring Boot 專案,加上 Security 依賴後幾乎不用寫任何設定,整個網站就自動被鎖起來要求先登入,這裡示範這種「開箱即用」的保護效果,並提醒開發測試時瀏覽器 session 可能讓你誤以為設定沒生效,要用無痕視窗才能正確重新測試。
 
-15. [用寫死在程式裡的帳號密碼做基本登入(記憶體驗證)](#配置基本安全性-configuring-basic-security)
+15. [用寫死在程式裡的帳號密碼做基本登入(記憶體驗證)](#15-配置基本安全性-configuring-basic-security)
     概念:先不接資料庫,直接在 Java 設定檔裡寫死幾個測試帳號、密碼、角色(像 John、Mary、Susan 這種假帳號),並說明密碼為什麼一定要用 Bcrypt 這類方式加密,不能存明碼。
 
-16. [打造完全客製化的登入頁面,含錯誤訊息與美化](#自定義登入表單-custom-login-form)
+16. [打造完全客製化的登入頁面,含錯誤訊息與美化](#16-自定義登入表單-custom-login-form)
     概念:不用 Spring 內建陽春的登入畫面,改成自己寫一個 HTML 登入表單,串接對應的欄位名稱跟登入失敗要導回哪一頁,並在密碼打錯時顯示明確的錯誤提示,最後用 Bootstrap 讓整個畫面更好看。
 
-17. [實作登出功能與登出成功提示](#步驟-1在-spring-security-配置中新增登出支援)
+17. [實作登出功能與登出成功提示](#17-步驟-1在-spring-security-配置中新增登出支援)
     概念:加上「登出」按鈕,點了之後清除登入狀態、導回登入頁,並顯示「您已成功登出」這類提示訊息。
 
-18. [依角色顯示不同畫面內容:管理員專屬頁面與拒絕存取頁](#顯示使用者-id-與角色)
+18. [依角色顯示不同畫面內容:管理員專屬頁面與拒絕存取頁](#18-顯示使用者-id-與角色)
     概念:登入後在畫面上顯示目前使用者的帳號、角色,並用 Thymeleaf 的 sec:authorize 標籤讓「只有管理員看得到的區塊」跟大家都看得到的區塊寫在同一頁面裡動態切換;順便做一個自己設計的「你沒有權限」友善頁面,取代嚇人的系統錯誤畫面。
 
-19. [帳號密碼改存資料庫:從硬編碼走向 JDBC 驗證](#使用者帳號管理從硬編碼轉向資料庫)
+19. [帳號密碼改存資料庫:從硬編碼走向 JDBC 驗證](#19-使用者帳號管理從硬編碼轉向資料庫)
     概念:把原本寫死在程式碼裡的帳密,改成從 MySQL 資料庫查詢驗證,說明 Spring Security 預設要求的資料表結構(users、authorities 表)長怎樣,動手建表、串接設定,並實測改資料庫內容能不能即時反映在登入行為上。
 
-20. [密碼加密實戰:Bcrypt 單向雜湊演算法](#spring-security-密碼加密)
+20. [密碼加密實戰:Bcrypt 單向雜湊演算法](#20-spring-security-密碼加密)
     概念:資料庫裡不能存明碼密碼,這裡教你用 Bcrypt 這種「單向加密」演算法(加密後無法反解回原文,只能拿新輸入的密碼重新加密比對)產生加密密碼,把資料庫裡的帳密資料換成加密版本。
 
-21. [對接自己命名的資料表結構(不用 Spring 預設的欄位名稱)](#擴展-spring-security-的資料庫配置)
+21. [對接自己命名的資料表結構(不用 Spring 預設的欄位名稱)](#21-擴展-spring-security-的資料庫配置)
     概念:現實專案的資料庫表格設計通常跟 Spring Security 預設的不一樣,這裡示範怎麼寫自訂 SQL 查詢語句,讓 Spring Security 改成讀你自己命名的資料表跟欄位。
 
-22. [番外篇:REST API 版本控制,加上課程總結收尾](#專案環境準備)
+22. [番外篇:REST API 版本控制,加上課程總結收尾](#22-專案環境準備)
     概念:另開一個迷你專案示範 API 版本控制——同一個網址路徑依照網址裡的版本號(v1、v2、v3)呼叫不同版本的方法,讓 API 改版時舊客戶端還能繼續用、新舊版本不會互相打架,並示範把重複的路徑設定重構掉;最後附上整堂課程學到的技術總複習與結業資訊。
 
 -----------------------------------------------------------
 
-### 檢查 BindingResult 物件
+### 1. 檢查 BindingResult 物件
 
 - 為了理解驗證過程中的細節，可以在 Controller 中檢查 `BindingResult` 物件
     - `BindingResult` 包含了驗證過程中的大量資訊與數據
@@ -174,7 +174,7 @@ flowchart LR
 
         - 這樣當使用者輸入錯誤格式時，前端就會顯示「Invalid number」而非預設的錯誤訊息
 
-### Spring MVC 自定義驗證 (Custom Validation)
+### 2. Spring MVC 自定義驗證 (Custom Validation)
 
 - **[概念]** 除了基本的型別檢查外，可以針對特定欄位加入自定義的業務規則 (Business Rule)
 - **範例演示**
@@ -204,7 +204,7 @@ flowchart TD
     D -- "否" --> F["觸發驗證錯誤<br/>(Display Error Message)"]
 ```
 
-### 從頭開始建立自定義 Java Annotation
+### 3. 從頭開始建立自定義 Java Annotation
 
 - **[核心機制]** 自定義驗證會根據使用者在表單中輸入的內容，回傳一個布林值 (boolean value)
     - `true`：驗證通過
@@ -258,7 +258,7 @@ flowchart TD
     Step4 --> End(["完成"])
 ```
 
-### 建立自定義驗證規則 (Create Custom Validation Rule)
+### 4. 建立自定義驗證規則 (Create Custom Validation Rule)
 
 建立自定義驗證規則的第一步包含兩個子步驟：
 
@@ -727,7 +727,7 @@ timeline
     步驟 4 : 更新確認頁面
 ```
 
-### 步驟 2：將驗證規則加入到 Customer 類別
+### 5. 步驟 2：將驗證規則加入到 Customer 類別
 
 在完成 Annotation 與 Validator 的核心邏輯後，下一步是將此規則套用到實際的業務模型類別（如 `Customer` 類別）上。
 
@@ -956,7 +956,7 @@ private String courseCode;
 
 本專案目標是利用 Thymeleaf 與 Spring Boot 技術棧，開發一個完整的員工目錄管理系統。
 
-### 應用需求 (Application Requirements)
+### 6. 應用需求 (Application Requirements)
 
 - **核心目標**：為員工目錄建立一個 Web 使用者介面 (Web UI)
 - **技術棧**：
@@ -1322,7 +1322,7 @@ sequenceDiagram
     - **目標**：讓頁面看起來更專業、更美觀
     - **工具**：將使用 HTML 表格 (`<table>`) 與 Bootstrap CSS 框架來進行介面優化
 
-### 介面美化：引入 Bootstrap CSS
+### 7. 介面美化：引入 Bootstrap CSS
 
 - **目標**：將目前的原始資料顯示方式，轉換為使用 HTML 表格與 Bootstrap CSS 樣式的專業介面
 - **實作步驟**：
@@ -1581,7 +1581,7 @@ flowchart TD
     - 檢查「Employee Directory」表格是否能正確顯示資料
 - **[驗證結論]** 所有的修改（包括套件重構與自定義驗證規則的加入）均未破壞原有功能，系統運作正常
 
-### 使用 Thymeleaf 新增員工流程演示
+### 8. 使用 Thymeleaf 新增員工流程演示
 
 - **操作流程演示**
     - 點擊頁面左上角的 「**Add Employee**」 按鈕
@@ -2227,7 +2227,7 @@ public String saveEmployee(@ModelAttribute("employee") Employee theEmployee) {
     - **[現況]** 目前顯示的員工資料是未排序的 (unsorted)
     - **[改進目標]** 實作按「姓氏 (Last Name)」進行排序的功能，以提升資料檢視的便利性
 
-### 實作按姓氏排序功能
+### 9. 實作按姓氏排序功能
 
 - **[需求]** 為了提升使用者體驗，需要讓員工列表能夠依照姓氏 (Last Name) 進行排序
 - **[實作方式]** 在 `EmployeeRepository` 介面中新增一個符合 Spring Data JPA 命名規則的方法
@@ -2325,7 +2325,7 @@ public List<Employee> findAll() {
 
 - **[核心結論]** 這就是所謂的 "Spring Data JPA Magic"：只需透過正確的方法命名，系統就能自動完成複雜的排序邏輯，並在前端呈現完美的結果。
 
-### 使用 Thymeleaf 更新員工資料
+### 10. 使用 Thymeleaf 更新員工資料
 
 - **[更新流程示範]** 在員工目錄 (Employee Directory) 頁面中，透過「Action」欄位進行操作：
 
@@ -2731,7 +2731,7 @@ public String showFormForUpdate(@RequestParam("employeeId") int theId, Model the
     - **前端即時反映**：在員工目錄表格中，可以觀察到該員工的資訊已正確更新為新的姓氏與 Email（例如：Trupti Sampath, trupti.sampath@luv2code.com）。
     - **[結論]**：這證明了「更新」功能、隱藏欄位的 ID 傳遞、以及 Controller 的儲存邏輯皆已正確串接並運作正常。
 
-### 使用 Thymeleaf 刪除員工
+### 11. 使用 Thymeleaf 刪除員工
 
 在員工目錄中，可以透過每個員工列右側的「Delete」按鈕來移除特定的員工紀錄：
 
@@ -2994,7 +2994,7 @@ public String delete(@RequestParam("employeeId") int theId) {
 - **實務導向 (Practical Results)**
     - 學習重點在於覆蓋日常專案中最常遇到的 Spring Security 任務
 
-### Spring Security 模型
+### 12. Spring Security 模型
 
 - **實作機制**
     - Spring Security 使用 **Servlet Filters** 在背景實作安全框架
@@ -3122,7 +3122,7 @@ Spring Security 框架提供了兩個層級的安全機制，以應對不同的�
     - 應用程式支援多種驗證機制，例如：
         - **HTTP Basic Authentication**
 
-### 不同登入方式 (Different Login Methods)
+### 13. 不同登入方式 (Different Login Methods)
 
 - **預設登入表單 (Default login form)**
     - Spring Security 會自動提供一個預設的登入介面，這對於快速開發與測試非常方便
@@ -3222,7 +3222,7 @@ flowchart TD
 
 ## Spring MVC Security 專案設定
 
-### 開發流程 (Development Process)
+### 14. 開發流程 (Development Process)
 
 - **步驟 1**：在 Spring Initializr 網站建立專案，並新增 Maven 依賴項 (Dependencies)
     - 需包含：Spring MVC Web App、Security 以及 Thymeleaf
@@ -3525,7 +3525,7 @@ Using generated security password: a40e1da6-87ea-4c9a-bb81-c1d10b216b66
     - 在瀏覽器選單中選擇「新無痕視窗」或「私密視窗」
     - 這是最快速且不需要切換整個應用程式即可獲得全新 Session 的方法
 
-### 配置基本安全性 (Configuring Basic Security)
+### 15. 配置基本安全性 (Configuring Basic Security)
 
 #### 使用者範例資料
 
@@ -3791,7 +3791,7 @@ return new InMemoryUserDetailsManager(john, mary, susan);
         - 處理更複雜的**密碼管理**
         - 實作**基於角色的權限控管**：根據使用者登入時的角色，動態決定頁面資訊的顯示或隱藏
 
-### 自定義登入表單 (Custom Login Form)
+### 16. 自定義登入表單 (Custom Login Form)
 
 - **[背景]** 目前已能使用 Spring Security 提供的預設登入表單
     - **預設表單 (Default Login Form)**
@@ -4650,7 +4650,7 @@ flowchart TD
     2. 在首頁新增登出按鈕。
     3. 更新登入表單以顯示「已登出」的訊息。
 
-### 步驟 1：在 Spring Security 配置中新增登出支援
+### 17. 步驟 1：在 Spring Security 配置中新增登出支援
 
 - **[實作細節]**：
     - 在 `DemoSecurityConfig.java` 的 `SecurityFilterChain` Bean 中，新增 `.logout()` 的設定。
@@ -4862,7 +4862,7 @@ sequenceDiagram
 </div>
 ```
 
-### 顯示使用者 ID 與角色
+### 18. 顯示使用者 ID 與角色
 
 - **[功能目標]**：
     - 在首頁（Home Page）上呈現使用者的身份資訊。
@@ -5591,7 +5591,7 @@ flowchart TD
 
 > 安全性不應只依賴前端的「隱藏」，必須結合後端的「攔截」才能達到真正的保護效果。
 
-### 使用者帳號管理：從硬編碼轉向資料庫
+### 19. 使用者帳號管理：從硬編碼轉向資料庫
 
 - **現狀回顧**：
     - 目前系統中的使用者帳號（如 John, Mary, Susan）及其對應的密碼與角色，都是直接寫死在 Java 原始碼中的（Hard-coded）。
@@ -6265,7 +6265,7 @@ UPDATE employee_directory.users SET password = '{noop}test123' WHERE username = 
 - **[後續進階方向]**
     - 目前使用的是 `{noop}`（明文）密碼格式，未來可進一步實作更安全的**密碼加密演算法**
 
-### Spring Security 密碼加密
+### 20. Spring Security 密碼加密
 
 在目前的實作中，使用者密碼是以明文（Plaintext）形式存儲在資料庫中，這在實際生產環境（Production）或真實專案中是非常危險的。
 
@@ -6581,7 +6581,7 @@ sequenceDiagram
     - 目前實作的加密與解密（比對）邏輯運作完全符合預期
     - 成功建立從明文到 Bcrypt 加密字串的轉換路徑，確保了後續 JDBC 驗證的基礎
 
-### 擴展 Spring Security 的資料庫配置
+### 21. 擴展 Spring Security 的資料庫配置
 
 在目前的實作中，Spring Security 是基於預設的資料庫架構（Schema）運作的。這意味著開發者必須嚴格遵守 Spring Security 所要求的資料表名稱與欄位名稱。
 
@@ -6867,7 +6867,7 @@ SELECT user_id, roles FROM roles WHERE user_id = ?
 
 ---
 
-### 專案環境準備
+### 22. 專案環境準備
 
 - 下載並解壓縮資源檔案 `starter-spring-boot-api-versioning-helloworld.zip`
 - 使用 IDE 開啟專案目錄
