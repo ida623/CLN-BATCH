@@ -1,7 +1,7 @@
 ---
 title: "Spring Boot 4 / Spring 7 / Hibernate 讀書筆記"
-description: "根據 Untitled 1.md(Udemy Spring Boot 課程整理筆記)改寫的讀書筆記"
-source: "Untitled 1.md"
+description: "根據 SpringBoot 1.md(Udemy Spring Boot 課程整理筆記)改寫的讀書筆記"
+source: "SpringBoot 1.md"
 created: "2026-09-01"
 tags:
   - reading-notes

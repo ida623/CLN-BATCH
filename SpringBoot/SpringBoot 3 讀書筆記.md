@@ -1,7 +1,7 @@
 ---
 title: "JPA / Hibernate 一對一映射 讀書筆記"
-description: "根據 Untitled 3.md(Udemy Spring Boot 課程整理筆記)改寫的讀書筆記"
-source: "Untitled 3.md"
+description: "根據 SpringBoot 3.md(Udemy Spring Boot 課程整理筆記)改寫的讀書筆記"
+source: "SpringBoot 3.md"
 created: "2026-09-01"
 tags:
   - reading-notes

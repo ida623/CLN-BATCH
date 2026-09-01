@@ -1,7 +1,7 @@
 ---
 title: "Spring MVC 表單驗證與 Spring Security 讀書筆記"
-description: "根據 Untitled 5.md(Udemy Spring Boot 課程整理筆記)改寫的讀書筆記"
-source: "Untitled 5.md"
+description: "根據 SpringBoot 5.md(Udemy Spring Boot 課程整理筆記)改寫的讀書筆記"
+source: "SpringBoot 5.md"
 created: "2026-09-01"
 tags:
   - reading-notes

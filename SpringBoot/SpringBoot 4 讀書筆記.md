@@ -1,7 +1,7 @@
 ---
 title: "JPA 進階關聯映射與 AOP 讀書筆記"
-description: "根據 Untitled 4.md(Udemy Spring Boot 課程整理筆記)改寫的讀書筆記"
-source: "Untitled 4.md"
+description: "根據 SpringBoot 4.md(Udemy Spring Boot 課程整理筆記)改寫的讀書筆記"
+source: "SpringBoot 4.md"
 created: "2026-09-01"
 tags:
   - reading-notes

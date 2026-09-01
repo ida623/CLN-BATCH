@@ -1,7 +1,7 @@
 ---
 title: "Spring Data REST / Spring Security / Spring MVC 表單 讀書筆記"
-description: "根據 Untitled 2.md(Udemy Spring Boot 課程整理筆記)改寫的讀書筆記"
-source: "Untitled 2.md"
+description: "根據 SpringBoot 2.md(Udemy Spring Boot 課程整理筆記)改寫的讀書筆記"
+source: "SpringBoot 2.md"
 created: "2026-09-01"
 tags:
   - reading-notes
